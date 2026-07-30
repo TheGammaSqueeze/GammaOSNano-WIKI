@@ -22,7 +22,7 @@ These are handled by the operating system itself, so they work everywhere: on th
 | <span class="btnchip">Select</span> + <span class="btnchip">Vol -</span> | Decrease screen brightness |
 | <span class="btnchip">Vol +</span> / <span class="btnchip">Vol -</span> alone | System volume up / down |
 | <span class="btnchip">Power</span> (short press) | Sleep or wake (blanks the panel and drops to power save) |
-| <span class="btnchip">Power</span> (long press, about 1.5 seconds) | Open the Power menu (Restart, Power Off, Recovery) |
+| <span class="btnchip">Power</span> (long press, about 1.5 seconds) | Raise the Nano overlay: over a game it opens on the [Quick Menu](quick-menu.html); on the home it opens the Quick Menu Power submenu (Restart, Power Off, Recovery). See [the in-game overlay](#the-in-game-overlay). |
 | <span class="btnchip">Power</span> + <span class="btnchip">Select</span> (held) | Emergency: disable the system display shader (an escape hatch when a shader makes the screen unreadable) |
 | Hold <span class="btnchip">Back</span> 10 seconds, or hold the <span class="btnchip">Guide</span> / <span class="btnchip">Mode</span> button 10 seconds | Emergency restart of a frozen or dead home screen |
 | Lid, hall, or slide switch | Sleep on close (on devices that have one) |

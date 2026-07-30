@@ -37,7 +37,13 @@ A looping video makes a lively, console-like backdrop. Here is the whole flow.
 
 3. Select it, and it starts playing behind the home right away, looping quietly.
 
-![A video wallpaper playing on the home](assets/img/shots/xmb_videowallpaper_home.png)
+<figure class="ui-video-fig">
+  <span class="ui-video-badge">Live demo</span>
+  <video class="ui-video" autoplay loop muted playsinline poster="assets/video/video-wallpaper-poster.jpg">
+    <source src="assets/video/video-wallpaper.mp4" type="video/mp4">
+  </video>
+  <figcaption>A looping video wallpaper playing live behind the XMB home.</figcaption>
+</figure>
 
 Put the videos you want to use in your Movies folder so the picker can find them. The XMB wave switches off automatically when a wallpaper is set, so the video shows cleanly.
 {: .callout .note }
@@ -45,6 +51,14 @@ Put the videos you want to use in your Movies folder so the picker can find them
 ## The darkened scrim (Wallpaper Dimming)
 
 A bright or busy wallpaper can make the menu text and icons hard to read. **Wallpaper Dimming** lays a dark scrim over the wallpaper to fix that. Higher values make it darker. The default is a gentle 25 percent, and you can push it much higher for a moody, high-contrast look where the menu really pops.
+
+<figure class="ui-video-fig">
+  <span class="ui-video-badge">Live demo</span>
+  <video class="ui-video" autoplay loop muted playsinline poster="assets/video/scrim-poster.jpg">
+    <source src="assets/video/scrim.mp4" type="video/mp4">
+  </video>
+  <figcaption>Raising Wallpaper Dimming darkens the scrim so the menu stays readable.</figcaption>
+</figure>
 
 Wallpaper Dimming only affects a custom photo or video wallpaper. With no wallpaper set (just the wave), it does nothing.
 {: .callout .tip }

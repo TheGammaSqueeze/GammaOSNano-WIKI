@@ -45,6 +45,14 @@ Supporting options:
 
 When the PSP Clock action is set, sliding the screen shows a large, polished analog clock, in the spirit of the PSP's clock. It is a lovely way to use the device as a desk clock when it is slid open.
 
+<figure class="ui-video-fig">
+  <span class="ui-video-badge">Live demo</span>
+  <video class="ui-video" autoplay loop muted playsinline poster="assets/video/clock-poster.jpg">
+    <source src="assets/video/clock.mp4" type="video/mp4">
+  </video>
+  <figcaption>Sliding the screen dissolves the XMB into the glowing PSP-style clock, then back.</figcaption>
+</figure>
+
 ![The clock and parallax options](assets/img/shots/xmb_slide_clock.png)
 
 Two options tune how it looks:

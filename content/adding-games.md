@@ -57,6 +57,16 @@ Once your files are in place, tell Nano to look for them:
 
 Nano scans every system folder and adds anything new to your library. Your games appear under the **Game** category, grouped by system.
 
+<figure class="ui-video-fig">
+  <span class="ui-video-badge">Live demo</span>
+  <video class="ui-video" autoplay loop muted playsinline poster="assets/video/rescan-poster.jpg">
+    <source src="assets/video/rescan.mp4" type="video/mp4">
+  </video>
+  <figcaption>Running Rescan Games, then the systems appearing under the Game category with their counts.</figcaption>
+</figure>
+
+Here is the same result as a still: each system shows how many games it found.
+
 ![XMB game list showing per-system counts](assets/img/shots/xmb_home.png)
 
 Run **Rescan Games** any time you add more files. It is safe to run as often as you like.

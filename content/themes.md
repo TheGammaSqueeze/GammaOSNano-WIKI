@@ -17,9 +17,17 @@ GammaOS Nano gives you three complete home themes in one interface. Pick the loo
 
 All three themes launch the same games, play the same media, and share the same deep [Settings](settings-reference.html). They just wear it differently.
 
+<figure class="ui-video-fig">
+  <span class="ui-video-badge">Live demo</span>
+  <video class="ui-video" autoplay loop muted playsinline poster="assets/video/ui-nav-poster.jpg">
+    <source src="assets/video/ui-nav.mp4" type="video/mp4">
+  </video>
+  <figcaption>Moving across categories and through games on the XMB, with the signature wave flowing behind.</figcaption>
+</figure>
+
 ## GammaOS XMB (PlayStation 3 style)
 
-This is the default look. A horizontal category bar runs across the screen, and the item list for the active category drops down vertically from it. Behind everything flows the continuous PS3 "wave" background, with glass icons and firmware-style animations. It adapts to any screen size or orientation automatically.
+This is the default look. A horizontal category bar runs across the screen, and the item list for the active category drops down vertically from it. Behind everything flows the continuous PS3 "wave" background, with glass icons and firmware-style animations. It adapts to any screen size or orientation automatically. You can see the wave and the sliding category rail in the clip above.
 
 ![XMB home on the Game category](assets/img/shots/xmb_home.png)
 
