@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wi-Fi &amp; Bluetooth - GammaOS Nano</title>
+<meta name="description" content="Connect Wi-Fi and Bluetooth with the setup wizard.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a class="active" href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">Getting online lets you scrape boxart, stream Internet Radio and IPTV, browse network servers, and download updates. GammaOS Nano keeps Wi-Fi and Bluetooth together in one friendly place.</p>
+<p>You will find everything under <strong>Settings &gt; Network Settings</strong>.</p>
+<h2 id="check-your-connection"><a class="toclink" href="#check-your-connection">Check your connection</a></h2>
+<p>Network Settings opens with a connection status list showing your current SSID, IP address, and signal strength. This is the quickest way to confirm you are online and see which network you are on.</p>
+<p>You can turn networking on or off here too, with the <strong>Internet Connection</strong> toggle.</p>
+<h2 id="connect-with-the-wizard"><a class="toclink" href="#connect-with-the-wizard">Connect with the wizard</a></h2>
+<p>Choose <strong>Internet Connection Settings</strong> to open the Wi-Fi and Bluetooth setup wizard. It walks you through:</p>
+<ol>
+<li>Picking your Wi-Fi network (SSID) from the list of nearby networks.</li>
+<li>Entering your WPA2 password.</li>
+<li>Pairing a Bluetooth device.</li>
+</ol>
+<p>This is the same wizard you meet during first-time setup, so if you skipped Wi-Fi back then you can finish the job here. See <a href="getting-started.html">Getting started</a> for the first-boot walkthrough.</p>
+<h2 id="test-your-connection"><a class="toclink" href="#test-your-connection">Test your connection</a></h2>
+<p>Use <strong>Internet Connection Test</strong> to confirm your handheld can actually reach the internet after connecting. It is a handy check if a download or scrape is not working as expected.</p>
+<p class="callout note">If a boxart scrape or an online media browser fails, run the Internet Connection Test first to rule out a dropped connection.</p>
+<h2 id="status-at-a-glance"><a class="toclink" href="#status-at-a-glance">Status at a glance</a></h2>
+<p>The HUD top bar shows your <strong>Wi-Fi signal</strong> and <strong>Bluetooth status</strong> at all times, so you can keep an eye on connectivity without opening Settings.</p>
+<h2 id="next-steps"><a class="toclink" href="#next-steps">Next steps</a></h2>
+<p>Once you are online, you can mount SMB, NFS, WebDAV, and FTP shares so files on another computer or NAS appear as if they were local. Head to <a href="network-shares.html">Network Shares</a> to set those up.</p>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#check-your-connection">Check your connection</a>
+</li>
+<li><a href="#connect-with-the-wizard">Connect with the wizard</a>
+</li>
+<li><a href="#test-your-connection">Test your connection</a>
+</li>
+<li><a href="#status-at-a-glance">Status at a glance</a>
+</li>
+<li><a href="#next-steps">Next steps</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

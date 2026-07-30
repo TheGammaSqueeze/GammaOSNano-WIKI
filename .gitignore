@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+
+# Editor / OS cruft
+.DS_Store
+*.swp
+
+# Local scratch
+/tmp/
+
+# Session build-orchestration scripts (not part of the site)
+content-workflow.js
+review-workflow.js

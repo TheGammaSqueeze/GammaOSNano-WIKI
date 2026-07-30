@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home Themes - GammaOS Nano</title>
+<meta name="description" content="The three home themes and how to switch and customize them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a class="active" href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">GammaOS Nano gives you three complete home themes in one launcher. Pick the look you love and everything (games, media, apps, Settings) reshapes to match.</p>
+<div class="theme-trio">
+  <figure><img src="assets/img/shots/xmb_home.png" alt="GammaOS XMB theme"><figcaption><b>GammaOS XMB</b><br>PlayStation 3 style</figcaption></figure>
+  <figure><img src="assets/img/shots/dsi_home.png" alt="DSi Menu theme"><figcaption><b>DSi Menu</b><br>Nintendo DSi style</figcaption></figure>
+  <figure><img src="assets/img/shots/min_home.png" alt="Minima theme"><figcaption><b>Minima</b><br>Minimal list style</figcaption></figure>
+</div>
+
+<p>All three themes launch the same games, play the same media, and share the same deep <a href="settings-reference.html">Settings</a>. They just wear it differently.</p>
+<h2 id="gammaos-xmb-playstation-3-style"><a class="toclink" href="#gammaos-xmb-playstation-3-style">GammaOS XMB (PlayStation 3 style)</a></h2>
+<p>This is the default look. A horizontal category bar runs across the screen, and the item list for the active category drops down vertically from it. Behind everything flows the continuous PS3 "wave" background, with glass icons and firmware-style animations. It adapts to any screen size or orientation automatically.</p>
+<p><img alt="XMB home on the Game category" src="assets/img/shots/xmb_home.png" /></p>
+<p>XMB has a few looks that are all its own, under Settings &gt; Theme Settings:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Choices</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>XMB Wave</td>
+<td>On / Off</td>
+<td>On (turns off automatically when you set a custom wallpaper)</td>
+</tr>
+<tr>
+<td>Background</td>
+<td>Original / Classic / Wallpaper</td>
+<td>Original</td>
+</tr>
+<tr>
+<td>Font</td>
+<td>Original / Rounded / Pop</td>
+<td>Original</td>
+</tr>
+<tr>
+<td>Day/Night</td>
+<td>Auto (by time of day) / Day / Morning / Dusk / Evening / Night</td>
+<td>Night</td>
+</tr>
+</tbody>
+</table>
+<p>Day/Night changes the lighting mood of the whole home. Leave it on Auto and it follows the time of day for you.</p>
+<h2 id="dsi-menu-nintendo-dsi-style"><a class="toclink" href="#dsi-menu-nintendo-dsi-style">DSi Menu (Nintendo DSi style)</a></h2>
+<p>A carousel of glossy tiles glides across a light field with a soft scanline background. Tiles spring into place as the menu opens, and you can fling or scrub the carousel with a touch panel, snapping neatly to each slot.</p>
+<p><img alt="DSi carousel home" src="assets/img/shots/dsi_home.png" /></p>
+<p>Drill into a category (like Game) and you get a familiar list with boxart, the same as the other themes.</p>
+<p><img alt="DSi game list with boxart" src="assets/img/shots/dsi_romlist.png" /></p>
+<p>DSi has one option of its own on single-panel devices: a <strong>Single-Screen / Stacked</strong> layout choice. You can keep the carousel-only view (the default), or switch to a stacked layout with the status bar on top. Dual-screen devices always use both physical panels, so this choice is for single-panel handhelds.</p>
+<h2 id="minima-nextui-style"><a class="toclink" href="#minima-nextui-style">Minima (NextUI style)</a></h2>
+<p>A clean, minimal vertical text list on a black canvas. The selected row is a bright white rounded capsule with inverted text, and there is a small accent status pill plus a bottom button-hint bar so you always know your controls. Scrolling is a smooth exponential glide. The main list keeps things text-only with no icons.</p>
+<p><img alt="Minima minimal list home" src="assets/img/shots/min_home.png" /></p>
+<p>Even in this stripped-back theme, your games still show their boxart once you drill into a system.</p>
+<p><img alt="Minima game list" src="assets/img/shots/min_romlist.png" /></p>
+<p>Minima adds two of its own options: a <strong>Background Colour</strong> (a solid colour instead of black, though a photo or video wallpaper overrides it), and an opt-in for the XMB <strong>wave</strong> (off by default in Minima, since the flat look is the point).</p>
+<h2 id="switching-themes"><a class="toclink" href="#switching-themes">Switching themes</a></h2>
+<p>Changing your whole home is one setting away.</p>
+<ol>
+<li>Open Settings &gt; <strong>Theme Settings</strong>.</li>
+<li>Choose <strong>Home Theme</strong>.</li>
+<li>Pick GammaOS XMB, DSi Menu, or Minima.</li>
+</ol>
+<p class="callout note">Applying a new theme restarts the home so the new look loads cleanly. Give it a second and you are in the new interface.</p>
+<p>The same menus simply look different in each theme. A Settings screen in Minima (see <code>min_settings.png</code>) and an Options menu in DSi (see <code>dsi_optmenu.png</code>) show the exact same choices as their XMB counterparts, just dressed to match the theme you chose.</p>
+<h2 id="accent-colour-all-three-themes"><a class="toclink" href="#accent-colour-all-three-themes">Accent Colour (all three themes)</a></h2>
+<p>Under Settings &gt; Theme Settings &gt; <strong>Colour</strong> you get 21 accent choices that apply to whichever theme you are using:</p>
+<p><strong>Original</strong> (each theme's signature colour: XMB uses a per-month hue, Minima a berry tone, DSi its azure), plus Yellow, Green, Pink, Dark Green, Light Purple, Teal, Dark Blue, Magenta, Orange, Brown, Red, Black, White, Gray, Blue, Cyan, Lime, Gold, Violet, and Crimson.</p>
+<p>The accent shows up differently in each theme. On XMB it tints the wave and menu accents, on Minima it colours the capsule and hint bar, and on DSi it hue-rotates the chrome. One colour, three personalities.</p>
+<h2 id="wallpapers"><a class="toclink" href="#wallpapers">Wallpapers</a></h2>
+<p>You can replace the default background with your own picture or a looping video, all from Settings &gt; Theme Settings.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wallpaper Image</td>
+<td>Pick a photo for the home background, using the photo grid picker</td>
+</tr>
+<tr>
+<td>Bottom Wallpaper</td>
+<td>A separate wallpaper for the bottom screen (dual-screen devices only)</td>
+</tr>
+<tr>
+<td>Video Wallpaper</td>
+<td>Pick a looping video for the top-screen background</td>
+</tr>
+<tr>
+<td>Clear Wallpaper</td>
+<td>Remove your custom wallpaper and restore the wave</td>
+</tr>
+<tr>
+<td>Wallpaper Dimming</td>
+<td>Darken a bright wallpaper so icons and text stay readable (default 25%)</td>
+</tr>
+<tr>
+<td>XMB Wave</td>
+<td>On / Off; turns off automatically when a wallpaper is set, then is honored exactly as you leave it</td>
+</tr>
+</tbody>
+</table>
+<p>Supported wallpaper image types: jpg, png, webp, bmp, gif, heic. Supported video types: mp4, mkv, webm, mov, 3gp, avi, ts, mpg.</p>
+<p class="callout tip">If your wallpaper makes text hard to read, nudge <strong>Wallpaper Dimming</strong> up until icons and labels pop again.</p>
+<h2 id="keep-exploring"><a class="toclink" href="#keep-exploring">Keep exploring</a></h2>
+<p>See the full list of every option in the <a href="settings-reference.html">Settings reference</a>, and check the <a href="gammaos-toolbox.html">GammaOS Toolbox</a> for extra display and system tweaks that pair well with your chosen theme.</p>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#gammaos-xmb-playstation-3-style">GammaOS XMB (PlayStation 3 style)</a>
+</li>
+<li><a href="#dsi-menu-nintendo-dsi-style">DSi Menu (Nintendo DSi style)</a>
+</li>
+<li><a href="#minima-nextui-style">Minima (NextUI style)</a>
+</li>
+<li><a href="#switching-themes">Switching themes</a>
+</li>
+<li><a href="#accent-colour-all-three-themes">Accent Colour (all three themes)</a>
+</li>
+<li><a href="#wallpapers">Wallpapers</a>
+</li>
+<li><a href="#keep-exploring">Keep exploring</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add a Custom System - GammaOS Nano</title>
+<meta name="description" content="Add your own system, step by step, with the AetherSX2 (PS2) example.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a class="active" href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">Nano ships knowing a lot of consoles, but you can add any system yourself. This page walks through it end to end using PlayStation 2 with the AetherSX2 emulator as the example. Follow the same steps for any standalone emulator or RetroArch core.</p>
+<p>Nano ships with a built-in emulator catalog that already knows many standalone emulators (AetherSX2, NetherSX2, Dolphin, azahar, and more) plus every RetroArch core. That means adding a system is mostly picking from lists, and you rarely have to type anything technical by hand.</p>
+<h2 id="step-1-install-the-emulator-app"><a class="toclink" href="#step-1-install-the-emulator-app">Step 1: Install the emulator app</a></h2>
+<p>Install the AetherSX2 app (package <code>xyz.aethersx2.android</code>) like any other app: side-load it, or copy the APK to the device and open it in the File Explorer.</p>
+<p>Launch AetherSX2 once so it finishes its first-run setup and you can point it at your PS2 BIOS.</p>
+<p class="callout warn">GammaOS Nano does not include any console BIOS files. AetherSX2 needs a PS2 BIOS, which you import inside the AetherSX2 app's own first-run setup. Games will not run without it. See <a href="emulators.html">Emulators</a> for where each emulator keeps its BIOS.</p>
+<h2 id="step-2-open-the-game-systems-editor"><a class="toclink" href="#step-2-open-the-game-systems-editor">Step 2: Open the Game Systems editor</a></h2>
+<p>Go to <strong>Settings &gt; Game Settings &gt; Game Systems</strong>. You get a list of every system with an On/Off toggle (reorder with <span class="btnchip">L1</span> and <span class="btnchip">R1</span>).</p>
+<p><img alt="Game Systems list" src="assets/img/shots/xmb_gamesystems.png" /></p>
+<h2 id="step-3-choose-add-new-system"><a class="toclink" href="#step-3-choose-add-new-system">Step 3: Choose Add New System</a></h2>
+<p>Scroll to the top of the list and choose <strong>Add New System...</strong>.</p>
+<p><img alt="Add New System highlighted at the bottom of the list" src="assets/img/shots/xmb_addsystem.png" /></p>
+<h2 id="step-4-pick-the-emulator"><a class="toclink" href="#step-4-pick-the-emulator">Step 4: Pick the emulator</a></h2>
+<p>Choosing <strong>Add New System...</strong> opens the emulator picker, a searchable catalog. Type <code>aethersx2</code> to filter, then choose <strong>Sony PlayStation 2 - Aethersx2</strong>.</p>
+<p><img alt="Emulator picker filtered to aethersx2" src="assets/img/shots/xmb_emupicker_aethersx2.png" /></p>
+<p class="callout note">Other PS2 targets live in the same catalog (NetherSX2 Turnip, ARMSX2, EmuCoreX, and RetroArch's Play core). Pick whichever emulator you actually installed.</p>
+<h2 id="step-5-let-the-editor-auto-fill"><a class="toclink" href="#step-5-let-the-editor-auto-fill">Step 5: Let the editor auto-fill</a></h2>
+<p>As soon as you pick the emulator, Nano fills in the launch details for you:</p>
+<p><img alt="The new-system editor, auto-filled" src="assets/img/shots/xmb_newsystem_editor.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Auto-filled value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Enabled</strong></td>
+<td>On</td>
+</tr>
+<tr>
+<td><strong>Display Name</strong></td>
+<td>Sony PlayStation 2</td>
+</tr>
+<tr>
+<td><strong>Launch Type</strong></td>
+<td>Custom Package</td>
+</tr>
+<tr>
+<td><strong>Emulator</strong></td>
+<td><code>xyz.aethersx2.android</code></td>
+</tr>
+</tbody>
+</table>
+<p>Scroll down and you will see the rest of the launch details filled in too:</p>
+<p><img alt="More editor fields" src="assets/img/shots/xmb_newsystem_fields.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Auto-filled value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Package</strong></td>
+<td><code>xyz.aethersx2.android</code></td>
+</tr>
+<tr>
+<td><strong>Intent Template</strong></td>
+<td>custom (<code>-n xyz.aethersx2.android/.EmulationActivity -a android.intent.action.MAIN -e bootPath {file.uri} --activity-clear-task --activity-clear-top</code>)</td>
+</tr>
+<tr>
+<td><strong>Extensions</strong></td>
+<td><code>.iso, .chd, .gz, .mdf, .bin</code></td>
+</tr>
+<tr>
+<td><strong>Scan Folders</strong></td>
+<td>Default</td>
+</tr>
+<tr>
+<td><strong>Icon</strong></td>
+<td>Sony - PlayStation 2</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>Emulator</strong> and <strong>Package</strong> fields both show the app you picked (<code>xyz.aethersx2.android</code>). That is expected: Emulator is the friendly identity you chose from the catalog, and Package is the exact Android package it launches.</p>
+<p>You can leave the Intent Template exactly as it is. The <code>{file.uri}</code> placeholder is replaced with the game you selected each time you launch. Adjust the Extensions if your files use different types.</p>
+<h2 id="step-6-set-your-scan-folders"><a class="toclink" href="#step-6-set-your-scan-folders">Step 6: Set your Scan Folders</a></h2>
+<p>Tell Nano where your PS2 games live. Select <strong>Scan Folders</strong>.</p>
+<p><img alt="The Scan Folders picker" src="assets/img/shots/xmb_scanfolders.png" /></p>
+<p>You can leave it on <strong>Default</strong> to use <code>ROMs/ps2/</code>, or choose <strong>Add Folder...</strong> to pick your own. The folder browser lets you pick internal storage, SD, or removable/USB, then drill down to your games folder.</p>
+<p><img alt="The storage-root folder browser" src="assets/img/shots/xmb_folderbrowser.png" /></p>
+<h2 id="step-7-add-roms-and-rescan"><a class="toclink" href="#step-7-add-roms-and-rescan">Step 7: Add ROMs and rescan</a></h2>
+<p>Put your PS2 games in the folder you chose (for example <code>/sdcard/ROMs/ps2/</code>), then run <strong>Settings &gt; Game Settings &gt; Rescan Games</strong>.</p>
+<p>The new PlayStation 2 system appears in the Game category with your games. Launching one hands off to AetherSX2 with the game's path.</p>
+<h2 id="jumping-back-into-the-editor"><a class="toclink" href="#jumping-back-into-the-editor">Jumping back into the editor</a></h2>
+<p class="callout tip">Later, from the <strong>Game</strong> category, highlight the system row and press the Options button, then choose <strong>Manage Game System</strong> to jump straight back into this editor. No need to go through Settings again.</p>
+<h2 id="if-a-game-does-not-launch"><a class="toclink" href="#if-a-game-does-not-launch">If a game does not launch</a></h2>
+<ul>
+<li>Check the <strong>Package</strong>. The emulator app must actually be installed.</li>
+<li>Check the <strong>Extensions</strong>. They must include your game's file type.</li>
+<li>Check the emulator's own BIOS/import step is done (AetherSX2 needs a PS2 BIOS).</li>
+</ul>
+<p>You can add unlimited custom systems this exact way, for any standalone app or RetroArch core.</p>
+<h2 id="related-pages"><a class="toclink" href="#related-pages">Related pages</a></h2>
+<ul>
+<li><a href="game-systems.html">Game Systems</a> for editing an existing system.</li>
+<li><a href="emulators.html">Emulators</a> for cores, standalone apps, and BIOS files.</li>
+<li><a href="boxart.html">Boxart &amp; Metadata</a> for cover art.</li>
+</ul>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#step-1-install-the-emulator-app">Step 1: Install the emulator app</a>
+</li>
+<li><a href="#step-2-open-the-game-systems-editor">Step 2: Open the Game Systems editor</a>
+</li>
+<li><a href="#step-3-choose-add-new-system">Step 3: Choose Add New System</a>
+</li>
+<li><a href="#step-4-pick-the-emulator">Step 4: Pick the emulator</a>
+</li>
+<li><a href="#step-5-let-the-editor-auto-fill">Step 5: Let the editor auto-fill</a>
+</li>
+<li><a href="#step-6-set-your-scan-folders">Step 6: Set your Scan Folders</a>
+</li>
+<li><a href="#step-7-add-roms-and-rescan">Step 7: Add ROMs and rescan</a>
+</li>
+<li><a href="#jumping-back-into-the-editor">Jumping back into the editor</a>
+</li>
+<li><a href="#if-a-game-does-not-launch">If a game does not launch</a>
+</li>
+<li><a href="#related-pages">Related pages</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

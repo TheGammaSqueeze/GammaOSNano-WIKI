@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DraStic Nano Controls - GammaOS Nano</title>
+<meta name="description" content="In-game controls for the built-in Nintendo DS emulator.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a class="active" href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">Nintendo DS games launch through DraStic Nano, the DS emulator built right into GammaOS. The controls are refreshingly simple: your DS buttons map straight across, and everything else runs off the Back button.</p>
+<h2 id="playing-a-ds-game"><a class="toclink" href="#playing-a-ds-game">Playing a DS game</a></h2>
+<p>The DS buttons map one-to-one to your handheld's face buttons, D-Pad, shoulders, and Start/Select: Up, Down, Left, Right, <span class="btnchip">A</span>, <span class="btnchip">B</span>, <span class="btnchip">X</span>, <span class="btnchip">Y</span>, <span class="btnchip">L</span>, <span class="btnchip">R</span>, <span class="btnchip">Start</span>, and <span class="btnchip">Select</span>.</p>
+<p>The DS bottom (touch) screen is driven by your touch panel, so you can tap and drag with a finger like a stylus. On devices without a touch panel, or when you prefer buttons, a virtual touch cursor lets the D-Pad or left stick move a pointer over the bottom screen, with <span class="btnchip">A</span> tapping or holding the stylus.</p>
+<h2 id="in-game-shortcuts"><a class="toclink" href="#in-game-shortcuts">In-game shortcuts</a></h2>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="btnchip">Back</span> (short press)</td>
+<td>Open or close the in-game overlay menu (the game pauses while it is open)</td>
+</tr>
+<tr>
+<td><span class="btnchip">Back</span> (long hold, about 1.5 seconds)</td>
+<td>Exit the game and return to the Nano home</td>
+</tr>
+<tr>
+<td><span class="btnchip">Power</span> (long hold)</td>
+<td>Raise the Nano in-game overlay over the game (opens on the Quick Menu); press <span class="btnchip">B</span> or hold <span class="btnchip">Power</span> again to resume</td>
+</tr>
+<tr>
+<td>Touch panel</td>
+<td>Acts as the DS stylus on the bottom screen</td>
+</tr>
+<tr>
+<td>Virtual touch cursor</td>
+<td>D-Pad or left stick moves a cursor over the bottom screen; <span class="btnchip">A</span> taps or holds the stylus</td>
+</tr>
+</tbody>
+</table>
+<p class="callout tip">A short tap of <span class="btnchip">Back</span> opens the overlay menu (and pauses the game); a long hold of <span class="btnchip">Back</span> exits to the home. Same button, two lengths of press.</p>
+<p class="callout note">If you power the device off from the overlay's Quick Menu while a game is running, <a href="quick-resume.html">Quick Resume</a> saves your spot first, so you will not lose progress.</p>
+<h2 id="the-overlay-menu"><a class="toclink" href="#the-overlay-menu">The overlay menu</a></h2>
+<p>A short <span class="btnchip">Back</span> press opens the in-game overlay, which pauses the game and gives you save states, video and audio options, control rebinding, cheats, and achievements. There is a lot in there, so it has its own page.</p>
+<p>For every setting in the overlay (screen layout, shaders, save states, cheats, achievements, firmware user data, and more), see the full <a href="drastic-nano.html">DraStic Nano</a> page.</p>
+<p class="callout note">Two different overlays, two different buttons: a short <span class="btnchip">Back</span> press opens DraStic's own in-game menu (save states, video, cheats), while holding <span class="btnchip">Power</span> raises the wider Nano overlay (Quick Menu, brightness, switch games) over the top. See <a href="controls-os.html#the-in-game-overlay">the in-game overlay</a>.</p>
+<h2 id="where-to-go-next"><a class="toclink" href="#where-to-go-next">Where to go next</a></h2>
+<ul>
+<li>Full DraStic Nano settings and features: <a href="drastic-nano.html">DraStic Nano</a></li>
+<li>Pick up exactly where you left off after a reboot: <a href="quick-resume.html">Quick Resume</a></li>
+<li>System-wide shortcuts (brightness, sleep, emergency restart): <a href="controls-os.html">Controls</a></li>
+</ul>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#playing-a-ds-game">Playing a DS game</a>
+</li>
+<li><a href="#in-game-shortcuts">In-game shortcuts</a>
+</li>
+<li><a href="#the-overlay-menu">The overlay menu</a>
+</li>
+<li><a href="#where-to-go-next">Where to go next</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

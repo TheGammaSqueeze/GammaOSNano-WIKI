@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Collections &amp; Recently Played - GammaOS Nano</title>
+<meta name="description" content="Group favourites across systems, and Recently Played.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a class="active" href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">Collections let you gather games from any system into your own named groups, like Favorites or Multiplayer. Nano also keeps a Recently Played list for you automatically, so the game you just closed is always one tap away.</p>
+<h2 id="collections"><a class="toclink" href="#collections">Collections</a></h2>
+<p>A collection is a group of games you choose yourself. Games can come from any system, so a single collection can mix NES, SNES, and PlayStation titles together. Each collection shows up as its own entry in the <strong>Game</strong> category, right alongside your systems.</p>
+<h3 id="creating-a-collection-and-adding-games"><a class="toclink" href="#creating-a-collection-and-adding-games">Creating a collection and adding games</a></h3>
+<p>You build a collection from a game's Options menu:</p>
+<ol>
+<li>Highlight a game and press the Options button.</li>
+<li>Choose <strong>Add to Collection</strong>.</li>
+<li>Create a new collection (type a name with the keyboard) or pick an existing one.</li>
+</ol>
+<p>The game is added, and if you created a new collection it appears in the Game category. Repeat for any other games you want in it.</p>
+<p class="callout note">A game can belong to several collections at once. Adding it to one does not remove it from any other.</p>
+<h3 id="managing-collections"><a class="toclink" href="#managing-collections">Managing collections</a></h3>
+<ul>
+<li>To remove a game from a collection, open the game's Options menu while you are inside that collection and choose <strong>Remove from Collection</strong>.</li>
+<li>To rename or delete a whole collection, highlight the collection entry, press the Options button, and choose <strong>Rename Collection</strong> or <strong>Delete Collection</strong>.</li>
+</ul>
+<p>Deleting a collection only removes the grouping. Your game files and the games themselves in your library are untouched.</p>
+<p>For the full list of Options-menu actions on games and collections, see <a href="context-menus.html">Context Menus</a>.</p>
+<h2 id="recently-played"><a class="toclink" href="#recently-played">Recently Played</a></h2>
+<p>Nano keeps a <strong>Recently Played</strong> list for you automatically. There is nothing to set up.</p>
+<ul>
+<li>Every game you launch is tracked here.</li>
+<li>The game you just played jumps to the front of the list, so it is always first.</li>
+<li>If a game is deleted, or scanned away when you run Rescan Games, it is quietly removed from the list.</li>
+</ul>
+<p>Recently Played entries behave just like normal games: press the Options button on one to Start it, view its Information, add it to a collection, and more.</p>
+<h2 id="related-pages"><a class="toclink" href="#related-pages">Related pages</a></h2>
+<ul>
+<li><a href="context-menus.html">Context Menus</a> for every Options-menu action.</li>
+<li><a href="adding-games.html">Adding Games</a> for building your library.</li>
+<li><a href="boxart.html">Boxart &amp; Metadata</a> for cover art and game info.</li>
+</ul>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#collections">Collections</a>
+<ul>
+<li><a href="#creating-a-collection-and-adding-games">Creating a collection and adding games</a></li>
+<li><a href="#managing-collections">Managing collections</a></li>
+</ul>
+</li>
+<li><a href="#recently-played">Recently Played</a>
+</li>
+<li><a href="#related-pages">Related pages</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

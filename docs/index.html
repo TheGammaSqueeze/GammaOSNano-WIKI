@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GammaOS Nano Wiki - GammaOS Nano</title>
+<meta name="description" content="The complete guide to operating GammaOS Nano.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home active" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content home">
+    <section class="hero">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="hero-eyebrow">The handheld gaming OS</p>
+    <h1 class="hero-title">Master <span class="grad">GammaOS Nano</span></h1>
+    <p class="hero-sub">A fast, beautiful launcher for retro handhelds - three switchable home themes, every emulator at your fingertips, and controls that just make sense. This is the complete guide.</p>
+    <div class="hero-cta">
+      <a class="btn primary" href="getting-started.html">Get started</a>
+      <a class="btn" href="themes.html">See the themes</a>
+      <a class="btn" href="controls-os.html">Controls cheat sheet</a>
+    </div>
+  </div>
+  <div class="hero-shots" aria-hidden="true">
+    <img src="assets/img/shots/xmb_home.png" alt="" class="shot shot-a" loading="lazy">
+    <img src="assets/img/shots/dsi_home.png" alt="" class="shot shot-b" loading="lazy">
+    <img src="assets/img/shots/min_home.png" alt="" class="shot shot-c" loading="lazy">
+  </div>
+</section>
+
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">Welcome to the GammaOS Nano wiki. This is your friendly, complete guide to getting the most out of your handheld: launching games, running emulators, playing your music and videos, browsing network shares, and tuning every setting to taste.</p>
+<p>New here? Start with <a href="getting-started.html">Getting Started</a>, then explore whatever catches your eye. Every page cross-links to the ones next to it, so you can wander freely.</p>
+<h2 id="jump-in"><a class="toclink" href="#jump-in">Jump in</a></h2>
+<div class="cards">
+  <a class="card" href="getting-started.html"><span class="card-ico">🚀</span><span class="card-kicker">Get Started</span><h3>Getting Started</h3><p>First boot, Wi-Fi, and your first games.</p></a>
+  <a class="card" href="themes.html"><span class="card-ico">🎨</span><span class="card-kicker">The Interface</span><h3>Home Themes</h3><p>Three looks, one launcher.</p></a>
+  <a class="card" href="controls-os.html"><span class="card-ico">🎮</span><span class="card-kicker">Controls</span><h3>Controls Cheat Sheet</h3><p>Every button, everywhere.</p></a>
+  <a class="card" href="adding-games.html"><span class="card-ico">📥</span><span class="card-kicker">Games</span><h3>Adding Games</h3><p>Drop in ROMs and rescan.</p></a>
+  <a class="card" href="custom-system.html"><span class="card-ico">🛠️</span><span class="card-kicker">Games</span><h3>Add a Custom System</h3><p>Wire up any emulator you like.</p></a>
+  <a class="card" href="emulators.html"><span class="card-ico">👾</span><span class="card-kicker">Emulators</span><h3>Emulators</h3><p>RetroArch cores and standalone apps.</p></a>
+  <a class="card" href="drastic-nano.html"><span class="card-ico">🕹️</span><span class="card-kicker">Emulators</span><h3>DraStic Nano</h3><p>The built-in Nintendo DS emulator.</p></a>
+  <a class="card" href="settings-reference.html"><span class="card-ico">⚙️</span><span class="card-kicker">Settings</span><h3>Settings Reference</h3><p>The whole Settings tree explained.</p></a>
+  <a class="card" href="faq.html"><span class="card-ico">❓</span><span class="card-kicker">Help</span><h3>FAQ</h3><p>Quick answers to common questions.</p></a>
+</div>
+
+<h2 id="three-themes-one-launcher"><a class="toclink" href="#three-themes-one-launcher">Three themes, one launcher</a></h2>
+<p>GammaOS Nano ships with three switchable home themes. Pick the one you love in Settings &gt; Theme Settings &gt; Home Theme, and switch any time you feel like a change.</p>
+<div class="theme-trio">
+  <figure><img src="assets/img/shots/xmb_home.png" alt="GammaOS XMB theme"><figcaption><b>GammaOS XMB</b><br>PlayStation 3 style</figcaption></figure>
+  <figure><img src="assets/img/shots/dsi_home.png" alt="DSi Menu theme"><figcaption><b>DSi Menu</b><br>Nintendo DSi style</figcaption></figure>
+  <figure><img src="assets/img/shots/min_home.png" alt="Minima theme"><figcaption><b>Minima</b><br>Minimal list style</figcaption></figure>
+</div>
+
+<p>Want the full tour of what each theme offers? Head to <a href="themes.html">Home Themes</a>.</p>
+<h2 id="what-you-can-do"><a class="toclink" href="#what-you-can-do">What you can do</a></h2>
+<ul>
+<li>Launch games from every system through RetroArch cores or standalone emulator apps.</li>
+<li>Play Nintendo DS games with the built-in <a href="drastic-nano.html">DraStic Nano</a> emulator.</li>
+<li>Enjoy your <a href="media.html">media</a>: music with visualizers and internet radio, a full-screen photo viewer, and a video player with multi audio track and subtitle support.</li>
+<li>Browse <a href="network-shares.html">network shares</a> over SMB, NFS, WebDAV, and FTP, right alongside your local files.</li>
+<li>Group games into <a href="collections.html">collections</a>, scrape <a href="boxart.html">boxart</a>, and sort huge libraries with ease.</li>
+<li>Tune everything from RGB lighting to speaker EQ in the deep <a href="settings-reference.html">Settings tree</a> and <a href="gammaos-toolbox.html">GammaOS Toolbox</a>.</li>
+</ul>
+<p>Ready to set up your handheld? <a href="getting-started.html">Getting Started</a> walks you through it.</p>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#jump-in">Jump in</a>
+</li>
+<li><a href="#three-themes-one-launcher">Three themes, one launcher</a>
+</li>
+<li><a href="#what-you-can-do">What you can do</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

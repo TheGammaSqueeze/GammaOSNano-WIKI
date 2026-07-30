@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DraStic Nano - GammaOS Nano</title>
+<meta name="description" content="&quot;The built-in Nintendo DS emulator and all its in-game options.&quot;">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a class="active" href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">DraStic Nano is the Nintendo DS emulator built right into GammaOS Nano. It runs your DS games straight from the Game menu with a fast boot and a friendly in-game overlay. This page is the complete reference: how it launches, its controls, and every option in the overlay menu.</p>
+<h2 id="what-drastic-nano-is"><a class="toclink" href="#what-drastic-nano-is">What DraStic Nano is</a></h2>
+<p>DraStic Nano embeds the DraStic DS core directly inside Nano, so there is no separate app to open and games boot quickly. It shares the same save data and preferences file with the stock DraStic app (<code>com.dsemu.drastic</code>), so any settings you change in one carry over to the other, both ways.</p>
+<p>Nintendo DS games (<code>.nds</code> files) launch through DraStic Nano automatically from the Game menu. There is nothing to select or configure to make this happen.</p>
+<p class="callout note">DraStic Nano shares its saves and preferences with the stock DraStic app, so your progress and settings stay in sync between them.</p>
+<h2 id="no-bios-needed"><a class="toclink" href="#no-bios-needed">No BIOS needed</a></h2>
+<p>Good news: DraStic does <strong>not</strong> need a BIOS. It has its own built-in high-level BIOS emulation, so Nintendo DS games run straight away with no BIOS or firmware files to find or copy. This is unlike PlayStation, PS2, or Dreamcast, which do need you to supply a BIOS (see <a href="emulators.html#bios-files-not-included">Emulators</a>).</p>
+<p class="callout tip">The only "firmware" DraStic has is cosmetic DS user data (nickname, birthday, favourite colour, and menu language). It is optional, and you set it inside the stock DraStic app, not with any BIOS file.</p>
+<h2 id="in-game-controls"><a class="toclink" href="#in-game-controls">In-game controls</a></h2>
+<p>The DS face buttons, D-pad, shoulder buttons, and Start/Select map to your handheld one to one (Up, Down, Left, Right, A, B, X, Y, L, R, Start, Select). The DS bottom (touch) screen is driven by your touch panel, or by a virtual touch cursor if your device has no touchscreen.</p>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Short <span class="btnchip">Back</span> / <span class="btnchip">Select</span> tap</td>
+<td>Open or close the in-game overlay menu (the game pauses while it is open)</td>
+</tr>
+<tr>
+<td>Long <span class="btnchip">Back</span> hold (about 1.5 s)</td>
+<td>Exit the game and return to the Nano home</td>
+</tr>
+<tr>
+<td>Long <span class="btnchip">Power</span> hold</td>
+<td>Graceful power-off (auto-saves first)</td>
+</tr>
+<tr>
+<td>Touch panel</td>
+<td>Acts as the DS stylus on the bottom screen</td>
+</tr>
+<tr>
+<td>Virtual touch cursor (toggle)</td>
+<td>D-pad or left stick moves a cursor over the bottom screen; <span class="btnchip">A</span> taps or holds the stylus</td>
+</tr>
+</tbody>
+</table>
+<p>For the full controls breakdown, see <a href="controls-drastic.html">DraStic controls</a>.</p>
+<h2 id="the-in-game-overlay-menu"><a class="toclink" href="#the-in-game-overlay-menu">The in-game overlay menu</a></h2>
+<p>Give the <span class="btnchip">Back</span> button a short tap to open the overlay. The game pauses while it is open, and tapping <span class="btnchip">Back</span> again closes it and resumes play. The overlay is organized into sections, covered below.</p>
+<h3 id="save-states"><a class="toclink" href="#save-states">Save States</a></h3>
+<ul>
+<li>Save and load slots <strong>0 to 8</strong>.</li>
+<li><strong>Auto-Load</strong> toggle, so a game can pick up from your last state automatically.</li>
+<li><strong>Restart Game</strong>.</li>
+</ul>
+<h3 id="video"><a class="toclink" href="#video">Video</a></h3>
+<p>This is the largest section. Options that need it are marked to restart before they take effect.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Choices / notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shader / video filter</td>
+<td>Linear by default; a picker of <code>.dfx</code> shaders</td>
+</tr>
+<tr>
+<td>Screen Layout</td>
+<td>Auto, Side by Side (horizontal), Stacked (vertical), or Single Screen</td>
+</tr>
+<tr>
+<td>Layout Preset</td>
+<td>Picture-in-picture and other presets</td>
+</tr>
+<tr>
+<td>PiP Opacity</td>
+<td>100%, 80%, 60%, or 40%</td>
+</tr>
+<tr>
+<td>PiP Corner</td>
+<td>Which corner the inset sits in</td>
+</tr>
+<tr>
+<td>Screen Scaling</td>
+<td>Stretch, None, or integer</td>
+</tr>
+<tr>
+<td>Screen Gap</td>
+<td>0%, 8%, 16%, or 25%</td>
+</tr>
+<tr>
+<td>Swap Screens</td>
+<td>Swap top and bottom</td>
+</tr>
+<tr>
+<td>Display Rotation</td>
+<td>0, 90, 180, or 270</td>
+</tr>
+<tr>
+<td>Hi-res 3D</td>
+<td>Default <strong>On</strong>; doubles the internal 3D render resolution</td>
+</tr>
+<tr>
+<td>Threaded 3D</td>
+<td>Default <strong>On</strong>; multi-threaded rasterizer</td>
+</tr>
+<tr>
+<td>Disable Edge Marking</td>
+<td>Default <strong>On</strong></td>
+</tr>
+<tr>
+<td>Frame Sync</td>
+<td>Default <strong>Off</strong>; phase-locks the two panels on dual-screen devices</td>
+</tr>
+<tr>
+<td>Frameskip</td>
+<td>Type plus value</td>
+</tr>
+<tr>
+<td>Performance Mode</td>
+<td>Max, Stock, or Powersave</td>
+</tr>
+</tbody>
+</table>
+<h3 id="audio"><a class="toclink" href="#audio">Audio</a></h3>
+<ul>
+<li><strong>Volume</strong>, 0 to 10, applies live.</li>
+<li><strong>Audio Latency</strong>, 0 to 4, applies on the next launch.</li>
+</ul>
+<h3 id="controls"><a class="toclink" href="#controls">Controls</a></h3>
+<p>Rebind DS buttons, choose analog stick modes, toggle the virtual touch cursor, and set portrait control rotation.</p>
+<h3 id="cheats"><a class="toclink" href="#cheats">Cheats</a></h3>
+<p>Enable or disable per-game cheats, and add your own custom cheats. Cheats are stored per game code, so they follow the right game.</p>
+<h3 id="achievements"><a class="toclink" href="#achievements">Achievements</a></h3>
+<p>RetroAchievements login, your unlock list, and leaderboards. On dual-screen devices this uses the bottom panel.</p>
+<h2 id="recommended-defaults"><a class="toclink" href="#recommended-defaults">Recommended defaults</a></h2>
+<p>On dual-screen devices GammaOS already sets sensible defaults for you, applied without overwriting your own choices:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frame Sync</td>
+<td>On</td>
+</tr>
+<tr>
+<td>Hi-res 3D</td>
+<td>On</td>
+</tr>
+<tr>
+<td>Threaded 3D</td>
+<td>On</td>
+</tr>
+<tr>
+<td>Disable Edge Marking</td>
+<td>On</td>
+</tr>
+</tbody>
+</table>
+<h2 id="firmware-and-ds-user-data"><a class="toclink" href="#firmware-and-ds-user-data">Firmware and DS user data</a></h2>
+<p>Your DS firmware personalization (Firmware Language, colour and theme, birthday, and nickname) is read at launch from the shared preferences file. These are <strong>not</strong> editable in the in-game overlay.</p>
+<p>To change them, open the stock DraStic app once, set them there, then relaunch your game from Nano. The stock app is also where you set the full keymaps.</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Language</td>
+<td>English</td>
+</tr>
+<tr>
+<td>Nickname</td>
+<td>Dr Drastic</td>
+</tr>
+<tr>
+<td>Birthday</td>
+<td>June 6</td>
+</tr>
+</tbody>
+</table>
+<h2 id="quick-resume"><a class="toclink" href="#quick-resume">Quick Resume</a></h2>
+<p>With Quick Resume enabled (default <strong>On</strong>, toggled on the Nano home with <span class="btnchip">R1</span> or in the setting), powering off or rebooting while in a DS game force-saves to DraStic's reserved autosave slot (slot 9). On the next boot, Nano relaunches straight back into your paused game with no load screen.</p>
+<p>There is a built-in crash guard: if an autosave is truncated or too small, it is quarantined and the game boots fresh instead of loading a corrupt state.</p>
+<p class="callout note">Quick Resume is skipped for RetroAchievements hardcore mode, which requires a fresh boot.</p>
+<p>DraStic has the most seamless Quick Resume of any emulator on Nano. For the full picture, including how it works for RetroArch, see the <a href="quick-resume.html">Quick Resume</a> page.</p>
+<h2 id="where-ds-options-live"><a class="toclink" href="#where-ds-options-live">Where DS options live</a></h2>
+<table>
+<thead>
+<tr>
+<th>Where</th>
+<th>What you set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>In-game overlay (short <span class="btnchip">Back</span>)</td>
+<td>Most video, audio, cheat, and control settings, live</td>
+</tr>
+<tr>
+<td>Nano home</td>
+<td>Quick Resume on or off</td>
+</tr>
+<tr>
+<td>Stock DraStic app</td>
+<td>Firmware user data (language, nickname, birthday, colour) and full keymaps</td>
+</tr>
+</tbody>
+</table>
+<p>All of it round-trips through the shared preferences file, so the built-in emulator and the stock app always stay in sync.</p>
+<h2 id="related-pages"><a class="toclink" href="#related-pages">Related pages</a></h2>
+<div class="cards">
+  <a class="card" href="controls-drastic.html"><span class="card-ico">🕹️</span><span class="card-kicker">Controls</span><h3>DraStic Controls</h3><p>Every button in a DS game.</p></a>
+  <a class="card" href="emulators.html"><span class="card-ico">💾</span><span class="card-kicker">Emulators</span><h3>Emulators & Cores</h3><p>How Nano runs every other system.</p></a>
+  <a class="card" href="adding-games.html"><span class="card-ico">📂</span><span class="card-kicker">Games</span><h3>Adding Games</h3><p>Where to put your DS ROMs.</p></a>
+</div>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#what-drastic-nano-is">What DraStic Nano is</a>
+</li>
+<li><a href="#no-bios-needed">No BIOS needed</a>
+</li>
+<li><a href="#in-game-controls">In-game controls</a>
+</li>
+<li><a href="#the-in-game-overlay-menu">The in-game overlay menu</a>
+<ul>
+<li><a href="#save-states">Save States</a></li>
+<li><a href="#video">Video</a></li>
+<li><a href="#audio">Audio</a></li>
+<li><a href="#controls">Controls</a></li>
+<li><a href="#cheats">Cheats</a></li>
+<li><a href="#achievements">Achievements</a></li>
+</ul>
+</li>
+<li><a href="#recommended-defaults">Recommended defaults</a>
+</li>
+<li><a href="#firmware-and-ds-user-data">Firmware and DS user data</a>
+</li>
+<li><a href="#quick-resume">Quick Resume</a>
+</li>
+<li><a href="#where-ds-options-live">Where DS options live</a>
+</li>
+<li><a href="#related-pages">Related pages</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

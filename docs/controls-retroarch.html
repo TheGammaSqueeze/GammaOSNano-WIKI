@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RetroArch Controls - GammaOS Nano</title>
+<meta name="description" content="Opening the RetroArch menu and exiting a game the GammaOS way.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a class="active" href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">Most systems run through RetroArch, and GammaOS gives you a simple, consistent way to open its menu and quit back home. The key thing to know: it is all done with the Back button, not a hotkey combo.</p>
+<h2 id="the-one-button-to-remember"><a class="toclink" href="#the-one-button-to-remember">The one button to remember</a></h2>
+<p>GammaOS does not use a hotkey-modifier combo (like Select plus a face button) to reach the RetroArch menu. Instead it drives RetroArch with the <span class="btnchip">Back</span> button. This is the Back button specifically, not <span class="btnchip">Select</span>.</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open the RetroArch menu</td>
+<td>Tap the <span class="btnchip">Back</span> button once (a quick press). GammaOS opens the menu for you.</td>
+</tr>
+<tr>
+<td>Open the RetroArch menu (alternative)</td>
+<td>Press <span class="btnchip">L3</span> + <span class="btnchip">R3</span> (click both analog sticks in together). This is RetroArch's own built-in combo.</td>
+</tr>
+<tr>
+<td>Exit RetroArch back to the home</td>
+<td>Hold the <span class="btnchip">Back</span> button. RetroArch closes and you land back on the same game in the home.</td>
+</tr>
+</tbody>
+</table>
+<p class="callout tip">A quick tap of <span class="btnchip">Back</span> opens the menu; a long hold of <span class="btnchip">Back</span> exits the game. Same button, two lengths of press.</p>
+<p>This is the RetroArch Back Button Override behavior, and it is only active while RetroArch is in the foreground. The <span class="btnchip">L3</span> + <span class="btnchip">R3</span> combo works on its own as RetroArch's native menu toggle.</p>
+<h2 id="exiting-a-game"><a class="toclink" href="#exiting-a-game">Exiting a game</a></h2>
+<p>You have a couple of ways to get back to the home screen:</p>
+<ol>
+<li>Hold the <span class="btnchip">Back</span> button. RetroArch quits and you return to the same game, highlighted, on the home.</li>
+<li>Or open the RetroArch menu (a single <span class="btnchip">Back</span> tap, or <span class="btnchip">L3</span> + <span class="btnchip">R3</span>) and choose Quit RetroArch.</li>
+</ol>
+<p class="callout note">You can also hold <span class="btnchip">Power</span> to raise the Nano overlay over a running game without quitting it. Press <span class="btnchip">B</span> to dismiss it, or pick another game to switch. See <a href="controls-os.html#the-in-game-overlay">the in-game overlay</a>.</p>
+<h2 id="inside-the-menu"><a class="toclink" href="#inside-the-menu">Inside the menu</a></h2>
+<p>Everything inside the RetroArch menu (save states, core options, controls, cheats) is RetroArch's own on-screen interface. Open it with a single <span class="btnchip">Back</span> tap or <span class="btnchip">L3</span> + <span class="btnchip">R3</span>, then use RetroArch's menu as normal.</p>
+<p>To rebind your in-game buttons, open RetroArch's Settings &gt; Input. That is where you remap controls for the running core.</p>
+<h2 id="where-to-go-next"><a class="toclink" href="#where-to-go-next">Where to go next</a></h2>
+<ul>
+<li>Not sure which core runs a given system, or need BIOS files? See <a href="emulators.html">Emulators</a>.</li>
+<li>Want the full system-shortcut list (brightness, sleep, emergency restart)? See <a href="controls-os.html">Controls</a>.</li>
+</ul>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#the-one-button-to-remember">The one button to remember</a>
+</li>
+<li><a href="#exiting-a-game">Exiting a game</a>
+</li>
+<li><a href="#inside-the-menu">Inside the menu</a>
+</li>
+<li><a href="#where-to-go-next">Where to go next</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

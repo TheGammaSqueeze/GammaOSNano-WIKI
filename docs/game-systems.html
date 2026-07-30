@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game Systems - GammaOS Nano</title>
+<meta name="description" content="Enable, disable, reorder and fully edit each game system.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a class="active" href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">The Game Systems editor is where you control every console in your library. You can turn systems on or off, change the order they appear in, and edit every detail of how a system finds and launches its games.</p>
+<h2 id="opening-the-editor"><a class="toclink" href="#opening-the-editor">Opening the editor</a></h2>
+<ol>
+<li>Open the <strong>Settings</strong> category.</li>
+<li>Go to <strong>Game Settings</strong>.</li>
+<li>Choose <strong>Game Systems</strong>.</li>
+</ol>
+<p>You get a list of every system Nano knows, each with an On/Off toggle. The editor uses your home theme's own look, so it feels native whether you are on XMB or Minima.</p>
+<div class="theme-trio">
+  <figure><img src="assets/img/shots/xmb_gamesystems.png" alt="Game Systems list in the XMB theme"><figcaption><b>GammaOS XMB</b></figcaption></figure>
+  <figure><img src="assets/img/shots/min_gamesystems.png" alt="Game Systems editor in the Minima theme"><figcaption><b>Minima</b></figcaption></figure>
+</div>
+
+<h2 id="turning-systems-on-and-off"><a class="toclink" href="#turning-systems-on-and-off">Turning systems on and off</a></h2>
+<p>Each system has an <strong>On/Off</strong> toggle. Turn a system Off to hide it from the Game category (handy if you do not own any games for it). Turn it back On whenever you like. Turning a system off does not delete any files.</p>
+<h2 id="reordering-systems"><a class="toclink" href="#reordering-systems">Reordering systems</a></h2>
+<p>To change the order systems appear in on the home screen, highlight a system and press <span class="btnchip">L1</span> or <span class="btnchip">R1</span> to move it up or down the list. Put your favourites at the top.</p>
+<h2 id="editing-a-system"><a class="toclink" href="#editing-a-system">Editing a system</a></h2>
+<p>Select any system to open its editor. Every field below can be changed, so you can point a system at a different emulator, add file types, or give it a new icon.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Display Name</strong></td>
+<td>The name shown in your library (for example "PlayStation 2").</td>
+</tr>
+<tr>
+<td><strong>Short Name</strong></td>
+<td>A brief label (for example "PS2").</td>
+</tr>
+<tr>
+<td><strong>Launch Type</strong></td>
+<td>Choose <strong>Libretro Core</strong> (runs inside RetroArch) or <strong>Custom Package</strong> (runs a standalone emulator app).</td>
+</tr>
+<tr>
+<td><strong>Emulator</strong></td>
+<td>A searchable picker of RetroArch cores or installed apps. Picking one fills in the launch details for you.</td>
+</tr>
+<tr>
+<td><strong>Core .so</strong></td>
+<td>The libretro core file used, when Launch Type is a Libretro Core.</td>
+</tr>
+<tr>
+<td><strong>Package</strong></td>
+<td>The app the game hands off to, when Launch Type is a Custom Package.</td>
+</tr>
+<tr>
+<td><strong>Intent Template</strong></td>
+<td>The launch command Nano sends to a standalone app. Usually filled in for you when you pick the emulator.</td>
+</tr>
+<tr>
+<td><strong>Launch Args</strong></td>
+<td>Extra arguments passed at launch.</td>
+</tr>
+<tr>
+<td><strong>Extensions</strong></td>
+<td>The file types this system scans for, comma-separated (for example <code>iso, chd, gz</code>).</td>
+</tr>
+<tr>
+<td><strong>Scan Folders</strong></td>
+<td>Which folders to search for games. Use the folder picker, or leave the default <code>ROMs/&lt;id&gt;/</code>.</td>
+</tr>
+<tr>
+<td><strong>Icon</strong></td>
+<td>The system's icon. Choose from a grid of built-in icons, or use your own PNG.</td>
+</tr>
+<tr>
+<td><strong>Icon Tint</strong></td>
+<td>Recolour the icon from 21 swatches, or set a custom RGB colour.</td>
+</tr>
+<tr>
+<td><strong>Scraper / Username / Password</strong></td>
+<td>An optional per-system override for the cover-art scraper. See <a href="boxart.html">Boxart &amp; Metadata</a>.</td>
+</tr>
+<tr>
+<td><strong>Scrape This System</strong></td>
+<td>Fetch boxart and metadata for every game in this system now.</td>
+</tr>
+<tr>
+<td><strong>Reset-to-Default</strong></td>
+<td>On built-in systems, restore the original settings.</td>
+</tr>
+<tr>
+<td><strong>Delete</strong></td>
+<td>On custom systems, remove the system.</td>
+</tr>
+</tbody>
+</table>
+<p>Built-in systems show <strong>Reset-to-Default</strong>, and custom systems you created show <strong>Delete</strong> instead. That way you can always undo your changes to a built-in system, and cleanly remove ones you made yourself.</p>
+<h2 id="a-quicker-way-in"><a class="toclink" href="#a-quicker-way-in">A quicker way in</a></h2>
+<p class="callout tip">From the <strong>Game</strong> category, highlight a system row and press the Options button, then choose <strong>Manage Game System</strong>. That jumps you straight into this editor for that system, without going through Settings. See <a href="context-menus.html">Context Menus</a> for more shortcuts.</p>
+<h2 id="adding-a-whole-new-system"><a class="toclink" href="#adding-a-whole-new-system">Adding a whole new system</a></h2>
+<p>The editor is also how you add a console Nano does not list yet. Scroll to the top of the Game Systems list, choose <strong>Add New System...</strong>, and pick your emulator. For a full worked example (adding AetherSX2 for PlayStation 2, step by step), see <a href="custom-system.html">Add a Custom System</a>.</p>
+<h2 id="related-pages"><a class="toclink" href="#related-pages">Related pages</a></h2>
+<ul>
+<li><a href="adding-games.html">Adding Games</a> for where to put your ROM files.</li>
+<li><a href="custom-system.html">Add a Custom System</a> for a complete walkthrough.</li>
+<li><a href="boxart.html">Boxart &amp; Metadata</a> for cover art and game info.</li>
+</ul>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#opening-the-editor">Opening the editor</a>
+</li>
+<li><a href="#turning-systems-on-and-off">Turning systems on and off</a>
+</li>
+<li><a href="#reordering-systems">Reordering systems</a>
+</li>
+<li><a href="#editing-a-system">Editing a system</a>
+</li>
+<li><a href="#a-quicker-way-in">A quicker way in</a>
+</li>
+<li><a href="#adding-a-whole-new-system">Adding a whole new system</a>
+</li>
+<li><a href="#related-pages">Related pages</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

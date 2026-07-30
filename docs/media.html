@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Music, Photos &amp; Video - GammaOS Nano</title>
+<meta name="description" content="Play music, view photos, and watch video, plus Internet Radio and IPTV.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a class="active" href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">GammaOS Nano is a media player as well as a game launcher. Your handheld can play music, show off your photos, and stream video, all from the home menu.</p>
+<p>The home menu has three media categories: Music, Photo, and Video. Each one scans your storage for supported files and organizes them into easy-to-browse libraries. Every category also has an online browser (Internet Radio, IPTV, and DLNA/network share search) so you are not limited to files on your device.</p>
+<p><img alt="DSi Music view" src="assets/img/shots/dsi_music.png" /></p>
+<h2 id="music"><a class="toclink" href="#music">Music</a></h2>
+<p>Open the Music category to browse your library three ways:</p>
+<table>
+<thead>
+<tr>
+<th>View</th>
+<th>What it shows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Albums</td>
+<td>Your tracks grouped by album</td>
+</tr>
+<tr>
+<td>Playlists</td>
+<td>Manual groups you create across folders</td>
+</tr>
+<tr>
+<td>Tracks</td>
+<td>Every song in one flat list</td>
+</tr>
+</tbody>
+</table>
+<p>Supported audio formats: <code>mp3</code>, <code>flac</code>, <code>m4a</code>, <code>aac</code>, <code>ogg</code>, <code>opus</code>, <code>wav</code>, <code>wma</code>.</p>
+<h3 id="now-playing"><a class="toclink" href="#now-playing">Now Playing</a></h3>
+<p>Start a track to open the Now Playing screen. It shows the album art plus:</p>
+<ul>
+<li>Play and pause</li>
+<li>Previous and next track</li>
+<li>Volume</li>
+<li>Visualizers (choose Canyon or Globe)</li>
+</ul>
+<h3 id="internet-radio"><a class="toclink" href="#internet-radio">Internet Radio</a></h3>
+<p>Music includes an <strong>Internet Radio</strong> browser, turned on by default. Browse and play live radio stations without any local files.</p>
+<p>Want your own station list? You can set a custom playlist URL in <strong>Settings &gt; Music Settings</strong> (Internet Radio on/off and Radio Playlist URL). See the <a href="settings-reference.html">Settings reference</a> for details.</p>
+<h2 id="photo"><a class="toclink" href="#photo">Photo</a></h2>
+<p>Open the Photo category for a thumbnail grid that opens into a full-screen viewer.</p>
+<p>Supported image formats: <code>jpg</code>, <code>png</code>, <code>webp</code>, <code>bmp</code>, <code>gif</code>, <code>heic</code>, <code>heif</code>.</p>
+<p>In the viewer you can:</p>
+<ul>
+<li>Pan with touch and pinch to zoom</li>
+<li>Start a slideshow with play/pause and previous/next</li>
+<li>View info about the current photo</li>
+<li>Delete a photo</li>
+</ul>
+<p>Group your photos by Month, Year, Album, or All so a big library stays tidy. You can also build Playlists, which are manual groups that pull photos from across different folders.</p>
+<h2 id="video"><a class="toclink" href="#video">Video</a></h2>
+<p>Open the Video category to browse by Folders, Playlists, or a flat Videos list.</p>
+<p>Supported video formats: <code>mp4</code>, <code>m4v</code>, <code>mkv</code>, <code>webm</code>, <code>mov</code>, <code>3gp</code>, <code>avi</code>, <code>ts</code>, <code>mpg</code>. MPEG-TS and AVI are handled in-process, so those tricky formats just work.</p>
+<p>The full-screen player gives you:</p>
+<ul>
+<li>Play, pause, and seek</li>
+<li>Volume</li>
+<li>Multi-audio-track selection (tracks are labeled by language)</li>
+<li>Subtitle and caption selection</li>
+</ul>
+<h3 id="iptv"><a class="toclink" href="#iptv">IPTV</a></h3>
+<p>Video includes an <strong>IPTV</strong> live-channel browser, turned on by default. Browse live channels straight from the menu.</p>
+<p>To use your own channel list, set a custom playlist URL in <strong>Settings &gt; Video Settings</strong> (IPTV Channels on/off and IPTV Playlist URL). See the <a href="settings-reference.html">Settings reference</a>.</p>
+<h2 id="play-media-from-network-servers"><a class="toclink" href="#play-media-from-network-servers">Play media from network servers</a></h2>
+<p>Each media category has a <strong>Search for Media Servers</strong> option that browses DLNA servers and network shares on your home network. This lets you play music, photos, and video that live on another computer or NAS, without copying anything to your handheld first.</p>
+<p class="callout tip">To mount a share so its files also feed the scanned Music, Photo, and Video libraries, set it up in <a href="network-shares.html">Network Shares</a>. Mounted shares behave just like local storage.</p>
+<h2 id="per-item-options"><a class="toclink" href="#per-item-options">Per-item Options</a></h2>
+<p>Highlight any track, photo, or video and open the Options menu for actions specific to that item (for example, deleting or adding to a playlist). For the full breakdown of what each Options menu offers, see <a href="context-menus.html">Context menus</a>.</p>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#music">Music</a>
+<ul>
+<li><a href="#now-playing">Now Playing</a></li>
+<li><a href="#internet-radio">Internet Radio</a></li>
+</ul>
+</li>
+<li><a href="#photo">Photo</a>
+</li>
+<li><a href="#video">Video</a>
+<ul>
+<li><a href="#iptv">IPTV</a></li>
+</ul>
+</li>
+<li><a href="#play-media-from-network-servers">Play media from network servers</a>
+</li>
+<li><a href="#per-item-options">Per-item Options</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

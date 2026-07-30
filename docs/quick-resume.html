@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quick Resume - GammaOS Nano</title>
+<meta name="description" content="Power off mid-game and boot straight back into it, for RetroArch and DraStic.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a class="active" href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">Quick Resume lets you power your handheld off in the middle of a game and, next time you turn it on, drop straight back into that exact moment. No load screen, no main menu, no reloading your save. It is one of the nicest things about GammaOS Nano.</p>
+<h2 id="what-it-does"><a class="toclink" href="#what-it-does">What it does</a></h2>
+<p>When Quick Resume is on and you power off (or reboot) while a game is running, Nano quietly saves your exact spot first. On the next boot it relaunches that same game and restores the moment you left, so turning the handheld on feels like waking it from sleep.</p>
+<p class="callout note">Quick Resume is available for <strong>RetroArch games and DraStic (Nintendo DS) games only</strong>. Standalone emulators such as PPSSPP, AetherSX2, Flycast, and Mupen64Plus do not support it, so those simply start fresh.</p>
+<h2 id="turning-it-on-or-off"><a class="toclink" href="#turning-it-on-or-off">Turning it on or off</a></h2>
+<p>Quick Resume is <strong>on by default</strong>. On the home screen you can toggle it at any time:</p>
+<ul>
+<li>Press <span class="btnchip">R1</span> on the home to flip Quick Resume on or off.</li>
+</ul>
+<p>When it is on, the next power off from inside a supported game arms the resume. When it is off, games always start from their own boot screen.</p>
+<h2 id="how-it-works-per-emulator"><a class="toclink" href="#how-it-works-per-emulator">How it works, per emulator</a></h2>
+<h3 id="drastic-nintendo-ds"><a class="toclink" href="#drastic-nintendo-ds">DraStic (Nintendo DS)</a></h3>
+<p>DraStic gets the most seamless Quick Resume. When you power off inside a DS game, Nano force-saves to DraStic's reserved autosave slot and, on the next boot, relaunches straight into the paused game with no load screen at all. It is as close to instant as it gets.</p>
+<p class="callout tip">If a previous save was cut short (for example the battery died mid-write), Nano notices the incomplete autosave, sets it aside, and boots that game fresh instead of loading something broken. Your other saves are untouched.</p>
+<p>One exception: RetroAchievements hardcore mode always boots fresh, because hardcore rules do not allow resuming from a saved state.</p>
+<h3 id="retroarch"><a class="toclink" href="#retroarch">RetroArch</a></h3>
+<p>For RetroArch games, powering off arms a resume marker with the core and the game. On the next boot Nano relaunches that game through RetroArch. RetroArch then handles restoring your progress with its own save and state system.</p>
+<h2 id="tips"><a class="toclink" href="#tips">Tips</a></h2>
+<ul>
+<li>Quick Resume works hand in hand with the normal sleep and wake behavior. A short <span class="btnchip">Power</span> press just sleeps the device; Quick Resume is about surviving a full power off or reboot.</li>
+<li>Because it saves on the way out, give the device a second to finish writing before you pull it off a charger or swap an SD card.</li>
+<li>Only one game is armed at a time: the one you were last playing.</li>
+</ul>
+<h2 id="where-to-go-next"><a class="toclink" href="#where-to-go-next">Where to go next</a></h2>
+<ul>
+<li><a href="emulators.html">Emulators</a> for how games launch in the first place.</li>
+<li><a href="drastic-nano.html">DraStic Nano</a> for everything about the built-in DS emulator.</li>
+<li><a href="controls-os.html">Controls</a> for sleep, wake, and the in-game overlay.</li>
+</ul>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#what-it-does">What it does</a>
+</li>
+<li><a href="#turning-it-on-or-off">Turning it on or off</a>
+</li>
+<li><a href="#how-it-works-per-emulator">How it works, per emulator</a>
+<ul>
+<li><a href="#drastic-nintendo-ds">DraStic (Nintendo DS)</a></li>
+<li><a href="#retroarch">RetroArch</a></li>
+</ul>
+</li>
+<li><a href="#tips">Tips</a>
+</li>
+<li><a href="#where-to-go-next">Where to go next</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting Started - GammaOS Nano</title>
+<meta name="description" content="First boot, connecting Wi-Fi, adding your first games.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a class="active" href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">This page walks you through your very first minutes with GammaOS Nano: finishing the quick setup, getting online, adding your first games, and switching to the theme you like best. It only takes a few minutes, and you do not need to be technical.</p>
+<h2 id="first-boot-the-setup"><a class="toclink" href="#first-boot-the-setup">First boot: the setup</a></h2>
+<p>The first time your handheld starts, GammaOS Nano runs a short setup to get you going. It covers the basics, including connecting to Wi-Fi so your device knows the date, time, and can reach online features. Follow the on-screen prompts and confirm each step.</p>
+<p>If you would rather skip Wi-Fi for now, you can. You can always connect later from Settings, and the steps below show you how.</p>
+<h2 id="finding-your-way-around"><a class="toclink" href="#finding-your-way-around">Finding your way around</a></h2>
+<p>Everything lives under a small set of categories on the home screen. Move sideways to change category and up or down to move through the items. To open the settings, go to the <strong>Settings</strong> category and pick the option you want.</p>
+<p>New to the controls? The <a href="controls-os.html">Controls cheat sheet</a> lists every button. On most handhelds you confirm with <span class="btnchip">A</span>, go back with <span class="btnchip">B</span>, and open an item's Options menu with <span class="btnchip">X</span>.</p>
+<h2 id="connecting-to-wi-fi"><a class="toclink" href="#connecting-to-wi-fi">Connecting to Wi-Fi</a></h2>
+<p>You can connect (or reconnect) any time:</p>
+<ol>
+<li>Open the <strong>Settings</strong> category.</li>
+<li>Go to <strong>Network Settings</strong>.</li>
+<li>Choose <strong>Internet Connection Settings</strong>.</li>
+<li>Pick your network name from the list.</li>
+<li>Enter your Wi-Fi password with the on-screen keyboard, then confirm.</li>
+</ol>
+<p>Once connected, the top bar shows your Wi-Fi signal. You can check the link with <strong>Internet Connection Test</strong> in the same menu. For more, including Bluetooth pairing and network shares, see <a href="network.html">Connectivity</a>.</p>
+<h2 id="adding-your-first-games"><a class="toclink" href="#adding-your-first-games">Adding your first games</a></h2>
+<p>Adding games is simple: you place your ROM files into a folder named for each system, then tell Nano to rescan.</p>
+<ol>
+<li>Copy your ROMs into per-system folders on your storage. For example, put NES games in <code>/sdcard/ROMs/nes/</code> and SNES games in <code>/sdcard/ROMs/snes/</code>.</li>
+<li>You can use internal storage, an SD card, or a USB drive.</li>
+<li>Back in Nano, open <strong>Settings &gt; Game Settings &gt; Rescan Games</strong>.</li>
+<li>Your games appear under their systems in the <strong>Game</strong> category.</li>
+</ol>
+<p>If a system does not show up yet, make sure it is turned on in Settings &gt; Game Settings &gt; Game Systems. For the full walkthrough, folder tips, and multi-disc games, see <a href="adding-games.html">Adding Games</a> and <a href="game-systems.html">Game Systems</a>.</p>
+<p class="callout tip">GammaOS Nano does not include any console BIOS files, and some systems need one to run. You supply your own BIOS files and place them where the emulator expects. See <a href="emulators.html">Emulators</a> for details.</p>
+<h2 id="switching-themes"><a class="toclink" href="#switching-themes">Switching themes</a></h2>
+<p>GammaOS Nano has three home themes, and switching is instant:</p>
+<ol>
+<li>Open <strong>Settings &gt; Theme Settings &gt; Home Theme</strong>.</li>
+<li>Choose <strong>GammaOS XMB</strong>, <strong>DSi Menu</strong>, or <strong>Minima</strong>.</li>
+</ol>
+<p>The home restarts into your chosen look. You can also change the accent colour, set a wallpaper, and more from Theme Settings. See <a href="themes.html">Home Themes</a> for the full tour.</p>
+<h2 id="where-to-next"><a class="toclink" href="#where-to-next">Where to next</a></h2>
+<ul>
+<li>Learn the layout in <a href="what-is-nano.html">What Is GammaOS Nano?</a></li>
+<li>Master every button in the <a href="controls-os.html">Controls cheat sheet</a></li>
+<li>Dive into your library with <a href="adding-games.html">Adding Games</a></li>
+<li>Explore every option in the <a href="settings-reference.html">Settings Reference</a></li>
+</ul>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#first-boot-the-setup">First boot: the setup</a>
+</li>
+<li><a href="#finding-your-way-around">Finding your way around</a>
+</li>
+<li><a href="#connecting-to-wi-fi">Connecting to Wi-Fi</a>
+</li>
+<li><a href="#adding-your-first-games">Adding your first games</a>
+</li>
+<li><a href="#switching-themes">Switching themes</a>
+</li>
+<li><a href="#where-to-next">Where to next</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

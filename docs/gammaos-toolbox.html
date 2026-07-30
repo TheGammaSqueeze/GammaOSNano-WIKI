@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GammaOS Toolbox - GammaOS Nano</title>
+<meta name="description" content="&quot;Power-user tweaks: performance, display, audio, swap, RetroArch back button and more.&quot;">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a class="active" href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">The GammaOS Toolbox is a collection of power-user switches that fine-tune performance, display, audio, and game behaviour. It lives under <strong>Settings &gt; GammaOS Toolbox</strong>.</p>
+<p>Each option is a simple toggle or a small setting. You can leave them all at their defaults and everything works fine, or dip in to squeeze out more performance, change how games are scanned, or free up memory. Some options are device-specific and only appear on hardware that supports them.</p>
+<p class="callout note">Some Toolbox options depend on your exact handheld's hardware. If a switch does not appear on your device, that feature is not available on your panel or chipset.</p>
+<h2 id="display"><a class="toclink" href="#display">Display</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Immersive Mode</strong></td>
+<td>Hide the system bars so apps and games use the whole screen.</td>
+</tr>
+<tr>
+<td><strong>Refresh Rate Lock</strong></td>
+<td>Pin the display to a fixed refresh rate.</td>
+</tr>
+<tr>
+<td><strong>Display Tweaks</strong></td>
+<td>Extra panel adjustments for your device.</td>
+</tr>
+<tr>
+<td><strong>Force Client Composition</strong></td>
+<td>Force the system to composite frames itself, which can fix rendering glitches.</td>
+</tr>
+<tr>
+<td><strong>Desktop Fullscreen</strong></td>
+<td>Run apps fullscreen in a desktop-style layout.</td>
+</tr>
+<tr>
+<td><strong>DC Dimming Emulation</strong></td>
+<td>Emulate DC dimming to reduce flicker at low brightness.</td>
+</tr>
+<tr>
+<td><strong>Black Frame Insertion</strong></td>
+<td>Insert black frames to sharpen motion on capable panels.</td>
+</tr>
+<tr>
+<td><strong>CRT Shader</strong></td>
+<td>Apply a retro CRT scanline shader to the display.</td>
+</tr>
+<tr>
+<td><strong>Dual-Stack Display</strong></td>
+<td>Enable the dual-stack display mode on supported devices.</td>
+</tr>
+<tr>
+<td><strong>Phone Taskbar</strong></td>
+<td>Show a phone-style taskbar.</td>
+</tr>
+<tr>
+<td><strong>Dual Taskbar</strong></td>
+<td>Show a taskbar on both screens (dual-screen devices).</td>
+</tr>
+</tbody>
+</table>
+<p class="callout warn">If a shader such as the CRT Shader ever makes the screen unreadable, hold <span class="btnchip">Power</span> + <span class="btnchip">Select</span> to disable the system display shader.</p>
+<h2 id="performance-and-power"><a class="toclink" href="#performance-and-power">Performance and power</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ultra Low Power Saving</strong></td>
+<td>Aggressively cut power use for the longest battery life.</td>
+</tr>
+<tr>
+<td><strong>Virtual Memory (swap size)</strong></td>
+<td>Set a swap file size to give memory-hungry apps and emulators more room (see below).</td>
+</tr>
+<tr>
+<td><strong>Launch Guard</strong></td>
+<td>Guard app launches for a more reliable hand-off.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="virtual-memory-swap"><a class="toclink" href="#virtual-memory-swap">Virtual Memory (swap)</a></h3>
+<p>Virtual Memory adds a swap file so the device has extra room when RAM is tight. This can help heavier emulators and apps stay stable. Pick a size that suits your device, and the setting is applied on every boot. Set it to off if you would rather not use swap.</p>
+<h2 id="audio"><a class="toclink" href="#audio">Audio</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Multi-Volume</strong></td>
+<td>Independent volume control per screen or output.</td>
+</tr>
+</tbody>
+</table>
+<p>For full speaker tuning (EQ bands, Crystalizer, Bass Limiter, Stereo Widener, and more), use <strong>GammaEQ</strong> in <a href="settings-reference.html">Settings</a>.</p>
+<h2 id="games-and-controllers"><a class="toclink" href="#games-and-controllers">Games and controllers</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RetroArch Back Button Override</strong></td>
+<td>Drive RetroArch with the Back button: tap Back to open the menu, hold Back to exit (see below).</td>
+</tr>
+<tr>
+<td><strong>Scan ROM Subfolders</strong></td>
+<td>Also scan folders inside your ROM folders when looking for games.</td>
+</tr>
+<tr>
+<td><strong>Group Multi-Disc (.m3u)</strong></td>
+<td>Group multi-disc games into a single entry using <code>.m3u</code> playlists.</td>
+</tr>
+<tr>
+<td><strong>USB Controller Switch</strong></td>
+<td>Handle hot-swapping of USB controllers.</td>
+</tr>
+<tr>
+<td><strong>Start+Select LED</strong></td>
+<td>Toggle the Start+Select LED behaviour.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retroarch-back-button-override"><a class="toclink" href="#retroarch-back-button-override">RetroArch Back Button Override</a></h3>
+<p>This is what lets you drive RetroArch with a single button instead of a hotkey combo:</p>
+<ul>
+<li><strong>Tap <span class="btnchip">Back</span> once</strong> to open the RetroArch menu.</li>
+<li><strong>Hold <span class="btnchip">Back</span></strong> to exit RetroArch and return to the Nano home.</li>
+<li><strong><span class="btnchip">L3</span> + <span class="btnchip">R3</span></strong> (click both sticks) also opens the RetroArch menu, using RetroArch's own built-in combo.</li>
+</ul>
+<p>The same hold-to-exit works for DraStic. Full details are on the <a href="controls-retroarch.html">RetroArch Controls</a> page.</p>
+<h3 id="scan-rom-subfolders-and-group-multi-disc"><a class="toclink" href="#scan-rom-subfolders-and-group-multi-disc">Scan ROM Subfolders and Group Multi-Disc</a></h3>
+<p>These two change how your library is built:</p>
+<ul>
+<li><strong>Scan ROM Subfolders</strong> finds games that are tucked into folders inside your per-system ROM folder.</li>
+<li><strong>Group Multi-Disc (.m3u)</strong> turns a multi-disc game into one clean entry so you do not see Disc 1, Disc 2, and so on as separate games.</li>
+</ul>
+<p>After changing either one, run <strong>Settings &gt; Game Settings &gt; Rescan Games</strong>. See <a href="adding-games.html">Adding Games</a> for how to organise your ROM folders.</p>
+<h2 id="miscellaneous"><a class="toclink" href="#miscellaneous">Miscellaneous</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RGB LED</strong></td>
+<td>Control the device RGB LED (see also GammaRGB in Settings).</td>
+</tr>
+<tr>
+<td><strong>Widevine L3 Compatibility</strong></td>
+<td>Improve compatibility with some streaming apps that use Widevine L3.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="related-pages"><a class="toclink" href="#related-pages">Related pages</a></h2>
+<ul>
+<li><a href="settings-reference.html">Settings Reference</a></li>
+<li><a href="controls-retroarch.html">RetroArch Controls</a></li>
+<li><a href="adding-games.html">Adding Games</a></li>
+<li><a href="faq.html">FAQ and Troubleshooting</a></li>
+</ul>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#display">Display</a>
+</li>
+<li><a href="#performance-and-power">Performance and power</a>
+<ul>
+<li><a href="#virtual-memory-swap">Virtual Memory (swap)</a></li>
+</ul>
+</li>
+<li><a href="#audio">Audio</a>
+</li>
+<li><a href="#games-and-controllers">Games and controllers</a>
+<ul>
+<li><a href="#retroarch-back-button-override">RetroArch Back Button Override</a></li>
+<li><a href="#scan-rom-subfolders-and-group-multi-disc">Scan ROM Subfolders and Group Multi-Disc</a></li>
+</ul>
+</li>
+<li><a href="#miscellaneous">Miscellaneous</a>
+</li>
+<li><a href="#related-pages">Related pages</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

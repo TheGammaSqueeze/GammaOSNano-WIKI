@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emulators &amp; Cores - GammaOS Nano</title>
+<meta name="description" content="&quot;How Nano runs games: RetroArch cores, standalone emulators, cores table, and BIOS.&quot;">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a class="active" href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">Nano is a launcher, so it does not emulate games by itself. Instead it hands each game to the right emulator, then brings you back to exactly where you were when you exit. This page explains how that handoff works, which core or emulator each system uses by default, and how to set up the BIOS files that some consoles need.</p>
+<h2 id="how-launching-works"><a class="toclink" href="#how-launching-works">How launching works</a></h2>
+<p>When you pick a game, Nano figures out which system it belongs to and launches it in one of two ways:</p>
+<ul>
+<li><strong>RetroArch cores (libretro).</strong> Most systems run inside RetroArch (<code>com.retroarch.aarch64</code>) using a small plug-in called a libretro core. One RetroArch install can run many systems by loading a different core for each.</li>
+<li><strong>Standalone emulator apps.</strong> A few systems run in their own dedicated app instead: Nintendo 64 uses Mupen64Plus, PSP uses PPSSPP, Dreamcast uses Flycast, and Nintendo DS uses the built-in <a href="drastic-nano.html">DraStic Nano</a>.</li>
+</ul>
+<p>Either way the experience is the same from your side. Nano launches the emulator, briefly drops its own controller input during the handoff so no stray button press leaks into your game, and remembers where you were. When you exit, you land back on the same game highlighted on the home screen.</p>
+<p class="callout note">The built-in Nintendo DS emulator has its own dedicated page. See <a href="drastic-nano.html">DraStic Nano</a> for its controls and in-game options.</p>
+<p class="callout tip">RetroArch and DraStic games also support <a href="quick-resume.html">Quick Resume</a>: power off mid-game and boot straight back into it.</p>
+<h2 id="default-systems-and-cores"><a class="toclink" href="#default-systems-and-cores">Default systems and cores</a></h2>
+<p>Here is what each system uses out of the box, along with the game file types Nano scans for. Every value below is editable (see <a href="#change-a-systems-core-or-emulator">changing a system's core</a>).</p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Folder</th>
+<th>Default core / emulator</th>
+<th>Common extensions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NES</td>
+<td>nes</td>
+<td>Nestopia (libretro)</td>
+<td>.nes .fds .unf .unif</td>
+</tr>
+<tr>
+<td>SNES</td>
+<td>snes</td>
+<td>Snes9x (libretro)</td>
+<td>.smc .sfc .fig .swc</td>
+</tr>
+<tr>
+<td>Game Boy</td>
+<td>gb</td>
+<td>Gambatte (libretro)</td>
+<td>.gb</td>
+</tr>
+<tr>
+<td>Game Boy Color</td>
+<td>gbc</td>
+<td>Gambatte (libretro)</td>
+<td>.gbc .gb</td>
+</tr>
+<tr>
+<td>Game Boy Advance</td>
+<td>gba</td>
+<td>gpSP (libretro)</td>
+<td>.gba</td>
+</tr>
+<tr>
+<td>Nintendo 64</td>
+<td>n64</td>
+<td>Mupen64Plus (standalone)</td>
+<td>.n64 .v64 .z64 .bin .ndd</td>
+</tr>
+<tr>
+<td>Nintendo DS</td>
+<td>nds</td>
+<td>DraStic Nano (built-in)</td>
+<td>.nds</td>
+</tr>
+<tr>
+<td>Genesis / Mega Drive</td>
+<td>genesis</td>
+<td>Genesis Plus GX (libretro)</td>
+<td>.md .gen .smd .bin</td>
+</tr>
+<tr>
+<td>Master System</td>
+<td>mastersystem</td>
+<td>Genesis Plus GX (libretro)</td>
+<td>.sms .sg</td>
+</tr>
+<tr>
+<td>Game Gear</td>
+<td>gamegear</td>
+<td>Genesis Plus GX (libretro)</td>
+<td>.gg</td>
+</tr>
+<tr>
+<td>PlayStation</td>
+<td>psx</td>
+<td>PCSX ReARMed (libretro)</td>
+<td>.cue .pbp .chd .iso .m3u .img</td>
+</tr>
+<tr>
+<td>PSP</td>
+<td>psp</td>
+<td>PPSSPP (standalone)</td>
+<td>.iso .cso .pbp</td>
+</tr>
+<tr>
+<td>Dreamcast</td>
+<td>dreamcast</td>
+<td>Flycast (standalone)</td>
+<td>.cdi .gdi .chd .cue</td>
+</tr>
+<tr>
+<td>Neo Geo Pocket</td>
+<td>ngpc</td>
+<td>Mednafen NGP (libretro)</td>
+<td>.ngp .ngc .npc</td>
+</tr>
+<tr>
+<td>PICO-8</td>
+<td>pico8</td>
+<td>fake08 (libretro)</td>
+<td>.p8 .png</td>
+</tr>
+</tbody>
+</table>
+<p>The "Folder" column is the subfolder name Nano scans under your ROMs directory. See <a href="adding-games.html">Adding games</a> for where to drop your files, and <a href="game-systems.html">Game Systems</a> to turn systems on or off.</p>
+<h2 id="bios-files-not-included"><a class="toclink" href="#bios-files-not-included">BIOS files (not included)</a></h2>
+<p>Nano does <strong>not</strong> ship any console BIOS or firmware files. Some systems refuse to boot without them, so you must supply your own for the consoles that need them (for example PlayStation, PS2, Dreamcast, Neo Geo, and Sega CD).</p>
+<p class="callout tip">Nintendo DS is the happy exception: the built-in <a href="drastic-nano.html">DraStic Nano</a> emulator has its own high-level BIOS emulation, so DS games run with no BIOS files at all.</p>
+<p class="callout warn">BIOS files are copyrighted. Nano cannot legally include them, so you provide your own copies.</p>
+<p>Where the file goes depends on which kind of emulator runs the system:</p>
+<ul>
+<li><strong>RetroArch cores.</strong> Put BIOS files in RetroArch's system folder on internal storage: <strong>Internal storage / RetroArch / system</strong> (full path <code>/storage/emulated/0/RetroArch/system</code>). A core looks there for files by exact name. If a game will not start, open that core's information screen inside RetroArch to see the precise filenames it expects.</li>
+<li><strong>Standalone emulators.</strong> AetherSX2 (PS2), PPSSPP, Flycast, and Mupen64Plus import their BIOS in their own settings the first time you launch them. For example, AetherSX2 asks you to import your PS2 BIOS. Just follow the emulator's own first-run prompt. (DraStic for Nintendo DS needs nothing here.)</li>
+</ul>
+<h2 id="change-a-systems-core-or-emulator"><a class="toclink" href="#change-a-systems-core-or-emulator">Change a system's core or emulator</a></h2>
+<p>You are never locked into the defaults above. To swap the core or standalone emulator a system uses, open the <strong>Game Systems</strong> editor:</p>
+<ol>
+<li>Go to Settings, then <strong>Game Settings</strong>, then <strong>Game Systems</strong>.</li>
+<li>Select the system you want to change.</li>
+<li>Edit the emulator (or core), the file extensions it scans, its scan folders, and its icon.</li>
+</ol>
+<p>The same editor lets you add unlimited custom systems from scratch. See <a href="game-systems.html">Game Systems</a> for the full walkthrough and <a href="custom-system.html">Custom systems</a> for building a brand-new one.</p>
+<h2 id="retroarch-controls-reminder"><a class="toclink" href="#retroarch-controls-reminder">RetroArch controls reminder</a></h2>
+<p>Inside a RetroArch game, a quick tap of the <span class="btnchip">Back</span> button opens the RetroArch menu, and holding <span class="btnchip">Back</span> exits back to the Nano home on the same game. You can also press <span class="btnchip">L3</span> + <span class="btnchip">R3</span> (click both sticks in) to open the menu, which is RetroArch's own built-in combo.</p>
+<p>For the full list, including how to reach states, options, and input rebinding, see <a href="controls-retroarch.html">RetroArch controls</a>.</p>
+<h2 id="related-pages"><a class="toclink" href="#related-pages">Related pages</a></h2>
+<div class="cards">
+  <a class="card" href="drastic-nano.html"><span class="card-ico">🟦</span><span class="card-kicker">Emulators</span><h3>DraStic Nano</h3><p>The built-in Nintendo DS emulator.</p></a>
+  <a class="card" href="game-systems.html"><span class="card-ico">🎮</span><span class="card-kicker">Games</span><h3>Game Systems</h3><p>Turn systems on, edit cores and folders.</p></a>
+  <a class="card" href="controls-retroarch.html"><span class="card-ico">🕹️</span><span class="card-kicker">Controls</span><h3>RetroArch Controls</h3><p>Menu, exit, and input rebinding.</p></a>
+</div>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#how-launching-works">How launching works</a>
+</li>
+<li><a href="#default-systems-and-cores">Default systems and cores</a>
+</li>
+<li><a href="#bios-files-not-included">BIOS files (not included)</a>
+</li>
+<li><a href="#change-a-systems-core-or-emulator">Change a system&#x27;s core or emulator</a>
+</li>
+<li><a href="#retroarch-controls-reminder">RetroArch controls reminder</a>
+</li>
+<li><a href="#related-pages">Related pages</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

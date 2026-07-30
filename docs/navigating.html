@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting Around - GammaOS Nano</title>
+<meta name="description" content="Moving around the menus with a controller, plus hold-to-scroll and page-skip.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a class="active" href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">Every theme in GammaOS Nano moves the same way, so once you learn it in one home you know them all. Here is how to get around quickly with your controller (and with touch, if your handheld has a touch panel).</p>
+<p><img alt="XMB home on the Game category" src="assets/img/shots/xmb_home.png" /></p>
+<h2 id="the-core-controls"><a class="toclink" href="#the-core-controls">The core controls</a></h2>
+<p>Four buttons do almost everything on the home:</p>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="btnchip">D-Pad</span></td>
+<td>Move around. Up/Down move through a list, Left/Right move across XMB categories</td>
+</tr>
+<tr>
+<td><span class="btnchip">A</span></td>
+<td>Confirm or launch the highlighted item (also opens a submenu)</td>
+</tr>
+<tr>
+<td><span class="btnchip">B</span></td>
+<td>Back one level, exit a submenu, or close a dialog</td>
+</tr>
+<tr>
+<td><span class="btnchip">Options</span></td>
+<td>The Options button (Triangle glyph) opens the <a href="context-menus.html">context menu</a> for whatever is highlighted</td>
+</tr>
+</tbody>
+</table>
+<p class="callout note">The Options button is the same physical button as X on the pad. You can also open the Options menu with Tab on a keyboard or a middle-click with a mouse.</p>
+<p>A couple of extra buttons come in handy on the home:</p>
+<ul>
+<li><span class="btnchip">Y</span> cycles Sort By in game and media lists (in Music it cycles the visualizer, in Photo it swaps 2D/3D).</li>
+<li><span class="btnchip">Select</span> opens global <a href="search.html">Search</a> from anywhere on the home.</li>
+</ul>
+<h2 id="hold-to-scroll-faster"><a class="toclink" href="#hold-to-scroll-faster">Hold to scroll faster</a></h2>
+<p>Long libraries are no problem. Hold a D-Pad direction and the list starts to accelerate: it begins after a short delay, then speeds up the longer you hold, so a big collection flies by. Let go to stop on the item you want.</p>
+<p class="callout note">The DSi carousel at the top level scrolls at a steady, gentle pace, and only kicks into the accelerating scroll once you drill into a list.</p>
+<h2 id="page-skip-and-reordering-with-l1-r1"><a class="toclink" href="#page-skip-and-reordering-with-l1-r1">Page-skip and reordering with L1 / R1</a></h2>
+<p>The shoulder buttons give you big jumps and quick reordering:</p>
+<ul>
+<li>Inside a drilled game or media list, <span class="btnchip">L1</span> jumps back 10 items and <span class="btnchip">R1</span> jumps forward 10 items. This is the fastest way through a large library.</li>
+<li>On the home level (on a game-system row), <span class="btnchip">L1</span> and <span class="btnchip">R1</span> reorder that system up or down the list.</li>
+<li>Also at the home level, <span class="btnchip">L1</span> can toggle XMB / text mode and <span class="btnchip">R1</span> can toggle Quick Resume.</li>
+</ul>
+<h2 id="lists-wrap-around"><a class="toclink" href="#lists-wrap-around">Lists wrap around</a></h2>
+<p>You never hit a dead end. Press Up on the first item and you wrap to the last item, and press Down on the last item to wrap back to the first. The analog stick and HAT behave exactly like the D-Pad, so use whichever feels natural.</p>
+<p><img alt="Minima minimal list home" src="assets/img/shots/min_home.png" /></p>
+<h2 id="touch-mouse-and-keyboard"><a class="toclink" href="#touch-mouse-and-keyboard">Touch, mouse and keyboard</a></h2>
+<p>If your handheld has a touch panel, tap a row to select and activate it, drag to scroll a list, and fling the DSi carousel (it snaps to the nearest slot). You can also drag slider tracks, tap Yes/No/OK in dialogs, and tap the dimmed area around a dialog to cancel.</p>
+<p>USB mice and keyboards work too. For the full mapping, see <a href="controls-mouse-keyboard.html">Mouse and Keyboard</a>.</p>
+<h2 id="learn-more"><a class="toclink" href="#learn-more">Learn more</a></h2>
+<p>For the complete button chart and the system-wide shortcuts (like brightness and the Power menu), see <a href="controls-os.html">OS Controls</a>. To master the Options button, head to <a href="context-menus.html">Context Menus</a>.</p>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#the-core-controls">The core controls</a>
+</li>
+<li><a href="#hold-to-scroll-faster">Hold to scroll faster</a>
+</li>
+<li><a href="#page-skip-and-reordering-with-l1-r1">Page-skip and reordering with L1 / R1</a>
+</li>
+<li><a href="#lists-wrap-around">Lists wrap around</a>
+</li>
+<li><a href="#touch-mouse-and-keyboard">Touch, mouse and keyboard</a>
+</li>
+<li><a href="#learn-more">Learn more</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

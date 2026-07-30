@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Context Menus - GammaOS Nano</title>
+<meta name="description" content="Every Options (context) menu and what each entry does.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a class="active" href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">Almost everything in GammaOS Nano has an Options menu, a short context menu that changes depending on what you have highlighted. This is where you rename games, set boxart, manage systems, delete media, and much more.</p>
+<h2 id="opening-the-options-menu"><a class="toclink" href="#opening-the-options-menu">Opening the Options menu</a></h2>
+<p>Highlight anything (a game, an app, a song, a folder) and press the <strong>Options button</strong> to open its context menu. The Options button is the Triangle glyph, which is the X button on your pad. You can also open it with:</p>
+<ul>
+<li><span class="btnchip">Tab</span> on a USB keyboard</li>
+<li>Middle-click on a USB mouse</li>
+</ul>
+<p>The menu contents change based on what you selected. The first bold row is the default action, which you can also trigger just by pressing <span class="btnchip">A</span> on the item.</p>
+<p><img alt="Options menu on a game" src="assets/img/shots/xmb_ctx_game.png" /></p>
+<p class="callout note">The Options menu, its submenus, and every dialog it opens are side panels that share the same frosted chrome. They are fully controller-driven (D-pad plus A/B) and touch-capable: tap a row to select and activate it, drag to scroll, drag a slider track, tap Yes/No/OK, or tap the dimmed area to cancel.</p>
+<h2 id="on-a-game-or-a-recently-played-entry"><a class="toclink" href="#on-a-game-or-a-recently-played-entry">On a game (or a Recently Played entry)</a></h2>
+<table>
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start</td>
+<td>Launch the game</td>
+</tr>
+<tr>
+<td>Rename / Edit Title</td>
+<td>Set the shown name everywhere; this also becomes the scraper search query</td>
+</tr>
+<tr>
+<td>Scrape This Game</td>
+<td>Re-fetch art and metadata for just this game (forces an overwrite)</td>
+</tr>
+<tr>
+<td>Information</td>
+<td>Full scraped info page: cover, fanart, synopsis, genre, players, rating, date, developer/publisher, file path and size</td>
+</tr>
+<tr>
+<td>Set Boxart</td>
+<td>Pick any image as the cover</td>
+</tr>
+<tr>
+<td>Reset Boxart</td>
+<td>Only shown once a custom or scraped cover exists</td>
+</tr>
+<tr>
+<td>Add to Collection</td>
+<td>Add the game to a collection, or create a new one</td>
+</tr>
+<tr>
+<td>Remove from Collection</td>
+<td>Only shown when you are inside a collection</td>
+</tr>
+</tbody>
+</table>
+<p>See <a href="boxart.html">Boxart</a> for scraping in depth and <a href="collections.html">Collections</a> for grouping games across systems.</p>
+<h2 id="on-an-application"><a class="toclink" href="#on-an-application">On an application</a></h2>
+<p><img alt="Options menu on an app" src="assets/img/shots/xmb_ctx_app.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start</td>
+<td>Launch the app</td>
+</tr>
+<tr>
+<td>Information</td>
+<td>App details</td>
+</tr>
+<tr>
+<td>Screen Orientation</td>
+<td>Submenu: Default / Auto / Landscape / Landscape (reverse) / Portrait / Portrait (reverse), forced while the app is foreground</td>
+</tr>
+<tr>
+<td>Dual-Stack Display</td>
+<td>Submenu (dual-screen devices only): Disabled / Enabled</td>
+</tr>
+<tr>
+<td>Uninstall</td>
+<td>Real user apps only (system and protected apps do not show this)</td>
+</tr>
+<tr>
+<td>Refresh Applications List</td>
+<td>Rescan installed apps for fresh labels and icons</td>
+</tr>
+<tr>
+<td>Show All Apps (On/Off)</td>
+<td>List every launchable app, or only your user apps</td>
+</tr>
+</tbody>
+</table>
+<p>More on managing installed apps is on the <a href="applications.html">Applications</a> page.</p>
+<h2 id="on-a-game-system-row-on-the-game-home"><a class="toclink" href="#on-a-game-system-row-on-the-game-home">On a game-system row (on the Game home)</a></h2>
+<p><img alt="Options menu on a game-system row" src="assets/img/shots/xmb_ctx_system.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manage Game System</td>
+<td>Jump straight into that system's editor (emulator, scan folders, icon, and more)</td>
+</tr>
+<tr>
+<td>Information</td>
+<td>System details</td>
+</tr>
+</tbody>
+</table>
+<p>Manage Game System is the fast way back into the editor covered in <a href="custom-system.html">Custom System</a>.</p>
+<h2 id="on-a-collection"><a class="toclink" href="#on-a-collection">On a collection</a></h2>
+<table>
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open</td>
+<td>Enter the collection</td>
+</tr>
+<tr>
+<td>Rename Collection</td>
+<td>Change its name</td>
+</tr>
+<tr>
+<td>Delete Collection</td>
+<td>Remove the collection (the games stay in their systems)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="on-a-music-album-track-or-playlist"><a class="toclink" href="#on-a-music-album-track-or-playlist">On a music album, track or playlist</a></h2>
+<table>
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Play</td>
+<td>Start playback</td>
+</tr>
+<tr>
+<td>Information</td>
+<td>Track or album details</td>
+</tr>
+</tbody>
+</table>
+<h2 id="on-a-video"><a class="toclink" href="#on-a-video">On a video</a></h2>
+<table>
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resume / Play from Beginning</td>
+<td>Shown when a video is partly watched, otherwise just Play</td>
+</tr>
+<tr>
+<td>Add to Playlist</td>
+<td>Add the video to a playlist</td>
+</tr>
+<tr>
+<td>Copy</td>
+<td>Copy the file</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Remove the file</td>
+</tr>
+<tr>
+<td>Information</td>
+<td>Video details</td>
+</tr>
+</tbody>
+</table>
+<h2 id="on-an-iptv-channel"><a class="toclink" href="#on-an-iptv-channel">On an IPTV channel</a></h2>
+<table>
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Watch</td>
+<td>Open the live channel</td>
+</tr>
+<tr>
+<td>Add to Playlist</td>
+<td>Save the channel to a playlist</td>
+</tr>
+</tbody>
+</table>
+<h2 id="on-a-photo-album-folder"><a class="toclink" href="#on-a-photo-album-folder">On a photo album (folder)</a></h2>
+<table>
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sort By</td>
+<td>Submenu: Film Date (newest/oldest), Import Date (newest/oldest), Image Name</td>
+</tr>
+<tr>
+<td>Group Content</td>
+<td>By Month / By Year / By Album / All</td>
+</tr>
+<tr>
+<td>Slideshow</td>
+<td>Normal / Slide / Portrait / Photo Album / Photo Album 2</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Remove the album</td>
+</tr>
+<tr>
+<td>Information</td>
+<td>Album details</td>
+</tr>
+</tbody>
+</table>
+<h2 id="on-a-single-photo-thumbnail-grid"><a class="toclink" href="#on-a-single-photo-thumbnail-grid">On a single photo (thumbnail grid)</a></h2>
+<table>
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete Multiple</td>
+<td>Select and remove several photos at once</td>
+</tr>
+<tr>
+<td>Sort By</td>
+<td>Reorder the grid</td>
+</tr>
+<tr>
+<td>Slideshow</td>
+<td>Start a slideshow</td>
+</tr>
+<tr>
+<td>View</td>
+<td>Open the photo full screen</td>
+</tr>
+<tr>
+<td>Copy</td>
+<td>Copy the photo</td>
+</tr>
+<tr>
+<td>Add to Playlist</td>
+<td>Add it to a photo playlist</td>
+</tr>
+<tr>
+<td>Print</td>
+<td>Send it to print</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Remove the photo</td>
+</tr>
+<tr>
+<td>Information</td>
+<td>Photo details</td>
+</tr>
+</tbody>
+</table>
+<h2 id="in-the-file-explorer"><a class="toclink" href="#in-the-file-explorer">In the File Explorer</a></h2>
+<p>On a <strong>folder</strong>: Open, Copy, Move, Paste Here (when something is on the clipboard), Rename, Delete, Information.</p>
+<p>On a <strong>file</strong>: Copy, Move, Paste Here, Rename, Delete, Information.</p>
+<h2 id="on-an-imported-media-folder-or-game-scan-source"><a class="toclink" href="#on-an-imported-media-folder-or-game-scan-source">On an imported media folder or game scan source</a></h2>
+<table>
+<thead>
+<tr>
+<th>Entry</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Remove Folder / Remove Source</td>
+<td>Stop scanning that folder or source</td>
+</tr>
+</tbody>
+</table>
+<p class="callout note">Removing a folder here does the same thing as the hidden <span class="btnchip">Y</span> shortcut on those "remove item" lists.</p>
+<h2 id="submenus"><a class="toclink" href="#submenus">Submenus</a></h2>
+<p>Options like Sort By, Slideshow, Screen Orientation, and Dual-Stack expand inline, and the highlight lands on the choice that is currently active, so you can see your current setting at a glance.</p>
+<h2 id="related"><a class="toclink" href="#related">Related</a></h2>
+<p>For the button that opens all of this, see <a href="navigating.html">Getting Around</a>, and for the full button chart see <a href="controls-os.html">OS Controls</a>.</p>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#opening-the-options-menu">Opening the Options menu</a>
+</li>
+<li><a href="#on-a-game-or-a-recently-played-entry">On a game (or a Recently Played entry)</a>
+</li>
+<li><a href="#on-an-application">On an application</a>
+</li>
+<li><a href="#on-a-game-system-row-on-the-game-home">On a game-system row (on the Game home)</a>
+</li>
+<li><a href="#on-a-collection">On a collection</a>
+</li>
+<li><a href="#on-a-music-album-track-or-playlist">On a music album, track or playlist</a>
+</li>
+<li><a href="#on-a-video">On a video</a>
+</li>
+<li><a href="#on-an-iptv-channel">On an IPTV channel</a>
+</li>
+<li><a href="#on-a-photo-album-folder">On a photo album (folder)</a>
+</li>
+<li><a href="#on-a-single-photo-thumbnail-grid">On a single photo (thumbnail grid)</a>
+</li>
+<li><a href="#in-the-file-explorer">In the File Explorer</a>
+</li>
+<li><a href="#on-an-imported-media-folder-or-game-scan-source">On an imported media folder or game scan source</a>
+</li>
+<li><a href="#submenus">Submenus</a>
+</li>
+<li><a href="#related">Related</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

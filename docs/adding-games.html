@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adding Games - GammaOS Nano</title>
+<meta name="description" content="Where to put ROMs and how to scan them into your library.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a class="active" href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">Getting your games into GammaOS Nano is simple: copy your ROM files into the right folders, then run a scan. This page shows you exactly where each system's files go and how to bring them into your library.</p>
+<h2 id="the-one-rule-per-system-folders"><a class="toclink" href="#the-one-rule-per-system-folders">The one rule: per-system folders</a></h2>
+<p>Nano finds your games by looking in a folder named for each system. Put each game in the folder that matches its console.</p>
+<p>The base folder is <code>ROMs</code> at the top of your storage. Inside it, make one folder per system using the short folder name from the table below. For example:</p>
+<ul>
+<li>Put NES games in <code>/sdcard/ROMs/nes/</code></li>
+<li>Put SNES games in <code>/sdcard/ROMs/snes/</code></li>
+<li>Put Game Boy Advance games in <code>/sdcard/ROMs/gba/</code></li>
+</ul>
+<p>SD card, internal storage, and USB all work, so use whichever you like. Nano scans them all.</p>
+<p>You do not have to unzip anything special or rename your files, as long as the file extension matches what the system expects (see the table).</p>
+<h2 id="systems-folders-and-file-types"><a class="toclink" href="#systems-folders-and-file-types">Systems, folders, and file types</a></h2>
+<p>Here are the systems Nano knows out of the box, the folder each one uses, and the file extensions it looks for.</p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Folder</th>
+<th>File types</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NES</td>
+<td><code>nes</code></td>
+<td>.nes .fds .unf .unif</td>
+</tr>
+<tr>
+<td>SNES</td>
+<td><code>snes</code></td>
+<td>.smc .sfc .fig .swc</td>
+</tr>
+<tr>
+<td>Game Boy</td>
+<td><code>gb</code></td>
+<td>.gb</td>
+</tr>
+<tr>
+<td>Game Boy Color</td>
+<td><code>gbc</code></td>
+<td>.gbc .gb</td>
+</tr>
+<tr>
+<td>Game Boy Advance</td>
+<td><code>gba</code></td>
+<td>.gba</td>
+</tr>
+<tr>
+<td>Nintendo 64</td>
+<td><code>n64</code></td>
+<td>.n64 .v64 .z64 .bin .ndd</td>
+</tr>
+<tr>
+<td>Nintendo DS</td>
+<td><code>nds</code></td>
+<td>.nds</td>
+</tr>
+<tr>
+<td>Genesis / Mega Drive</td>
+<td><code>genesis</code></td>
+<td>.md .gen .smd .bin</td>
+</tr>
+<tr>
+<td>Master System</td>
+<td><code>mastersystem</code></td>
+<td>.sms .sg</td>
+</tr>
+<tr>
+<td>Game Gear</td>
+<td><code>gamegear</code></td>
+<td>.gg</td>
+</tr>
+<tr>
+<td>PlayStation</td>
+<td><code>psx</code></td>
+<td>.cue .pbp .chd .iso .m3u .img</td>
+</tr>
+<tr>
+<td>PSP</td>
+<td><code>psp</code></td>
+<td>.iso .cso .pbp</td>
+</tr>
+<tr>
+<td>Dreamcast</td>
+<td><code>dreamcast</code></td>
+<td>.cdi .gdi .chd .cue</td>
+</tr>
+<tr>
+<td>Neo Geo Pocket</td>
+<td><code>ngpc</code></td>
+<td>.ngp .ngc .npc</td>
+</tr>
+<tr>
+<td>PICO-8</td>
+<td><code>pico8</code></td>
+<td>.p8 .png</td>
+</tr>
+</tbody>
+</table>
+<p>Every system here can be changed, and you can add your own. See <a href="game-systems.html">Game Systems</a> to edit any of these, and <a href="custom-system.html">Add a Custom System</a> to create a new one.</p>
+<h2 id="scanning-your-games-in"><a class="toclink" href="#scanning-your-games-in">Scanning your games in</a></h2>
+<p>Once your files are in place, tell Nano to look for them:</p>
+<ol>
+<li>Open the <strong>Settings</strong> category on the home screen.</li>
+<li>Go to <strong>Game Settings</strong>.</li>
+<li>Choose <strong>Rescan Games</strong>.</li>
+</ol>
+<p>Nano scans every system folder and adds anything new to your library. Your games appear under the <strong>Game</strong> category, grouped by system.</p>
+<p><img alt="XMB game list showing per-system counts" src="assets/img/shots/xmb_home.png" /></p>
+<p>Run <strong>Rescan Games</strong> any time you add more files. It is safe to run as often as you like.</p>
+<h2 id="multi-disc-games-m3u"><a class="toclink" href="#multi-disc-games-m3u">Multi-disc games (.m3u)</a></h2>
+<p>Some games span several discs (common on PlayStation). Instead of showing every disc as a separate entry, Nano can group a multi-disc game into a single library item using an <code>.m3u</code> playlist file that lists the disc files.</p>
+<p>This grouping is a switch you turn on in the toolbox: <strong>Settings &gt; GammaOS Toolbox &gt; Group Multi-Disc (.m3u)</strong>. With it on, a game with an <code>.m3u</code> file shows up once, and the emulator can switch discs on its own. See <a href="gammaos-toolbox.html">GammaOS Toolbox</a> for the full list of scan options.</p>
+<h2 id="games-tucked-away-in-subfolders"><a class="toclink" href="#games-tucked-away-in-subfolders">Games tucked away in subfolders</a></h2>
+<p>If you keep your games sorted into subfolders inside a system folder (for example <code>ROMs/snes/USA/</code> and <code>ROMs/snes/Japan/</code>), turn on <strong>Settings &gt; GammaOS Toolbox &gt; Scan ROM Subfolders</strong> so Nano looks inside those subfolders too. Without it, only files directly in the system folder are scanned.</p>
+<h2 id="a-note-on-bios-files"><a class="toclink" href="#a-note-on-bios-files">A note on BIOS files</a></h2>
+<p class="callout warn">GammaOS Nano does not include any console BIOS or firmware files. Systems like PlayStation, PS2, and Dreamcast need you to supply your own BIOS before games will run, and each emulator has its own place to put it. (Nintendo DS is the exception: the built-in DraStic emulator needs no BIOS.)</p>
+<p>For the full picture of which systems need a BIOS and where each one goes, see <a href="emulators.html">Emulators</a>.</p>
+<h2 id="next-steps"><a class="toclink" href="#next-steps">Next steps</a></h2>
+<ul>
+<li>Turn systems on or off and change how they run in <a href="game-systems.html">Game Systems</a>.</li>
+<li>Add a console Nano does not list yet in <a href="custom-system.html">Add a Custom System</a>.</li>
+<li>Download cover art for your library in <a href="boxart.html">Boxart &amp; Metadata</a>.</li>
+</ul>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#the-one-rule-per-system-folders">The one rule: per-system folders</a>
+</li>
+<li><a href="#systems-folders-and-file-types">Systems, folders, and file types</a>
+</li>
+<li><a href="#scanning-your-games-in">Scanning your games in</a>
+</li>
+<li><a href="#multi-disc-games-m3u">Multi-disc games (.m3u)</a>
+</li>
+<li><a href="#games-tucked-away-in-subfolders">Games tucked away in subfolders</a>
+</li>
+<li><a href="#a-note-on-bios-files">A note on BIOS files</a>
+</li>
+<li><a href="#next-steps">Next steps</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
