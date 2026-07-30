@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
-<link rel="icon" href="assets/img/brand/favicon.svg">
+<link rel="icon" href="assets/img/brand/favicon.png">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -18,7 +18,7 @@
     <span></span><span></span><span></span>
   </button>
   <a class="brand" href="index.html">
-    <span class="brand-mark" aria-hidden="true"></span>
+    <img class="brand-mark" src="assets/img/brand/gammaos-g.png" alt="GammaOS logo" width="28" height="28">
     <span class="brand-text">GammaOS <b>Nano</b></span>
   </a>
   <div class="search" role="search">
@@ -44,6 +44,7 @@
 <li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
 <li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
 <li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+<li><a href="theme-settings.html"><span class="nav-ico">🖼️</span>Wallpapers &amp; Theme Settings</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Controls</div><ul>
 <li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
@@ -72,8 +73,12 @@
 <li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
 <li><a class="active" href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
 <li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+<li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
+<li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
+<li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -443,7 +448,7 @@
 </tbody>
 </table>
 <h2 id="gamepad-settings"><a class="toclink" href="#gamepad-settings">Gamepad Settings</a></h2>
-<p>Tune how your controller behaves across the whole system. For the button map itself, see <a href="controls-os.html">OS Controls</a>.</p>
+<p>Tune how your controller behaves across the whole system. For the full breakdown, including button remapping, calibration, and Mouse Mode, see <a href="gamepad-settings.html">Gamepad &amp; Remapping</a>. For the button map in the menu, see <a href="controls-os.html">OS Controls</a>.</p>
 <table>
 <thead>
 <tr>
@@ -503,7 +508,7 @@
 </tbody>
 </table>
 <h2 id="slide-behaviour"><a class="toclink" href="#slide-behaviour">Slide Behaviour</a></h2>
-<p>For devices with a slide, swivel, or hall (lid) switch. Configure what happens when you open or close.</p>
+<p>For devices with a slide, swivel, or hall (lid) switch. Configure what happens when you open or close, including the PSP-style clock. See the full page: <a href="slide-rotation.html">Slide &amp; Rotate Clock</a>.</p>
 <table>
 <thead>
 <tr>
@@ -656,7 +661,7 @@
 <td>RGB LED lighting: effect (Off / Follow Screen / Solid / Effect 1-5), colour, brightness, scale-with-brightness, speed, saturation, fade, split zones with per-zone colours.</td>
 </tr>
 <tr>
-<td><strong>GammaEQ</strong></td>
+<td><strong><a href="gammaeq.html">GammaEQ</a></strong></td>
 <td>Speaker EQ and enhancements: master enable, speaker-only, preview, preamp and postgain, Crystalizer, Bass Limiter, Mid Protector, Stereo Widener, and two parametric EQ bands.</td>
 </tr>
 <tr>
@@ -670,9 +675,9 @@
 </tbody>
 </table>
 <h2 id="quick-menu"><a class="toclink" href="#quick-menu">Quick Menu</a></h2>
-<p>Hold <span class="btnchip">Power</span> on the home screen (or use its home shortcut) to open the Quick Menu without leaving what you are doing.</p>
+<p>The Quick Menu gives you fast access to brightness, performance, shaders, USB mode, and power, from the home or right over a running game. It has its own page: <a href="quick-menu.html">Quick Menu</a>.</p>
 <p><img alt="The Minima Quick Menu" src="assets/img/shots/min_quickmenu.png" /></p>
-<p>The Quick Menu includes:</p>
+<p>In short, it includes:</p>
 <ul>
 <li><strong>Screen Brightness</strong> slider</li>
 <li><strong>Performance Mode</strong></li>
@@ -680,9 +685,9 @@
 <li><strong>System Settings</strong> (jump into the full Settings app)</li>
 <li><strong>Global Shaders</strong></li>
 <li><strong>Notifications</strong></li>
-<li><strong>USB Settings</strong> (adb / mtp / rndis / off)</li>
+<li><strong>USB Settings</strong> (Charging only / MTP / PTP / RNDIS)</li>
 <li><strong>Close / Kill Apps</strong></li>
-<li>A <strong>Power</strong> submenu (Reboot / Shutdown / Recovery / Safe Mode / Android Settings)</li>
+<li>A <strong>Power</strong> submenu (Restart / Power Off / Recovery / Safe Mode / Boot Android)</li>
 </ul>
 <p class="callout warn">If a screen shader ever makes the display unreadable, hold <span class="btnchip">Power</span> + <span class="btnchip">Select</span> together to disable the system display shader. This is the emergency escape hatch.</p>
 <h2 id="related-pages"><a class="toclink" href="#related-pages">Related pages</a></h2>

@@ -16,7 +16,7 @@ New here? Start with [Getting Started](getting-started.html), then explore whate
 
 <div class="cards">
   <a class="card" href="getting-started.html"><span class="card-ico">🚀</span><span class="card-kicker">Get Started</span><h3>Getting Started</h3><p>First boot, Wi-Fi, and your first games.</p></a>
-  <a class="card" href="themes.html"><span class="card-ico">🎨</span><span class="card-kicker">The Interface</span><h3>Home Themes</h3><p>Three looks, one launcher.</p></a>
+  <a class="card" href="themes.html"><span class="card-ico">🎨</span><span class="card-kicker">The Interface</span><h3>Home Themes</h3><p>Three looks, one interface.</p></a>
   <a class="card" href="controls-os.html"><span class="card-ico">🎮</span><span class="card-kicker">Controls</span><h3>Controls Cheat Sheet</h3><p>Every button, everywhere.</p></a>
   <a class="card" href="adding-games.html"><span class="card-ico">📥</span><span class="card-kicker">Games</span><h3>Adding Games</h3><p>Drop in ROMs and rescan.</p></a>
   <a class="card" href="custom-system.html"><span class="card-ico">🛠️</span><span class="card-kicker">Games</span><h3>Add a Custom System</h3><p>Wire up any emulator you like.</p></a>
@@ -26,7 +26,7 @@ New here? Start with [Getting Started](getting-started.html), then explore whate
   <a class="card" href="faq.html"><span class="card-ico">❓</span><span class="card-kicker">Help</span><h3>FAQ</h3><p>Quick answers to common questions.</p></a>
 </div>
 
-## Three themes, one launcher
+## Three themes, one interface
 
 GammaOS Nano ships with three switchable home themes. Pick the one you love in Settings > Theme Settings > Home Theme, and switch any time you feel like a change.
 

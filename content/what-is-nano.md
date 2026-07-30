@@ -6,10 +6,10 @@ icon: ✨
 desc: What GammaOS Nano is and how its home screen works.
 ---
 
-GammaOS Nano is a fast, good-looking home screen for your retro handheld. It is the first thing you see when the device starts, and it is where you launch everything: your games, your emulators, your music, photos, and videos, plus your network shares and every system setting.
+GammaOS Nano is the console-style interface at the heart of GammaOS, a customized Android firmware for handhelds. It is the first thing you see when the device starts, and it is far more than a launcher: it has its own built-in music, photo, and video players, a controller-friendly web browser, IPTV and internet radio, network shares, and the full system settings, all wrapped in a smooth, console-like home.
 {: .lead }
 
-Think of it as the front door to your handheld. It is built to feel smooth and console-like, to look great at any screen size or orientation, and to stay out of your way when you just want to play.
+Because GammaOS is a full firmware, Nano is tied into the system itself: brightness, performance modes, shaders, controller remapping, RGB lighting, and audio tuning are all reachable from the same interface. Think of it as the front door to your handheld, built to feel smooth and console-like, to look great at any screen size or orientation, and to stay out of your way when you just want to play.
 
 ![The GammaOS XMB home on the Game category](assets/img/shots/xmb_home.png)
 
@@ -32,7 +32,7 @@ You can reorder or hide these categories to suit how you use your device. See [S
 
 ## Three themes at a glance
 
-GammaOS Nano comes with three switchable looks, and they all drive the same launcher underneath:
+GammaOS Nano comes with three switchable looks, and they all drive the same interface underneath:
 
 - **GammaOS XMB**, a PlayStation 3 style layout with a flowing wave background and glass icons.
 - **DSi Menu**, a Nintendo DSi style carousel of glossy tiles.
@@ -40,13 +40,15 @@ GammaOS Nano comes with three switchable looks, and they all drive the same laun
 
 Switch between them any time in Settings > Theme Settings > Home Theme. For the full breakdown of each one, see [Home Themes](themes.html).
 
-## It launches everything
+## What it does
 
-Nano is a launcher, so its main job is getting you into your games and media quickly:
+Nano gets you into your games and media fast, and handles a lot itself along the way:
 
 - **Games** run through emulators, either RetroArch cores or standalone emulator apps. See [Emulators](emulators.html).
 - **Nintendo DS** games use the built-in [DraStic Nano](drastic-nano.html) emulator.
-- **Media** (music, photos, and video) plays right inside Nano. See [Media](media.html).
+- **Media** (music, photos, and video) plays right inside Nano, with its own players. See [Media](media.html).
+- **Web, radio, and TV**: a controller-friendly browser, internet radio in Music, and live IPTV channels in Video are all built in.
+- **Network shares** over SMB, NFS, WebDAV, and FTP mount as if they were local storage. See [Network Shares](network-shares.html).
 - **Apps** you install appear in the Game category and launch just like a game. See [Applications](applications.html).
 
 When you exit a game, an app, or a media player, you come straight back to the home where you left off.

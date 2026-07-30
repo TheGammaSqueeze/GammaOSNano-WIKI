@@ -6,7 +6,7 @@ icon: 🎨
 desc: The three home themes and how to switch and customize them.
 ---
 
-GammaOS Nano gives you three complete home themes in one launcher. Pick the look you love and everything (games, media, apps, Settings) reshapes to match.
+GammaOS Nano gives you three complete home themes in one interface. Pick the look you love and everything (games, media, apps, Settings) reshapes to match.
 {: .lead }
 
 <div class="theme-trio">

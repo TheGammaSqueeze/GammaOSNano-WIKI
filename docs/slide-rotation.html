@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slide &amp; Rotate Clock - GammaOS Nano</title>
+<meta name="description" content="Configure swivel and slide devices, and the PSP-style clock that appears when you slide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.png">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <img class="brand-mark" src="assets/img/brand/gammaos-g.png" alt="GammaOS logo" width="28" height="28">
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+<li><a href="theme-settings.html"><span class="nav-ico">🖼️</span>Wallpapers &amp; Theme Settings</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+<li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
+<li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
+<li><a class="active" href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">Some handhelds have a sliding or swivelling screen, like the RG Rotate. GammaOS can react when you slide the screen: rotate the display, sleep or wake, launch something, or show a slick PSP-style clock. It is all under Settings &gt; Slide Behaviour.</p>
+<p><img alt="Slide Behaviour settings" src="assets/img/shots/xmb_slide.png" /></p>
+<p class="callout note">This page is for devices with a slide or swivel sensor. On a device without one, these settings have no effect.</p>
+<h2 id="telling-gammaos-about-your-slide-sensor"><a class="toclink" href="#telling-gammaos-about-your-slide-sensor">Telling GammaOS about your slide sensor</a></h2>
+<p>The first rows describe the hardware, so GammaOS knows which signal to watch:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>What it does</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Slide Enable</strong></td>
+<td>React to the slide button at all</td>
+<td>On</td>
+</tr>
+<tr>
+<td><strong>Slide Device</strong></td>
+<td>Which input device reports the slide</td>
+<td>gpio-keys</td>
+</tr>
+<tr>
+<td><strong>Slide Button Code</strong></td>
+<td>The event code that device sends</td>
+<td>TABLET_MODE</td>
+</tr>
+<tr>
+<td><strong>Slide Event Type</strong></td>
+<td>The kind of event</td>
+<td>Switch (EV_SW)</td>
+</tr>
+<tr>
+<td><strong>Slide Active Value</strong></td>
+<td>Which state counts as engaged</td>
+<td>High (1)</td>
+</tr>
+</tbody>
+</table>
+<p>These defaults are already correct for supported devices. You only touch them if you are adapting the feature to new hardware.</p>
+<h2 id="what-happens-when-you-slide"><a class="toclink" href="#what-happens-when-you-slide">What happens when you slide</a></h2>
+<p>Two rows decide the actions:</p>
+<ul>
+<li><strong>On Slide Down</strong>: what happens when you slide the screen. Choose from Rotate, Sleep, Wake, Launch, or the PSP Clock (you can pick more than one).</li>
+<li><strong>On Slide Up</strong>: what happens when you slide it back.</li>
+</ul>
+<p>Supporting options:</p>
+<ul>
+<li><strong>Sleep Delay</strong>: how long to wait before sleeping (for the Sleep action).</li>
+<li><strong>Rotation Angle</strong>: the angle used by the Rotate action (for example 90 degrees).</li>
+<li><strong>Slide Launch Target</strong>: the app or mode to open (for the Launch action).</li>
+</ul>
+<h2 id="the-psp-clock"><a class="toclink" href="#the-psp-clock">The PSP clock</a></h2>
+<p>When the PSP Clock action is set, sliding the screen shows a large, polished analog clock, in the spirit of the PSP's clock. It is a lovely way to use the device as a desk clock when it is slid open.</p>
+<p><img alt="The clock and parallax options" src="assets/img/shots/xmb_slide_clock.png" /></p>
+<p>Two options tune how it looks:</p>
+<ul>
+<li><strong>Show Clock On Slide</strong>: turn the clock on or off when you slide.</li>
+<li><strong>Clock Live Backdrop</strong>: when on, whatever is behind the clock (your game or the home) shows through and refracts behind the glass, instead of a flat backdrop.</li>
+<li><strong>Parallax Calibration</strong>: tunes the subtle parallax effect that shifts the clock as you tilt the device, using the motion sensor.</li>
+</ul>
+<p class="callout tip">The clock reads the time from your device, so make sure your <a href="settings-reference.html">Date and Time</a> is set. Turn on <strong>Clock Live Backdrop</strong> for the nicest effect while a game is running behind it.</p>
+<h2 id="where-to-go-next"><a class="toclink" href="#where-to-go-next">Where to go next</a></h2>
+<ul>
+<li><a href="gamepad-settings.html">Gamepad &amp; Remapping</a> for controller options.</li>
+<li><a href="settings-reference.html">Settings Reference</a> for the whole Settings tree.</li>
+</ul>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#telling-gammaos-about-your-slide-sensor">Telling GammaOS about your slide sensor</a>
+</li>
+<li><a href="#what-happens-when-you-slide">What happens when you slide</a>
+</li>
+<li><a href="#the-psp-clock">The PSP clock</a>
+</li>
+<li><a href="#where-to-go-next">Where to go next</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

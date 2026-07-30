@@ -156,7 +156,7 @@ The heart of the launcher's look. See the [Themes](themes.html) page for the ful
 
 ## Gamepad Settings
 
-Tune how your controller behaves across the whole system. For the button map itself, see [OS Controls](controls-os.html).
+Tune how your controller behaves across the whole system. For the full breakdown, including button remapping, calibration, and Mouse Mode, see [Gamepad & Remapping](gamepad-settings.html). For the button map in the menu, see [OS Controls](controls-os.html).
 
 | Option | What it does |
 |--------|--------------|
@@ -175,7 +175,7 @@ Tune how your controller behaves across the whole system. For the button map its
 
 ## Slide Behaviour
 
-For devices with a slide, swivel, or hall (lid) switch. Configure what happens when you open or close.
+For devices with a slide, swivel, or hall (lid) switch. Configure what happens when you open or close, including the PSP-style clock. See the full page: [Slide & Rotate Clock](slide-rotation.html).
 
 | Option | What it does |
 |--------|--------------|
@@ -229,17 +229,17 @@ These rows open dedicated tools rather than a simple list of toggles.
 |-----|-----------|
 | **[GammaOS Toolbox](gammaos-toolbox.html)** | Power-user tweaks: performance, display, audio, swap, the RetroArch Back Button, and more. |
 | **GammaRGB** | RGB LED lighting: effect (Off / Follow Screen / Solid / Effect 1-5), colour, brightness, scale-with-brightness, speed, saturation, fade, split zones with per-zone colours. |
-| **GammaEQ** | Speaker EQ and enhancements: master enable, speaker-only, preview, preamp and postgain, Crystalizer, Bass Limiter, Mid Protector, Stereo Widener, and two parametric EQ bands. |
+| **[GammaEQ](gammaeq.html)** | Speaker EQ and enhancements: master enable, speaker-only, preview, preamp and postgain, Crystalizer, Bass Limiter, Mid Protector, Stereo Widener, and two parametric EQ bands. |
 | **File Explorer** | Browse and manage the files on your device. |
 | **[Network Shares](network-shares.html)** | Connect SMB, NFS, WebDAV, and FTP shares. |
 
 ## Quick Menu
 
-Hold <span class="btnchip">Power</span> on the home screen (or use its home shortcut) to open the Quick Menu without leaving what you are doing.
+The Quick Menu gives you fast access to brightness, performance, shaders, USB mode, and power, from the home or right over a running game. It has its own page: [Quick Menu](quick-menu.html).
 
 ![The Minima Quick Menu](assets/img/shots/min_quickmenu.png)
 
-The Quick Menu includes:
+In short, it includes:
 
 - **Screen Brightness** slider
 - **Performance Mode**
@@ -247,9 +247,9 @@ The Quick Menu includes:
 - **System Settings** (jump into the full Settings app)
 - **Global Shaders**
 - **Notifications**
-- **USB Settings** (adb / mtp / rndis / off)
+- **USB Settings** (Charging only / MTP / PTP / RNDIS)
 - **Close / Kill Apps**
-- A **Power** submenu (Reboot / Shutdown / Recovery / Safe Mode / Android Settings)
+- A **Power** submenu (Restart / Power Off / Recovery / Safe Mode / Boot Android)
 
 If a screen shader ever makes the display unreadable, hold <span class="btnchip">Power</span> + <span class="btnchip">Select</span> together to disable the system display shader. This is the emergency escape hatch.
 {: .callout .warn }

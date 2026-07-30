@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
-<link rel="icon" href="assets/img/brand/favicon.svg">
+<link rel="icon" href="assets/img/brand/favicon.png">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -18,7 +18,7 @@
     <span></span><span></span><span></span>
   </button>
   <a class="brand" href="index.html">
-    <span class="brand-mark" aria-hidden="true"></span>
+    <img class="brand-mark" src="assets/img/brand/gammaos-g.png" alt="GammaOS logo" width="28" height="28">
     <span class="brand-text">GammaOS <b>Nano</b></span>
   </a>
   <div class="search" role="search">
@@ -44,6 +44,7 @@
 <li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
 <li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
 <li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+<li><a href="theme-settings.html"><span class="nav-ico">🖼️</span>Wallpapers &amp; Theme Settings</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Controls</div><ul>
 <li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
@@ -72,8 +73,12 @@
 <li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
 <li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
 <li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+<li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
+<li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
+<li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -85,9 +90,10 @@
     <section class="hero">
   <div class="hero-glow" aria-hidden="true"></div>
   <div class="hero-inner">
-    <p class="hero-eyebrow">The handheld gaming OS</p>
-    <h1 class="hero-title">Master <span class="grad">GammaOS Nano</span></h1>
-    <p class="hero-sub">A fast, beautiful launcher for retro handhelds - three switchable home themes, every emulator at your fingertips, and controls that just make sense. This is the complete guide.</p>
+    <img class="hero-logo" src="assets/img/brand/gammaos-banner.png" alt="GammaOS" loading="eager">
+    <p class="hero-eyebrow">The console interface for GammaOS</p>
+    <h1 class="hero-title"><span class="grad">GammaOS Nano</span></h1>
+    <p class="hero-sub">GammaOS Nano is the console-style heart of GammaOS, a customized Android firmware for handhelds. It boots you straight into a PlayStation 3 style home with three switchable themes, built-in music, photo and video players, a web browser, IPTV and internet radio, network shares, and fast emulation. This is the complete guide.</p>
     <div class="hero-cta">
       <a class="btn primary" href="getting-started.html">Get started</a>
       <a class="btn" href="themes.html">See the themes</a>
@@ -108,7 +114,7 @@
 <h2 id="jump-in"><a class="toclink" href="#jump-in">Jump in</a></h2>
 <div class="cards">
   <a class="card" href="getting-started.html"><span class="card-ico">🚀</span><span class="card-kicker">Get Started</span><h3>Getting Started</h3><p>First boot, Wi-Fi, and your first games.</p></a>
-  <a class="card" href="themes.html"><span class="card-ico">🎨</span><span class="card-kicker">The Interface</span><h3>Home Themes</h3><p>Three looks, one launcher.</p></a>
+  <a class="card" href="themes.html"><span class="card-ico">🎨</span><span class="card-kicker">The Interface</span><h3>Home Themes</h3><p>Three looks, one interface.</p></a>
   <a class="card" href="controls-os.html"><span class="card-ico">🎮</span><span class="card-kicker">Controls</span><h3>Controls Cheat Sheet</h3><p>Every button, everywhere.</p></a>
   <a class="card" href="adding-games.html"><span class="card-ico">📥</span><span class="card-kicker">Games</span><h3>Adding Games</h3><p>Drop in ROMs and rescan.</p></a>
   <a class="card" href="custom-system.html"><span class="card-ico">🛠️</span><span class="card-kicker">Games</span><h3>Add a Custom System</h3><p>Wire up any emulator you like.</p></a>
@@ -118,7 +124,7 @@
   <a class="card" href="faq.html"><span class="card-ico">❓</span><span class="card-kicker">Help</span><h3>FAQ</h3><p>Quick answers to common questions.</p></a>
 </div>
 
-<h2 id="three-themes-one-launcher"><a class="toclink" href="#three-themes-one-launcher">Three themes, one launcher</a></h2>
+<h2 id="three-themes-one-interface"><a class="toclink" href="#three-themes-one-interface">Three themes, one interface</a></h2>
 <p>GammaOS Nano ships with three switchable home themes. Pick the one you love in Settings &gt; Theme Settings &gt; Home Theme, and switch any time you feel like a change.</p>
 <div class="theme-trio">
   <figure><img src="assets/img/shots/xmb_home.png" alt="GammaOS XMB theme"><figcaption><b>GammaOS XMB</b><br>PlayStation 3 style</figcaption></figure>
@@ -144,7 +150,7 @@
       <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
 <li><a href="#jump-in">Jump in</a>
 </li>
-<li><a href="#three-themes-one-launcher">Three themes, one launcher</a>
+<li><a href="#three-themes-one-interface">Three themes, one interface</a>
 </li>
 <li><a href="#what-you-can-do">What you can do</a>
 </li>

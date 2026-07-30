@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wallpapers &amp; Theme Settings - GammaOS Nano</title>
+<meta name="description" content="Set a photo or looping video wallpaper, darken it with a scrim, and tune the home look.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.png">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <img class="brand-mark" src="assets/img/brand/gammaos-g.png" alt="GammaOS logo" width="28" height="28">
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+<li><a class="active" href="theme-settings.html"><span class="nav-ico">🖼️</span>Wallpapers &amp; Theme Settings</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+<li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
+<li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
+<li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">Beyond the three home themes, Theme Settings is where you make the home your own: a still photo or a looping video wallpaper, a dimming scrim so bright art does not drown the menu, accent colour, fonts, and more. It all lives under Settings &gt; Theme Settings.</p>
+<p><img alt="Theme Settings" src="assets/img/shots/xmb_themesettings.png" /></p>
+<p>For the three home looks themselves (XMB, DSi, Minima), see <a href="themes.html">Home Themes</a>. This page focuses on wallpapers and the finer appearance controls.</p>
+<h2 id="the-wallpaper-rows"><a class="toclink" href="#the-wallpaper-rows">The wallpaper rows</a></h2>
+<p><img alt="The wallpaper rows in Theme Settings" src="assets/img/shots/xmb_wallpaper_rows.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Row</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Wallpaper Image</strong></td>
+<td>Pick a photo as the home background, chosen from a picker grid</td>
+</tr>
+<tr>
+<td><strong>Bottom Wallpaper</strong></td>
+<td>A separate wallpaper for the bottom screen (dual-screen devices only)</td>
+</tr>
+<tr>
+<td><strong>Video Wallpaper</strong></td>
+<td>Pick a looping video as the top-screen background</td>
+</tr>
+<tr>
+<td><strong>Clear Wallpaper</strong></td>
+<td>Remove the custom wallpaper and bring back the moving wave</td>
+</tr>
+<tr>
+<td><strong>Wallpaper Dimming</strong></td>
+<td>Darken a photo or video wallpaper so icons and text stay readable</td>
+</tr>
+<tr>
+<td><strong>XMB Wave</strong></td>
+<td>Show or hide the PS3 wave (auto-off when a wallpaper is set)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="setting-a-video-wallpaper"><a class="toclink" href="#setting-a-video-wallpaper">Setting a video wallpaper</a></h2>
+<p>A looping video makes a lively, console-like backdrop. Here is the whole flow.</p>
+<ol>
+<li>Go to <strong>Settings &gt; Theme Settings &gt; Video Wallpaper</strong>.</li>
+<li>Nano scans your videos and shows them in a picker. Choose the one you want.</li>
+</ol>
+<p><img alt="The Video Wallpaper picker" src="assets/img/shots/xmb_videowallpaper_picker.png" /></p>
+<ol start="3">
+<li>Select it, and it starts playing behind the home right away, looping quietly.</li>
+</ol>
+<p><img alt="A video wallpaper playing on the home" src="assets/img/shots/xmb_videowallpaper_home.png" /></p>
+<p class="callout note">Put the videos you want to use in your Movies folder so the picker can find them. The XMB wave switches off automatically when a wallpaper is set, so the video shows cleanly.</p>
+<h2 id="the-darkened-scrim-wallpaper-dimming"><a class="toclink" href="#the-darkened-scrim-wallpaper-dimming">The darkened scrim (Wallpaper Dimming)</a></h2>
+<p>A bright or busy wallpaper can make the menu text and icons hard to read. <strong>Wallpaper Dimming</strong> lays a dark scrim over the wallpaper to fix that. Higher values make it darker. The default is a gentle 25 percent, and you can push it much higher for a moody, high-contrast look where the menu really pops.</p>
+<p class="callout tip">Wallpaper Dimming only affects a custom photo or video wallpaper. With no wallpaper set (just the wave), it does nothing.</p>
+<h2 id="removing-a-wallpaper"><a class="toclink" href="#removing-a-wallpaper">Removing a wallpaper</a></h2>
+<p>Choose <strong>Clear Wallpaper</strong> to drop the custom image or video on both screens and bring back the moving wave. If you would rather keep a wallpaper but see the wave too, turn <strong>XMB Wave</strong> back on.</p>
+<h2 id="other-appearance-controls"><a class="toclink" href="#other-appearance-controls">Other appearance controls</a></h2>
+<p>Theme Settings also holds:</p>
+<ul>
+<li><strong>Colour</strong>: the accent colour, with 21 choices (see <a href="themes.html">Home Themes</a>).</li>
+<li><strong>Background</strong> and <strong>Font</strong>: overall background style and font look.</li>
+<li><strong>Day/Night</strong>: the XMB lighting blend.</li>
+<li><strong>Background Colour</strong>: a solid colour for the Minima home (Minima only).</li>
+<li><strong>Bottom Clock</strong> and <strong>Bottom Clock FPS</strong>: the PSP-style clock on dual-screen devices.</li>
+<li><strong>Home Categories</strong>: reorder or hide the top-level categories.</li>
+<li><strong>Home Theme</strong>: switch between XMB, DSi, and Minima (this restarts the home).</li>
+</ul>
+<h2 id="where-to-go-next"><a class="toclink" href="#where-to-go-next">Where to go next</a></h2>
+<ul>
+<li><a href="themes.html">Home Themes</a> for the three looks in detail.</li>
+<li><a href="settings-reference.html">Settings Reference</a> for the whole Settings tree.</li>
+</ul>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#the-wallpaper-rows">The wallpaper rows</a>
+</li>
+<li><a href="#setting-a-video-wallpaper">Setting a video wallpaper</a>
+</li>
+<li><a href="#the-darkened-scrim-wallpaper-dimming">The darkened scrim (Wallpaper Dimming)</a>
+</li>
+<li><a href="#removing-a-wallpaper">Removing a wallpaper</a>
+</li>
+<li><a href="#other-appearance-controls">Other appearance controls</a>
+</li>
+<li><a href="#where-to-go-next">Where to go next</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

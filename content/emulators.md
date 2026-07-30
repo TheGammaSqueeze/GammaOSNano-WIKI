@@ -6,7 +6,7 @@ icon: 💾
 desc: "How Nano runs games: RetroArch cores, standalone emulators, cores table, and BIOS."
 ---
 
-Nano is a launcher, so it does not emulate games by itself. Instead it hands each game to the right emulator, then brings you back to exactly where you were when you exit. This page explains how that handoff works, which core or emulator each system uses by default, and how to set up the BIOS files that some consoles need.
+Nano does not emulate games itself (other than the built-in DraStic DS emulator). Instead it hands each game to the right emulator, then brings you back to exactly where you were when you exit. This page explains how that handoff works, which core or emulator each system uses by default, and how to set up the BIOS files that some consoles need.
 {: .lead }
 
 ## How launching works

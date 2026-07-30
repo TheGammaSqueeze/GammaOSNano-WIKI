@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quick Menu - GammaOS Nano</title>
+<meta name="description" content="The fast-access overlay for brightness, performance, shaders, USB, and power.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.png">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <img class="brand-mark" src="assets/img/brand/gammaos-g.png" alt="GammaOS logo" width="28" height="28">
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+<li><a href="theme-settings.html"><span class="nav-ico">🖼️</span>Wallpapers &amp; Theme Settings</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a class="active" href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+<li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
+<li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
+<li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">The Quick Menu is your fast lane to the settings you reach for most: brightness, performance mode, shaders, USB mode, and power options. You can open it from the home, and you can raise it right over a running game without quitting.</p>
+<p><img alt="The Quick Menu on the XMB home" src="assets/img/shots/xmb_quickmenu.png" /></p>
+<h2 id="opening-the-quick-menu"><a class="toclink" href="#opening-the-quick-menu">Opening the Quick Menu</a></h2>
+<ul>
+<li><strong>On the home</strong>, the Quick Menu is the far-left category (the power-icon column). Move to it like any other category.</li>
+<li><strong>Over a running game or app</strong>, hold <span class="btnchip">Power</span> to raise the Nano overlay, which opens straight on the Quick Menu. Press <span class="btnchip">B</span> or hold <span class="btnchip">Power</span> again to drop back into your game. See <a href="controls-os.html#the-in-game-overlay">the in-game overlay</a>.</li>
+<li>Holding <span class="btnchip">Power</span> on the home jumps directly to the Quick Menu's Power submenu.</li>
+</ul>
+<h2 id="what-is-in-it"><a class="toclink" href="#what-is-in-it">What is in it</a></h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Resume Audio Player</strong></td>
+<td>Jumps back to the now-playing screen (shown only while music is playing)</td>
+</tr>
+<tr>
+<td><strong>Screen Brightness</strong></td>
+<td>An inline slider; move <span class="btnchip">Left</span> / <span class="btnchip">Right</span> to adjust</td>
+</tr>
+<tr>
+<td><strong>Performance Mode</strong></td>
+<td>Normal, Max Performance, or Power Saver CPU/GPU profile</td>
+</tr>
+<tr>
+<td><strong>Quick Settings</strong></td>
+<td>A page of toggle tiles (see below)</td>
+</tr>
+<tr>
+<td><strong>System Settings</strong></td>
+<td>Opens the full Android Settings app</td>
+</tr>
+<tr>
+<td><strong>Global Shaders</strong></td>
+<td>Turns the system display shader on or off and tunes it (see below)</td>
+</tr>
+<tr>
+<td><strong>Notifications</strong></td>
+<td>Shows active system notifications; dismiss the focused one</td>
+</tr>
+<tr>
+<td><strong>USB Settings</strong></td>
+<td>Switch the USB mode: Charging only, MTP, PTP, or RNDIS (USB Ethernet)</td>
+</tr>
+<tr>
+<td><strong>Close Current App</strong></td>
+<td>Force-stops the foreground app and returns you home</td>
+</tr>
+<tr>
+<td><strong>Kill Background Apps</strong></td>
+<td>Force-stops background apps, sparing the one in front</td>
+</tr>
+<tr>
+<td><strong>Kill All Apps</strong></td>
+<td>Force-stops all third-party apps</td>
+</tr>
+<tr>
+<td><strong>Screen Orientation</strong></td>
+<td>Force an app's orientation (shown only over a running app)</td>
+</tr>
+<tr>
+<td><strong>Quick Resume</strong></td>
+<td>Toggles <a href="quick-resume.html">Quick Resume</a> on or off</td>
+</tr>
+<tr>
+<td><strong>Power</strong></td>
+<td>A submenu: Restart, Power Off, Recovery, Safe Mode, Boot Android</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="More Quick Menu items: USB, Close Apps, Quick Resume" src="assets/img/shots/xmb_quickmenu2.png" /></p>
+<h2 id="performance-mode"><a class="toclink" href="#performance-mode">Performance Mode</a></h2>
+<p>Three profiles trade battery for speed:</p>
+<ul>
+<li><strong>Normal</strong> scales up and down with load (the everyday default).</li>
+<li><strong>Max Performance</strong> holds high clocks for the most demanding games.</li>
+<li><strong>Power Saver</strong> keeps clocks low for light emulation and long sessions.</li>
+</ul>
+<h2 id="global-shaders"><a class="toclink" href="#global-shaders">Global Shaders</a></h2>
+<p>The Global Shaders item applies a system-wide display shader over everything on screen. Pick a preset and tune it:</p>
+<ul>
+<li><strong>Off</strong> turns shaders off.</li>
+<li><strong>CRT</strong> adds scanlines (adjust Scanline Size and Scanline Strength).</li>
+<li><strong>LCD3x</strong> and <strong>LCD</strong> emulate an LCD grid.</li>
+<li><strong>Blur Fill</strong> fills the empty sides of a non-fullscreen image (with a Resolution and Orientation control).</li>
+<li><strong>Custom Shader</strong> loads your own preset, with Resolution Scale and Scanline Density controls.</li>
+</ul>
+<p class="callout tip">If a shader ever makes the screen unreadable, hold <span class="btnchip">Power</span> + <span class="btnchip">Select</span> to disable it instantly. See <a href="controls-os.html#system-shortcuts">Controls</a>.</p>
+<h2 id="quick-settings-tiles"><a class="toclink" href="#quick-settings-tiles">Quick Settings tiles</a></h2>
+<p>The Quick Settings page is a grid of one-tap toggles, including Wi-Fi, Bluetooth, Performance Mode, Global Shaders, GammaRGB, GammaEQ, Screen Map, Deep Sleep Mode, External as Primary, Immersive Mode, ABXY Swap, D-Pad/Analog Swap, Global Sensitivity, Analog Calibration, and stick inversion. Tap one to flip it.</p>
+<h2 id="usb-settings"><a class="toclink" href="#usb-settings">USB Settings</a></h2>
+<p>Switch how the device appears when plugged into a computer:</p>
+<ul>
+<li><strong>Charging only</strong> (default): no data connection.</li>
+<li><strong>MTP</strong>: browse the device's files as media storage.</li>
+<li><strong>PTP</strong>: transfer photos.</li>
+<li><strong>RNDIS</strong>: share the device's connection as USB Ethernet.</li>
+</ul>
+<h2 id="where-to-go-next"><a class="toclink" href="#where-to-go-next">Where to go next</a></h2>
+<ul>
+<li><a href="controls-os.html">Controls</a> for the in-game overlay and system shortcuts.</li>
+<li><a href="settings-reference.html">Settings Reference</a> for the full Settings tree.</li>
+<li><a href="gammaos-toolbox.html">GammaOS Toolbox</a> for the deeper system tweaks.</li>
+</ul>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#opening-the-quick-menu">Opening the Quick Menu</a>
+</li>
+<li><a href="#what-is-in-it">What is in it</a>
+</li>
+<li><a href="#performance-mode">Performance Mode</a>
+</li>
+<li><a href="#global-shaders">Global Shaders</a>
+</li>
+<li><a href="#quick-settings-tiles">Quick Settings tiles</a>
+</li>
+<li><a href="#usb-settings">USB Settings</a>
+</li>
+<li><a href="#where-to-go-next">Where to go next</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
