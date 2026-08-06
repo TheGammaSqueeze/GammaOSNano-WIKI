@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What&#x27;s New since 1.4 - GammaOS Nano</title>
+<meta name="description" content="Everything added to GammaOS Nano since version 1.4 - themes, game library, media, drastic-nano, network and settings.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.png">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <img class="brand-mark" src="assets/img/brand/gammaos-logo-tile.png" alt="GammaOS logo" width="28" height="28">
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+<li><a class="active" href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+<li><a href="theme-settings.html"><span class="nav-ico">🖼️</span>Wallpapers &amp; Theme Settings</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+<li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
+<li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
+<li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+<li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">A lot has changed since GammaOS Nano 1.4. This page is a quick, user-facing tour of the new features grouped by area. Where a setting or menu is named, the full details live on that area's own page.</p>
+<h2 id="themes-and-the-home-look"><a class="toclink" href="#themes-and-the-home-look">Themes and the home look</a></h2>
+<ul>
+<li><strong>DSi Dark Theme.</strong> The DSi theme now has a dark variant. Turn it on in Theme Settings while the DSi theme is active and the whole DSi look (carousel, top screen, info page, dialogs, status bar and tile cards) flips to light text and icons on a dark field, live.</li>
+</ul>
+<p><img alt="DSi Dark Theme" src="assets/img/shots/wn_dsi_dark_theme.png" />
+- <strong>DSi accent colour support.</strong> The DSi theme now follows the <strong>Colour</strong> setting. Your accent recolours the glossy list buttons, scrollbar, carousel selection frame, back button, scroll arrows and dialog borders.
+- <strong>Font scaling in every theme.</strong> The <strong>Font Size</strong> setting now scales UI text live in XMB, DSi and Minima, and word-wrapped text reflows as you change it.</p>
+<p><img alt="Font scaling across themes" src="assets/img/shots/wn_font_size_setting.png" />
+- <strong>Theme Settings only shows what applies.</strong> Rows that belong to a theme you are not using are hidden, so the menu stays short and relevant.
+- <strong>Show, hide and reorder home categories.</strong> A new <strong>Home Categories</strong> editor in Theme Settings lets you hide columns you never use and reorder them. Drill into a category to hide individual rows too. Quick Menu stays first, Settings can't be hidden, and at least one category must stay visible.</p>
+<p><img alt="Home Categories editor" src="assets/img/shots/wn_home_categories_editor.png" />
+- <strong>Distinct icons for Applications and Pinned Apps.</strong> The Applications row now uses a grid icon and the new Pinned Apps row a push-pin, so they are easy to tell apart.</p>
+<p><img alt="Applications vs Pinned Apps icons" src="assets/img/shots/wn_apps_pinned_icons.png" />
+- <strong>Heart icon for Favourites.</strong> The Favourites row now uses a procedurally-drawn heart (glass on XMB, flat theme-tinted glyph elsewhere).</p>
+<p><img alt="Favourites heart icon" src="assets/img/shots/wn_favourites_heart_icon.png" />
+- <strong>Larger, readable sort/pin banner.</strong> The centred banner that confirms a game sort, folder view or pin now renders at a readable size with a solid backdrop in all three themes.</p>
+<p><img alt="Larger sort/pin banner" src="assets/img/shots/wn_sort_banner.png" />
+- <strong>Clocks honour your Time and Date Format.</strong> The DSi top-screen clock and the Minima status-pill clock now follow 12/24-hour Time Format, and the DSi date follows your Date Format.</p>
+<p><img alt="DSi/Minima clock format" src="assets/img/shots/wn_dsi_clock_format.png" /></p>
+<h3 id="minima"><a class="toclink" href="#minima">Minima</a></h3>
+<ul>
+<li><strong>Long names scroll by default.</strong> Long game and app names keep their normal size and scroll on the focused row instead of shrinking. You can still pick <strong>Shrink to Fit</strong> in Theme Settings.</li>
+</ul>
+<p><img alt="Minima long-name scroll" src="assets/img/shots/wn_minima_scroll_names.png" />
+- <strong>Wave opt-in.</strong> The XMB Wave toggle now works in Minima as an alternative to the plain black canvas, and the choice persists across restarts.
+- <strong>Portrait scaling.</strong> On portrait panels Minima scales by the short edge, so text and density track the narrow dimension.
+- <strong>Button-legend circles at large fonts.</strong> The A/B/Y glyph badges now size correctly at large font settings, with letters that fit inside their rings.</p>
+<h3 id="portrait-and-small-panels"><a class="toclink" href="#portrait-and-small-panels">Portrait and small panels</a></h3>
+<ul>
+<li><strong>XMB portrait scaling.</strong> On small portrait panels XMB scales up so icons and text stay readable, and the User Guide uses the full screen width.</li>
+<li><strong>XMB option-panel marquee.</strong> On portrait panels the XMB option side panel now marquee-scrolls the focused row instead of truncating long labels.</li>
+</ul>
+<h3 id="dual-screen-ds-style-devices"><a class="toclink" href="#dual-screen-ds-style-devices">Dual-screen (DS-style) devices</a></h3>
+<ul>
+<li><strong>DSi single-screen status bar.</strong> On single-screen 4:3 DSi layouts a top status bar now reserves space for the clock, Wi-Fi, Bluetooth and date.</li>
+</ul>
+<p><img alt="DSi single-screen status bar" src="assets/img/shots/wn_dsi_statusbar.png" />
+- <strong>Full-width scrollbar and paged game info.</strong> On single-screen DSi the carousel scrollbar spans the whole panel edge to edge, and Game Information pages across L/R turns instead of overlapping.
+- <strong>Dual-screen settings.</strong> New DSi rows: <strong>Dual Screen</strong> (Auto / Top+Bottom / Carousel-Only) and <strong>Screen Gap</strong> to tune the spacing between stacked screens on portrait panels.</p>
+<p><img alt="DSi dual-screen settings" src="assets/img/shots/wn_dsi_dualscreen_settings.png" />
+- <strong>Dual-screen User Guide.</strong> The DSi User Guide now spans both screens as a full-width paged reader instead of the cramped info dialog.</p>
+<h3 id="slide-clock-rg-rotate"><a class="toclink" href="#slide-clock-rg-rotate">Slide clock (RG Rotate)</a></h3>
+<ul>
+<li><strong>Slide clock over running apps in DSi and Minima.</strong> Closing the device shows the PSP-style slide clock over a running game in DSi and Minima too, not just XMB.</li>
+<li><strong>Slide clock uses your background.</strong> In home/wallpaper mode the slide clock now shows your wallpaper or the theme's own background behind it instead of the XMB wave.</li>
+</ul>
+<h2 id="game-library"><a class="toclink" href="#game-library">Game library</a></h2>
+<ul>
+<li><strong>Global Favourites.</strong> Star any game with <strong>Add/Remove from Favorites</strong> in its Options menu. A single cross-system <strong>Favorites</strong> list appears under Game with your first star and disappears with your last.</li>
+</ul>
+<p><img alt="Global Favourites list" src="assets/img/shots/wn_favourites_list.png" />
+- <strong>Collections.</strong> Group games from any system into named Collections that appear under Game. Create and manage them from a game's Options menu.</p>
+<p><img alt="Collections" src="assets/img/shots/wn_collections_list.png" />
+- <strong>Rename / Edit Title.</strong> Rename any game to override its filename. The new name shows everywhere (lists, Recently Played, search, Information) and is used as the scraper search query, so titles the scraper can't match by filename can be renamed and then scraped.</p>
+<p><img alt="Rename / Edit Title" src="assets/img/shots/wn_rename_game.png" />
+- <strong>Scraped title replaces the filename.</strong> Once a game is scraped, its matched title shows in the Game category and search, and title-sort follows it. A manual rename still wins over the scraped title.
+- <strong>Set custom box art.</strong> Pick any image from your Photos as a game's cover with <strong>Set Boxart</strong>. It appears immediately in every theme. <strong>Reset Boxart</strong> removes it.
+- <strong>Scrape one game with a custom name.</strong> <strong>Scrape with Custom Name...</strong> re-scrapes just that game using a name you type, without renaming the file.</p>
+<p><img alt="Scrape with custom name" src="assets/img/shots/wn_scrape_custom_name.png" />
+- <strong>Game sort (Y).</strong> Press Y in the Game category to cycle the system tile order: Default, A to Z, Most Games, By Manufacturer. It persists and never reorders your actual collection.</p>
+<p><img alt="Game category sort" src="assets/img/shots/wn_game_sort.png" />
+- <strong>Multi-disc .m3u grouping.</strong> Multi-disc games referenced by a <code>.m3u</code> playlist now group into one launchable entry instead of listing every disc. On by default.
+- <strong>Subfolder launch fix and optional recursive scan.</strong> Games in subfolders launch correctly with standalone emulators, and you can turn on <strong>Scan ROM Subfolders</strong> (Settings &gt; GammaOS Toolbox) to scan up to six levels deep. One level by default.
+- <strong>Bulk auto-add systems (ES-DE style).</strong> <strong>Auto-add Systems from Folder</strong> imports every recognised system from a ROMs root in one pass, linking to built-ins or creating new systems and skipping empty/media folders.</p>
+<p><img alt="Bulk auto-add systems" src="assets/img/shots/wn_bulk_autoadd.png" />
+- <strong>Missing-emulator warning.</strong> If a game's core or app is not installed, Nano shows a toast instead of black-screening.
+- <strong>Manage Game System shortcut.</strong> Press Options on a system row under Game and choose <strong>Manage Game System</strong> to jump straight to its editor.</p>
+<p><img alt="Manage Game System shortcut" src="assets/img/shots/wn_manage_system_shortcut.png" />
+- <strong>See where default ROM folders live.</strong> The Scan Folders screen now lists the built-in default folders (like ROMs/nes/) with their game counts, so you know where to drop ROMs.
+- <strong>Confirm before removing a scan folder.</strong> Removing a scan-source folder now shows a Cancel / Remove Folder confirmation with the folder path.</p>
+<h2 id="apps-and-home"><a class="toclink" href="#apps-and-home">Apps and home</a></h2>
+<ul>
+<li><strong>Pin apps to the home.</strong> Press Y on any app to pin it. A new <strong>Pinned Apps</strong> row appears in the Game column with your apps' real icons, kept across restarts.</li>
+</ul>
+<p><img alt="Pin app to home" src="assets/img/shots/wn_pin_app.png" />
+- <strong>Show All Apps and Refresh.</strong> The Applications Options menu adds <strong>Show All Apps</strong> (include system utilities) and <strong>Refresh Applications List</strong> (rescan now). Newly installed or uninstalled apps update immediately.</p>
+<p><img alt="Show All Apps / Refresh" src="assets/img/shots/wn_show_all_apps.png" />
+- <strong>Store-installed apps and RetroArch listed.</strong> Apps installed from Google Play, F-Droid or Aurora now show in the default Applications list, and RetroArch appears there so you can open its UI directly.
+- <strong>Keep Running in Background.</strong> An app's Options menu has a <strong>Keep Running in Background</strong> toggle so tools like music players or file managers aren't force-stopped when you exit.</p>
+<p><img alt="Keep Running in Background" src="assets/img/shots/wn_keep_running.png" />
+- <strong>Files app with controller navigation.</strong> The standard Files (DocumentsUI) app is in Applications and is fully d-pad navigable; it focuses the first item on load and keeps focus on-screen.
+- <strong>GammaBrowser bundled.</strong> A web browser now ships in all Nano builds, not just TV builds.</p>
+<h2 id="media"><a class="toclink" href="#media">Media</a></h2>
+<ul>
+<li><strong>Portrait music player.</strong> On tall portrait panels the Now-Playing view switches to a vertical phone-style layout: a large centred album jacket, title and artist below, a full-width seek bar and controls under it.</li>
+<li><strong>Touch seek bar.</strong> Tap or drag the seek bar to jump (local tracks). It previews while dragging and commits on release.</li>
+<li><strong>Wallpaper scrim behind the player.</strong> With a custom wallpaper set, a dark scrim keeps the art, text and controls readable over busy images.</li>
+<li><strong>Delete a track without leaving the player.</strong> Deleting the current track now keeps the music player open and moves to the next track instead of dropping you to the home menu.</li>
+<li><strong>Folder view for Photos, Videos and Music.</strong> Press Y to cycle sort modes; the final mode groups each library by parent folder. Persisted per library.</li>
+<li><strong>Real bulk photo delete.</strong> Deleting a photo group (by folder, month, year) or several checked photos now permanently removes the files. (Bulk photo copy was removed because the clipboard holds one path; single-photo copy still works.)</li>
+<li><strong>Video custom icon.</strong> In the video player, press Options &gt; <strong>Change Icon</strong> to grab the current frame as that video's column thumbnail.</li>
+<li><strong>Video wallpaper hover preview.</strong> When choosing a video wallpaper, the focused clip plays a live preview in its grid cell before you pick it.</li>
+<li><strong>Adjustable wallpaper dimming.</strong> A <strong>Wallpaper Dimming</strong> setting (0-70%, default 25%) adds a scrim over photo and video wallpapers so bright images don't wash out the icons and text.</li>
+</ul>
+<p><img alt="Adjustable wallpaper dimming" src="assets/img/shots/wn_wallpaper_dimming.png" /></p>
+<h2 id="drastic-nano-ds-emulation"><a class="toclink" href="#drastic-nano-ds-emulation">drastic-nano (DS emulation)</a></h2>
+<ul>
+<li><strong>General overlay page.</strong> The in-game overlay now opens to a <strong>General</strong> tab by default, gathering everyday actions: Brightness, Performance, Restart Game, Exit Game, Power Off and Reboot.</li>
+<li><strong>Adjustable screen layout.</strong> New <strong>Layout X Offset</strong>, <strong>Layout Y Offset</strong> and <strong>Layout Scale</strong> rows in the Video section nudge and zoom the screen display, with <strong>Reset Layout Tuning</strong> to snap back.</li>
+<li><strong>Two vertical layout presets.</strong> <strong>Big Top + Small</strong> stacks the two screens directly (768x576 / 512x384, with a Swap toggle). <strong>Big Top + Tiny</strong> is a dynamic preset that fits the big screen to full width at the top and gives the rest of the height to the tiny screen at the bottom.</li>
+<li><strong>On-screen FPS counter.</strong> Toggle an optional FPS counter in the Video overlay; it shows the present rate over a rolling ~1s window, top-right, sized to stay readable at any resolution.</li>
+<li><strong>SF render options (opt-in, off by default).</strong> For fill-bound panels: <strong>Half Resolution</strong> renders at half size and nearest-upscales to quarter the fill cost; <strong>16-Bit Layout</strong> uses RGB565 to halve bandwidth; <strong>SF Vsync Lock</strong> phase-locks the present loop to the panel vblank.</li>
+<li><strong>Save State / Load State bindable actions.</strong> Quick-save and quick-load (slot 0) can be bound to any button and work even with the overlay closed. <strong>L3</strong> and <strong>R3</strong> are now freely rebindable, and binding a key clears it from any other action to avoid conflicts.</li>
+<li><strong>Firmware language honoured.</strong> DS games now boot with the firmware language (and system name, birthday, colour) from DraStic's own settings instead of always defaulting to English.</li>
+<li><strong>Custom DraStic data folder.</strong> Point drastic-nano at a shared-storage folder from <strong>Settings &gt; Game Settings &gt; DraStic Data Folder</strong> so saves, config and BIOS live in one place you can reach outside the app.</li>
+</ul>
+<p><img alt="DraStic data folder" src="assets/img/shots/wn_drastic_data_folder.png" />
+- <strong>Guide strip fits small panels.</strong> The in-game guide strip (L/R tabs, hints) now shrinks and centres to fit narrow panels like the Brick instead of clipping.</p>
+<h2 id="gamepad"><a class="toclink" href="#gamepad">Gamepad</a></h2>
+<ul>
+<li><strong>DraStic Save/Load State and L3/R3 rebinding.</strong> See drastic-nano above; both are set under <strong>Menu &gt; Controls</strong>.</li>
+<li><strong>DSi and Minima page-skip and hold-to-accelerate.</strong> L1/R1 page-skip through blocks of items in DSi and Minima game lists, and holding a direction now accelerates the scroll like XMB (the carousel keeps its DSi cadence).</li>
+<li><strong>Wrap-around navigation.</strong> DSi and Minima lists wrap from the last item back to the first.</li>
+</ul>
+<h2 id="network-and-bluetooth"><a class="toclink" href="#network-and-bluetooth">Network and Bluetooth</a></h2>
+<ul>
+<li><strong>More responsive Wi-Fi/Bluetooth state.</strong> A resident system bridge pushes live Wi-Fi and Bluetooth status to the HUD and reads the settings-screen lists from framework data instead of parsing shell output, so indicators and lists are accurate and fast.</li>
+</ul>
+<p><img alt="Live Wi-Fi/BT HUD" src="assets/img/shots/wn_network_hud.png" />
+- <strong>Reliable Bluetooth discovery and pairing.</strong> Device scanning uses native discovery so nearby devices appear reliably. Already-paired devices can be re-registered, pairing codes are shown clearly, and pairing/connecting/scanning now have real timeouts (Bluetooth pairing up to 80 seconds).</p>
+<p><img alt="BT register/pairing codes" src="assets/img/shots/wn_bt_register.png" />
+- <strong>Wizard fixes.</strong> The setup wizard no longer blanks out after idle time, renders in the Minima theme, and shows a clear prompt to turn Wi-Fi on when you scan with the radio off.</p>
+<p><img alt="Wi-Fi radio-off prompt" src="assets/img/shots/wn_wifi_radio_off.png" />
+- <strong>Change password, Forget, and tricky SSIDs.</strong> Changing a saved network's password works directly, Forget properly removes a network, networks with spaces in the name connect, and the password shows in the clear as you type it.</p>
+<p><img alt="Show Wi-Fi password in clear" src="assets/img/shots/wn_wifi_show_password.png" />
+- <strong>Bluetooth toggle in System Settings.</strong> The Bluetooth and Accessories screen now shows the on/off toggle even when Bluetooth is off.</p>
+<p><img alt="Bluetooth toggle in System Settings" src="assets/img/shots/wn_bt_toggle.png" /></p>
+<h2 id="system-rgb-and-other-settings"><a class="toclink" href="#system-rgb-and-other-settings">System, RGB and other settings</a></h2>
+<ul>
+<li><strong>USB File Transfer (MTP).</strong> Switch the USB connection to <strong>File Transfer (MTP)</strong> or <strong>Charge Only</strong> from <strong>Settings &gt; USB &amp; Docking</strong>, so you can move files to a PC without ADB.</li>
+</ul>
+<p><img alt="USB File Transfer (MTP)" src="assets/img/shots/wn_usb_mtp.png" />
+- <strong>OSK paste with Y.</strong> Press Y on the on-screen keyboard to paste from the system clipboard, handy for long URLs.</p>
+<p><img alt="OSK paste with Y" src="assets/img/shots/wn_osk_paste.png" />
+- <strong>RGB fixes.</strong> <strong>Effect &gt; Off</strong> now really turns the LEDs off, solid colours display vividly at full brightness, there's a full-screen d-pad HSV colour picker with a live hex readout, and a <strong>Navigation Sounds</strong> toggle silences UI sounds while keeping the boot jingle.</p>
+<p><img alt="RGB d-pad HSV picker" src="assets/img/shots/wn_rgb_picker.png" />
+- <strong>Auto-granted storage and mic permissions.</strong> Apps that declare storage and microphone permissions are granted automatically (still revocable in Settings), and permission dialogs are now controller-navigable.
+- <strong>Widevine L3 compatibility.</strong> A <strong>Widevine L3 Compatibility</strong> toggle in GammaOS Toolbox fixes streaming apps (like the Disney+ error) on uncertified devices.</p>
+<p><img alt="Widevine L3 compatibility" src="assets/img/shots/wn_widevine_l3.png" /></p>
+<h2 id="full-android-desktop-mode"><a class="toclink" href="#full-android-desktop-mode">Full-Android / desktop mode</a></h2>
+<p>These apply when you boot into normal Android (desktop/TV) mode rather than Nano.</p>
+<ul>
+<li><strong>Custom notification shade (TvGammaShade).</strong> A shade with paged Quick Settings tiles, brightness and volume sliders, live notifications and swipe-up-to-dismiss. Toggle it with the ALL_APPS key. On split-brightness devices it shows a slider per panel.</li>
+<li><strong>Full Android Settings app.</strong> The desktop build now ships the complete Settings app instead of the cut-down TvSettings, and the Settings dashboard includes GammaOS Toolbox plus shortcuts to the hardware control apps.</li>
+<li><strong>Screen orientation in normal Android.</strong> A <strong>GammaOS &gt; Screen Orientation</strong> screen (Auto / Landscape / Portrait plus clamping) that persists between Nano and normal Android, and the RG Rotate hardware slider is respected in normal Android too.</li>
+<li><strong>Dual-screen home and per-app primary screen.</strong> Desktop mode keeps a launcher on both displays, and dual-screen apps (like Cocoon Shell) can be set to <strong>Run on Primary Screen</strong> with an auto-detect prompt; the Control Center yields the bottom panel to them.</li>
+<li><strong>Per-display volume.</strong> Volume can be set per physical display, with per-display sliders in the shade.</li>
+</ul>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#themes-and-the-home-look">Themes and the home look</a>
+<ul>
+<li><a href="#minima">Minima</a></li>
+<li><a href="#portrait-and-small-panels">Portrait and small panels</a></li>
+<li><a href="#dual-screen-ds-style-devices">Dual-screen (DS-style) devices</a></li>
+<li><a href="#slide-clock-rg-rotate">Slide clock (RG Rotate)</a></li>
+</ul>
+</li>
+<li><a href="#game-library">Game library</a>
+</li>
+<li><a href="#apps-and-home">Apps and home</a>
+</li>
+<li><a href="#media">Media</a>
+</li>
+<li><a href="#drastic-nano-ds-emulation">drastic-nano (DS emulation)</a>
+</li>
+<li><a href="#gamepad">Gamepad</a>
+</li>
+<li><a href="#network-and-bluetooth">Network and Bluetooth</a>
+</li>
+<li><a href="#system-rgb-and-other-settings">System, RGB and other settings</a>
+</li>
+<li><a href="#full-android-desktop-mode">Full-Android / desktop mode</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

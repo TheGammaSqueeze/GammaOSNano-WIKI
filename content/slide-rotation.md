@@ -41,9 +41,19 @@ Supporting options:
 - **Rotation Angle**: the angle used by the Rotate action (for example 90 degrees).
 - **Slide Launch Target**: the app or mode to open (for the Launch action).
 
+## Square-panel landscape lock (RG Rotate)
+
+On the RG Rotate's square 720x720 panel there is no aspect ratio to tell portrait from landscape apart, so games could end up rendering into only half the screen. Nano now forces launched apps to landscape in both slide positions, so a game fills the panel whether the device is open or closed.
+
+## Rotation in normal Android
+
+The slide/swivel rotation is respected in normal Android (desktop/TV) mode too, not just in Nano. For the desktop-mode Screen Orientation controls that pair with this, see the [Full-Android desktop features](atv-desktop-features.html) page.
+
 ## The PSP clock
 
 When the PSP Clock action is set, sliding the screen shows a large, polished analog clock, in the spirit of the PSP's clock. It is a lovely way to use the device as a desk clock when it is slid open.
+
+The slide clock now appears over a running game in the DSi and Minima themes as well as XMB, so closing the device always drops the clock over whatever you were playing. In home or wallpaper mode it shows your wallpaper or the active theme's own background behind it instead of the XMB wave.
 
 <figure class="ui-video-fig">
   <span class="ui-video-badge">Live demo</span>

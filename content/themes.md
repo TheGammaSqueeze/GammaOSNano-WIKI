@@ -42,6 +42,12 @@ XMB has a few looks that are all its own, under Settings > Theme Settings:
 
 Day/Night changes the lighting mood of the whole home. Leave it on Auto and it follows the time of day for you.
 
+### XMB on portrait and small panels
+
+On small portrait panels XMB scales itself up so icons and text stay readable, and the User Guide uses the full screen width.
+
+On portrait panels the XMB option side panel marquee-scrolls the focused row instead of truncating a long label, so you can always read the whole option name.
+
 ## DSi Menu (Nintendo DSi style)
 
 A carousel of glossy tiles glides across a light field with a soft scanline background. Tiles spring into place as the menu opens, and you can fling or scrub the carousel with a touch panel, snapping neatly to each slot.
@@ -54,6 +60,16 @@ Drill into a category (like Game) and you get a familiar list with boxart, the s
 
 DSi has one option of its own on single-panel devices: a **Single-Screen / Stacked** layout choice. You can keep the carousel-only view (the default), or switch to a stacked layout with the status bar on top. Dual-screen devices always use both physical panels, so this choice is for single-panel handhelds.
 
+### DSi Dark Theme
+
+The DSi theme now has a dark variant. With the DSi theme active, turn on **Dark Theme** in Theme Settings and the whole DSi look flips live: the carousel, top screen, information page, dialogs, status bar and tile cards all switch to light text and icons on a dark field. It is a shared palette, so everything recolours together in one step, no restart needed.
+
+![DSi Dark Theme](assets/img/shots/wn_dsi_dark_theme.png)
+
+### DSi accent colour
+
+The DSi theme now follows the **Colour** accent setting like the other themes. Your accent recolours the glossy list buttons, the scrollbar, the carousel selection frame, the back button, the scroll arrows and the dialog borders, so the DSi chrome matches whichever accent you picked.
+
 ## Minima (NextUI style)
 
 A clean, minimal vertical text list on a black canvas. The selected row is a bright white rounded capsule with inverted text, and there is a small accent status pill plus a bottom button-hint bar so you always know your controls. Scrolling is a smooth exponential glide. The main list keeps things text-only with no icons.
@@ -64,7 +80,16 @@ Even in this stripped-back theme, your games still show their boxart once you dr
 
 ![Minima game list](assets/img/shots/min_romlist.png)
 
-Minima adds two of its own options: a **Background Colour** (a solid colour instead of black, though a photo or video wallpaper overrides it), and an opt-in for the XMB **wave** (off by default in Minima, since the flat look is the point).
+Minima adds two of its own options: a **Background Colour** (a solid colour instead of black, though a photo or video wallpaper overrides it), and an opt-in for the XMB **wave** (off by default in Minima, since the flat look is the point). The wave choice persists across restarts, so once you turn it on it stays on.
+
+### Minima details
+
+- **Long names scroll by default.** A long game or app name keeps its normal size and scrolls across the focused row instead of shrinking to fit. If you prefer the old behaviour, pick **Shrink to Fit** in Theme Settings.
+
+![Minima long-name scroll](assets/img/shots/wn_minima_scroll_names.png)
+
+- **Portrait scaling.** On portrait panels Minima scales by the short edge, so text and item density track the narrow dimension and stay readable.
+- **Button-legend circles at large fonts.** The A/B/Y glyph badges in the hint bar size correctly at large font settings, with the letters fitting neatly inside their rings.
 
 ## Switching themes
 
@@ -105,6 +130,12 @@ Supported wallpaper image types: jpg, png, webp, bmp, gif, heic. Supported video
 If your wallpaper makes text hard to read, nudge **Wallpaper Dimming** up until icons and labels pop again.
 {: .callout .tip }
 
+## Clocks follow your Time and Date Format
+
+The DSi top-screen clock and the Minima status-pill clock both follow your **Time Format** (12 or 24 hour), and the DSi date follows your **Date Format**. Set these under Settings and every theme's clock matches.
+
 ## Keep exploring
+
+For a tour of everything added since version 1.4, see [What's New since 1.4](what-s-new-since-1-4.html).
 
 See the full list of every option in the [Settings reference](settings-reference.html), and check the [GammaOS Toolbox](gammaos-toolbox.html) for extra display and system tweaks that pair well with your chosen theme.

@@ -38,6 +38,7 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
@@ -79,6 +80,7 @@
 <li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+<li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a class="active" href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -88,7 +90,7 @@
 
   <main id="main" class="content">
     
-    <div class="prose no-toc">
+    <div class="prose has-toc">
       <article class="article">
         <p class="lead">Quick answers to the questions handheld owners ask most. If your question is not here, the linked pages go into more depth.</p>
 <h3 id="how-do-i-change-the-screen-brightness"><a class="toclink" href="#how-do-i-change-the-screen-brightness">How do I change the screen brightness?</a></h3>
@@ -145,11 +147,66 @@
 <li><a href="boxart.html">Boxart</a> and <a href="emulators.html">Emulators</a></li>
 <li><a href="settings-reference.html">Settings Reference</a> and <a href="gammaos-toolbox.html">GammaOS Toolbox</a></li>
 </ul>
+<h2 id="new-in-this-release"><a class="toclink" href="#new-in-this-release">New in this release</a></h2>
+<p>Common questions about the features added since GammaOS Nano 1.4.</p>
+<h3 id="how-do-i-mark-a-game-as-a-favourite"><a class="toclink" href="#how-do-i-mark-a-game-as-a-favourite">How do I mark a game as a favourite?</a></h3>
+<p>Highlight the game and press the Options button, then choose <strong>Add to Favorites</strong>. A single cross-system <strong>Favorites</strong> list appears under the Game category (above Collections) as soon as you star your first game, and it disappears again when you remove your last. Use <strong>Remove from Favorites</strong> in the same menu to un-star.</p>
+<h3 id="can-i-set-my-own-box-art-from-an-image-on-the-device"><a class="toclink" href="#can-i-set-my-own-box-art-from-an-image-on-the-device">Can I set my own box art from an image on the device?</a></h3>
+<p>Yes. Highlight the game, press Options and choose <strong>Set Boxart</strong>, then pick any image from your Photos. It is copied into the cover cache and shows up immediately in every theme. Use <strong>Reset Boxart</strong> to remove it. This is the easiest way to give cover art to homebrew, undubs, prototypes and romhacks that the scraper cannot match by filename. If you prefer, the game's <strong>Information</strong> page shows the exact cover file path so you can drop your own image there manually.</p>
+<h3 id="a-games-name-is-wrong-or-the-scraper-cannot-match-it-can-i-fix-it"><a class="toclink" href="#a-games-name-is-wrong-or-the-scraper-cannot-match-it-can-i-fix-it">A game's name is wrong or the scraper cannot match it. Can I fix it?</a></h3>
+<p>Open the game's Options menu and choose <strong>Rename / Edit Title</strong> to type the correct name. The new name is used everywhere (game lists, Recently Played, search and the Information page) and is also used as the scraper search query, so you can rename a game and then run <strong>Scrape This Game</strong> to fetch the right art and details. To scrape one game under a different name without renaming the file, use <strong>Scrape with Custom Name...</strong>. Renaming to an empty title reverts to the filename.</p>
+<h3 id="how-do-i-transfer-roms-and-files-over-usb"><a class="toclink" href="#how-do-i-transfer-roms-and-files-over-usb">How do I transfer ROMs and files over USB?</a></h3>
+<p>Connect the device to a PC, then go to <strong>Settings &gt; USB &amp; Docking</strong> and select <strong>File Transfer (MTP)</strong>. The device appears as a drive on your PC; switch back to <strong>Charge Only</strong> when you are done. On a brand-new install MTP can be reluctant until you have launched a game once. If MTP still does not show storage, a file manager such as MiXplorer from Applications is a reliable alternative.</p>
+<h3 id="how-do-i-hide-game-systems-or-home-categories-i-dont-use"><a class="toclink" href="#how-do-i-hide-game-systems-or-home-categories-i-dont-use">How do I hide game systems or home categories I don't use?</a></h3>
+<p>Go to <strong>Settings &gt; Theme Settings &gt; Home Categories</strong>. Use X to hide or show a category and L1/R1 to reorder them. To hide individual rows inside a category (for example specific game systems), drill into that category and toggle the rows there. Quick Menu always stays first, Settings cannot be hidden, and at least one category must remain visible. Changes are saved and apply live across XMB, DSi and Minima.</p>
+<h3 id="how-do-i-pin-my-favourite-apps-to-the-home"><a class="toclink" href="#how-do-i-pin-my-favourite-apps-to-the-home">How do I pin my favourite apps to the home?</a></h3>
+<p>Open the Applications category, highlight an app and press Y. A <strong>Pinned Apps</strong> row appears in the Game column showing your pinned apps with their real icons, and it persists across restarts. Press Y again on a pinned app to unpin it.</p>
+<h3 id="can-i-keep-an-app-running-in-the-background-when-i-leave-it"><a class="toclink" href="#can-i-keep-an-app-running-in-the-background-when-i-leave-it">Can I keep an app running in the background when I leave it?</a></h3>
+<p>Yes. Open the app's Options menu and turn on <strong>Keep Running in Background</strong>. That app will not be force-stopped when you return to the menu, which is useful for music players, file managers and other tools you want to stay warm. Leave it off for games so they close cleanly.</p>
+<h3 id="how-do-i-make-text-bigger-or-smaller"><a class="toclink" href="#how-do-i-make-text-bigger-or-smaller">How do I make text bigger or smaller?</a></h3>
+<p>Go to <strong>Settings &gt; Theme Settings &gt; Font Size</strong> (also listed under Display). The size applies live across XMB, DSi and Minima, and word-wrapped text reflows as you change it. In Minima, long names scroll on the focused row at the normal size by default; you can switch to Shrink to Fit in Theme Settings if you prefer.</p>
+<h3 id="my-whole-roms-folder-has-many-systems-do-i-have-to-add-each-one"><a class="toclink" href="#my-whole-roms-folder-has-many-systems-do-i-have-to-add-each-one">My whole ROMs folder has many systems. Do I have to add each one?</a></h3>
+<p>No. Go to <strong>Settings &gt; Game Settings &gt; Game Systems &gt; Auto-add Systems from Folder</strong> and point it at your ROMs root. Nano recognises ES-DE style folders, links them to built-in systems or creates new ones, and skips empty and media-only folders. A summary tells you what was added and which systems still need an emulator installed.</p>
+<h3 id="why-does-a-game-show-a-black-screen-instead-of-launching"><a class="toclink" href="#why-does-a-game-show-a-black-screen-instead-of-launching">Why does a game show a black screen instead of launching?</a></h3>
+<p>If the emulator for that game is not installed, Nano now shows a short warning message instead of black-screening. Install the required RetroArch core or standalone emulator app, or set the correct emulator for that system in <strong>Settings &gt; Game Settings &gt; Game Systems</strong>, and try again.</p>
+<h3 id="does-the-dsi-theme-have-a-dark-mode"><a class="toclink" href="#does-the-dsi-theme-have-a-dark-mode">Does the DSi theme have a dark mode?</a></h3>
+<p>Yes. Switch to the DSi theme, then in <strong>Settings &gt; Theme Settings</strong> turn on <strong>Dark Theme</strong>. The whole DSi look flips to light text and icons on a dark field, and it applies immediately. The DSi theme also follows your accent <strong>Colour</strong> setting.</p>
+<h3 id="how-do-i-paste-a-url-or-long-text-into-a-text-field"><a class="toclink" href="#how-do-i-paste-a-url-or-long-text-into-a-text-field">How do I paste a URL or long text into a text field?</a></h3>
+<p>When the on-screen keyboard is open, press Y to paste whatever is on the system clipboard into the field. This saves typing out long URLs and passwords by hand.</p>
+<h3 id="my-multi-disc-ps1-game-shows-every-disc-separately-how-do-i-group-them"><a class="toclink" href="#my-multi-disc-ps1-game-shows-every-disc-separately-how-do-i-group-them">My multi-disc PS1 game shows every disc separately. How do I group them?</a></h3>
+<p>Create a <code>.m3u</code> playlist file listing the disc images and place it alongside them. Nano groups multi-disc games referenced by an <code>.m3u</code> into a single launchable entry and hides the individual discs. This is on by default. If your CD games are in subfolders, you can also enable <strong>Scan ROM Subfolders</strong> in GammaOS Toolbox so they are found.</p>
+<h3 id="can-i-move-where-drastic-keeps-its-saves"><a class="toclink" href="#can-i-move-where-drastic-keeps-its-saves">Can I move where DraStic keeps its saves?</a></h3>
+<p>Yes. Go to <strong>Settings &gt; Game Settings &gt; DraStic Data Folder</strong> and choose a folder on shared storage. drastic-nano and the standalone DraStic app then use that same location, so your saves, config and BIOS live in one place you can reach outside the app.</p>
+<h3 id="drastic-runs-slowly-on-my-device-what-can-i-try"><a class="toclink" href="#drastic-runs-slowly-on-my-device-what-can-i-try">DraStic runs slowly on my device. What can I try?</a></h3>
+<p>Open the in-game overlay and go to Video. Turn on <strong>Half Resolution</strong> to render at half size and upscale (a big speed-up on fill-bound panels, at the cost of a softer image). You can also try <strong>16-Bit Layout</strong> to cut bandwidth. <strong>SF Vsync Lock</strong> is off by default and only helps once the frame already fits inside the vblank. All three are opt-in and safe to toggle live. The optional <strong>FPS Counter</strong> in the same menu helps you see the effect.</p>
+<h3 id="streaming-apps-like-disney-show-a-drm-or-certification-error-any-fix"><a class="toclink" href="#streaming-apps-like-disney-show-a-drm-or-certification-error-any-fix">Streaming apps like Disney+ show a DRM or certification error. Any fix?</a></h3>
+<p>Go to <strong>Settings &gt; GammaOS Toolbox</strong> and enable <strong>Widevine L3 Compatibility</strong>. This forces Widevine L3 mode, which resolves common DRM errors (such as the Disney+ error) on uncertified devices.</p>
         <footer class="page-foot">
           <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
         </footer>
       </article>
-      <div class="toc-col"></div>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#new-in-this-release">New in this release</a>
+<ul>
+<li><a href="#how-do-i-mark-a-game-as-a-favourite">How do I mark a game as a favourite?</a></li>
+<li><a href="#can-i-set-my-own-box-art-from-an-image-on-the-device">Can I set my own box art from an image on the device?</a></li>
+<li><a href="#a-games-name-is-wrong-or-the-scraper-cannot-match-it-can-i-fix-it">A game&#x27;s name is wrong or the scraper cannot match it. Can I fix it?</a></li>
+<li><a href="#how-do-i-transfer-roms-and-files-over-usb">How do I transfer ROMs and files over USB?</a></li>
+<li><a href="#how-do-i-hide-game-systems-or-home-categories-i-dont-use">How do I hide game systems or home categories I don&#x27;t use?</a></li>
+<li><a href="#how-do-i-pin-my-favourite-apps-to-the-home">How do I pin my favourite apps to the home?</a></li>
+<li><a href="#can-i-keep-an-app-running-in-the-background-when-i-leave-it">Can I keep an app running in the background when I leave it?</a></li>
+<li><a href="#how-do-i-make-text-bigger-or-smaller">How do I make text bigger or smaller?</a></li>
+<li><a href="#my-whole-roms-folder-has-many-systems-do-i-have-to-add-each-one">My whole ROMs folder has many systems. Do I have to add each one?</a></li>
+<li><a href="#why-does-a-game-show-a-black-screen-instead-of-launching">Why does a game show a black screen instead of launching?</a></li>
+<li><a href="#does-the-dsi-theme-have-a-dark-mode">Does the DSi theme have a dark mode?</a></li>
+<li><a href="#how-do-i-paste-a-url-or-long-text-into-a-text-field">How do I paste a URL or long text into a text field?</a></li>
+<li><a href="#my-multi-disc-ps1-game-shows-every-disc-separately-how-do-i-group-them">My multi-disc PS1 game shows every disc separately. How do I group them?</a></li>
+<li><a href="#can-i-move-where-drastic-keeps-its-saves">Can I move where DraStic keeps its saves?</a></li>
+<li><a href="#drastic-runs-slowly-on-my-device-what-can-i-try">DraStic runs slowly on my device. What can I try?</a></li>
+<li><a href="#streaming-apps-like-disney-show-a-drm-or-certification-error-any-fix">Streaming apps like Disney+ show a DRM or certification error. Any fix?</a></li>
+</ul>
+</li>
+</ul></div></div>
     </div>
   </main>
 </div>

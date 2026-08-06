@@ -28,15 +28,17 @@ The Options menu, its submenus, and every dialog it opens are side panels that s
 | Entry | What it does |
 |-------|--------------|
 | Start | Launch the game |
+| Add/Remove from Favorites | Star or unstar the game; your stars gather in one cross-system **Favorites** list under Game |
 | Rename / Edit Title | Set the shown name everywhere; this also becomes the scraper search query |
 | Scrape This Game | Re-fetch art and metadata for just this game (forces an overwrite) |
+| Scrape with Custom Name... | Re-scrape just this game using a name you type, without renaming the file |
 | Information | Full scraped info page: cover, fanart, synopsis, genre, players, rating, date, developer/publisher, file path and size |
-| Set Boxart | Pick any image as the cover |
+| Set Boxart | Pick any image from your Photos as the cover; it appears immediately in every theme |
 | Reset Boxart | Only shown once a custom or scraped cover exists |
 | Add to Collection | Add the game to a collection, or create a new one |
 | Remove from Collection | Only shown when you are inside a collection |
 
-See [Boxart](boxart.html) for scraping in depth and [Collections](collections.html) for grouping games across systems.
+See [Boxart](boxart.html) for scraping in depth and [Collections](collections.html) for grouping games across systems, including the cross-system Favorites list.
 
 ## On an application
 
@@ -46,11 +48,15 @@ See [Boxart](boxart.html) for scraping in depth and [Collections](collections.ht
 |-------|--------------|
 | Start | Launch the app |
 | Information | App details |
+| Keep Running in Background | Toggle: keep the app alive after you exit, so tools like music players or file managers are not force-stopped |
 | Screen Orientation | Submenu: Default / Auto / Landscape / Landscape (reverse) / Portrait / Portrait (reverse), forced while the app is foreground |
 | Dual-Stack Display | Submenu (dual-screen devices only): Disabled / Enabled |
+| Run on Primary Screen | Toggle (dual-screen devices only): run a dual-screen app on the primary panel; the Control Center yields the bottom panel to it |
 | Uninstall | Real user apps only (system and protected apps do not show this) |
 | Refresh Applications List | Rescan installed apps for fresh labels and icons |
 | Show All Apps (On/Off) | List every launchable app, or only your user apps |
+
+You can also press <span class="btnchip">Y</span> on any app to pin or unpin it to the home; pinned apps appear in a **Pinned Apps** row under Game.
 
 More on managing installed apps is on the [Applications](applications.html) page.
 
@@ -86,6 +92,7 @@ Manage Game System is the fast way back into the editor covered in [Custom Syste
 |-------|--------------|
 | Resume / Play from Beginning | Shown when a video is partly watched, otherwise just Play |
 | Add to Playlist | Add the video to a playlist |
+| Change Icon | Grab the current frame as this video's column thumbnail (from the video player, Options > Change Icon) |
 | Copy | Copy the file |
 | Delete | Remove the file |
 | Information | Video details |
@@ -104,22 +111,25 @@ Manage Game System is the fast way back into the editor covered in [Custom Syste
 | Sort By | Submenu: Film Date (newest/oldest), Import Date (newest/oldest), Image Name |
 | Group Content | By Month / By Year / By Album / All |
 | Slideshow | Normal / Slide / Portrait / Photo Album / Photo Album 2 |
-| Delete | Remove the album |
+| Delete | Permanently remove the whole group (by folder, month or year); the files are deleted for real |
 | Information | Album details |
 
 ## On a single photo (thumbnail grid)
 
 | Entry | What it does |
 |-------|--------------|
-| Delete Multiple | Select and remove several photos at once |
+| Delete Multiple | Check several photos and permanently remove them all at once |
 | Sort By | Reorder the grid |
 | Slideshow | Start a slideshow |
 | View | Open the photo full screen |
-| Copy | Copy the photo |
+| Copy | Copy the single photo |
 | Add to Playlist | Add it to a photo playlist |
 | Print | Send it to print |
 | Delete | Remove the photo |
 | Information | Photo details |
+
+Bulk photo delete (a whole group or several checked photos) removes the files for real. There is no bulk photo Copy, since the clipboard holds a single path; single-photo Copy still works.
+{: .callout .note }
 
 ## In the File Explorer
 

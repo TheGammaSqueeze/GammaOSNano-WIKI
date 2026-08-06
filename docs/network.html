@@ -38,6 +38,7 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
@@ -79,6 +80,7 @@
 <li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+<li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -103,11 +105,30 @@
 <li>Pairing a Bluetooth device.</li>
 </ol>
 <p>This is the same wizard you meet during first-time setup, so if you skipped Wi-Fi back then you can finish the job here. See <a href="getting-started.html">Getting started</a> for the first-boot walkthrough.</p>
+<p>The wizard no longer blanks out after idle time and now renders in the Minima theme as well as XMB and DSi. As you type a Wi-Fi password it is shown in the clear so you can check it before you connect, and networks whose names contain spaces connect correctly.</p>
+<p><img alt="Show Wi-Fi password in clear" src="assets/img/shots/wn_wifi_show_password.png" /></p>
+<h3 id="if-wi-fi-is-off"><a class="toclink" href="#if-wi-fi-is-off">If Wi-Fi is off</a></h3>
+<p>If you open the network list with the radio turned off, the wizard shows a clear prompt to turn Wi-Fi on rather than an empty list. Turn it on and the scan runs.</p>
+<p><img alt="Wi-Fi radio-off prompt" src="assets/img/shots/wn_wifi_radio_off.png" /></p>
+<h3 id="change-or-forget-a-network"><a class="toclink" href="#change-or-forget-a-network">Change or forget a network</a></h3>
+<ul>
+<li><strong>Change Password</strong> on a saved network applies the new password directly.</li>
+<li><strong>Forget</strong> properly removes a saved network so the device stops reconnecting to it.</li>
+</ul>
+<h2 id="bluetooth"><a class="toclink" href="#bluetooth">Bluetooth</a></h2>
+<p>Bluetooth pairing lives in the same wizard, and the Bluetooth and Accessories screen shows the on/off toggle even when Bluetooth is currently off, so you can turn it back on without hunting for it.</p>
+<p><img alt="Bluetooth toggle in System Settings" src="assets/img/shots/wn_bt_toggle.png" /></p>
+<p>Device scanning uses native discovery, so nearby devices appear reliably. An already-paired device can be re-registered, and pairing codes are shown clearly so you can confirm them on both ends. Scanning, pairing and connecting all have real timeouts (Bluetooth pairing waits up to 80 seconds), so a slow accessory no longer leaves the screen hanging.</p>
+<p><img alt="BT register/pairing codes" src="assets/img/shots/wn_bt_register.png" /></p>
 <h2 id="test-your-connection"><a class="toclink" href="#test-your-connection">Test your connection</a></h2>
 <p>Use <strong>Internet Connection Test</strong> to confirm your handheld can actually reach the internet after connecting. It is a handy check if a download or scrape is not working as expected.</p>
 <p class="callout note">If a boxart scrape or an online media browser fails, run the Internet Connection Test first to rule out a dropped connection.</p>
 <h2 id="status-at-a-glance"><a class="toclink" href="#status-at-a-glance">Status at a glance</a></h2>
 <p>The HUD top bar shows your <strong>Wi-Fi signal</strong> and <strong>Bluetooth status</strong> at all times, so you can keep an eye on connectivity without opening Settings.</p>
+<p>A resident system bridge pushes live Wi-Fi and Bluetooth state to the HUD and reads the settings-screen lists straight from framework data instead of parsing shell output, so the indicators and the network and device lists stay accurate and update quickly.</p>
+<p><img alt="Live Wi-Fi/BT HUD" src="assets/img/shots/wn_network_hud.png" /></p>
+<p>On single-screen 4:3 DSi layouts, a top status bar reserves space for the clock, Wi-Fi, Bluetooth and date, so the same connectivity indicators are visible in the DSi theme.</p>
+<p><img alt="DSi single-screen status bar" src="assets/img/shots/wn_dsi_statusbar.png" /></p>
 <h2 id="next-steps"><a class="toclink" href="#next-steps">Next steps</a></h2>
 <p>Once you are online, you can mount SMB, NFS, WebDAV, and FTP shares so files on another computer or NAS appear as if they were local. Head to <a href="network-shares.html">Network Shares</a> to set those up.</p>
         <footer class="page-foot">
@@ -118,6 +139,12 @@
 <li><a href="#check-your-connection">Check your connection</a>
 </li>
 <li><a href="#connect-with-the-wizard">Connect with the wizard</a>
+<ul>
+<li><a href="#if-wi-fi-is-off">If Wi-Fi is off</a></li>
+<li><a href="#change-or-forget-a-network">Change or forget a network</a></li>
+</ul>
+</li>
+<li><a href="#bluetooth">Bluetooth</a>
 </li>
 <li><a href="#test-your-connection">Test your connection</a>
 </li>

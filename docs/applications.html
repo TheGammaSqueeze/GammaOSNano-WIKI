@@ -38,6 +38,7 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
@@ -79,6 +80,7 @@
 <li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+<li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -91,8 +93,12 @@
     <div class="prose has-toc">
       <article class="article">
         <p class="lead">Your installed apps live right alongside your games. GammaOS Nano gathers them into an <strong>Applications</strong> entry inside the Game category, so a standalone emulator, a store app, or any other program is only a couple of button presses away.</p>
+<p>Several app features are new since 1.4 (pinning apps to the home, Keep Running in Background, the bundled browser and more). See <a href="what-s-new-since-1-4.html">What's New</a> for the full list.</p>
 <h2 id="where-to-find-your-apps"><a class="toclink" href="#where-to-find-your-apps">Where to find your apps</a></h2>
 <p>Open the Game category and look for the <strong>Applications</strong> entry. Select it to see the apps installed on your handheld. System apps are hidden by an exclusion list so the view stays clean and useful, but you can reveal everything if you need to (see Show All Apps below).</p>
+<p>The <strong>Applications</strong> row uses a grid icon so it is easy to tell apart from the <strong>Pinned Apps</strong> row, which uses a push-pin (see Pin apps to the home below).</p>
+<p><img alt="Applications vs Pinned Apps icons" src="assets/img/shots/wn_apps_pinned_icons.png" /></p>
+<p>Apps installed from Google Play, F-Droid or Aurora now appear in the default Applications list, and <strong>RetroArch</strong> is listed here too so you can open its own UI directly.</p>
 <h2 id="launching-an-app"><a class="toclink" href="#launching-an-app">Launching an app</a></h2>
 <p>Selecting an app launches it, and the handoff works exactly like starting a game: the home menu steps aside, the app takes over the screen, and when you exit the app you return to the home menu right where you left off.</p>
 <h2 id="per-app-options"><a class="toclink" href="#per-app-options">Per-app Options</a></h2>
@@ -119,6 +125,10 @@
 <td>Set how the app is displayed</td>
 </tr>
 <tr>
+<td>Keep Running in Background</td>
+<td>Stop Nano force-stopping the app when you exit it</td>
+</tr>
+<tr>
 <td>Uninstall</td>
 <td>Remove the app from your handheld</td>
 </tr>
@@ -132,8 +142,22 @@
 </tr>
 </tbody>
 </table>
-<p class="callout tip">If you just installed something and it is not in the list yet, run <strong>Refresh Applications List</strong> to pick it up.</p>
+<p class="callout tip">If you just installed something and it is not in the list yet, run <strong>Refresh Applications List</strong> to pick it up. Newly installed or uninstalled apps also update the list immediately.</p>
+<p><strong>Show All Apps</strong> adds the system utilities that are normally hidden, so you can reach things like the standard Files app when you need them. Turn it off again to go back to the clean list.</p>
+<p><img alt="Show All Apps / Refresh" src="assets/img/shots/wn_show_all_apps.png" /></p>
 <p>For a full tour of the Options menus across every part of Nano, see <a href="context-menus.html">Context menus</a>.</p>
+<h3 id="keep-running-in-background"><a class="toclink" href="#keep-running-in-background">Keep Running in Background</a></h3>
+<p>By default Nano force-stops an app when you leave it, which keeps memory free for games. For tools that are meant to stay alive, such as a music player or a file manager, turn on <strong>Keep Running in Background</strong> in the app's Options menu. The app then keeps running after you return to the home menu instead of being closed.</p>
+<p><img alt="Keep Running in Background" src="assets/img/shots/wn_keep_running.png" /></p>
+<h2 id="pin-apps-to-the-home"><a class="toclink" href="#pin-apps-to-the-home">Pin apps to the home</a></h2>
+<p>Press <strong>Y</strong> on any app to pin it. A new <strong>Pinned Apps</strong> row appears in the Game column showing your pinned apps with their real icons, so your favourite tools are one hop from the home menu. Press <strong>Y</strong> again on a pinned app to unpin it. Your pins are kept across restarts.</p>
+<p><img alt="Pin app to home" src="assets/img/shots/wn_pin_app.png" /></p>
+<h2 id="the-files-app"><a class="toclink" href="#the-files-app">The Files app</a></h2>
+<p>The standard <strong>Files</strong> app (DocumentsUI) is listed under Applications and is fully controller-navigable. It focuses the first item when a folder loads and keeps the focused item on-screen as you move the d-pad, so you can browse and manage storage without a touch screen.</p>
+<h2 id="gammabrowser"><a class="toclink" href="#gammabrowser">GammaBrowser</a></h2>
+<p>A web browser, <strong>GammaBrowser</strong>, ships in every Nano build (not just TV builds), so you can reach the web straight from Applications.</p>
+<h2 id="run-on-primary-screen-dual-screen-devices"><a class="toclink" href="#run-on-primary-screen-dual-screen-devices">Run on Primary Screen (dual-screen devices)</a></h2>
+<p>On dual-screen (DS-style) handhelds, an app's Options menu adds <strong>Run on Primary Screen</strong>. Turn it on to make a dual-screen app run on the main panel. Nano can also prompt you automatically when it detects an app that suits this, and the Control Center yields the bottom panel to an app that owns it.</p>
 <h2 id="standalone-emulator-apps"><a class="toclink" href="#standalone-emulator-apps">Standalone emulator apps</a></h2>
 <p>Many emulators are regular Android apps rather than RetroArch cores. Once one is installed, it shows up here in Applications and you can launch it directly. To wire a standalone emulator into the Game systems so ROMs launch straight into it (for example, AetherSX2 for PlayStation 2), set it up as a custom system. See <a href="custom-system.html">Add a custom system</a> for the step-by-step.</p>
         <footer class="page-foot">
@@ -146,6 +170,17 @@
 <li><a href="#launching-an-app">Launching an app</a>
 </li>
 <li><a href="#per-app-options">Per-app Options</a>
+<ul>
+<li><a href="#keep-running-in-background">Keep Running in Background</a></li>
+</ul>
+</li>
+<li><a href="#pin-apps-to-the-home">Pin apps to the home</a>
+</li>
+<li><a href="#the-files-app">The Files app</a>
+</li>
+<li><a href="#gammabrowser">GammaBrowser</a>
+</li>
+<li><a href="#run-on-primary-screen-dual-screen-devices">Run on Primary Screen (dual-screen devices)</a>
 </li>
 <li><a href="#standalone-emulator-apps">Standalone emulator apps</a>
 </li>

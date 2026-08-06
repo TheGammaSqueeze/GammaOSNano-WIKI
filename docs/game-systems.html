@@ -38,6 +38,7 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
@@ -79,6 +80,7 @@
 <li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+<li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -186,6 +188,19 @@
 <p>Built-in systems show <strong>Reset-to-Default</strong>, and custom systems you created show <strong>Delete</strong> instead. That way you can always undo your changes to a built-in system, and cleanly remove ones you made yourself.</p>
 <h2 id="a-quicker-way-in"><a class="toclink" href="#a-quicker-way-in">A quicker way in</a></h2>
 <p class="callout tip">From the <strong>Game</strong> category, highlight a system row and press the Options button, then choose <strong>Manage Game System</strong>. That jumps you straight into this editor for that system, without going through Settings. See <a href="context-menus.html">Context Menus</a> for more shortcuts.</p>
+<p><img alt="Manage Game System shortcut" src="assets/img/shots/wn_manage_system_shortcut.png" /></p>
+<h2 id="scan-folders-and-default-locations"><a class="toclink" href="#scan-folders-and-default-locations">Scan folders and default locations</a></h2>
+<p>The <strong>Scan Folders</strong> field lists which folders a system searches for games. It now also shows the built-in default folders (for example <code>ROMs/nes/</code>) with the number of games found in each, so you can see at a glance where to drop your ROMs. A default folder that has no games yet is shown as <strong>Default (empty)</strong>.</p>
+<p>When you remove a scan-source folder, Nano first asks you to confirm with a <strong>Cancel</strong> or <strong>Remove Folder</strong> dialog that shows the folder path, so you do not drop a source by accident. Removing a folder only stops Nano scanning it; your files are left in place.</p>
+<h2 id="missing-emulator-warning"><a class="toclink" href="#missing-emulator-warning">Missing-emulator warning</a></h2>
+<p>If a system's libretro core or standalone emulator app is not installed, Nano tells you rather than launching into a black screen. When you try to start a game whose core <code>.so</code> or standalone package is missing, a short toast appears explaining what is needed. See <a href="emulators.html">Emulators &amp; Cores</a> for which core or app each system uses.</p>
+<h2 id="auto-add-whole-systems-from-a-folder"><a class="toclink" href="#auto-add-whole-systems-from-a-folder">Auto-add whole systems from a folder</a></h2>
+<p>At the top of the Game Systems list you can bulk-import an entire ROMs collection in one pass. Choose <strong>Auto-add Systems from Folder</strong> and point it at your ROMs root (laid out with one folder per system, the ES-DE style).</p>
+<p>Nano walks the folders and, for each recognised system, links it to a built-in system or creates a new one for it. Empty folders and media-only folders are skipped. When it finishes it shows a summary of what was added, including any systems that still need an emulator installed to run.</p>
+<p><img alt="Bulk auto-add systems" src="assets/img/shots/wn_bulk_autoadd.png" /></p>
+<h2 id="sorting-the-game-category-y"><a class="toclink" href="#sorting-the-game-category-y">Sorting the Game category (Y)</a></h2>
+<p>The order systems appear on the home screen is separate from how you sort the tiles on screen. In the <strong>Game</strong> category, press <span class="btnchip">Y</span> to cycle the tile order: <strong>Default</strong>, <strong>A to Z</strong>, <strong>Most Games</strong>, and <strong>By Manufacturer</strong>. The choice persists across restarts, and it only changes the on-screen order. It never reorders or touches your actual games or systems.</p>
+<p><img alt="Game category sort" src="assets/img/shots/wn_game_sort.png" /></p>
 <h2 id="adding-a-whole-new-system"><a class="toclink" href="#adding-a-whole-new-system">Adding a whole new system</a></h2>
 <p>The editor is also how you add a console Nano does not list yet. Scroll to the top of the Game Systems list, choose <strong>Add New System...</strong>, and pick your emulator. For a full worked example (adding AetherSX2 for PlayStation 2, step by step), see <a href="custom-system.html">Add a Custom System</a>.</p>
 <h2 id="related-pages"><a class="toclink" href="#related-pages">Related pages</a></h2>
@@ -208,6 +223,14 @@
 <li><a href="#editing-a-system">Editing a system</a>
 </li>
 <li><a href="#a-quicker-way-in">A quicker way in</a>
+</li>
+<li><a href="#scan-folders-and-default-locations">Scan folders and default locations</a>
+</li>
+<li><a href="#missing-emulator-warning">Missing-emulator warning</a>
+</li>
+<li><a href="#auto-add-whole-systems-from-a-folder">Auto-add whole systems from a folder</a>
+</li>
+<li><a href="#sorting-the-game-category-y">Sorting the Game category (Y)</a>
 </li>
 <li><a href="#adding-a-whole-new-system">Adding a whole new system</a>
 </li>

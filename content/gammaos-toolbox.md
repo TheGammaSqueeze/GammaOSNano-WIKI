@@ -77,7 +77,7 @@ The same hold-to-exit works for DraStic. Full details are on the [RetroArch Cont
 
 These two change how your library is built:
 
-- **Scan ROM Subfolders** finds games that are tucked into folders inside your per-system ROM folder.
+- **Scan ROM Subfolders** finds games that are tucked into folders inside your per-system ROM folder. It is off by default (Nano scans one level); turn it on to scan up to six levels deep.
 - **Group Multi-Disc (.m3u)** turns a multi-disc game into one clean entry so you do not see Disc 1, Disc 2, and so on as separate games.
 
 After changing either one, run **Settings > Game Settings > Rescan Games**. See [Adding Games](adding-games.html) for how to organise your ROM folders.
@@ -87,7 +87,17 @@ After changing either one, run **Settings > Game Settings > Rescan Games**. See 
 | Option | What it does |
 |--------|--------------|
 | **RGB LED** | Control the device RGB LED (see also GammaRGB in Settings). |
-| **Widevine L3 Compatibility** | Improve compatibility with some streaming apps that use Widevine L3. |
+| **Widevine L3 Compatibility** | Fix streaming apps that fail on uncertified devices (see below). |
+
+### Widevine L3 Compatibility
+
+Some streaming apps refuse to play or throw an error (for example the Disney+ error) on uncertified devices because of DRM checks. Turn on **Widevine L3 Compatibility** to improve compatibility with these apps so protected video plays.
+
+![Widevine L3 compatibility](assets/img/shots/wn_widevine_l3.png)
+
+### Looking for Font Size?
+
+Font Size is not in the Toolbox. To scale the launcher's text, use **Font Size** in [Theme Settings](settings-reference.html#theme-settings) (it scales text live in every theme), or the system **Font Size** row in **Display Settings**.
 
 ## Related pages
 

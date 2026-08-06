@@ -38,6 +38,7 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
@@ -79,6 +80,7 @@
 <li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+<li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -276,8 +278,14 @@
 <td><strong>System Language</strong></td>
 <td>Pick your language, with a live preview across many languages.</td>
 </tr>
+<tr>
+<td><strong>USB &amp; Docking</strong></td>
+<td>Set the USB connection to <strong>File Transfer (MTP)</strong> or <strong>Charge Only</strong>, so you can move files to a PC without ADB.</td>
+</tr>
 </tbody>
 </table>
+<p><img alt="USB File Transfer (MTP)" src="assets/img/shots/wn_usb_mtp.png" /></p>
+<p>Apps that declare storage and microphone permissions are granted automatically (you can still revoke them later in the full Settings app), and permission dialogs are controller-navigable, with the confirm button focused and activated by your controller.</p>
 <h2 id="developer-options"><a class="toclink" href="#developer-options">Developer Options</a></h2>
 <p>For power users and debugging. Leave these off unless you know you need them.</p>
 <table>
@@ -354,19 +362,35 @@
 </tr>
 <tr>
 <td><strong>Wallpaper Dimming</strong></td>
-<td>Darken a bright wallpaper so text stays readable (default 25%).</td>
+<td>Darken a bright wallpaper so text stays readable (0 to 70%, default 25%).</td>
 </tr>
 <tr>
 <td><strong>XMB Wave</strong></td>
-<td>Turn the PS3 wave on or off (auto-off when a wallpaper is set).</td>
+<td>Turn the PS3 wave on or off (auto-off when a wallpaper is set). Also available as an opt-in in Minima.</td>
 </tr>
 <tr>
 <td><strong>Font</strong></td>
 <td>XMB font style (Original / Rounded / Pop).</td>
 </tr>
 <tr>
+<td><strong>Font Size</strong></td>
+<td>Scale the launcher's text live in every theme (XMB, DSi and Minima); word-wrapped text reflows as you change it.</td>
+</tr>
+<tr>
 <td><strong>Day/Night</strong></td>
 <td>XMB lighting (Auto / Day / Morning / Dusk / Evening / Night; default Night).</td>
+</tr>
+<tr>
+<td><strong>Dark Theme (DSi)</strong></td>
+<td>While the DSi theme is active, flip the whole DSi look (carousel, top screen, info page, dialogs, status bar and tile cards) to light text and icons on a dark field, live.</td>
+</tr>
+<tr>
+<td><strong>Dual Screen (DSi)</strong></td>
+<td>On dual-screen devices, choose Auto, Top+Bottom, or Carousel-Only.</td>
+</tr>
+<tr>
+<td><strong>Screen Gap (DSi)</strong></td>
+<td>Tune the spacing between the stacked screens on portrait dual-screen panels.</td>
 </tr>
 <tr>
 <td><strong>Bottom Clock</strong></td>
@@ -378,10 +402,14 @@
 </tr>
 <tr>
 <td><strong>Home Categories</strong></td>
-<td>Reorder or hide the home categories (Settings, Photo, Music, Video, Game, Network) with <span class="btnchip">L1</span> and <span class="btnchip">R1</span>.</td>
+<td>Reorder or hide the home categories (see below).</td>
 </tr>
 </tbody>
 </table>
+<p><img alt="Font scaling across themes" src="assets/img/shots/wn_font_size_setting.png" /></p>
+<p>Rows that belong to a theme you are not using are hidden, so Theme Settings only shows what applies to your active theme. See the <a href="themes.html">Themes</a> page for the full look-and-feel tour.</p>
+<h3 id="home-categories-editor"><a class="toclink" href="#home-categories-editor">Home Categories editor</a></h3>
+<p><strong>Home Categories</strong> opens an editor for the top-level home columns. Hide columns you never use and reorder them with <span class="btnchip">L1</span> and <span class="btnchip">R1</span>, and drill into a category to hide individual rows too. Quick Menu stays first, Settings cannot be hidden, and at least one category must stay visible. Changes apply live and persist.</p>
 <h2 id="date-and-time-settings"><a class="toclink" href="#date-and-time-settings">Date and Time Settings</a></h2>
 <table>
 <thead>
@@ -417,6 +445,8 @@
 </tr>
 </tbody>
 </table>
+<p>The DSi top-screen clock and the Minima status-pill clock follow your <strong>Time Format</strong> (12-hour or 24-hour), and the DSi date follows your <strong>Date Format</strong>.</p>
+<p><img alt="DSi/Minima clock format" src="assets/img/shots/wn_dsi_clock_format.png" /></p>
 <h2 id="power-save-settings"><a class="toclink" href="#power-save-settings">Power Save Settings</a></h2>
 <table>
 <thead>
@@ -590,6 +620,7 @@
 </tr>
 </tbody>
 </table>
+<p>When you boot into normal Android (desktop/TV) mode instead of Nano, screen orientation gets its own dedicated screen and the custom TvGammaShade notification shade becomes available. Those desktop-mode features are covered on the <a href="atv-desktop-features.html">Full-Android desktop features</a> page.</p>
 <h2 id="sound-settings"><a class="toclink" href="#sound-settings">Sound Settings</a></h2>
 <table>
 <thead>
@@ -610,6 +641,10 @@
 <tr>
 <td><strong>Screen Lock Sounds</strong></td>
 <td>Play a sound on lock and unlock.</td>
+</tr>
+<tr>
+<td><strong>Navigation Sounds</strong></td>
+<td>Turn the launcher's UI navigation sounds on or off (the boot jingle still plays).</td>
 </tr>
 </tbody>
 </table>
@@ -658,7 +693,7 @@
 </tr>
 <tr>
 <td><strong>GammaRGB</strong></td>
-<td>RGB LED lighting: effect (Off / Follow Screen / Solid / Effect 1-5), colour, brightness, scale-with-brightness, speed, saturation, fade, split zones with per-zone colours.</td>
+<td>RGB LED lighting: effect (Off / Follow Screen / Solid / Effect 1-5), colour, brightness, scale-with-brightness, speed, saturation, fade, split zones with per-zone colours. <strong>Effect &gt; Off</strong> now truly powers the LEDs off, solid colours display vividly at full brightness, and there is a full-screen d-pad HSV colour picker with a live hex readout.</td>
 </tr>
 <tr>
 <td><strong><a href="gammaeq.html">GammaEQ</a></strong></td>
@@ -668,12 +703,11 @@
 <td><strong>File Explorer</strong></td>
 <td>Browse and manage the files on your device.</td>
 </tr>
-<tr>
-<td><strong><a href="network-shares.html">Network Shares</a></strong></td>
-<td>Connect SMB, NFS, WebDAV, and FTP shares.</td>
-</tr>
 </tbody>
 </table>
+<p>If you see a <strong>Storage</strong> row, its status text only reports how much space is used or free; it is not where you manage files. To browse, move, delete, or format storage, open <strong>Applications &gt; Files</strong> (the standard file manager, fully controller-navigable) or the <strong>File Explorer</strong> row above.
+| <strong><a href="network-shares.html">Network Shares</a></strong> | Connect SMB, NFS, WebDAV, and FTP shares. |</p>
+<p><img alt="RGB d-pad HSV picker" src="assets/img/shots/wn_rgb_picker.png" /></p>
 <h2 id="quick-menu"><a class="toclink" href="#quick-menu">Quick Menu</a></h2>
 <p>The Quick Menu gives you fast access to brightness, performance, shaders, USB mode, and power, from the home or right over a running game. It has its own page: <a href="quick-menu.html">Quick Menu</a>.</p>
 <p><img alt="The Minima Quick Menu" src="assets/img/shots/min_quickmenu.png" /></p>
@@ -719,6 +753,9 @@
 <li><a href="#developer-options">Developer Options</a>
 </li>
 <li><a href="#theme-settings">Theme Settings</a>
+<ul>
+<li><a href="#home-categories-editor">Home Categories editor</a></li>
+</ul>
 </li>
 <li><a href="#date-and-time-settings">Date and Time Settings</a>
 </li>

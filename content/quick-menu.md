@@ -32,7 +32,7 @@ The Quick Menu is your fast lane to the settings you reach for most: brightness,
 | **Close Current App** | Force-stops the foreground app and returns you home |
 | **Kill Background Apps** | Force-stops background apps, sparing the one in front |
 | **Kill All Apps** | Force-stops all third-party apps |
-| **Screen Orientation** | Force an app's orientation (shown only over a running app) |
+| **Screen Orientation** | Force an app's orientation (shown only over a running app); the choice is remembered per app and persists between Nano and normal Android |
 | **Quick Resume** | Toggles [Quick Resume](quick-resume.html) on or off |
 | **Power** | A submenu: Restart, Power Off, Recovery, Safe Mode, Boot Android |
 
@@ -71,6 +71,10 @@ Switch how the device appears when plugged into a computer:
 - **MTP**: browse the device's files as media storage.
 - **PTP**: transfer photos.
 - **RNDIS**: share the device's connection as USB Ethernet.
+
+For a simpler two-way choice, **Settings > USB & Docking** offers **File Transfer (MTP)** and **Charge Only**, which is the quickest way to move files to a PC without ADB. See the [Settings Reference](settings-reference.html#system-settings).
+
+To silence the launcher's UI navigation sounds, use the **Navigation Sounds** toggle in **Settings > Sound Settings** (the boot jingle still plays).
 
 ## Where to go next
 

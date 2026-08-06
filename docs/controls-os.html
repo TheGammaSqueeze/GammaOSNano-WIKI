@@ -38,6 +38,7 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
@@ -79,6 +80,7 @@
 <li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+<li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -212,7 +214,7 @@
 <td><span class="btnchip">Y</span></td>
 <td>Cycle Sort By (Music: cycle visualizer; Photo: 2D/3D)</td>
 <td>Cycle Sort By</td>
-<td>(unused)</td>
+<td>Paste from the system clipboard</td>
 </tr>
 <tr>
 <td><span class="btnchip">L1</span></td>
@@ -250,20 +252,62 @@
 <ul>
 <li>The analog stick and the HAT are treated the same as the D-Pad. They fire at about 90 percent throw, then repeat.</li>
 <li>On the special "remove an item" lists (custom Game Systems, and music/photo/video folders), pressing <span class="btnchip">Y</span> removes the highlighted entry.</li>
+<li>On the on-screen keyboard, press <span class="btnchip">Y</span> to paste from the system clipboard. This is handy for long URLs and passwords you have copied elsewhere.</li>
 <li>You can start a global search from the home screen with <span class="btnchip">Select</span>. See the <a href="search.html">search</a> page for more.</li>
 </ul>
+<p><img alt="OSK paste with Y" src="assets/img/shots/wn_osk_paste.png" /></p>
+<p>Permission dialogs are now controller-navigable: the first button is focused when the dialog appears, and the confirm buttons activate straight from the pad, so you do not need a touch panel to allow or deny a permission.</p>
 <h2 id="hold-to-scroll"><a class="toclink" href="#hold-to-scroll">Hold to scroll</a></h2>
 <p>In a big library you do not have to tap the D-Pad over and over. Hold <span class="btnchip">D-Pad Up</span> or <span class="btnchip">D-Pad Down</span> in a game or media list and the list starts scrolling, then speeds up the longer you hold.</p>
 <ul>
 <li>The scroll waits about 300 milliseconds before it starts repeating, then repeats every 200 milliseconds and keeps accelerating (down to a fast 50 millisecond floor).</li>
+<li>This accelerating hold-to-scroll now works in DSi and Minima game lists too, not just XMB.</li>
 <li>The DSi carousel home uses a steadier, gentler cadence and only accelerates once you drill into a list.</li>
 </ul>
 <h2 id="bumper-page-skip"><a class="toclink" href="#bumper-page-skip">Bumper page-skip</a></h2>
 <p>The shoulder buttons are your fast-travel keys inside a list.</p>
 <ul>
-<li>Inside a drilled-in game or media list, <span class="btnchip">L1</span> jumps back 10 items and <span class="btnchip">R1</span> jumps forward 10 items. This is the quickest way to move through a large collection.</li>
+<li>Inside a drilled-in game or media list, <span class="btnchip">L1</span> jumps back 10 items and <span class="btnchip">R1</span> jumps forward 10 items. This is the quickest way to move through a large collection, and it works in DSi and Minima lists too.</li>
 <li>On a photo or music list, <span class="btnchip">L1</span> and <span class="btnchip">R1</span> step to the previous or next photo/track.</li>
 <li>On the home screen (not drilled in), <span class="btnchip">L1</span> and <span class="btnchip">R1</span> instead reorder your systems or toggle XMB text mode and Quick Resume.</li>
+</ul>
+<h2 id="emulator-controls-cheat-sheet"><a class="toclink" href="#emulator-controls-cheat-sheet">Emulator controls cheat sheet</a></h2>
+<p>Once a game is running, the controls belong to the emulator, not the Nano menu. Here is the short version of how to open the in-game menu, exit, and save or load state across the main emulator families. Follow the links for the full button tables.</p>
+<table>
+<thead>
+<tr>
+<th>Emulator family</th>
+<th>Open the in-game menu</th>
+<th>Exit the game</th>
+<th>Save / load state</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RetroArch</strong> cores</td>
+<td>The RetroArch menu combo (see the linked page)</td>
+<td>From the RetroArch menu</td>
+<td>RetroArch save/load state, or bindable hotkeys</td>
+</tr>
+<tr>
+<td><strong>DraStic Nano</strong> (Nintendo DS)</td>
+<td>Short-tap <span class="btnchip">Back</span></td>
+<td>Long-hold <span class="btnchip">Back</span></td>
+<td>Bindable <strong>Save State</strong> / <strong>Load State</strong> actions (slot 0), usable with the overlay closed</td>
+</tr>
+<tr>
+<td><strong>PPSSPP</strong> and standalone cores</td>
+<td>Each app's own in-app menu</td>
+<td>Each app's own menu</td>
+<td>Each app's own save-state feature</td>
+</tr>
+</tbody>
+</table>
+<p>For the details:</p>
+<ul>
+<li>RetroArch: <a href="controls-retroarch.html">RetroArch controls</a>.</li>
+<li>DraStic Nano: <a href="controls-drastic.html">DraStic Nano controls</a> and the <a href="drastic-nano.html">drastic-nano</a> overlay guide.</li>
+<li>PPSSPP and other standalone emulators use their own in-app menus; open them the way that app documents.</li>
 </ul>
 <h2 id="where-to-go-next"><a class="toclink" href="#where-to-go-next">Where to go next</a></h2>
 <ul>
@@ -285,6 +329,8 @@
 <li><a href="#hold-to-scroll">Hold to scroll</a>
 </li>
 <li><a href="#bumper-page-skip">Bumper page-skip</a>
+</li>
+<li><a href="#emulator-controls-cheat-sheet">Emulator controls cheat sheet</a>
 </li>
 <li><a href="#where-to-go-next">Where to go next</a>
 </li>

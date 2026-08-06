@@ -38,6 +38,7 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
@@ -79,6 +80,7 @@
 <li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+<li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -95,6 +97,14 @@
 <p>DraStic Nano embeds the DraStic DS core directly inside Nano, so there is no separate app to open and games boot quickly. It shares the same save data and preferences file with the stock DraStic app (<code>com.dsemu.drastic</code>), so any settings you change in one carry over to the other, both ways.</p>
 <p>Nintendo DS games (<code>.nds</code> files) launch through DraStic Nano automatically from the Game menu. There is nothing to select or configure to make this happen.</p>
 <p class="callout note">DraStic Nano shares its saves and preferences with the stock DraStic app, so your progress and settings stay in sync between them.</p>
+<h2 id="quick-start-your-first-ds-game"><a class="toclink" href="#quick-start-your-first-ds-game">Quick start: your first DS game</a></h2>
+<ol>
+<li>Drop your <code>.nds</code> files in a DS ROM folder and open the <strong>Game</strong> menu.</li>
+<li>Pick your game and press <span class="btnchip">A</span> to launch. There is no BIOS to find and nothing to set up first.</li>
+<li>While playing, give <span class="btnchip">Back</span> a <strong>short tap</strong> to open the in-game overlay. It now opens on a <strong>General</strong> tab with the everyday actions, and the game pauses while the overlay is open.</li>
+<li>To leave the game, give <span class="btnchip">Back</span> a <strong>long hold</strong> (about 1.5 seconds) to exit back to the Nano home.</li>
+</ol>
+<p class="callout tip">Same button, two lengths of press: a short tap of <span class="btnchip">Back</span> opens the menu, a long hold exits the game.</p>
 <h2 id="no-bios-needed"><a class="toclink" href="#no-bios-needed">No BIOS needed</a></h2>
 <p>Good news: DraStic does <strong>not</strong> need a BIOS. It has its own built-in high-level BIOS emulation, so Nintendo DS games run straight away with no BIOS or firmware files to find or copy. This is unlike PlayStation, PS2, or Dreamcast, which do need you to supply a BIOS (see <a href="emulators.html#bios-files-not-included">Emulators</a>).</p>
 <p class="callout tip">The only "firmware" DraStic has is cosmetic DS user data (nickname, birthday, favourite colour, and menu language). It is optional, and you set it inside the stock DraStic app, not with any BIOS file.</p>
@@ -133,12 +143,24 @@
 <p>For the full controls breakdown, see <a href="controls-drastic.html">DraStic controls</a>.</p>
 <h2 id="the-in-game-overlay-menu"><a class="toclink" href="#the-in-game-overlay-menu">The in-game overlay menu</a></h2>
 <p>Give the <span class="btnchip">Back</span> button a short tap to open the overlay. The game pauses while it is open, and tapping <span class="btnchip">Back</span> again closes it and resumes play. The overlay is organized into sections, covered below.</p>
+<p class="callout note">The overlay now opens on the <strong>General</strong> tab by default, so the actions you reach for most are the first thing you see. On narrow panels like the Brick the guide strip (the L/R tabs and hints along the edge) shrinks and centres to fit instead of clipping.</p>
+<h3 id="general"><a class="toclink" href="#general">General</a></h3>
+<p>The default tab, gathering the everyday actions in one place:</p>
+<ul>
+<li><strong>Brightness</strong></li>
+<li><strong>Performance</strong> (the same Max / Stock / Powersave mode as in Video)</li>
+<li><strong>Restart Game</strong></li>
+<li><strong>Exit Game</strong></li>
+<li><strong>Power Off</strong></li>
+<li><strong>Reboot</strong></li>
+</ul>
 <h3 id="save-states"><a class="toclink" href="#save-states">Save States</a></h3>
 <ul>
 <li>Save and load slots <strong>0 to 8</strong>.</li>
 <li><strong>Auto-Load</strong> toggle, so a game can pick up from your last state automatically.</li>
 <li><strong>Restart Game</strong>.</li>
 </ul>
+<p><strong>Save State</strong> and <strong>Load State</strong> (slot 0) can also be bound to any button as quick actions, so you can quick-save and quick-load without opening the overlay at all. See <a href="controls-drastic.html">DraStic controls</a> for how to bind them.</p>
 <h3 id="video"><a class="toclink" href="#video">Video</a></h3>
 <p>This is the largest section. Options that need it are marked to restart before they take effect.</p>
 <table>
@@ -159,7 +181,7 @@
 </tr>
 <tr>
 <td>Layout Preset</td>
-<td>Picture-in-picture and other presets</td>
+<td>Picture-in-picture and other presets, plus the two vertical presets below</td>
 </tr>
 <tr>
 <td>PiP Opacity</td>
@@ -186,6 +208,26 @@
 <td>0, 90, 180, or 270</td>
 </tr>
 <tr>
+<td>Layout X Offset</td>
+<td>Nudge the whole screen display left or right</td>
+</tr>
+<tr>
+<td>Layout Y Offset</td>
+<td>Nudge the whole screen display up or down</td>
+</tr>
+<tr>
+<td>Layout Scale</td>
+<td>Zoom the screen display in or out</td>
+</tr>
+<tr>
+<td>Reset Layout Tuning</td>
+<td>Snap the three offset/scale values back to default</td>
+</tr>
+<tr>
+<td>FPS Counter</td>
+<td>Optional on-screen frame-rate readout (default <strong>Off</strong>)</td>
+</tr>
+<tr>
 <td>Hi-res 3D</td>
 <td>Default <strong>On</strong>; doubles the internal 3D render resolution</td>
 </tr>
@@ -209,8 +251,37 @@
 <td>Performance Mode</td>
 <td>Max, Stock, or Powersave</td>
 </tr>
+<tr>
+<td>Half Resolution</td>
+<td>SF render option, default <strong>Off</strong> (see below)</td>
+</tr>
+<tr>
+<td>16-Bit Layout</td>
+<td>SF render option, default <strong>Off</strong> (see below)</td>
+</tr>
+<tr>
+<td>SF Vsync Lock</td>
+<td>SF render option, default <strong>Off</strong> (see below)</td>
+</tr>
 </tbody>
 </table>
+<h4 id="adjustable-screen-layout"><a class="toclink" href="#adjustable-screen-layout">Adjustable screen layout</a></h4>
+<p>The <strong>Layout X Offset</strong>, <strong>Layout Y Offset</strong> and <strong>Layout Scale</strong> rows let you nudge and zoom the on-screen display to line it up exactly on your panel, on top of the chosen layout. <strong>Reset Layout Tuning</strong> snaps all three back to their defaults if you want to start over.</p>
+<h4 id="vertical-layout-presets"><a class="toclink" href="#vertical-layout-presets">Vertical layout presets</a></h4>
+<p>Two vertical presets stack the two DS screens for portrait-friendly play:</p>
+<ul>
+<li><strong>Big Top + Small</strong> stacks the two screens directly at fixed sizes (768x576 on top, 512x384 below), with a <strong>Swap</strong> toggle to put the small screen on top instead.</li>
+<li><strong>Big Top + Tiny</strong> is a dynamic preset: it fits the big screen to the full panel width along the top, then gives whatever height is left to the tiny screen at the bottom. This adapts to your panel rather than using fixed sizes.</li>
+</ul>
+<h4 id="on-screen-fps-counter"><a class="toclink" href="#on-screen-fps-counter">On-screen FPS counter</a></h4>
+<p>Turn on the <strong>FPS Counter</strong> to show the present rate in the top-right corner. It measures over a rolling one-second window and is sized to stay readable at any resolution. It is off by default.</p>
+<h4 id="sf-render-options-opt-in"><a class="toclink" href="#sf-render-options-opt-in">SF render options (opt-in)</a></h4>
+<p>These three options are aimed at fill-bound panels and are all <strong>off by default</strong>. Leave them off unless you need the extra headroom:</p>
+<ul>
+<li><strong>Half Resolution</strong> renders at half size and nearest-upscales, cutting the fill cost to about a quarter.</li>
+<li><strong>16-Bit Layout</strong> composites in RGB565 to halve the display bandwidth.</li>
+<li><strong>SF Vsync Lock</strong> phase-locks the present loop to the panel's vblank for a steadier cadence.</li>
+</ul>
 <h3 id="audio"><a class="toclink" href="#audio">Audio</a></h3>
 <ul>
 <li><strong>Volume</strong>, 0 to 10, applies live.</li>
@@ -252,6 +323,7 @@
 </table>
 <h2 id="firmware-and-ds-user-data"><a class="toclink" href="#firmware-and-ds-user-data">Firmware and DS user data</a></h2>
 <p>Your DS firmware personalization (Firmware Language, colour and theme, birthday, and nickname) is read at launch from the shared preferences file. These are <strong>not</strong> editable in the in-game overlay.</p>
+<p class="callout note">DS games now boot with your chosen <strong>Firmware Language</strong> (and system name, birthday and colour) from those DraStic settings, instead of always defaulting to English. Set a non-English firmware language once and every game respects it.</p>
 <p>To change them, open the stock DraStic app once, set them there, then relaunch your game from Nano. The stock app is also where you set the full keymaps.</p>
 <table>
 <thead>
@@ -275,6 +347,12 @@
 </tr>
 </tbody>
 </table>
+<h2 id="save-location-and-syncing"><a class="toclink" href="#save-location-and-syncing">Save location and syncing</a></h2>
+<p>DraStic Nano keeps your DS saves, its config and any BIOS files with the stock DraStic app, so both the built-in emulator and the standalone app read the same data.</p>
+<p>You can now point everything at a folder you choose from <strong>Settings &gt; Game Settings &gt; DraStic Data Folder</strong>. Set a <strong>Custom DraStic Data Folder</strong> on shared storage and your saves, config and BIOS all live in one place you can reach from a file manager, from a PC over MTP, or off the device entirely.</p>
+<p><img alt="DraStic data folder" src="assets/img/shots/wn_drastic_data_folder.png" /></p>
+<p>To keep the standalone DraStic app pointed at the same folder, open it and set its own <strong>Settings &gt; Data Location</strong> to match. With both pointing at one folder, a game saved in Nano is instantly available in the standalone app and back again.</p>
+<p class="callout tip">Because that folder is ordinary shared storage, a tool like <strong>Syncthing</strong> can mirror it to a PC or another device, so your DS saves follow you between machines. Point Syncthing at the same <strong>DraStic Data Folder</strong> on each device and let it keep them in sync.</p>
 <h2 id="quick-resume"><a class="toclink" href="#quick-resume">Quick Resume</a></h2>
 <p>With Quick Resume enabled (default <strong>On</strong>, toggled on the Nano home with <span class="btnchip">R1</span> or in the setting), powering off or rebooting while in a DS game force-saves to DraStic's reserved autosave slot (slot 9). On the next boot, Nano relaunches straight back into your paused game with no load screen.</p>
 <p>There is a built-in crash guard: if an autosave is truncated or too small, it is quarantined and the game boots fresh instead of loading a corrupt state.</p>
@@ -298,6 +376,10 @@
 <td>Quick Resume on or off</td>
 </tr>
 <tr>
+<td>Settings &gt; Game Settings</td>
+<td>Custom <strong>DraStic Data Folder</strong> (shared save/config/BIOS location)</td>
+</tr>
+<tr>
 <td>Stock DraStic app</td>
 <td>Firmware user data (language, nickname, birthday, colour) and full keymaps</td>
 </tr>
@@ -309,6 +391,7 @@
   <a class="card" href="controls-drastic.html"><span class="card-ico">🕹️</span><span class="card-kicker">Controls</span><h3>DraStic Controls</h3><p>Every button in a DS game.</p></a>
   <a class="card" href="emulators.html"><span class="card-ico">💾</span><span class="card-kicker">Emulators</span><h3>Emulators & Cores</h3><p>How Nano runs every other system.</p></a>
   <a class="card" href="adding-games.html"><span class="card-ico">📂</span><span class="card-kicker">Games</span><h3>Adding Games</h3><p>Where to put your DS ROMs.</p></a>
+  <a class="card" href="what-s-new-since-1-4.html"><span class="card-ico">✨</span><span class="card-kicker">Getting Started</span><h3>What's New since 1.4</h3><p>The new General tab, layout tuning and more.</p></a>
 </div>
         <footer class="page-foot">
           <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
@@ -317,12 +400,15 @@
       <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
 <li><a href="#what-drastic-nano-is">What DraStic Nano is</a>
 </li>
+<li><a href="#quick-start-your-first-ds-game">Quick start: your first DS game</a>
+</li>
 <li><a href="#no-bios-needed">No BIOS needed</a>
 </li>
 <li><a href="#in-game-controls">In-game controls</a>
 </li>
 <li><a href="#the-in-game-overlay-menu">The in-game overlay menu</a>
 <ul>
+<li><a href="#general">General</a></li>
 <li><a href="#save-states">Save States</a></li>
 <li><a href="#video">Video</a></li>
 <li><a href="#audio">Audio</a></li>
@@ -334,6 +420,8 @@
 <li><a href="#recommended-defaults">Recommended defaults</a>
 </li>
 <li><a href="#firmware-and-ds-user-data">Firmware and DS user data</a>
+</li>
+<li><a href="#save-location-and-syncing">Save location and syncing</a>
 </li>
 <li><a href="#quick-resume">Quick Resume</a>
 </li>

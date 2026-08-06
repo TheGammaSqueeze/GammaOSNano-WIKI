@@ -86,3 +86,71 @@ Either one restarts a frozen or dead home screen.
 - [Adding Games](adding-games.html), [Game Systems](game-systems.html), and [Custom System](custom-system.html)
 - [Boxart](boxart.html) and [Emulators](emulators.html)
 - [Settings Reference](settings-reference.html) and [GammaOS Toolbox](gammaos-toolbox.html)
+
+## New in this release
+
+Common questions about the features added since GammaOS Nano 1.4.
+
+### How do I mark a game as a favourite?
+
+Highlight the game and press the Options button, then choose **Add to Favorites**. A single cross-system **Favorites** list appears under the Game category (above Collections) as soon as you star your first game, and it disappears again when you remove your last. Use **Remove from Favorites** in the same menu to un-star.
+
+### Can I set my own box art from an image on the device?
+
+Yes. Highlight the game, press Options and choose **Set Boxart**, then pick any image from your Photos. It is copied into the cover cache and shows up immediately in every theme. Use **Reset Boxart** to remove it. This is the easiest way to give cover art to homebrew, undubs, prototypes and romhacks that the scraper cannot match by filename. If you prefer, the game's **Information** page shows the exact cover file path so you can drop your own image there manually.
+
+### A game's name is wrong or the scraper cannot match it. Can I fix it?
+
+Open the game's Options menu and choose **Rename / Edit Title** to type the correct name. The new name is used everywhere (game lists, Recently Played, search and the Information page) and is also used as the scraper search query, so you can rename a game and then run **Scrape This Game** to fetch the right art and details. To scrape one game under a different name without renaming the file, use **Scrape with Custom Name...**. Renaming to an empty title reverts to the filename.
+
+### How do I transfer ROMs and files over USB?
+
+Connect the device to a PC, then go to **Settings > USB & Docking** and select **File Transfer (MTP)**. The device appears as a drive on your PC; switch back to **Charge Only** when you are done. On a brand-new install MTP can be reluctant until you have launched a game once. If MTP still does not show storage, a file manager such as MiXplorer from Applications is a reliable alternative.
+
+### How do I hide game systems or home categories I don't use?
+
+Go to **Settings > Theme Settings > Home Categories**. Use X to hide or show a category and L1/R1 to reorder them. To hide individual rows inside a category (for example specific game systems), drill into that category and toggle the rows there. Quick Menu always stays first, Settings cannot be hidden, and at least one category must remain visible. Changes are saved and apply live across XMB, DSi and Minima.
+
+### How do I pin my favourite apps to the home?
+
+Open the Applications category, highlight an app and press Y. A **Pinned Apps** row appears in the Game column showing your pinned apps with their real icons, and it persists across restarts. Press Y again on a pinned app to unpin it.
+
+### Can I keep an app running in the background when I leave it?
+
+Yes. Open the app's Options menu and turn on **Keep Running in Background**. That app will not be force-stopped when you return to the menu, which is useful for music players, file managers and other tools you want to stay warm. Leave it off for games so they close cleanly.
+
+### How do I make text bigger or smaller?
+
+Go to **Settings > Theme Settings > Font Size** (also listed under Display). The size applies live across XMB, DSi and Minima, and word-wrapped text reflows as you change it. In Minima, long names scroll on the focused row at the normal size by default; you can switch to Shrink to Fit in Theme Settings if you prefer.
+
+### My whole ROMs folder has many systems. Do I have to add each one?
+
+No. Go to **Settings > Game Settings > Game Systems > Auto-add Systems from Folder** and point it at your ROMs root. Nano recognises ES-DE style folders, links them to built-in systems or creates new ones, and skips empty and media-only folders. A summary tells you what was added and which systems still need an emulator installed.
+
+### Why does a game show a black screen instead of launching?
+
+If the emulator for that game is not installed, Nano now shows a short warning message instead of black-screening. Install the required RetroArch core or standalone emulator app, or set the correct emulator for that system in **Settings > Game Settings > Game Systems**, and try again.
+
+### Does the DSi theme have a dark mode?
+
+Yes. Switch to the DSi theme, then in **Settings > Theme Settings** turn on **Dark Theme**. The whole DSi look flips to light text and icons on a dark field, and it applies immediately. The DSi theme also follows your accent **Colour** setting.
+
+### How do I paste a URL or long text into a text field?
+
+When the on-screen keyboard is open, press Y to paste whatever is on the system clipboard into the field. This saves typing out long URLs and passwords by hand.
+
+### My multi-disc PS1 game shows every disc separately. How do I group them?
+
+Create a `.m3u` playlist file listing the disc images and place it alongside them. Nano groups multi-disc games referenced by an `.m3u` into a single launchable entry and hides the individual discs. This is on by default. If your CD games are in subfolders, you can also enable **Scan ROM Subfolders** in GammaOS Toolbox so they are found.
+
+### Can I move where DraStic keeps its saves?
+
+Yes. Go to **Settings > Game Settings > DraStic Data Folder** and choose a folder on shared storage. drastic-nano and the standalone DraStic app then use that same location, so your saves, config and BIOS live in one place you can reach outside the app.
+
+### DraStic runs slowly on my device. What can I try?
+
+Open the in-game overlay and go to Video. Turn on **Half Resolution** to render at half size and upscale (a big speed-up on fill-bound panels, at the cost of a softer image). You can also try **16-Bit Layout** to cut bandwidth. **SF Vsync Lock** is off by default and only helps once the frame already fits inside the vblank. All three are opt-in and safe to toggle live. The optional **FPS Counter** in the same menu helps you see the effect.
+
+### Streaming apps like Disney+ show a DRM or certification error. Any fix?
+
+Go to **Settings > GammaOS Toolbox** and enable **Widevine L3 Compatibility**. This forces Widevine L3 mode, which resolves common DRM errors (such as the Disney+ error) on uncertified devices.

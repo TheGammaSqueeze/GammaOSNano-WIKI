@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Desktop Mode Features - GammaOS Nano</title>
+<meta name="description" content="What you get when you boot GammaOS into normal Android (desktop and TV mode) instead of the Nano launcher.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.png">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <img class="brand-mark" src="assets/img/brand/gammaos-logo-tile.png" alt="GammaOS logo" width="28" height="28">
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+<li><a href="theme-settings.html"><span class="nav-ico">🖼️</span>Wallpapers &amp; Theme Settings</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+<li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
+<li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
+<li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+<li><a class="active" href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">GammaOS can boot straight into the Nano launcher or into normal Android (desktop and TV mode). Desktop mode is the full Android experience with a launcher, a status bar and a notification shade, and it is where you install and manage apps that expect a normal phone or tablet environment. This page covers the features that only apply in desktop mode. For the Nano launcher itself, see <a href="what-is-nano.html">What Is GammaOS Nano</a> and <a href="what-s-new-since-1-4.html">What's New since 1.4</a>.</p>
+<h2 id="switching-between-nano-and-desktop-mode"><a class="toclink" href="#switching-between-nano-and-desktop-mode">Switching between Nano and desktop mode</a></h2>
+<p>Nano and desktop mode are two boot targets on the same system. Switching is controlled by a single setting, so your games, saves and apps stay in place either way. When you switch to desktop mode the device boots to a normal Android home screen with a status bar and an app drawer instead of the XMB, DSi or Minima launcher.</p>
+<h2 id="custom-notification-shade-tvgammashade"><a class="toclink" href="#custom-notification-shade-tvgammashade">Custom notification shade (TvGammaShade)</a></h2>
+<p>Desktop mode ships a purpose built notification shade that works with a controller and on screens that do not have a touch digitizer.</p>
+<ul>
+<li><strong>Paged Quick Settings tiles</strong> for the common toggles, laid out so you can move through them with a d-pad.</li>
+<li><strong>Brightness and volume sliders</strong> right in the shade. On devices with two panels and split brightness enabled, you get a separate brightness slider per panel.</li>
+<li><strong>Live notifications</strong> that grow and update in place.</li>
+<li><strong>Swipe up to dismiss</strong> that follows your finger on touch panels, and a controller friendly close.</li>
+</ul>
+<p>Open and close the shade with the <strong>ALL_APPS</strong> key on your controller or keyboard.</p>
+<h2 id="full-android-settings-app"><a class="toclink" href="#full-android-settings-app">Full Android Settings app</a></h2>
+<p>Desktop mode now ships the complete Android Settings app rather than the cut down TV Settings. The Settings dashboard also surfaces <strong>GammaOS Toolbox</strong> and shortcuts to the hardware control apps, so the device specific options sit alongside the standard Android ones. See the <a href="settings-reference.html">Settings Reference</a> and <a href="gammaos-toolbox.html">GammaOS Toolbox</a> for what each option does.</p>
+<h2 id="screen-orientation-in-normal-android"><a class="toclink" href="#screen-orientation-in-normal-android">Screen orientation in normal Android</a></h2>
+<p>A <strong>GammaOS &gt; Screen Orientation</strong> screen lets you set Auto, Landscape or Portrait (with clamping) for normal Android, and the choice persists between Nano and desktop mode. On the RG Rotate the hardware slider is respected in normal Android too, so rotating the panel rotates the desktop as expected. For the Nano side of rotation and the slide clock, see <a href="slide-rotation.html">Slide and Rotate Clock</a>.</p>
+<h2 id="dual-screen-home-and-per-app-primary-screen"><a class="toclink" href="#dual-screen-home-and-per-app-primary-screen">Dual-screen home and per-app primary screen</a></h2>
+<p>On dual-screen devices desktop mode keeps a launcher on both displays, so each screen has its own home. Apps that are built for two screens (such as Cocoon Shell) can be set to <strong>Run on Primary Screen</strong>, and the system shows an auto-detect prompt the first time it sees such an app. When one of these apps takes over the bottom panel, the Control Center yields the bottom panel to it so the two do not fight over the same screen. The matching per-app toggle in the Nano launcher is covered in <a href="applications.html">Applications</a>.</p>
+<h2 id="per-display-volume"><a class="toclink" href="#per-display-volume">Per-display volume</a></h2>
+<p>Volume can be set per physical display, so a dual-screen device can run the two panels at different levels. The per-display sliders live in the shade described above.</p>
+<h2 id="boot-reliability"><a class="toclink" href="#boot-reliability">Boot reliability</a></h2>
+<p>Two fixes make desktop mode start cleanly:</p>
+<ul>
+<li>The panel no longer blanks for several seconds partway through boot.</li>
+<li>The locked boot home resolves correctly, so a fresh boot into normal Android reaches the home screen instead of hanging before the launcher appears.</li>
+</ul>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#switching-between-nano-and-desktop-mode">Switching between Nano and desktop mode</a>
+</li>
+<li><a href="#custom-notification-shade-tvgammashade">Custom notification shade (TvGammaShade)</a>
+</li>
+<li><a href="#full-android-settings-app">Full Android Settings app</a>
+</li>
+<li><a href="#screen-orientation-in-normal-android">Screen orientation in normal Android</a>
+</li>
+<li><a href="#dual-screen-home-and-per-app-primary-screen">Dual-screen home and per-app primary screen</a>
+</li>
+<li><a href="#per-display-volume">Per-display volume</a>
+</li>
+<li><a href="#boot-reliability">Boot reliability</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -96,6 +96,11 @@ These two rows control the streaming browsers in the [media players](media.html)
 |--------|--------------|
 | **System Name** | Set the name shown for this device. |
 | **System Language** | Pick your language, with a live preview across many languages. |
+| **USB & Docking** | Set the USB connection to **File Transfer (MTP)** or **Charge Only**, so you can move files to a PC without ADB. |
+
+![USB File Transfer (MTP)](assets/img/shots/wn_usb_mtp.png)
+
+Apps that declare storage and microphone permissions are granted automatically (you can still revoke them later in the full Settings app), and permission dialogs are controller-navigable, with the confirm button focused and activated by your controller.
 
 ## Developer Options
 
@@ -123,13 +128,25 @@ The heart of the launcher's look. See the [Themes](themes.html) page for the ful
 | **Video Wallpaper** | A looping video for the top-screen background. |
 | **Clear Wallpaper** | Remove a custom wallpaper and restore the wave. |
 | **Background Colour** | A solid colour for the Minima background. |
-| **Wallpaper Dimming** | Darken a bright wallpaper so text stays readable (default 25%). |
-| **XMB Wave** | Turn the PS3 wave on or off (auto-off when a wallpaper is set). |
+| **Wallpaper Dimming** | Darken a bright wallpaper so text stays readable (0 to 70%, default 25%). |
+| **XMB Wave** | Turn the PS3 wave on or off (auto-off when a wallpaper is set). Also available as an opt-in in Minima. |
 | **Font** | XMB font style (Original / Rounded / Pop). |
+| **Font Size** | Scale the launcher's text live in every theme (XMB, DSi and Minima); word-wrapped text reflows as you change it. |
 | **Day/Night** | XMB lighting (Auto / Day / Morning / Dusk / Evening / Night; default Night). |
+| **Dark Theme (DSi)** | While the DSi theme is active, flip the whole DSi look (carousel, top screen, info page, dialogs, status bar and tile cards) to light text and icons on a dark field, live. |
+| **Dual Screen (DSi)** | On dual-screen devices, choose Auto, Top+Bottom, or Carousel-Only. |
+| **Screen Gap (DSi)** | Tune the spacing between the stacked screens on portrait dual-screen panels. |
 | **Bottom Clock** | Turn the bottom-screen clock on or off (dual-screen devices). |
 | **Bottom Clock FPS** | 30 or 60 frames per second for the clock. |
-| **Home Categories** | Reorder or hide the home categories (Settings, Photo, Music, Video, Game, Network) with <span class="btnchip">L1</span> and <span class="btnchip">R1</span>. |
+| **Home Categories** | Reorder or hide the home categories (see below). |
+
+![Font scaling across themes](assets/img/shots/wn_font_size_setting.png)
+
+Rows that belong to a theme you are not using are hidden, so Theme Settings only shows what applies to your active theme. See the [Themes](themes.html) page for the full look-and-feel tour.
+
+### Home Categories editor
+
+**Home Categories** opens an editor for the top-level home columns. Hide columns you never use and reorder them with <span class="btnchip">L1</span> and <span class="btnchip">R1</span>, and drill into a category to hide individual rows too. Quick Menu stays first, Settings cannot be hidden, and at least one category must stay visible. Changes apply live and persist.
 
 ## Date and Time Settings
 
@@ -141,6 +158,10 @@ The heart of the launcher's look. See the [Themes](themes.html) page for the ful
 | **Time Format** | 12-hour or 24-hour clock. |
 | **Time Zone** | Pick your zone. |
 | **Daylight Saving** | Toggle daylight saving. |
+
+The DSi top-screen clock and the Minima status-pill clock follow your **Time Format** (12-hour or 24-hour), and the DSi date follows your **Date Format**.
+
+![DSi/Minima clock format](assets/img/shots/wn_dsi_clock_format.png)
 
 ## Power Save Settings
 
@@ -200,6 +221,8 @@ For devices with a slide, swivel, or hall (lid) switch. Configure what happens w
 | **Dark Theme** | System dark mode. |
 | **Screen Orientation / Force Orientation** | Set or lock the screen orientation. |
 
+When you boot into normal Android (desktop/TV) mode instead of Nano, screen orientation gets its own dedicated screen and the custom TvGammaShade notification shade becomes available. Those desktop-mode features are covered on the [Full-Android desktop features](atv-desktop-features.html) page.
+
 ## Sound Settings
 
 | Option | What it does |
@@ -207,6 +230,7 @@ For devices with a slide, swivel, or hall (lid) switch. Configure what happens w
 | **Touch Sounds** | Play a sound on touch. |
 | **Charging Sounds** | Play a sound when charging starts. |
 | **Screen Lock Sounds** | Play a sound on lock and unlock. |
+| **Navigation Sounds** | Turn the launcher's UI navigation sounds on or off (the boot jingle still plays). |
 
 ## Network Settings
 
@@ -228,10 +252,14 @@ These rows open dedicated tools rather than a simple list of toggles.
 | Row | What it is |
 |-----|-----------|
 | **[GammaOS Toolbox](gammaos-toolbox.html)** | Power-user tweaks: performance, display, audio, swap, the RetroArch Back Button, and more. |
-| **GammaRGB** | RGB LED lighting: effect (Off / Follow Screen / Solid / Effect 1-5), colour, brightness, scale-with-brightness, speed, saturation, fade, split zones with per-zone colours. |
+| **GammaRGB** | RGB LED lighting: effect (Off / Follow Screen / Solid / Effect 1-5), colour, brightness, scale-with-brightness, speed, saturation, fade, split zones with per-zone colours. **Effect > Off** now truly powers the LEDs off, solid colours display vividly at full brightness, and there is a full-screen d-pad HSV colour picker with a live hex readout. |
 | **[GammaEQ](gammaeq.html)** | Speaker EQ and enhancements: master enable, speaker-only, preview, preamp and postgain, Crystalizer, Bass Limiter, Mid Protector, Stereo Widener, and two parametric EQ bands. |
 | **File Explorer** | Browse and manage the files on your device. |
+
+If you see a **Storage** row, its status text only reports how much space is used or free; it is not where you manage files. To browse, move, delete, or format storage, open **Applications > Files** (the standard file manager, fully controller-navigable) or the **File Explorer** row above.
 | **[Network Shares](network-shares.html)** | Connect SMB, NFS, WebDAV, and FTP shares. |
+
+![RGB d-pad HSV picker](assets/img/shots/wn_rgb_picker.png)
 
 ## Quick Menu
 

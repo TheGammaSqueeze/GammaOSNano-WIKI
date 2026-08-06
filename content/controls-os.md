@@ -66,7 +66,7 @@ Inside the Nano menu, buttons change meaning a little depending on where you are
 | <span class="btnchip">A</span> | Confirm or launch the selected item | Launch a game or open a submenu | Submit query / password |
 | <span class="btnchip">B</span> | Back, exit submenu, or close a modal | Back one level | Close the keyboard |
 | <span class="btnchip">X</span> | Open the Options menu | Open the Options menu | Backspace |
-| <span class="btnchip">Y</span> | Cycle Sort By (Music: cycle visualizer; Photo: 2D/3D) | Cycle Sort By | (unused) |
+| <span class="btnchip">Y</span> | Cycle Sort By (Music: cycle visualizer; Photo: 2D/3D) | Cycle Sort By | Paste from the system clipboard |
 | <span class="btnchip">L1</span> | Toggle XMB/text mode; reorder a system up | Page-skip back 10 items; previous photo/track | Toggle Shift (ABC/abc/symbols) |
 | <span class="btnchip">R1</span> | Toggle Quick Resume; reorder a system down | Page-skip forward 10 items; next photo/track | Toggle symbols mode |
 | <span class="btnchip">L2</span> / <span class="btnchip">R2</span> | Not used in the menu | Not used | Not used |
@@ -77,22 +77,44 @@ A few handy notes:
 
 - The analog stick and the HAT are treated the same as the D-Pad. They fire at about 90 percent throw, then repeat.
 - On the special "remove an item" lists (custom Game Systems, and music/photo/video folders), pressing <span class="btnchip">Y</span> removes the highlighted entry.
+- On the on-screen keyboard, press <span class="btnchip">Y</span> to paste from the system clipboard. This is handy for long URLs and passwords you have copied elsewhere.
 - You can start a global search from the home screen with <span class="btnchip">Select</span>. See the [search](search.html) page for more.
+
+![OSK paste with Y](assets/img/shots/wn_osk_paste.png)
+
+Permission dialogs are now controller-navigable: the first button is focused when the dialog appears, and the confirm buttons activate straight from the pad, so you do not need a touch panel to allow or deny a permission.
 
 ## Hold to scroll
 
 In a big library you do not have to tap the D-Pad over and over. Hold <span class="btnchip">D-Pad Up</span> or <span class="btnchip">D-Pad Down</span> in a game or media list and the list starts scrolling, then speeds up the longer you hold.
 
 - The scroll waits about 300 milliseconds before it starts repeating, then repeats every 200 milliseconds and keeps accelerating (down to a fast 50 millisecond floor).
+- This accelerating hold-to-scroll now works in DSi and Minima game lists too, not just XMB.
 - The DSi carousel home uses a steadier, gentler cadence and only accelerates once you drill into a list.
 
 ## Bumper page-skip
 
 The shoulder buttons are your fast-travel keys inside a list.
 
-- Inside a drilled-in game or media list, <span class="btnchip">L1</span> jumps back 10 items and <span class="btnchip">R1</span> jumps forward 10 items. This is the quickest way to move through a large collection.
+- Inside a drilled-in game or media list, <span class="btnchip">L1</span> jumps back 10 items and <span class="btnchip">R1</span> jumps forward 10 items. This is the quickest way to move through a large collection, and it works in DSi and Minima lists too.
 - On a photo or music list, <span class="btnchip">L1</span> and <span class="btnchip">R1</span> step to the previous or next photo/track.
 - On the home screen (not drilled in), <span class="btnchip">L1</span> and <span class="btnchip">R1</span> instead reorder your systems or toggle XMB text mode and Quick Resume.
+
+## Emulator controls cheat sheet
+
+Once a game is running, the controls belong to the emulator, not the Nano menu. Here is the short version of how to open the in-game menu, exit, and save or load state across the main emulator families. Follow the links for the full button tables.
+
+| Emulator family | Open the in-game menu | Exit the game | Save / load state |
+|-----------------|-----------------------|---------------|-------------------|
+| **RetroArch** cores | The RetroArch menu combo (see the linked page) | From the RetroArch menu | RetroArch save/load state, or bindable hotkeys |
+| **DraStic Nano** (Nintendo DS) | Short-tap <span class="btnchip">Back</span> | Long-hold <span class="btnchip">Back</span> | Bindable **Save State** / **Load State** actions (slot 0), usable with the overlay closed |
+| **PPSSPP** and standalone cores | Each app's own in-app menu | Each app's own menu | Each app's own save-state feature |
+
+For the details:
+
+- RetroArch: [RetroArch controls](controls-retroarch.html).
+- DraStic Nano: [DraStic Nano controls](controls-drastic.html) and the [drastic-nano](drastic-nano.html) overlay guide.
+- PPSSPP and other standalone emulators use their own in-app menus; open them the way that app documents.
 
 ## Where to go next
 

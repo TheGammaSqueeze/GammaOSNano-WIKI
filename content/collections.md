@@ -6,12 +6,28 @@ icon: ⭐
 desc: Group favourites across systems, and Recently Played.
 ---
 
-Collections let you gather games from any system into your own named groups, like Favorites or Multiplayer. Nano also keeps a Recently Played list for you automatically, so the game you just closed is always one tap away.
+Collections let you gather games from any system into your own named groups, like Favorites or Multiplayer. Nano also keeps a global Favourites list and a Recently Played list for you automatically, so the game you just closed is always one tap away.
 {: .lead }
+
+## Favourites
+
+Favourites is a single, cross-system starred list. It gives you one quick place for the games you play most, without building a named collection first.
+
+- Highlight any game, press the Options button, and choose **Add/Remove from Favorites** to star or unstar it. The same option toggles it back off.
+- Starred games gather into one **Favorites** list under the **Game** category, above your collections and systems. Games from different systems sit together in the one list.
+- The Favorites list appears automatically when you star your first game, and disappears again when you unstar your last. There is nothing to create or delete.
+- The Favorites row uses a heart icon, so it is easy to spot in the Game category.
+
+![Global Favourites list](assets/img/shots/wn_favourites_list.png)
+
+Favourites and Collections are separate features. A game can be a favourite and also belong to any number of collections at the same time.
+{: .callout .note }
 
 ## Collections
 
 A collection is a group of games you choose yourself. Games can come from any system, so a single collection can mix NES, SNES, and PlayStation titles together. Each collection shows up as its own entry in the **Game** category, right alongside your systems.
+
+![Collections](assets/img/shots/wn_collections_list.png)
 
 ### Creating a collection and adding games
 

@@ -60,6 +60,32 @@ Built-in systems show **Reset-to-Default**, and custom systems you created show 
 From the **Game** category, highlight a system row and press the Options button, then choose **Manage Game System**. That jumps you straight into this editor for that system, without going through Settings. See [Context Menus](context-menus.html) for more shortcuts.
 {: .callout .tip }
 
+![Manage Game System shortcut](assets/img/shots/wn_manage_system_shortcut.png)
+
+## Scan folders and default locations
+
+The **Scan Folders** field lists which folders a system searches for games. It now also shows the built-in default folders (for example `ROMs/nes/`) with the number of games found in each, so you can see at a glance where to drop your ROMs. A default folder that has no games yet is shown as **Default (empty)**.
+
+When you remove a scan-source folder, Nano first asks you to confirm with a **Cancel** or **Remove Folder** dialog that shows the folder path, so you do not drop a source by accident. Removing a folder only stops Nano scanning it; your files are left in place.
+
+## Missing-emulator warning
+
+If a system's libretro core or standalone emulator app is not installed, Nano tells you rather than launching into a black screen. When you try to start a game whose core `.so` or standalone package is missing, a short toast appears explaining what is needed. See [Emulators & Cores](emulators.html) for which core or app each system uses.
+
+## Auto-add whole systems from a folder
+
+At the top of the Game Systems list you can bulk-import an entire ROMs collection in one pass. Choose **Auto-add Systems from Folder** and point it at your ROMs root (laid out with one folder per system, the ES-DE style).
+
+Nano walks the folders and, for each recognised system, links it to a built-in system or creates a new one for it. Empty folders and media-only folders are skipped. When it finishes it shows a summary of what was added, including any systems that still need an emulator installed to run.
+
+![Bulk auto-add systems](assets/img/shots/wn_bulk_autoadd.png)
+
+## Sorting the Game category (Y)
+
+The order systems appear on the home screen is separate from how you sort the tiles on screen. In the **Game** category, press <span class="btnchip">Y</span> to cycle the tile order: **Default**, **A to Z**, **Most Games**, and **By Manufacturer**. The choice persists across restarts, and it only changes the on-screen order. It never reorders or touches your actual games or systems.
+
+![Game category sort](assets/img/shots/wn_game_sort.png)
+
 ## Adding a whole new system
 
 The editor is also how you add a console Nano does not list yet. Scroll to the top of the Game Systems list, choose **Add New System...**, and pick your emulator. For a full worked example (adding AetherSX2 for PlayStation 2, step by step), see [Add a Custom System](custom-system.html).

@@ -24,6 +24,10 @@ The built-in Nintendo DS emulator has its own dedicated page. See [DraStic Nano]
 RetroArch and DraStic games also support [Quick Resume](quick-resume.html): power off mid-game and boot straight back into it.
 {: .callout .tip }
 
+### If the emulator is not installed
+
+Before it launches a game, Nano checks that the emulator it needs is actually present: the RetroArch core `.so` for a libretro system, or the standalone app's package for a Custom Package system. If it is missing, Nano shows a short toast telling you what is needed instead of dropping you into a black screen. Install the core inside RetroArch, or install the standalone app, and try again. See [Game Systems](game-systems.html) to check or change which core or app a system uses.
+
 ## Default systems and cores
 
 Here is what each system uses out of the box, along with the game file types Nano scans for. Every value below is editable (see [changing a system's core](#change-a-systems-core-or-emulator)).
@@ -63,6 +67,28 @@ Where the file goes depends on which kind of emulator runs the system:
 - **RetroArch cores.** Put BIOS files in RetroArch's system folder on internal storage: **Internal storage / RetroArch / system** (full path `/storage/emulated/0/RetroArch/system`). A core looks there for files by exact name. If a game will not start, open that core's information screen inside RetroArch to see the precise filenames it expects.
 - **Standalone emulators.** AetherSX2 (PS2), PPSSPP, Flycast, and Mupen64Plus import their BIOS in their own settings the first time you launch them. For example, AetherSX2 asks you to import your PS2 BIOS. Just follow the emulator's own first-run prompt. (DraStic for Nintendo DS needs nothing here.)
 
+### Getting your files onto the device
+
+You can copy BIOS and firmware files from a PC or move them around on the device in three ways:
+
+- **USB File Transfer (MTP).** Plug the device into a PC, then set the USB connection to **File Transfer (MTP)** under **Settings > USB & Docking**. The device shows up as a drive so you can drag files straight into `RetroArch/system`.
+- **`adb push`.** From a computer with ADB set up, run for example `adb push scph5501.bin /storage/emulated/0/RetroArch/system/`.
+- **The on-device Files app.** The standard Files app (in Applications) can move a file you have already downloaded into the right folder, no PC needed.
+
+### Common RetroArch BIOS filenames
+
+Put these in `/storage/emulated/0/RetroArch/system`, keeping the exact filename. Different cores and regions may accept different files, so this is a starting point, not an exhaustive list. Always check the core's own information screen inside RetroArch for what it wants.
+
+| System | Common filenames | Notes |
+|--------|------------------|-------|
+| PlayStation (psx) | `scph1001.bin`, `scph5501.bin`, `scph7001.bin` | One region BIOS is usually enough; match your games' region. |
+| Sega CD / Mega CD | `bios_CD_U.bin`, `bios_CD_E.bin`, `bios_CD_J.bin` | US, Europe and Japan BIOS respectively. |
+| Dreamcast (dreamcast) | `dc_bios.bin`, `dc_flash.bin` | Flycast standalone imports these in its own settings instead. |
+| Neo Geo (neogeo) | `neogeo.zip` | The BIOS is supplied as a named archive. |
+
+Nintendo DS is different: the built-in [DraStic Nano](drastic-nano.html) emulator does not use the RetroArch system folder at all. If you supply DS BIOS files, they live with the DraStic data folder (see [DraStic Nano](drastic-nano.html)), and DS games run without them anyway thanks to DraStic's high-level BIOS emulation.
+{: .callout .note }
+
 ## Change a system's core or emulator
 
 You are never locked into the defaults above. To swap the core or standalone emulator a system uses, open the **Game Systems** editor:
@@ -73,11 +99,19 @@ You are never locked into the defaults above. To swap the core or standalone emu
 
 The same editor lets you add unlimited custom systems from scratch. See [Game Systems](game-systems.html) for the full walkthrough and [Custom systems](custom-system.html) for building a brand-new one.
 
+To bring in a whole ROMs collection at once, the Game Systems list has an **Auto-add Systems from Folder** action that imports every recognised system in one pass, linking to built-ins or creating new systems. See [Game Systems](game-systems.html) for that flow.
+
 ## RetroArch controls reminder
 
 Inside a RetroArch game, a quick tap of the <span class="btnchip">Back</span> button opens the RetroArch menu, and holding <span class="btnchip">Back</span> exits back to the Nano home on the same game. You can also press <span class="btnchip">L3</span> + <span class="btnchip">R3</span> (click both sticks in) to open the menu, which is RetroArch's own built-in combo.
 
 For the full list, including how to reach states, options, and input rebinding, see [RetroArch controls](controls-retroarch.html).
+
+For the built-in DS emulator, see [DraStic Nano](drastic-nano.html) for its own in-game overlay, screen layout tuning, FPS counter, and save/load-state bindings.
+
+## Known limitations
+
+Per-game core-option overrides are not managed from the Nano launcher. To change a core setting for one game only (for example a different renderer or aspect ratio for a single title), use RetroArch's own **Quick Menu > Overrides** inside the running game and save a game-specific override there. Nano's Game Systems editor changes settings for the whole system, not one game.
 
 ## Related pages
 

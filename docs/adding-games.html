@@ -38,6 +38,7 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
@@ -79,6 +80,7 @@
 <li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+<li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -209,11 +211,23 @@
 <p>Here is the same result as a still: each system shows how many games it found.</p>
 <p><img alt="XMB game list showing per-system counts" src="assets/img/shots/xmb_home.png" /></p>
 <p>Run <strong>Rescan Games</strong> any time you add more files. It is safe to run as often as you like.</p>
+<h2 id="bulk-auto-add-whole-systems-at-once"><a class="toclink" href="#bulk-auto-add-whole-systems-at-once">Bulk auto-add whole systems at once</a></h2>
+<p>If you have a ROMs root laid out with one folder per system (the ES-DE style, where each folder is named for its console), you can import every recognised system in a single pass instead of setting each one up by hand.</p>
+<p>Open <strong>Settings &gt; Game Settings &gt; Game Systems</strong>, choose <strong>Auto-add Systems from Folder</strong>, and point it at your ROMs root. Nano walks the folders, links each recognised system to a built-in one or creates a new system for it, and skips empty and media-only folders. When it finishes it shows a summary of what it added, including any systems that still need an emulator installed. See <a href="game-systems.html">Game Systems</a> for the details.</p>
+<p><img alt="Bulk auto-add systems" src="assets/img/shots/wn_bulk_autoadd.png" /></p>
+<p class="callout tip">On a very small screen the file picker used to clip its rows so you could not see the bottom of a long list. It now fits the visible screen. If you still prefer a different tool for moving or browsing files, MiXplorer or <code>adb push</code> remain good alternatives.</p>
 <h2 id="multi-disc-games-m3u"><a class="toclink" href="#multi-disc-games-m3u">Multi-disc games (.m3u)</a></h2>
-<p>Some games span several discs (common on PlayStation). Instead of showing every disc as a separate entry, Nano can group a multi-disc game into a single library item using an <code>.m3u</code> playlist file that lists the disc files.</p>
-<p>This grouping is a switch you turn on in the toolbox: <strong>Settings &gt; GammaOS Toolbox &gt; Group Multi-Disc (.m3u)</strong>. With it on, a game with an <code>.m3u</code> file shows up once, and the emulator can switch discs on its own. See <a href="gammaos-toolbox.html">GammaOS Toolbox</a> for the full list of scan options.</p>
-<h2 id="games-tucked-away-in-subfolders"><a class="toclink" href="#games-tucked-away-in-subfolders">Games tucked away in subfolders</a></h2>
-<p>If you keep your games sorted into subfolders inside a system folder (for example <code>ROMs/snes/USA/</code> and <code>ROMs/snes/Japan/</code>), turn on <strong>Settings &gt; GammaOS Toolbox &gt; Scan ROM Subfolders</strong> so Nano looks inside those subfolders too. Without it, only files directly in the system folder are scanned.</p>
+<p>Some games span several discs (common on PlayStation). Instead of showing every disc as a separate entry, Nano groups a multi-disc game into a single library item using an <code>.m3u</code> playlist file that lists the disc files.</p>
+<p>This grouping is now <strong>on by default</strong>. When a folder holds an <code>.m3u</code> playlist, that playlist becomes the one launchable entry and the individual discs it lists are suppressed, so you see the game once and the emulator can switch discs on its own. You can turn the behaviour off under <strong>Settings &gt; GammaOS Toolbox &gt; Group Multi-Disc (.m3u)</strong> if you would rather see each disc separately. See <a href="gammaos-toolbox.html">GammaOS Toolbox</a> for the full list of scan options.</p>
+<h2 id="cd-games-and-subfolders"><a class="toclink" href="#cd-games-and-subfolders">CD games and subfolders</a></h2>
+<p>CD-based games (PlayStation, Dreamcast, Sega CD and similar) come as a small <code>.cue</code> or <code>.m3u</code> text file plus one or more large disc data files (usually <code>.bin</code>). Keep them together and let the launcher use the right one:</p>
+<ul>
+<li>The <code>.cue</code> (single disc) or <code>.m3u</code> (multi-disc) is the <strong>entry point</strong>. That is the file the launcher and the emulator open.</li>
+<li>The disc data files (<code>.bin</code> and friends) must sit <strong>beside</strong> the <code>.cue</code>/<code>.m3u</code> in the same folder, because the text file refers to them by name.</li>
+</ul>
+<p>Because CD games carry these extra files, most people keep each game in its own subfolder, for example <code>ROMs/psx/Final Fantasy VII/</code> holding the <code>.cue</code>, the <code>.m3u</code> and the <code>.bin</code> files together. To scan games kept this way, turn on <strong>Settings &gt; GammaOS Toolbox &gt; Scan ROM Subfolders</strong> (off by default). With it on, Nano looks inside subfolders up to six levels deep; with it off, only files directly in the system folder are scanned. One level is scanned by default.</p>
+<p class="callout warn">Do not flatten a per-game subfolder by dumping every disc's <code>.bin</code> and <code>.m3u</code> into the system folder together. That makes the launcher scan each disc <code>.bin</code> and each stray <code>.m3u</code> as its own entry, so one game shows up as several duplicate items. Keeping the disc files beside their <code>.cue</code>/<code>.m3u</code> in a subfolder avoids this.</p>
+<p>Once games are scanned, remember that a scraped or renamed game shows its proper title rather than the raw filename in your lists and search. See <a href="boxart.html">Boxart &amp; Metadata</a> for how the shown name is chosen.</p>
 <h2 id="a-note-on-bios-files"><a class="toclink" href="#a-note-on-bios-files">A note on BIOS files</a></h2>
 <p class="callout warn">GammaOS Nano does not include any console BIOS or firmware files. Systems like PlayStation, PS2, and Dreamcast need you to supply your own BIOS before games will run, and each emulator has its own place to put it. (Nintendo DS is the exception: the built-in DraStic emulator needs no BIOS.)</p>
 <p>For the full picture of which systems need a BIOS and where each one goes, see <a href="emulators.html">Emulators</a>.</p>
@@ -234,9 +248,11 @@
 </li>
 <li><a href="#scanning-your-games-in">Scanning your games in</a>
 </li>
+<li><a href="#bulk-auto-add-whole-systems-at-once">Bulk auto-add whole systems at once</a>
+</li>
 <li><a href="#multi-disc-games-m3u">Multi-disc games (.m3u)</a>
 </li>
-<li><a href="#games-tucked-away-in-subfolders">Games tucked away in subfolders</a>
+<li><a href="#cd-games-and-subfolders">CD games and subfolders</a>
 </li>
 <li><a href="#a-note-on-bios-files">A note on BIOS files</a>
 </li>

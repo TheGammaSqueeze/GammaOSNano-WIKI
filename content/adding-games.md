@@ -71,15 +71,36 @@ Here is the same result as a still: each system shows how many games it found.
 
 Run **Rescan Games** any time you add more files. It is safe to run as often as you like.
 
+## Bulk auto-add whole systems at once
+
+If you have a ROMs root laid out with one folder per system (the ES-DE style, where each folder is named for its console), you can import every recognised system in a single pass instead of setting each one up by hand.
+
+Open **Settings > Game Settings > Game Systems**, choose **Auto-add Systems from Folder**, and point it at your ROMs root. Nano walks the folders, links each recognised system to a built-in one or creates a new system for it, and skips empty and media-only folders. When it finishes it shows a summary of what it added, including any systems that still need an emulator installed. See [Game Systems](game-systems.html) for the details.
+
+![Bulk auto-add systems](assets/img/shots/wn_bulk_autoadd.png)
+
+On a very small screen the file picker used to clip its rows so you could not see the bottom of a long list. It now fits the visible screen. If you still prefer a different tool for moving or browsing files, MiXplorer or `adb push` remain good alternatives.
+{: .callout .tip }
+
 ## Multi-disc games (.m3u)
 
-Some games span several discs (common on PlayStation). Instead of showing every disc as a separate entry, Nano can group a multi-disc game into a single library item using an `.m3u` playlist file that lists the disc files.
+Some games span several discs (common on PlayStation). Instead of showing every disc as a separate entry, Nano groups a multi-disc game into a single library item using an `.m3u` playlist file that lists the disc files.
 
-This grouping is a switch you turn on in the toolbox: **Settings > GammaOS Toolbox > Group Multi-Disc (.m3u)**. With it on, a game with an `.m3u` file shows up once, and the emulator can switch discs on its own. See [GammaOS Toolbox](gammaos-toolbox.html) for the full list of scan options.
+This grouping is now **on by default**. When a folder holds an `.m3u` playlist, that playlist becomes the one launchable entry and the individual discs it lists are suppressed, so you see the game once and the emulator can switch discs on its own. You can turn the behaviour off under **Settings > GammaOS Toolbox > Group Multi-Disc (.m3u)** if you would rather see each disc separately. See [GammaOS Toolbox](gammaos-toolbox.html) for the full list of scan options.
 
-## Games tucked away in subfolders
+## CD games and subfolders
 
-If you keep your games sorted into subfolders inside a system folder (for example `ROMs/snes/USA/` and `ROMs/snes/Japan/`), turn on **Settings > GammaOS Toolbox > Scan ROM Subfolders** so Nano looks inside those subfolders too. Without it, only files directly in the system folder are scanned.
+CD-based games (PlayStation, Dreamcast, Sega CD and similar) come as a small `.cue` or `.m3u` text file plus one or more large disc data files (usually `.bin`). Keep them together and let the launcher use the right one:
+
+- The `.cue` (single disc) or `.m3u` (multi-disc) is the **entry point**. That is the file the launcher and the emulator open.
+- The disc data files (`.bin` and friends) must sit **beside** the `.cue`/`.m3u` in the same folder, because the text file refers to them by name.
+
+Because CD games carry these extra files, most people keep each game in its own subfolder, for example `ROMs/psx/Final Fantasy VII/` holding the `.cue`, the `.m3u` and the `.bin` files together. To scan games kept this way, turn on **Settings > GammaOS Toolbox > Scan ROM Subfolders** (off by default). With it on, Nano looks inside subfolders up to six levels deep; with it off, only files directly in the system folder are scanned. One level is scanned by default.
+
+Do not flatten a per-game subfolder by dumping every disc's `.bin` and `.m3u` into the system folder together. That makes the launcher scan each disc `.bin` and each stray `.m3u` as its own entry, so one game shows up as several duplicate items. Keeping the disc files beside their `.cue`/`.m3u` in a subfolder avoids this.
+{: .callout .warn }
+
+Once games are scanned, remember that a scraped or renamed game shows its proper title rather than the raw filename in your lists and search. See [Boxart & Metadata](boxart.html) for how the shown name is chosen.
 
 ## A note on BIOS files
 

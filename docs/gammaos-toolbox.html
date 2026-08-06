@@ -38,6 +38,7 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
@@ -79,6 +80,7 @@
 <li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+<li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -232,7 +234,7 @@
 <h3 id="scan-rom-subfolders-and-group-multi-disc"><a class="toclink" href="#scan-rom-subfolders-and-group-multi-disc">Scan ROM Subfolders and Group Multi-Disc</a></h3>
 <p>These two change how your library is built:</p>
 <ul>
-<li><strong>Scan ROM Subfolders</strong> finds games that are tucked into folders inside your per-system ROM folder.</li>
+<li><strong>Scan ROM Subfolders</strong> finds games that are tucked into folders inside your per-system ROM folder. It is off by default (Nano scans one level); turn it on to scan up to six levels deep.</li>
 <li><strong>Group Multi-Disc (.m3u)</strong> turns a multi-disc game into one clean entry so you do not see Disc 1, Disc 2, and so on as separate games.</li>
 </ul>
 <p>After changing either one, run <strong>Settings &gt; Game Settings &gt; Rescan Games</strong>. See <a href="adding-games.html">Adding Games</a> for how to organise your ROM folders.</p>
@@ -251,10 +253,15 @@
 </tr>
 <tr>
 <td><strong>Widevine L3 Compatibility</strong></td>
-<td>Improve compatibility with some streaming apps that use Widevine L3.</td>
+<td>Fix streaming apps that fail on uncertified devices (see below).</td>
 </tr>
 </tbody>
 </table>
+<h3 id="widevine-l3-compatibility"><a class="toclink" href="#widevine-l3-compatibility">Widevine L3 Compatibility</a></h3>
+<p>Some streaming apps refuse to play or throw an error (for example the Disney+ error) on uncertified devices because of DRM checks. Turn on <strong>Widevine L3 Compatibility</strong> to improve compatibility with these apps so protected video plays.</p>
+<p><img alt="Widevine L3 compatibility" src="assets/img/shots/wn_widevine_l3.png" /></p>
+<h3 id="looking-for-font-size"><a class="toclink" href="#looking-for-font-size">Looking for Font Size?</a></h3>
+<p>Font Size is not in the Toolbox. To scale the launcher's text, use <strong>Font Size</strong> in <a href="settings-reference.html#theme-settings">Theme Settings</a> (it scales text live in every theme), or the system <strong>Font Size</strong> row in <strong>Display Settings</strong>.</p>
 <h2 id="related-pages"><a class="toclink" href="#related-pages">Related pages</a></h2>
 <ul>
 <li><a href="settings-reference.html">Settings Reference</a></li>
@@ -283,6 +290,10 @@
 </ul>
 </li>
 <li><a href="#miscellaneous">Miscellaneous</a>
+<ul>
+<li><a href="#widevine-l3-compatibility">Widevine L3 Compatibility</a></li>
+<li><a href="#looking-for-font-size">Looking for Font Size?</a></li>
+</ul>
 </li>
 <li><a href="#related-pages">Related pages</a>
 </li>

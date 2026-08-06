@@ -38,6 +38,7 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
@@ -79,6 +80,7 @@
 <li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+<li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -154,8 +156,12 @@
 <td>Re-fetch art and details for just this game (forces an overwrite).</td>
 </tr>
 <tr>
+<td><strong>Scrape with Custom Name...</strong></td>
+<td>Re-scrape just this game using a name you type, without renaming the file.</td>
+</tr>
+<tr>
 <td><strong>Set Boxart</strong></td>
-<td>Pick any image on your device as this game's cover.</td>
+<td>Pick any image from your Photos as this game's cover.</td>
 </tr>
 <tr>
 <td><strong>Reset Boxart</strong></td>
@@ -171,7 +177,37 @@
 </tr>
 </tbody>
 </table>
-<p class="callout note">If the scraper cannot find the right cover for a game, try <strong>Rename / Edit Title</strong> to correct the name first, then <strong>Scrape This Game</strong> again.</p>
+<p class="callout note">If the scraper cannot find the right cover for a game, try <strong>Rename / Edit Title</strong> to correct the name first, then <strong>Scrape This Game</strong> again. If you would rather not touch the filename or the shown title, use <strong>Scrape with Custom Name...</strong> and type the name to search for just this once.</p>
+<p><img alt="Scrape with custom name" src="assets/img/shots/wn_scrape_custom_name.png" /></p>
+<h2 id="rename-and-edit-title"><a class="toclink" href="#rename-and-edit-title">Rename and Edit Title</a></h2>
+<p><strong>Rename / Edit Title</strong> lets you override a game's filename with a name of your choosing. The name you type shows everywhere the game appears: game lists, Recently Played, search results and the Information page. It is also used as the scraper's search query, so a game the scraper cannot match by its filename can be renamed to the correct title and then scraped.</p>
+<p><img alt="Rename / Edit Title" src="assets/img/shots/wn_rename_game.png" /></p>
+<p>Your manual rename always wins. If you rename a game and later scrape it, the scraped title does not overwrite the name you set.</p>
+<h2 id="scraped-titles-replace-the-filename"><a class="toclink" href="#scraped-titles-replace-the-filename">Scraped titles replace the filename</a></h2>
+<p>Once a game has been scraped, its matched title (not the raw filename) shows in the <strong>Game</strong> category and in search, and title sorting follows that matched title. This keeps lists tidy when your files have terse or coded names.</p>
+<p>The shown name follows a clear order of precedence:</p>
+<ol>
+<li>A <strong>manual rename</strong> you set with Rename / Edit Title (highest priority).</li>
+<li>The <strong>scraped title</strong>, if the game has been scraped.</li>
+<li>The <strong>filename</strong>, when neither of the above applies.</li>
+</ol>
+<h2 id="custom-box-art"><a class="toclink" href="#custom-box-art">Custom box art</a></h2>
+<p>You do not have to rely on the scraper for covers. You can point any single game at your own image.</p>
+<h3 id="set-it-in-the-launcher-recommended"><a class="toclink" href="#set-it-in-the-launcher-recommended">Set it in the launcher (recommended)</a></h3>
+<ol>
+<li>Highlight the game and press the Options button.</li>
+<li>Choose <strong>Set Boxart</strong>.</li>
+<li>Pick any image from your Photos.</li>
+</ol>
+<p>The image is copied into the cover cache and appears immediately as that game's cover in every theme. There is no rescan or restart needed. To go back to the default icon later, open the Options menu again and choose <strong>Reset Boxart</strong>.</p>
+<h3 id="drop-a-file-in-by-hand"><a class="toclink" href="#drop-a-file-in-by-hand">Drop a file in by hand</a></h3>
+<p>If you would rather manage covers as files (for example, when applying a whole set at once from a PC), you can place the image yourself:</p>
+<ol>
+<li>Highlight the game and open its <strong>Information</strong> page from the Options menu.</li>
+<li>Note the exact <strong>cover file path</strong> shown on that page.</li>
+<li>Copy your own image to that path, keeping the same filename.</li>
+</ol>
+<p>You can transfer the file with USB File Transfer (MTP), <code>adb push</code>, or the on-device Files app. The new cover shows the next time that game's art is loaded. The Information page is the reliable source for the correct path, since it names the exact cover file for the highlighted game.</p>
 <h2 id="per-system-scraping"><a class="toclink" href="#per-system-scraping">Per-system scraping</a></h2>
 <p>You can also scrape one system at a time from the <strong>Game Systems</strong> editor. Each system has a <strong>Scrape This System</strong> action, plus optional scraper account fields to override the global setting for just that system. See <a href="game-systems.html">Game Systems</a>.</p>
 <h2 id="related-pages"><a class="toclink" href="#related-pages">Related pages</a></h2>
@@ -188,6 +224,16 @@
 <li><a href="#the-boxart-scraper">The Boxart Scraper</a>
 </li>
 <li><a href="#per-game-boxart">Per-game boxart</a>
+</li>
+<li><a href="#rename-and-edit-title">Rename and Edit Title</a>
+</li>
+<li><a href="#scraped-titles-replace-the-filename">Scraped titles replace the filename</a>
+</li>
+<li><a href="#custom-box-art">Custom box art</a>
+<ul>
+<li><a href="#set-it-in-the-launcher-recommended">Set it in the launcher (recommended)</a></li>
+<li><a href="#drop-a-file-in-by-hand">Drop a file in by hand</a></li>
+</ul>
 </li>
 <li><a href="#per-system-scraping">Per-system scraping</a>
 </li>

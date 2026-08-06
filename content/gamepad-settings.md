@@ -82,6 +82,24 @@ The same remapping is available from three places, all writing the same settings
 - **In the Settings app** (on the TV/ATV build), under the Gamepad section.
 - **In LineageParts** (the non-TV build), which has a live key-capture dialog with a full button catalog and an app picker.
 
+### In-emulator binding (DraStic Nano)
+
+DS games have their own button binding, separate from the system remapper above and set under the DraStic overlay's **Menu > Controls**:
+
+- **Save State** and **Load State** (quick-save/quick-load slot 0) can be bound to any button and work even with the overlay closed.
+- **L3** and **R3** are now freely rebindable.
+- Binding a key to one action clears it from any other action automatically, so you never leave a button doing two jobs.
+
+For the full binding walkthrough see [DraStic controls](controls-drastic.html) and [DraStic Nano](drastic-nano.html).
+
+## List navigation in DSi and Minima
+
+Beyond remapping, the DSi and Minima home themes gained the same fast list navigation the XMB already had:
+
+- <span class="btnchip">L1</span> and <span class="btnchip">R1</span> page-skip through blocks of items in game and app lists.
+- Holding a direction accelerates the scroll the way XMB does (the DSi carousel keeps its own cadence).
+- Lists wrap around, so pressing past the last item returns you to the first.
+
 ## Touch & Mouse
 
 - **Screen Map** maps controller input to on-screen touch zones, so a pad can drive touch-only apps.

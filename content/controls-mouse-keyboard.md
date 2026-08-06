@@ -38,6 +38,9 @@ A standard US-layout keyboard maps to navigation and confirms, and it types stra
 When a text field or the on-screen keyboard is up, just start typing on your USB keyboard. Use Shift for capitals and symbols, and Backspace to correct.
 {: .callout .tip }
 
+To paste text you copied elsewhere, press <span class="btnchip">Y</span> on the gamepad while the on-screen keyboard is open and it pastes from the system clipboard, handy for long URLs and passwords.
+{: .callout .note }
+
 ## Where to go next
 
 - Prefer the gamepad? The full button map is on the [Controls](controls-os.html) page.

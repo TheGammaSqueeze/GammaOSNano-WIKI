@@ -35,7 +35,20 @@ If you power the device off from the overlay's Quick Menu while a game is runnin
 
 A short <span class="btnchip">Back</span> press opens the in-game overlay, which pauses the game and gives you save states, video and audio options, control rebinding, cheats, and achievements. There is a lot in there, so it has its own page.
 
+The overlay now opens on a **General** tab by default, gathering the everyday actions (Brightness, Performance, Restart Game, Exit Game, Power Off, Reboot) in one place. The **Video** section also gained two vertical layout presets (**Big Top + Small** and **Big Top + Tiny**) for stacking the two DS screens. See [DraStic Nano](drastic-nano.html) for the full overlay reference.
+{: .callout .note }
+
 For every setting in the overlay (screen layout, shaders, save states, cheats, achievements, firmware user data, and more), see the full [DraStic Nano](drastic-nano.html) page.
+
+## Bindable quick actions
+
+Beyond the DS face buttons, DraStic Nano can bind two extra quick actions to any button, set under the overlay's **Menu > Controls**:
+
+- **Save State** and **Load State** target quick-save/quick-load slot 0. Once bound, they work even with the overlay closed, so you can quick-save and quick-load mid-game without pausing.
+- **L3** and **R3** (the stick clicks) are now freely rebindable to whatever you like.
+
+Binding a key to one action automatically clears it from any other action, so you cannot accidentally leave the same button doing two things.
+{: .callout .tip }
 
 Two different overlays, two different buttons: a short <span class="btnchip">Back</span> press opens DraStic's own in-game menu (save states, video, cheats), while holding <span class="btnchip">Power</span> raises the wider Nano overlay (Quick Menu, brightness, switch games) over the top. See [the in-game overlay](controls-os.html#the-in-game-overlay).
 {: .callout .note }
@@ -45,3 +58,4 @@ Two different overlays, two different buttons: a short <span class="btnchip">Bac
 - Full DraStic Nano settings and features: [DraStic Nano](drastic-nano.html)
 - Pick up exactly where you left off after a reboot: [Quick Resume](quick-resume.html)
 - System-wide shortcuts (brightness, sleep, emergency restart): [Controls](controls-os.html)
+- Everything added recently, including the new General tab and bindable save/load: [What's New since 1.4](what-s-new-since-1-4.html)
