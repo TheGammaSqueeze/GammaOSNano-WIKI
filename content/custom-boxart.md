@@ -6,8 +6,11 @@ icon: 🖼️
 desc: Add your own cover art in bulk, back it up, and manage it from a PC, with the GammaOS Boxart Tool or by hand.
 ---
 
-The [Boxart Scraper](boxart.html) and the per-game **Set Boxart** option cover most needs, but sometimes you want to manage covers in bulk: drop in your own art from a computer, fix a whole system at once, or back up every cover you have collected. This page shows how, end to end, with a ready-made tool and the full on-device format if you would rather do it by hand.
+The [Boxart Scraper](boxart.html) and the per-game **Set Boxart** option cover most needs, but sometimes you want to manage art in bulk: drop in your own **covers** and **backgrounds** from a computer, fix a whole system at once, or back up everything you have collected. This page shows how, end to end, with a ready-made tool and the full on-device format if you would rather do it by hand.
 {: .lead }
+
+A game has two images: the **cover** (the boxart thumbnail) and the **background** (the fan-art image Nano shows full-screen behind the game). You can set either or both.
+{: .callout .note }
 
 ## The quick ways, inside Nano
 
@@ -20,7 +23,7 @@ Both are covered on the [Boxart and Metadata](boxart.html) page. The rest of thi
 
 ## The GammaOS Boxart Tool
 
-The easiest way to manage your covers from a computer is the **GammaOS Boxart Tool**, a small cross-platform app (Windows, macOS, Linux) that talks to your device over ADB. It has a desktop window and a command line, and it writes to the same place Nano does, so anything you set shows up in the XMB, DSi and Minima themes.
+The easiest way to manage your art from a computer is the **GammaOS Boxart Tool**, a small cross-platform app (Windows, macOS, Linux) that talks to your device over ADB. It has a desktop window and a command line, manages both the cover and the background, and writes to the same place Nano does, so anything you set shows up in the XMB, DSi and Minima themes.
 
 Get it here: **[github.com/TheGammaSqueeze/GammaOS-BoxartTool](https://github.com/TheGammaSqueeze/GammaOS-BoxartTool)**
 
@@ -28,27 +31,26 @@ Get it here: **[github.com/TheGammaSqueeze/GammaOS-BoxartTool](https://github.co
 
 - Your handheld connected over USB with **USB debugging** turned on (Settings has a Developer Options entry, and desktop mode exposes the full Android settings).
 - **Root ADB.** The cover cache lives in a protected system folder, so the tool runs `adb root` for you. This works on the standard GammaOS builds.
-- **Python 3.8 or newer** on your computer, plus the `adb` command from Android platform-tools. Pillow is optional and only makes the previews nicer (`pip install pillow`).
+- The `adb` command from Android platform-tools on your PATH.
 
-### Install
+### Download
 
-```bash
-pip install .
-# or run it without installing:
-python3 gammaos-boxart.py --gui
-```
+Grab the prebuilt binary for your system from the [Releases page](https://github.com/TheGammaSqueeze/GammaOS-BoxartTool/releases): Windows, macOS (Intel or Apple Silicon), or Linux. No Python needed. Run it with no arguments for the window, or pass a command for the CLI. The binaries are unsigned, so allow it past SmartScreen (Windows) or right-click Open (macOS) the first time.
+
+Prefer to run from source? You need Python 3.8+ (Tkinter is bundled; `pip install pillow` gives nicer previews), then `pip install .` or `python3 gammaos-boxart.py --gui`.
 
 ### The desktop app
 
-Launch `gammaos-boxart-gui`. It connects to your device, lists your games (the ones that already have a cover are starred), and previews the selected cover.
+Launch the app (or `gammaos-boxart-gui` from source). It connects to your device, lists your games (the ones that already have a cover are starred), and previews the selected game's cover and background.
 
 ![The GammaOS Boxart Tool desktop app](assets/img/shots/boxart_tool_gui.png)
 
 From here you can:
 
-- **Set / Replace Cover** pick any image; the tool pushes it and restarts Nano so it appears right away.
-- **Save Current Cover As** pull an existing cover back to your PC.
-- **Remove Cover** delete a custom cover and fall back to the generic icon.
+- **Set / Replace Cover** pick any image for the boxart thumbnail; the tool pushes it and restarts Nano so it appears right away.
+- **Set / Replace Background** pick the full-screen fan-art image shown behind the game.
+- **Save Cover As** pull an existing cover back to your PC.
+- **Remove** delete the cover, the background, or both.
 - **Bulk Import** and **Bulk Export** manage the whole library in one go.
 
 ### The command line
@@ -59,22 +61,25 @@ Every action is also a command, which is handy for scripting or batching.
 
 ```bash
 gammaos-boxart list                         # every game, boxart marked
-gammaos-boxart set nes/Spacegulls.nes cover.png       # add or replace a cover
-gammaos-boxart get nes/Spacegulls.nes -o out.png      # pull a cover to your PC
-gammaos-boxart remove nes/Spacegulls.nes              # remove a custom cover
-gammaos-boxart export ./my-covers                     # back up every cover (+ manifest)
-gammaos-boxart import ./my-covers                     # bulk import a folder of covers
+gammaos-boxart set nes/Spacegulls.nes cover.png       # add or replace the cover
+gammaos-boxart set nes/Spacegulls.nes bg.jpg --fan    # add or replace the background
+gammaos-boxart get nes/Spacegulls.nes -o out.png      # pull the cover to your PC
+gammaos-boxart remove nes/Spacegulls.nes --both       # remove the cover and background
+gammaos-boxart export ./my-covers                     # back up every cover and background
+gammaos-boxart import ./my-covers                     # bulk import a folder
 ```
 
-A game can be named by its full device path (`/storage/emulated/0/ROMs/nes/Game.nes`) or the short `system/file` form (`nes/Game.nes`).
+A game can be named by its full device path (`/storage/emulated/0/ROMs/nes/Game.nes`) or the short `system/file` form (`nes/Game.nes`). Add `--fan` to any `set`, `get` or `remove` to act on the background instead of the cover.
 
 ### Bulk backup and restore
 
-`export` writes every cover into a folder as `system/GameName.png`, plus a `boxart_manifest.json`, so you have a tidy, portable backup. `import` reads that folder back: with the manifest it restores each cover to the exact game, and without one it matches images to games by filename (`Spacegulls.png` finds `Spacegulls.nes`). This is the fast way to move your covers to a new device or a fresh install.
+`export` writes every cover into a folder as `system/GameName.png` (and each background as `GameName.fan.png`), plus a `boxart_manifest.json`, so you have a tidy, portable backup. `import` reads that folder back: with the manifest it restores each image to the exact game, and without one it matches by filename (`Spacegulls.png` finds `Spacegulls.nes`, and `Spacegulls.fan.png` sets its background). This is the fast way to move your art to a new device or a fresh install.
 
-Here is a set of tool-added covers rendering on the device, in the XMB theme:
+Here is a tool-added **cover** and a tool-added **background** rendering on the device, in the XMB theme:
 
-![Custom boxart on the device](assets/img/shots/boxart_device.png)
+![Custom cover on the device](assets/img/shots/boxart_device.png)
+
+![Custom background (fan art) on the device](assets/img/shots/boxart_background.png)
 
 ## How boxart is stored
 
@@ -101,6 +106,7 @@ If you would rather understand the format or edit it by hand, here is exactly ho
     {
       "rom": "/data/media/0/ROMs/nes/Spacegulls.nes",
       "box": "/data/system/nano_scrape/5cbf8efabe804c89.box.png",
+      "fan": "/data/system/nano_scrape/5cbf8efabe804c89.fan.jpg",
       "scraper": "manual",
       "when": 1786974787,
       "title": "Spacegulls"
@@ -112,8 +118,8 @@ If you would rather understand the format or edit it by hand, here is exactly ho
 | Field | Meaning |
 |-------|---------|
 | `rom` | The full ROM path. Nano matches it across the `/storage/emulated/0`, `/data/media/0`, `/sdcard` and `/storage/self/primary` views, so any of those prefixes works. |
-| `box` | Absolute path to the cover image. This is what Nano actually loads. |
-| `fan` | Absolute path to fan art (optional). |
+| `box` | Absolute path to the cover (thumbnail) image. This is what Nano actually loads. |
+| `fan` | Absolute path to the background (fan-art) image Nano shows behind the game (optional). |
 | `title` | The displayed name (optional). |
 | `scraper` | Where it came from; use `manual` for your own art. |
 | `when` | Unix timestamp. |

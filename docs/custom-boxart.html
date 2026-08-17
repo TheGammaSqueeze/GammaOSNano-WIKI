@@ -94,7 +94,8 @@
     
     <div class="prose has-toc">
       <article class="article">
-        <p class="lead">The <a href="boxart.html">Boxart Scraper</a> and the per-game <strong>Set Boxart</strong> option cover most needs, but sometimes you want to manage covers in bulk: drop in your own art from a computer, fix a whole system at once, or back up every cover you have collected. This page shows how, end to end, with a ready-made tool and the full on-device format if you would rather do it by hand.</p>
+        <p class="lead">The <a href="boxart.html">Boxart Scraper</a> and the per-game <strong>Set Boxart</strong> option cover most needs, but sometimes you want to manage art in bulk: drop in your own <strong>covers</strong> and <strong>backgrounds</strong> from a computer, fix a whole system at once, or back up everything you have collected. This page shows how, end to end, with a ready-made tool and the full on-device format if you would rather do it by hand.</p>
+<p class="callout note">A game has two images: the <strong>cover</strong> (the boxart thumbnail) and the <strong>background</strong> (the fan-art image Nano shows full-screen behind the game). You can set either or both.</p>
 <h2 id="the-quick-ways-inside-nano"><a class="toclink" href="#the-quick-ways-inside-nano">The quick ways, inside Nano</a></h2>
 <p>If you only need one or two covers, you do not need any of this. Inside Nano you can:</p>
 <ul>
@@ -103,46 +104,46 @@
 </ul>
 <p>Both are covered on the <a href="boxart.html">Boxart and Metadata</a> page. The rest of this page is for managing covers <strong>in bulk or from a PC</strong>.</p>
 <h2 id="the-gammaos-boxart-tool"><a class="toclink" href="#the-gammaos-boxart-tool">The GammaOS Boxart Tool</a></h2>
-<p>The easiest way to manage your covers from a computer is the <strong>GammaOS Boxart Tool</strong>, a small cross-platform app (Windows, macOS, Linux) that talks to your device over ADB. It has a desktop window and a command line, and it writes to the same place Nano does, so anything you set shows up in the XMB, DSi and Minima themes.</p>
+<p>The easiest way to manage your art from a computer is the <strong>GammaOS Boxart Tool</strong>, a small cross-platform app (Windows, macOS, Linux) that talks to your device over ADB. It has a desktop window and a command line, manages both the cover and the background, and writes to the same place Nano does, so anything you set shows up in the XMB, DSi and Minima themes.</p>
 <p>Get it here: <strong><a href="https://github.com/TheGammaSqueeze/GammaOS-BoxartTool">github.com/TheGammaSqueeze/GammaOS-BoxartTool</a></strong></p>
 <h3 id="what-you-need"><a class="toclink" href="#what-you-need">What you need</a></h3>
 <ul>
 <li>Your handheld connected over USB with <strong>USB debugging</strong> turned on (Settings has a Developer Options entry, and desktop mode exposes the full Android settings).</li>
 <li><strong>Root ADB.</strong> The cover cache lives in a protected system folder, so the tool runs <code>adb root</code> for you. This works on the standard GammaOS builds.</li>
-<li><strong>Python 3.8 or newer</strong> on your computer, plus the <code>adb</code> command from Android platform-tools. Pillow is optional and only makes the previews nicer (<code>pip install pillow</code>).</li>
+<li>The <code>adb</code> command from Android platform-tools on your PATH.</li>
 </ul>
-<h3 id="install"><a class="toclink" href="#install">Install</a></h3>
-<div class="codehilite"><pre><span></span><code>pip install .
-<span class="c1"># or run it without installing:</span>
-python3 gammaos-boxart.py --gui
-</code></pre></div>
-
+<h3 id="download"><a class="toclink" href="#download">Download</a></h3>
+<p>Grab the prebuilt binary for your system from the <a href="https://github.com/TheGammaSqueeze/GammaOS-BoxartTool/releases">Releases page</a>: Windows, macOS (Intel or Apple Silicon), or Linux. No Python needed. Run it with no arguments for the window, or pass a command for the CLI. The binaries are unsigned, so allow it past SmartScreen (Windows) or right-click Open (macOS) the first time.</p>
+<p>Prefer to run from source? You need Python 3.8+ (Tkinter is bundled; <code>pip install pillow</code> gives nicer previews), then <code>pip install .</code> or <code>python3 gammaos-boxart.py --gui</code>.</p>
 <h3 id="the-desktop-app"><a class="toclink" href="#the-desktop-app">The desktop app</a></h3>
-<p>Launch <code>gammaos-boxart-gui</code>. It connects to your device, lists your games (the ones that already have a cover are starred), and previews the selected cover.</p>
+<p>Launch the app (or <code>gammaos-boxart-gui</code> from source). It connects to your device, lists your games (the ones that already have a cover are starred), and previews the selected game's cover and background.</p>
 <p><img alt="The GammaOS Boxart Tool desktop app" src="assets/img/shots/boxart_tool_gui.png" /></p>
 <p>From here you can:</p>
 <ul>
-<li><strong>Set / Replace Cover</strong> pick any image; the tool pushes it and restarts Nano so it appears right away.</li>
-<li><strong>Save Current Cover As</strong> pull an existing cover back to your PC.</li>
-<li><strong>Remove Cover</strong> delete a custom cover and fall back to the generic icon.</li>
+<li><strong>Set / Replace Cover</strong> pick any image for the boxart thumbnail; the tool pushes it and restarts Nano so it appears right away.</li>
+<li><strong>Set / Replace Background</strong> pick the full-screen fan-art image shown behind the game.</li>
+<li><strong>Save Cover As</strong> pull an existing cover back to your PC.</li>
+<li><strong>Remove</strong> delete the cover, the background, or both.</li>
 <li><strong>Bulk Import</strong> and <strong>Bulk Export</strong> manage the whole library in one go.</li>
 </ul>
 <h3 id="the-command-line"><a class="toclink" href="#the-command-line">The command line</a></h3>
 <p>Every action is also a command, which is handy for scripting or batching.</p>
 <p><img alt="The GammaOS Boxart Tool command line" src="assets/img/shots/boxart_tool_cli.png" /></p>
 <div class="codehilite"><pre><span></span><code>gammaos-boxart list                         <span class="c1"># every game, boxart marked</span>
-gammaos-boxart <span class="nb">set</span> nes/Spacegulls.nes cover.png       <span class="c1"># add or replace a cover</span>
-gammaos-boxart get nes/Spacegulls.nes -o out.png      <span class="c1"># pull a cover to your PC</span>
-gammaos-boxart remove nes/Spacegulls.nes              <span class="c1"># remove a custom cover</span>
-gammaos-boxart <span class="nb">export</span> ./my-covers                     <span class="c1"># back up every cover (+ manifest)</span>
-gammaos-boxart import ./my-covers                     <span class="c1"># bulk import a folder of covers</span>
+gammaos-boxart <span class="nb">set</span> nes/Spacegulls.nes cover.png       <span class="c1"># add or replace the cover</span>
+gammaos-boxart <span class="nb">set</span> nes/Spacegulls.nes bg.jpg --fan    <span class="c1"># add or replace the background</span>
+gammaos-boxart get nes/Spacegulls.nes -o out.png      <span class="c1"># pull the cover to your PC</span>
+gammaos-boxart remove nes/Spacegulls.nes --both       <span class="c1"># remove the cover and background</span>
+gammaos-boxart <span class="nb">export</span> ./my-covers                     <span class="c1"># back up every cover and background</span>
+gammaos-boxart import ./my-covers                     <span class="c1"># bulk import a folder</span>
 </code></pre></div>
 
-<p>A game can be named by its full device path (<code>/storage/emulated/0/ROMs/nes/Game.nes</code>) or the short <code>system/file</code> form (<code>nes/Game.nes</code>).</p>
+<p>A game can be named by its full device path (<code>/storage/emulated/0/ROMs/nes/Game.nes</code>) or the short <code>system/file</code> form (<code>nes/Game.nes</code>). Add <code>--fan</code> to any <code>set</code>, <code>get</code> or <code>remove</code> to act on the background instead of the cover.</p>
 <h3 id="bulk-backup-and-restore"><a class="toclink" href="#bulk-backup-and-restore">Bulk backup and restore</a></h3>
-<p><code>export</code> writes every cover into a folder as <code>system/GameName.png</code>, plus a <code>boxart_manifest.json</code>, so you have a tidy, portable backup. <code>import</code> reads that folder back: with the manifest it restores each cover to the exact game, and without one it matches images to games by filename (<code>Spacegulls.png</code> finds <code>Spacegulls.nes</code>). This is the fast way to move your covers to a new device or a fresh install.</p>
-<p>Here is a set of tool-added covers rendering on the device, in the XMB theme:</p>
-<p><img alt="Custom boxart on the device" src="assets/img/shots/boxart_device.png" /></p>
+<p><code>export</code> writes every cover into a folder as <code>system/GameName.png</code> (and each background as <code>GameName.fan.png</code>), plus a <code>boxart_manifest.json</code>, so you have a tidy, portable backup. <code>import</code> reads that folder back: with the manifest it restores each image to the exact game, and without one it matches by filename (<code>Spacegulls.png</code> finds <code>Spacegulls.nes</code>, and <code>Spacegulls.fan.png</code> sets its background). This is the fast way to move your art to a new device or a fresh install.</p>
+<p>Here is a tool-added <strong>cover</strong> and a tool-added <strong>background</strong> rendering on the device, in the XMB theme:</p>
+<p><img alt="Custom cover on the device" src="assets/img/shots/boxart_device.png" /></p>
+<p><img alt="Custom background (fan art) on the device" src="assets/img/shots/boxart_background.png" /></p>
 <h2 id="how-boxart-is-stored"><a class="toclink" href="#how-boxart-is-stored">How boxart is stored</a></h2>
 <p>If you would rather understand the format or edit it by hand, here is exactly how Nano keeps cover art. Everything lives in a protected folder:</p>
 <div class="codehilite"><pre><span></span><code>/data/system/nano_scrape/
@@ -161,6 +162,7 @@ gammaos-boxart import ./my-covers                     <span class="c1"># bulk im
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="w">      </span><span class="nt">&quot;rom&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/data/media/0/ROMs/nes/Spacegulls.nes&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="nt">&quot;box&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/data/system/nano_scrape/5cbf8efabe804c89.box.png&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;fan&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/data/system/nano_scrape/5cbf8efabe804c89.fan.jpg&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="nt">&quot;scraper&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;manual&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="nt">&quot;when&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1786974787</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Spacegulls&quot;</span><span class="w"></span>
@@ -183,11 +185,11 @@ gammaos-boxart import ./my-covers                     <span class="c1"># bulk im
 </tr>
 <tr>
 <td><code>box</code></td>
-<td>Absolute path to the cover image. This is what Nano actually loads.</td>
+<td>Absolute path to the cover (thumbnail) image. This is what Nano actually loads.</td>
 </tr>
 <tr>
 <td><code>fan</code></td>
-<td>Absolute path to fan art (optional).</td>
+<td>Absolute path to the background (fan-art) image Nano shows behind the game (optional).</td>
 </tr>
 <tr>
 <td><code>title</code></td>
@@ -245,7 +247,7 @@ adb shell <span class="s1">&#39;setprop ctl.stop gammaos-nano; setprop ctl.start
 <li><a href="#the-gammaos-boxart-tool">The GammaOS Boxart Tool</a>
 <ul>
 <li><a href="#what-you-need">What you need</a></li>
-<li><a href="#install">Install</a></li>
+<li><a href="#download">Download</a></li>
 <li><a href="#the-desktop-app">The desktop app</a></li>
 <li><a href="#the-command-line">The command line</a></li>
 <li><a href="#bulk-backup-and-restore">Bulk backup and restore</a></li>
