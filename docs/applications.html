@@ -157,6 +157,21 @@
 <p>The standard <strong>Files</strong> app (DocumentsUI) is listed under Applications and is fully controller-navigable. It focuses the first item when a folder loads and keeps the focused item on-screen as you move the d-pad, so you can browse and manage storage without a touch screen.</p>
 <h2 id="gammabrowser"><a class="toclink" href="#gammabrowser">GammaBrowser</a></h2>
 <p>A web browser, <strong>GammaBrowser</strong>, ships in every Nano build (not just TV builds), so you can reach the web straight from Applications.</p>
+<h2 id="google-apps-and-the-play-store"><a class="toclink" href="#google-apps-and-the-play-store">Google apps and the Play Store</a></h2>
+<p>Whether Google apps are already on your device depends on your GammaOS edition (see the <a href="what-is-nano.html">editions rundown</a>):</p>
+<ul>
+<li><strong>GammaOS Full</strong> includes Google apps and the Play Store out of the box, so there is nothing to set up.</li>
+<li><strong>GammaOS Lite and Core</strong> ship without Google services to stay light. You can still add apps, and you can add full Google services if you need them.</li>
+</ul>
+<p><strong>The simple path: Aurora Store.</strong> <a href="https://auroraoss.com/">Aurora Store</a> is an alternative client for the Google Play catalogue that works without Google services. Install it (it is on <a href="https://f-droid.org/">F-Droid</a>) and you can browse and download most free apps, often including apps you already own, without signing in to Google. Apps you install this way show up in the Applications list like any other.</p>
+<p class="callout warn">microG is not officially endorsed or supported by GammaOS. The steps below are a guide put together by the community, provided as-is. Do not install any form of Google apps or microG on low-memory devices, such as the TrimUI Brick (1GB RAM): there is not enough memory for them, and it will hurt performance and stability.</p>
+<p><strong>Full Google services: microG.</strong> If you need Google sign-in, push notifications, or paid-app licensing, install <a href="https://microg.org/">microG</a>, an open reimplementation of Google Play services. Do this in <strong>full Android (desktop) mode</strong>, not in Nano, and install three APKs from the microG project in this order:</p>
+<ol>
+<li><strong>GmsCore</strong> (<code>com.google.android.gms</code>), the core services, from the <a href="https://github.com/microg/GmsCore/releases">microG GmsCore releases</a>.</li>
+<li><strong>microG Companion</strong> (<code>com.android.vending</code>) from the same releases page. It acts as a lightweight Play Store; advanced users can later swap it for a patched full Play Store.</li>
+<li><strong>GsfProxy</strong>, from the <a href="https://github.com/microg/GsfProxy/releases">GsfProxy releases</a>.</li>
+</ol>
+<p class="callout note">Sign in to your Google account while in Android mode. If sign-in fails with "there was a problem connecting to Google services", open microG Settings and check its <strong>Self-Check</strong> screen; the <a href="https://github.com/microg/GmsCore/wiki">microG documentation</a> explains what each check needs. Once it is set up, your apps work whether you are in Android or back in Nano. To learn how to boot into full Android and back, see <a href="atv-desktop-features.html">Desktop Mode Features</a>.</p>
 <h2 id="run-on-primary-screen-dual-screen-devices"><a class="toclink" href="#run-on-primary-screen-dual-screen-devices">Run on Primary Screen (dual-screen devices)</a></h2>
 <p>On dual-screen (DS-style) handhelds, an app's Options menu adds <strong>Run on Primary Screen</strong>. Turn it on to make a dual-screen app run on the main panel. Nano can also prompt you automatically when it detects an app that suits this, and the Control Center yields the bottom panel to an app that owns it.</p>
 <h2 id="standalone-emulator-apps"><a class="toclink" href="#standalone-emulator-apps">Standalone emulator apps</a></h2>
@@ -180,6 +195,8 @@
 <li><a href="#the-files-app">The Files app</a>
 </li>
 <li><a href="#gammabrowser">GammaBrowser</a>
+</li>
+<li><a href="#google-apps-and-the-play-store">Google apps and the Play Store</a>
 </li>
 <li><a href="#run-on-primary-screen-dual-screen-devices">Run on Primary Screen (dual-screen devices)</a>
 </li>

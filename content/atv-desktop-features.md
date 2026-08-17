@@ -13,6 +13,8 @@ GammaOS can boot straight into the Nano launcher or into normal Android (desktop
 
 Nano and desktop mode are two boot targets on the same system. Switching is controlled by a single setting, so your games, saves and apps stay in place either way. When you switch to desktop mode the device boots to a normal Android home screen with a status bar and an app drawer instead of the XMB, DSi or Minima launcher.
 
+The quickest way to switch is the power menu: from Nano, choose **Boot into Android**, and from Android, open the power menu and choose **Boot to Nano**. Because it is the same system underneath, this is a fast round trip, so you can pop into full Android for a native app, a browser or the Play Store, then drop back into Nano for games and media. Setting up Google services with microG is one common reason to boot into Android; see [Applications](applications.html#google-apps-and-the-play-store).
+
 ## Custom notification shade (TvGammaShade)
 
 Desktop mode ships a purpose built notification shade that works with a controller and on screens that do not have a touch digitizer.

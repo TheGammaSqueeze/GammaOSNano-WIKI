@@ -113,7 +113,13 @@ The fix is to reset the power controller by disconnecting the battery: open the 
 
 ### How do I get back to Nano from full Android?
 
-Nano and full Android (desktop or TV mode) are two boot targets on the same system, controlled by a single setting, so your games, saves and apps stay in place either way. To return to Nano, use that setting rather than reinstalling. The full walkthrough, including why you might boot to Android for a native app or the Play Store, is on [Desktop Mode Features](atv-desktop-features.html).
+Nano and full Android (desktop or TV mode) are two boot targets on the same system, so your games, saves and apps stay in place either way. To return to Nano, open the power menu and choose **Boot to Nano**. The full walkthrough, including why you might boot to Android for a native app or the Play Store, is on [Desktop Mode Features](atv-desktop-features.html).
+
+### How do I get the Play Store or Google apps?
+
+It depends on your edition. **GammaOS Full** already includes the Play Store and Google apps. On **Lite** and **Core**, which ship without Google services, use **Aurora Store** for most apps, or install **microG** while in full Android mode for full Google services and paid apps. The step-by-step is on the [Applications](applications.html#google-apps-and-the-play-store) page.
+
+microG is a community-collected setup, not officially endorsed or supported by GammaOS, and it should not be used on low-memory devices such as the TrimUI Brick (1GB RAM).
 
 ### More help
 

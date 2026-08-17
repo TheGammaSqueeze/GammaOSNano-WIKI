@@ -70,6 +70,27 @@ The standard **Files** app (DocumentsUI) is listed under Applications and is ful
 
 A web browser, **GammaBrowser**, ships in every Nano build (not just TV builds), so you can reach the web straight from Applications.
 
+## Google apps and the Play Store
+
+Whether Google apps are already on your device depends on your GammaOS edition (see the [editions rundown](what-is-nano.html)):
+
+- **GammaOS Full** includes Google apps and the Play Store out of the box, so there is nothing to set up.
+- **GammaOS Lite and Core** ship without Google services to stay light. You can still add apps, and you can add full Google services if you need them.
+
+**The simple path: Aurora Store.** [Aurora Store](https://auroraoss.com/) is an alternative client for the Google Play catalogue that works without Google services. Install it (it is on [F-Droid](https://f-droid.org/)) and you can browse and download most free apps, often including apps you already own, without signing in to Google. Apps you install this way show up in the Applications list like any other.
+
+microG is not officially endorsed or supported by GammaOS. The steps below are a guide put together by the community, provided as-is. Do not install any form of Google apps or microG on low-memory devices, such as the TrimUI Brick (1GB RAM): there is not enough memory for them, and it will hurt performance and stability.
+{: .callout .warn }
+
+**Full Google services: microG.** If you need Google sign-in, push notifications, or paid-app licensing, install [microG](https://microg.org/), an open reimplementation of Google Play services. Do this in **full Android (desktop) mode**, not in Nano, and install three APKs from the microG project in this order:
+
+1. **GmsCore** (`com.google.android.gms`), the core services, from the [microG GmsCore releases](https://github.com/microg/GmsCore/releases).
+2. **microG Companion** (`com.android.vending`) from the same releases page. It acts as a lightweight Play Store; advanced users can later swap it for a patched full Play Store.
+3. **GsfProxy**, from the [GsfProxy releases](https://github.com/microg/GsfProxy/releases).
+
+Sign in to your Google account while in Android mode. If sign-in fails with "there was a problem connecting to Google services", open microG Settings and check its **Self-Check** screen; the [microG documentation](https://github.com/microg/GmsCore/wiki) explains what each check needs. Once it is set up, your apps work whether you are in Android or back in Nano. To learn how to boot into full Android and back, see [Desktop Mode Features](atv-desktop-features.html).
+{: .callout .note }
+
 ## Run on Primary Screen (dual-screen devices)
 
 On dual-screen (DS-style) handhelds, an app's Options menu adds **Run on Primary Screen**. Turn it on to make a dual-screen app run on the main panel. Nano can also prompt you automatically when it detects an app that suits this, and the Control Center yields the bottom panel to an app that owns it.
