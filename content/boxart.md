@@ -91,12 +91,16 @@ If you would rather manage covers as files (for example, when applying a whole s
 
 You can transfer the file with USB File Transfer (MTP), `adb push`, or the on-device Files app. The new cover shows the next time that game's art is loaded. The Information page is the reliable source for the correct path, since it names the exact cover file for the highlighted game.
 
+To manage covers in bulk, back them all up, or add your own art from a PC, see [Custom Boxart and Backup](custom-boxart.html) and the GammaOS Boxart Tool.
+{: .callout .tip }
+
 ## Per-system scraping
 
 You can also scrape one system at a time from the **Game Systems** editor. Each system has a **Scrape This System** action, plus optional scraper account fields to override the global setting for just that system. See [Game Systems](game-systems.html).
 
 ## Related pages
 
+- [Custom Boxart and Backup](custom-boxart.html) to manage covers in bulk or from a PC.
 - [Game Systems](game-systems.html) for per-system scraper settings.
 - [Context Menus](context-menus.html) for every Options-menu action on a game.
 - [Collections & Recently Played](collections.html) for grouping your games.

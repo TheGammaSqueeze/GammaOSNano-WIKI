@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Custom Boxart and Backup - GammaOS Nano</title>
+<meta name="description" content="Add your own cover art in bulk, back it up, and manage it from a PC, with the GammaOS Boxart Tool or by hand.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.png">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <img class="brand-mark" src="assets/img/brand/gammaos-logo-tile.png" alt="GammaOS logo" width="28" height="28">
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
+<li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+<li><a href="theme-settings.html"><span class="nav-ico">🖼️</span>Wallpapers &amp; Theme Settings</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+<li><a class="active" href="custom-boxart.html"><span class="nav-ico">🖼️</span>Custom Boxart and Backup</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+<li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
+<li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
+<li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+<li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">The <a href="boxart.html">Boxart Scraper</a> and the per-game <strong>Set Boxart</strong> option cover most needs, but sometimes you want to manage covers in bulk: drop in your own art from a computer, fix a whole system at once, or back up every cover you have collected. This page shows how, end to end, with a ready-made tool and the full on-device format if you would rather do it by hand.</p>
+<h2 id="the-quick-ways-inside-nano"><a class="toclink" href="#the-quick-ways-inside-nano">The quick ways, inside Nano</a></h2>
+<p>If you only need one or two covers, you do not need any of this. Inside Nano you can:</p>
+<ul>
+<li>Run the <strong>Boxart Scraper</strong> (Settings &gt; Game Settings &gt; Boxart Scraper) to fetch art automatically.</li>
+<li>Highlight a game, press the Options button, and choose <strong>Set Boxart</strong> to use any image from your Photos.</li>
+</ul>
+<p>Both are covered on the <a href="boxart.html">Boxart and Metadata</a> page. The rest of this page is for managing covers <strong>in bulk or from a PC</strong>.</p>
+<h2 id="the-gammaos-boxart-tool"><a class="toclink" href="#the-gammaos-boxart-tool">The GammaOS Boxart Tool</a></h2>
+<p>The easiest way to manage your covers from a computer is the <strong>GammaOS Boxart Tool</strong>, a small cross-platform app (Windows, macOS, Linux) that talks to your device over ADB. It has a desktop window and a command line, and it writes to the same place Nano does, so anything you set shows up in the XMB, DSi and Minima themes.</p>
+<p>Get it here: <strong><a href="https://github.com/TheGammaSqueeze/GammaOS-BoxartTool">github.com/TheGammaSqueeze/GammaOS-BoxartTool</a></strong></p>
+<h3 id="what-you-need"><a class="toclink" href="#what-you-need">What you need</a></h3>
+<ul>
+<li>Your handheld connected over USB with <strong>USB debugging</strong> turned on (Settings has a Developer Options entry, and desktop mode exposes the full Android settings).</li>
+<li><strong>Root ADB.</strong> The cover cache lives in a protected system folder, so the tool runs <code>adb root</code> for you. This works on the standard GammaOS builds.</li>
+<li><strong>Python 3.8 or newer</strong> on your computer, plus the <code>adb</code> command from Android platform-tools. Pillow is optional and only makes the previews nicer (<code>pip install pillow</code>).</li>
+</ul>
+<h3 id="install"><a class="toclink" href="#install">Install</a></h3>
+<div class="codehilite"><pre><span></span><code>pip install .
+<span class="c1"># or run it without installing:</span>
+python3 gammaos-boxart.py --gui
+</code></pre></div>
+
+<h3 id="the-desktop-app"><a class="toclink" href="#the-desktop-app">The desktop app</a></h3>
+<p>Launch <code>gammaos-boxart-gui</code>. It connects to your device, lists your games (the ones that already have a cover are starred), and previews the selected cover.</p>
+<p><img alt="The GammaOS Boxart Tool desktop app" src="assets/img/shots/boxart_tool_gui.png" /></p>
+<p>From here you can:</p>
+<ul>
+<li><strong>Set / Replace Cover</strong> pick any image; the tool pushes it and restarts Nano so it appears right away.</li>
+<li><strong>Save Current Cover As</strong> pull an existing cover back to your PC.</li>
+<li><strong>Remove Cover</strong> delete a custom cover and fall back to the generic icon.</li>
+<li><strong>Bulk Import</strong> and <strong>Bulk Export</strong> manage the whole library in one go.</li>
+</ul>
+<h3 id="the-command-line"><a class="toclink" href="#the-command-line">The command line</a></h3>
+<p>Every action is also a command, which is handy for scripting or batching.</p>
+<p><img alt="The GammaOS Boxart Tool command line" src="assets/img/shots/boxart_tool_cli.png" /></p>
+<div class="codehilite"><pre><span></span><code>gammaos-boxart list                         <span class="c1"># every game, boxart marked</span>
+gammaos-boxart <span class="nb">set</span> nes/Spacegulls.nes cover.png       <span class="c1"># add or replace a cover</span>
+gammaos-boxart get nes/Spacegulls.nes -o out.png      <span class="c1"># pull a cover to your PC</span>
+gammaos-boxart remove nes/Spacegulls.nes              <span class="c1"># remove a custom cover</span>
+gammaos-boxart <span class="nb">export</span> ./my-covers                     <span class="c1"># back up every cover (+ manifest)</span>
+gammaos-boxart import ./my-covers                     <span class="c1"># bulk import a folder of covers</span>
+</code></pre></div>
+
+<p>A game can be named by its full device path (<code>/storage/emulated/0/ROMs/nes/Game.nes</code>) or the short <code>system/file</code> form (<code>nes/Game.nes</code>).</p>
+<h3 id="bulk-backup-and-restore"><a class="toclink" href="#bulk-backup-and-restore">Bulk backup and restore</a></h3>
+<p><code>export</code> writes every cover into a folder as <code>system/GameName.png</code>, plus a <code>boxart_manifest.json</code>, so you have a tidy, portable backup. <code>import</code> reads that folder back: with the manifest it restores each cover to the exact game, and without one it matches images to games by filename (<code>Spacegulls.png</code> finds <code>Spacegulls.nes</code>). This is the fast way to move your covers to a new device or a fresh install.</p>
+<p>Here is a set of tool-added covers rendering on the device, in the XMB theme:</p>
+<p><img alt="Custom boxart on the device" src="assets/img/shots/boxart_device.png" /></p>
+<h2 id="how-boxart-is-stored"><a class="toclink" href="#how-boxart-is-stored">How boxart is stored</a></h2>
+<p>If you would rather understand the format or edit it by hand, here is exactly how Nano keeps cover art. Everything lives in a protected folder:</p>
+<div class="codehilite"><pre><span></span><code>/data/system/nano_scrape/
+    index.json        the manifest (version 2)
+    names.json        per-game title overrides (version 1)
+    &lt;key&gt;.box.png     a game&#39;s cover image
+    &lt;key&gt;.fan.jpg     a game&#39;s fan art
+</code></pre></div>
+
+<p><code>&lt;key&gt;</code> is the game's ROM path run through a 64-bit <strong>FNV-1a</strong> hash, written as 16 lowercase hex digits. It is only a filename convention: Nano loads a cover from the path stored in the manifest, so what really matters is the <code>index.json</code> entry.</p>
+<h3 id="indexjson"><a class="toclink" href="#indexjson">index.json</a></h3>
+<p><code>index.json</code> is an object with a <code>version</code> and an <code>items</code> array. Each item ties one ROM to its art and metadata. Only non-empty fields are written.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;rom&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/data/media/0/ROMs/nes/Spacegulls.nes&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;box&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/data/system/nano_scrape/5cbf8efabe804c89.box.png&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;scraper&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;manual&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;when&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1786974787</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Spacegulls&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">]</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rom</code></td>
+<td>The full ROM path. Nano matches it across the <code>/storage/emulated/0</code>, <code>/data/media/0</code>, <code>/sdcard</code> and <code>/storage/self/primary</code> views, so any of those prefixes works.</td>
+</tr>
+<tr>
+<td><code>box</code></td>
+<td>Absolute path to the cover image. This is what Nano actually loads.</td>
+</tr>
+<tr>
+<td><code>fan</code></td>
+<td>Absolute path to fan art (optional).</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>The displayed name (optional).</td>
+</tr>
+<tr>
+<td><code>scraper</code></td>
+<td>Where it came from; use <code>manual</code> for your own art.</td>
+</tr>
+<tr>
+<td><code>when</code></td>
+<td>Unix timestamp.</td>
+</tr>
+<tr>
+<td><code>desc</code>, <code>genre</code>, <code>players</code>, <code>rating</code>, <code>date</code>, <code>dev</code>, <code>pub</code></td>
+<td>Optional scraped metadata.</td>
+</tr>
+</tbody>
+</table>
+<p><code>names.json</code> is the same shape with <code>{ "rom", "name" }</code> items and just renames a game.</p>
+<p class="callout note">Nano reads <code>index.json</code> once at startup, so after any change you must restart Nano for it to show. It also refuses to save over an <code>index.json</code> it cannot read, so a bad edit will not wipe your library, but you should still keep a backup (use <code>export</code>).</p>
+<h2 id="doing-it-by-hand"><a class="toclink" href="#doing-it-by-hand">Doing it by hand</a></h2>
+<p>If you want to skip the tool, the same result is a few ADB commands (root, as above):</p>
+<div class="codehilite"><pre><span></span><code>adb root
+<span class="c1"># 1. copy your image into the cache under the game&#39;s hash-named file</span>
+adb push mycover.png /data/local/tmp/c.png
+adb shell <span class="s1">&#39;cp /data/local/tmp/c.png /data/system/nano_scrape/5cbf8efabe804c89.box.png&#39;</span>
+adb shell <span class="s1">&#39;chmod 600 /data/system/nano_scrape/5cbf8efabe804c89.box.png; restorecon /data/system/nano_scrape/5cbf8efabe804c89.box.png&#39;</span>
+<span class="c1"># 2. add or edit the matching item in /data/system/nano_scrape/index.json</span>
+<span class="c1">#    (rom, box, scraper: &quot;manual&quot;), then restart Nano:</span>
+adb shell <span class="s1">&#39;setprop ctl.stop gammaos-nano; setprop ctl.start gammaos-nano&#39;</span>
+</code></pre></div>
+
+<p>The hard part by hand is computing the <code>&lt;key&gt;</code> (the FNV-1a hash of the ROM path) and editing the JSON safely, which is exactly what the tool does for you, so the tool is the recommended route.</p>
+<h2 id="tips"><a class="toclink" href="#tips">Tips</a></h2>
+<ul>
+<li>Any common image works (PNG, JPG, WebP). Portrait covers around 480x640 look best in the XMB and DSi themes.</li>
+<li>Run <code>export</code> before a big change so you always have a backup.</li>
+<li>If a new cover does not appear, restart Nano (the tool does this automatically; by hand, use the <code>setprop</code> line above).</li>
+<li>To go back to the generic cartridge icon, <code>remove</code> the cover (or Reset Boxart in the game's Options menu inside Nano).</li>
+</ul>
+<h2 id="related-pages"><a class="toclink" href="#related-pages">Related pages</a></h2>
+<ul>
+<li><a href="boxart.html">Boxart and Metadata</a></li>
+<li><a href="adding-games.html">Adding Games</a></li>
+<li><a href="https://github.com/TheGammaSqueeze/GammaOS-BoxartTool">The GammaOS Boxart Tool</a></li>
+</ul>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#the-quick-ways-inside-nano">The quick ways, inside Nano</a>
+</li>
+<li><a href="#the-gammaos-boxart-tool">The GammaOS Boxart Tool</a>
+<ul>
+<li><a href="#what-you-need">What you need</a></li>
+<li><a href="#install">Install</a></li>
+<li><a href="#the-desktop-app">The desktop app</a></li>
+<li><a href="#the-command-line">The command line</a></li>
+<li><a href="#bulk-backup-and-restore">Bulk backup and restore</a></li>
+</ul>
+</li>
+<li><a href="#how-boxart-is-stored">How boxart is stored</a>
+<ul>
+<li><a href="#indexjson">index.json</a></li>
+</ul>
+</li>
+<li><a href="#doing-it-by-hand">Doing it by hand</a>
+</li>
+<li><a href="#tips">Tips</a>
+</li>
+<li><a href="#related-pages">Related pages</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
