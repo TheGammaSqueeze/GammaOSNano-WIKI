@@ -27,7 +27,7 @@ Nano is a microOS: a light, console-style layer that runs on top of a full copy 
   <div class="os-editions">
     <div class="os-edition os-core">
       <div class="os-edition-name">GammaOS Core</div>
-      <div class="os-edition-desc">Built on Android TV, a streamlined living-room base</div>
+      <div class="os-edition-desc">The lightest base, built on Android TV. Best for lower-spec or non-touch devices</div>
     </div>
     <div class="os-edition os-lite">
       <div class="os-edition-name">GammaOS Lite</div>
@@ -46,9 +46,9 @@ Nano is a microOS: a light, console-style layer that runs on top of a full copy 
   </div>
 </div>
 
-The three editions differ only in the Android base underneath:
+The three editions:
 
-- **GammaOS Core** is built on Android TV, a streamlined living-room style base.
+- **GammaOS Core** is the most lightweight edition, built on Android TV. It is best suited to devices with lower specifications or no touch screen.
 - **GammaOS Lite** is built on standard Android, the phone and tablet style system, without Google apps or the Play Store.
 - **GammaOS Full** is the standard Android edition with Google apps and the Play Store included, for when you want to install straight from Play on the device.
 
