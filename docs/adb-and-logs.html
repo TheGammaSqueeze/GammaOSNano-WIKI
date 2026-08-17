@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ADB Setup and Logs - GammaOS Nano</title>
+<meta name="description" content="Install ADB on Windows, macOS or Linux, connect your handheld, and collect logs (logcat, dmesg, bugreport) for support.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.png">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <img class="brand-mark" src="assets/img/brand/gammaos-logo-tile.png" alt="GammaOS logo" width="28" height="28">
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
+<li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+<li><a href="theme-settings.html"><span class="nav-ico">🖼️</span>Wallpapers &amp; Theme Settings</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+<li><a href="custom-boxart.html"><span class="nav-ico">🖼️</span>Custom Boxart and Backup</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+<li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
+<li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
+<li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+<li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+<li><a class="active" href="adb-and-logs.html"><span class="nav-ico">🧰</span>ADB Setup and Logs</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead"><strong>ADB</strong> (Android Debug Bridge) is a small program for your computer that talks to your handheld over USB. You need it to use PC tools like the <a href="custom-boxart.html">GammaOS Boxart Tool</a>, and, most usefully, to <strong>collect logs</strong> when something goes wrong so a developer can see what happened. This page sets it up from scratch on any computer, then shows exactly what to run to grab the logs.</p>
+<p>You do not need the whole Android SDK. Pick the option for your computer below, and you are done in a couple of minutes.</p>
+<h2 id="install-adb"><a class="toclink" href="#install-adb">Install ADB</a></h2>
+<h3 id="windows-easiest"><a class="toclink" href="#windows-easiest">Windows (easiest)</a></h3>
+<p>Use <strong>ADB &amp; Fastboot++</strong>, a tiny installer that sets up the latest <code>adb</code> and <code>fastboot</code> and, importantly, installs the <strong>USB driver</strong> Windows needs to see your device.</p>
+<ol>
+<li>Download it from the <a href="https://github.com/K3V1991/ADB-and-FastbootPlusPlus/releases">ADB &amp; Fastboot++ Releases page</a> (grab the latest <strong>Installer</strong>).</li>
+<li>Run it. When asked, tick <strong>Add to System Path Environment</strong> and, if you are not sure your device has a driver, tick the <strong>Universal ADB Driver</strong> option too.</li>
+<li>Finish. Now <code>adb</code> works from any Command Prompt or PowerShell window.</li>
+</ol>
+<p class="callout tip">That is the whole Windows setup. It also comes with a <strong>Toolkit</strong> that can create a bugreport with one click (see the logs section below).</p>
+<h3 id="macos-easiest"><a class="toclink" href="#macos-easiest">macOS (easiest)</a></h3>
+<p>If you have <a href="https://brew.sh/">Homebrew</a> (a popular Mac package manager), open <strong>Terminal</strong> and run:</p>
+<div class="codehilite"><pre><span></span><code>brew install android-platform-tools
+</code></pre></div>
+
+<p>That installs <code>adb</code> and puts it on your PATH. No Homebrew? Use <a href="#the-official-download-any-computer">the official download</a> below.</p>
+<h3 id="linux-easiest"><a class="toclink" href="#linux-easiest">Linux (easiest)</a></h3>
+<p>Install it from your distribution's package manager in a terminal:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Debian / Ubuntu / Linux Mint / SteamOS</span>
+sudo apt install adb
+
+<span class="c1"># Fedora</span>
+sudo dnf install android-tools
+
+<span class="c1"># Arch / Manjaro</span>
+sudo pacman -S android-tools
+</code></pre></div>
+
+<p>That is it: <code>adb</code> is now on your PATH.</p>
+<h3 id="the-official-download-any-computer"><a class="toclink" href="#the-official-download-any-computer">The official download (any computer)</a></h3>
+<p>If the options above do not fit, Google publishes just <code>adb</code> and <code>fastboot</code> (no SDK) for every system. This always works.</p>
+<ol>
+<li>Open the <a href="https://developer.android.com/tools/releases/platform-tools">SDK Platform Tools page</a> and download the zip for your OS (or use a direct link: <a href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip">Windows</a>, <a href="https://dl.google.com/android/repository/platform-tools-latest-darwin.zip">macOS</a>, <a href="https://dl.google.com/android/repository/platform-tools-latest-linux.zip">Linux</a>).</li>
+<li>Unzip it somewhere you can find, for example your Desktop. You get a <code>platform-tools</code> folder with <code>adb</code> inside.</li>
+<li>Open a terminal or Command Prompt <strong>inside that folder</strong> and run the commands as <code>./adb ...</code> (macOS/Linux) or <code>adb ...</code> (Windows). On Windows you can also add that folder to your PATH so <code>adb</code> works everywhere.</li>
+</ol>
+<p class="callout note">On macOS the first run may be blocked ("cannot be opened because Apple cannot check it"). Right-click <code>adb</code> in Finder and choose <strong>Open</strong> once to allow it.</p>
+<h2 id="connect-your-handheld"><a class="toclink" href="#connect-your-handheld">Connect your handheld</a></h2>
+<ol>
+<li>On the device, make sure <strong>USB debugging</strong> is on. On most GammaOS builds it already is. If your PC does not see the device, enable it in <strong>Settings &gt; Developer Options &gt; USB debugging</strong> (in desktop mode you get the full Android Settings; if Developer Options is hidden, open Settings &gt; About and tap <strong>Build Number</strong> seven times to reveal it).</li>
+<li>Plug the handheld into the computer with a <strong>data</strong> USB cable (some cables are charge-only and will not work).</li>
+<li>Open a terminal (macOS/Linux) or Command Prompt / PowerShell (Windows) and run:</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>adb devices
+</code></pre></div>
+
+<p>The first time, the handheld shows an <strong>Allow USB debugging?</strong> prompt. Tick "Always allow" and accept it, then run <code>adb devices</code> again. You should see a line with your device's serial and the word <code>device</code>. If it says <code>unauthorized</code>, you missed the prompt; reconnect and accept it.</p>
+<h2 id="collect-logs-for-support"><a class="toclink" href="#collect-logs-for-support">Collect logs for support</a></h2>
+<p>When you report a problem, logs are what let a developer actually diagnose it. The steps are the same on every computer; only the folder you start in differs.</p>
+<p>First, open your terminal in a folder where the files will be easy to find, so everything saves to your Desktop:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># macOS / Linux</span>
+<span class="nb">cd</span> ~/Desktop
+
+<span class="c1"># Windows (Command Prompt)</span>
+<span class="nb">cd</span> %USERPROFILE%<span class="se">\D</span>esktop
+</code></pre></div>
+
+<p>Then run these. The single most useful one is the <strong>bugreport</strong>, so start there:</p>
+<div class="codehilite"><pre><span></span><code>adb bugreport bugreport.zip          <span class="c1"># everything at once (best single file to send)</span>
+adb logcat -d &gt; logcat.txt           <span class="c1"># the Android log (app + system)</span>
+adb shell getprop &gt; getprop.txt      <span class="c1"># device + build properties</span>
+adb root                             <span class="c1"># switch to root so the kernel log is readable</span>
+adb shell dmesg &gt; dmesg.txt          <span class="c1"># the kernel log (crashes, drivers, power)</span>
+</code></pre></div>
+
+<ul>
+<li><strong>bugreport.zip</strong> is a full snapshot and usually all a developer needs.</li>
+<li><strong>logcat.txt</strong> captures what GammaOS Nano and Android printed. If you can, reproduce the problem and then grab the log right after, so the failure is near the end.</li>
+<li><strong>dmesg.txt</strong> is the kernel side (freezes, USB, power, reboots). It needs root, which <code>adb root</code> provides on GammaOS (a normal Android phone would refuse this).</li>
+</ul>
+<p class="callout tip">If the device is <strong>stuck or will not reach the home screen</strong>, you can often still run <code>adb devices</code> and the commands above while it is stuck; that log is exactly what pins down a boot problem.</p>
+<p>Finally, share the files: put <code>bugreport.zip</code>, <code>logcat.txt</code> and <code>dmesg.txt</code> together (zip them if needed) and attach them where you were asked, or send them to the developer.</p>
+<p class="callout note">On Windows, ADB &amp; Fastboot++ makes this even easier: its <strong>Toolkit</strong> has a <strong>Create Bugreport</strong> button that saves the report straight to your Desktop, no typing required.</p>
+<h3 id="handy-extras"><a class="toclink" href="#handy-extras">Handy extras</a></h3>
+<div class="codehilite"><pre><span></span><code>adb logcat -d <span class="p">|</span> findstr GammaOS      <span class="c1"># Windows: only GammaOS lines</span>
+adb logcat -d <span class="p">|</span> grep GammaOS         <span class="c1"># macOS / Linux: only GammaOS lines</span>
+adb reboot                           <span class="c1"># reboot the device</span>
+adb shell getprop ro.gammaos.device  <span class="c1"># your device codename</span>
+</code></pre></div>
+
+<h2 id="faq-and-troubleshooting"><a class="toclink" href="#faq-and-troubleshooting">FAQ and troubleshooting</a></h2>
+<h3 id="adb-devices-shows-nothing-my-device-is-not-listed"><a class="toclink" href="#adb-devices-shows-nothing-my-device-is-not-listed"><code>adb devices</code> shows nothing / my device is not listed</a></h3>
+<ul>
+<li>Use a <strong>data</strong> USB cable and a different USB port (front-panel and hub ports are less reliable).</li>
+<li>Make sure <strong>USB debugging</strong> is on (see above).</li>
+<li><strong>Windows:</strong> install the driver. The ADB &amp; Fastboot++ installer includes the Universal ADB Driver; tick that option, or install it from the Toolkit.</li>
+<li>macOS and Linux normally need no driver.</li>
+</ul>
+<h3 id="it-says-unauthorized"><a class="toclink" href="#it-says-unauthorized">It says <code>unauthorized</code></a></h3>
+<p>You did not accept the <strong>Allow USB debugging</strong> prompt on the handheld. Reconnect the cable, watch the device screen, and tick "Always allow". If no prompt appears, go to Developer Options, choose <strong>Revoke USB debugging authorizations</strong>, and reconnect.</p>
+<h3 id="windows-says-adb-is-not-recognized"><a class="toclink" href="#windows-says-adb-is-not-recognized">Windows says <code>'adb' is not recognized</code></a></h3>
+<p><code>adb</code> is not on your PATH. Re-run the ADB &amp; Fastboot++ installer and tick <strong>Add to System Path Environment</strong>, or open the Command Prompt inside the folder that contains <code>adb.exe</code> and run it from there.</p>
+<h3 id="adb-root-says-it-cannot-run-as-root"><a class="toclink" href="#adb-root-says-it-cannot-run-as-root"><code>adb root</code> says it cannot run as root</a></h3>
+<p>That message means the build does not allow root. GammaOS builds do, so make sure the device is actually running GammaOS and not stock firmware. You still get <code>logcat</code> and <code>bugreport</code> without root; only <code>dmesg</code> needs it.</p>
+<h3 id="macos-will-not-open-adb"><a class="toclink" href="#macos-will-not-open-adb">macOS will not open adb</a></h3>
+<p>Right-click <code>adb</code> in Finder and choose <strong>Open</strong> the first time, or run <code>xattr -d com.apple.quarantine adb</code> in the folder, then try again.</p>
+<h2 id="related-pages"><a class="toclink" href="#related-pages">Related pages</a></h2>
+<ul>
+<li><a href="custom-boxart.html">GammaOS Boxart Tool</a> uses ADB to manage your covers.</li>
+<li><a href="faq.html">FAQ and Troubleshooting</a> for in-device fixes.</li>
+<li><a href="network.html">Wi-Fi and Bluetooth</a> and <a href="network-shares.html">Network Shares</a> for wireless file transfer.</li>
+</ul>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#install-adb">Install ADB</a>
+<ul>
+<li><a href="#windows-easiest">Windows (easiest)</a></li>
+<li><a href="#macos-easiest">macOS (easiest)</a></li>
+<li><a href="#linux-easiest">Linux (easiest)</a></li>
+<li><a href="#the-official-download-any-computer">The official download (any computer)</a></li>
+</ul>
+</li>
+<li><a href="#connect-your-handheld">Connect your handheld</a>
+</li>
+<li><a href="#collect-logs-for-support">Collect logs for support</a>
+<ul>
+<li><a href="#handy-extras">Handy extras</a></li>
+</ul>
+</li>
+<li><a href="#faq-and-troubleshooting">FAQ and troubleshooting</a>
+<ul>
+<li><a href="#adb-devices-shows-nothing-my-device-is-not-listed">adb devices shows nothing / my device is not listed</a></li>
+<li><a href="#it-says-unauthorized">It says unauthorized</a></li>
+<li><a href="#windows-says-adb-is-not-recognized">Windows says &#x27;adb&#x27; is not recognized</a></li>
+<li><a href="#adb-root-says-it-cannot-run-as-root">adb root says it cannot run as root</a></li>
+<li><a href="#macos-will-not-open-adb">macOS will not open adb</a></li>
+</ul>
+</li>
+<li><a href="#related-pages">Related pages</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

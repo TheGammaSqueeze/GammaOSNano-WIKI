@@ -127,6 +127,7 @@ microG is a community-collected setup, not officially endorsed or supported by G
 - [Adding Games](adding-games.html), [Game Systems](game-systems.html), and [Custom System](custom-system.html)
 - [Boxart](boxart.html) and [Emulators](emulators.html)
 - [Settings Reference](settings-reference.html) and [GammaOS Toolbox](gammaos-toolbox.html)
+- [ADB Setup and Logs](adb-and-logs.html) to connect a PC and collect logs for support
 
 ## New in this release
 

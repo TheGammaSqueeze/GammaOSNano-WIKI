@@ -31,7 +31,7 @@ Get it here: **[github.com/TheGammaSqueeze/GammaOS-BoxartTool](https://github.co
 
 - Your handheld connected over USB with **USB debugging** turned on (Settings has a Developer Options entry, and desktop mode exposes the full Android settings).
 - **Root ADB.** The cover cache lives in a protected system folder, so the tool runs `adb root` for you. This works on the standard GammaOS builds.
-- The `adb` command from Android platform-tools on your PATH.
+- The `adb` command on your PATH. New to this? [ADB Setup and Logs](adb-and-logs.html) installs it in a couple of minutes on Windows, macOS or Linux.
 
 ### Download
 
