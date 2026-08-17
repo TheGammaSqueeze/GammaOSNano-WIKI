@@ -13,6 +13,49 @@ Because GammaOS is a full firmware, Nano is tied into the system itself: brightn
 
 ![The GammaOS XMB home on the Game category](assets/img/shots/xmb_home.png)
 
+## Nano and the OS underneath
+
+Nano is a microOS: a light, console-style layer that runs on top of a full copy of GammaOS. GammaOS itself is a complete Android based firmware, and it comes in three editions. Your handheld runs one of them, with Nano sitting on top as the home you boot into.
+
+<div class="os-stack" role="img" aria-label="GammaOS Nano is the layer you boot into by default. It sits on top of one GammaOS edition, either Core, Lite or Full, which runs on your handheld hardware. The edition underneath stays fully accessible.">
+  <div class="os-layer os-nano">
+    <span class="os-badge">Boots by default</span>
+    <div class="os-layer-title">GammaOS Nano</div>
+    <div class="os-layer-sub">The console home you see first: XMB, DSi or Minima, with your games, apps and built-in players</div>
+  </div>
+  <div class="os-join">sits on top of</div>
+  <div class="os-editions">
+    <div class="os-edition os-core">
+      <div class="os-edition-name">GammaOS Core</div>
+      <div class="os-edition-desc">Built on Android TV, a streamlined living-room base</div>
+    </div>
+    <div class="os-edition os-lite">
+      <div class="os-edition-name">GammaOS Lite</div>
+      <div class="os-edition-desc">Standard Android, without Google apps or the Play Store</div>
+    </div>
+    <div class="os-edition os-full">
+      <div class="os-edition-name">GammaOS Full</div>
+      <div class="os-edition-desc">Standard Android with Google apps and the Play Store</div>
+    </div>
+  </div>
+  <div class="os-editions-cap">One edition runs underneath, and stays fully accessible</div>
+  <div class="os-join">runs on</div>
+  <div class="os-layer os-hw">
+    <div class="os-layer-title">Your handheld</div>
+    <div class="os-layer-sub">Anbernic, TrimUI, AYANEO and other supported devices</div>
+  </div>
+</div>
+
+The three editions differ only in the Android base underneath:
+
+- **GammaOS Core** is built on Android TV, a streamlined living-room style base.
+- **GammaOS Lite** is built on standard Android, the phone and tablet style system, without Google apps or the Play Store.
+- **GammaOS Full** is the standard Android edition with Google apps and the Play Store included, for when you want to install straight from Play on the device.
+
+Whichever edition your device ships with, it boots straight into Nano. There is nothing to set up: Nano is the default home. The full Android system underneath never goes away, so you can switch to desktop or TV mode for a normal app, a browser or the Play Store, then drop back into Nano for games and media. That switch is a single setting, and your games, saves and apps stay in place either way. See [Desktop Mode Features](atv-desktop-features.html).
+
+Think of Nano as the console shell, and Core, Lite or Full as the engine room underneath. Nano keeps the everyday experience fast and controller friendly, while the full OS stays one step away.
+
 ## How the home screen works
 
 The home is organized into a small set of categories that you move between. On the GammaOS XMB theme they sit across the top of the screen, and the items for the selected category drop down in a vertical list beneath it. Move sideways to change category, and up or down to move through the items.

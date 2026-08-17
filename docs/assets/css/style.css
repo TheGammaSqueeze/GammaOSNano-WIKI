@@ -277,6 +277,42 @@ blockquote p{margin:.3em 0}
 .ui-video-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--accent-ink);background:var(--spectrum-soft);border:1px solid var(--line-strong);border-radius:20px;padding:3px 10px;margin-bottom:10px}
 .ui-video-badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 3px color-mix(in srgb,var(--pink) 25%,transparent)}
 
+/* ---------- OS layering diagram (what-is-nano) ---------- */
+.os-stack{
+  margin:1.9em 0;padding:22px 22px 20px;border:1px solid var(--line);border-radius:var(--radius);
+  background:linear-gradient(180deg,color-mix(in srgb,var(--panel-2) 55%,var(--panel)),var(--panel));
+  box-shadow:var(--shadow);display:flex;flex-direction:column;
+}
+.os-layer{position:relative;border:1px solid var(--line-strong);border-radius:var(--radius-sm);padding:15px 18px;background:var(--bg-2)}
+.os-layer-title{font-family:var(--font-head);font-weight:600;font-size:1.05rem;color:var(--ink);line-height:1.25}
+.os-layer-sub{font-size:13px;color:var(--ink-soft);margin-top:3px;line-height:1.5}
+/* Nano = the hero layer, painted with the gamma spectrum */
+.os-nano{border-color:transparent;background:var(--spectrum);box-shadow:0 10px 26px rgba(123,47,247,.28)}
+.os-nano .os-layer-title{color:#fff;font-size:1.22rem}
+.os-nano .os-layer-sub{color:rgba(255,255,255,.92)}
+.os-badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;
+  color:#fff;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.4);border-radius:20px;padding:3px 11px;margin-bottom:9px;
+}
+.os-badge::before{content:"";width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 0 0 3px rgba(255,255,255,.28)}
+/* connector between layers */
+.os-join{
+  display:flex;align-items:center;justify-content:center;gap:12px;padding:9px 0 8px;
+  color:var(--ink-faint);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.09em;
+}
+.os-join::before,.os-join::after{content:"";height:1px;flex:0 0 42px;background:var(--line-strong)}
+/* the three editions */
+.os-editions{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.os-edition{--dot:var(--accent);border:1px solid var(--line-strong);border-top:3px solid var(--dot);border-radius:var(--radius-sm);padding:13px 14px;background:var(--bg-2)}
+.os-core{--dot:var(--cyan)}
+.os-lite{--dot:var(--accent)}
+.os-full{--dot:var(--green)}
+.os-edition-name{display:flex;align-items:center;gap:8px;font-family:var(--font-head);font-weight:600;font-size:.98rem;color:var(--ink)}
+.os-edition-name::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--dot);flex:0 0 auto;box-shadow:0 0 0 3px color-mix(in srgb,var(--dot) 22%,transparent)}
+.os-edition-desc{font-size:12.5px;color:var(--ink-soft);margin-top:5px;line-height:1.45}
+.os-editions-cap{text-align:center;font-size:12px;color:var(--ink-faint);margin-top:11px;font-style:italic}
+@media (max-width:560px){.os-editions{grid-template-columns:1fr}.os-join::before,.os-join::after{flex-basis:26px}}
+
 hr{border:0;height:1px;background:var(--line);margin:2em 0}
 
 /* ---------- responsive ---------- */
