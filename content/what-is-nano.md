@@ -52,6 +52,10 @@ The three editions:
 - **GammaOS Lite** is built on standard Android, the phone and tablet style system, without Google apps or the Play Store.
 - **GammaOS Full** is the standard Android edition with Google apps and the Play Store included, for when you want to install straight from Play on the device.
 
+You may also see the name **GammaOS Next**. That is the current generation of GammaOS as a whole: Core, Lite and Full are all GammaOS Next editions, and Nano is the console home that ships on top of them.
+
+**Which edition should I choose?** It depends on your device and whether you want Google apps. **Core** is the lightest and suits lower-powered devices or ones without a touch screen. **Lite** is the standard choice, a normal Android base without Google apps or the Play Store. Pick **Full** only if you want the Google Play Store on the device. On devices that boot from an SD card, use a good A2-rated card where possible; an A1 card works but loads more slowly.
+
 Whichever edition your device ships with, it boots straight into Nano. There is nothing to set up: Nano is the default home. The full Android system underneath never goes away, so you can switch to desktop or TV mode for a normal app, a browser or the Play Store, then drop back into Nano for games and media. That switch is a single setting, and your games, saves and apps stay in place either way. See [Desktop Mode Features](atv-desktop-features.html).
 
 Think of Nano as the console shell, and Core, Lite or Full as the engine room underneath. Nano keeps the everyday experience fast and controller friendly, while the full OS stays one step away.

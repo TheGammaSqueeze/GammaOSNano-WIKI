@@ -39,6 +39,7 @@
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
 <li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
+<li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
@@ -140,6 +141,28 @@
 <li><strong>Hold the Guide / Mode button for 10 seconds</strong>.</li>
 </ul>
 <p>Either one restarts a frozen or dead home screen.</p>
+<h3 id="the-home-screen-feels-laggy-or-the-device-runs-hot"><a class="toclink" href="#the-home-screen-feels-laggy-or-the-device-runs-hot">The home screen feels laggy or the device runs hot</a></h3>
+<p>The GammaOS XMB theme, with its flowing wave and glass icons, is the heaviest home to draw. On lower-powered devices, the TrimUI Brick for example, it can stutter and warm the device up. Two things help, and both take effect right away:</p>
+<ul>
+<li>Switch to a lighter home in <strong>Settings &gt; Theme Settings &gt; Home Theme</strong>. The <strong>DSi</strong> and <strong>Minima</strong> themes are much lighter than XMB.</li>
+<li>Keep XMB but turn on its <strong>Half Resolution</strong> toggles (Wave, Icons and Clock) in <strong>Theme Settings</strong>. Each renders that layer at half size for a large speed-up while the menu text stays crisp.</li>
+</ul>
+<h3 id="a-game-crashes-back-to-the-menu-especially-under-load"><a class="toclink" href="#a-game-crashes-back-to-the-menu-especially-under-load">A game crashes back to the menu, especially under load</a></h3>
+<p>Being dropped back to the home is usually a crashing core or a device throttling under load, not a safety feature. Try:</p>
+<ul>
+<li>Set <strong>Performance Mode</strong> to <strong>Max Performance</strong> in the <a href="quick-menu.html">Quick Menu</a> (hold <span class="btnchip">Power</span>). This keeps the CPU from slowing down under load.</li>
+<li>Change the core or emulator for that system in <strong>Settings &gt; Game Settings &gt; Game Systems</strong>. A different core is often more stable for demanding systems like Nintendo 64.</li>
+</ul>
+<p>On a low-memory device, a first-time RetroArch setup can also crash once; force a restart (hold <span class="btnchip">Power</span>) and run it again, and the second attempt usually succeeds.</p>
+<h3 id="where-does-retroarch-keep-my-saves"><a class="toclink" href="#where-does-retroarch-keep-my-saves">Where does RetroArch keep my saves?</a></h3>
+<p>By default RetroArch stores save files and save states in the same folder as the game. You can change where they go in <strong>RetroArch &gt; Settings &gt; Directory</strong> (Save Files and Save States). When moving to another device, ordinary in-game saves (<code>.srm</code>) transfer reliably; save states are tied to the exact core version and may not carry across. For the built-in DS emulator, see <a href="drastic-nano.html">DraStic Nano</a> instead.</p>
+<h3 id="wi-fi-keeps-dropping-after-sleep-or-will-not-hold-on-my-mesh-network"><a class="toclink" href="#wi-fi-keeps-dropping-after-sleep-or-will-not-hold-on-my-mesh-network">Wi-Fi keeps dropping after sleep, or will not hold on my mesh network</a></h3>
+<p>If Wi-Fi drops when the screen sleeps or the lid closes, it normally reconnects on wake; if it does not, toggle Wi-Fi off and on in <strong>Network Settings</strong>. If the device keeps dropping, or reboots, on a mesh network or a mixed 2.4/5GHz network, connect it to a dedicated <strong>2.4GHz</strong> access point (or your router's 2.4GHz band under its own name). This has been the reliable fix on the RG DS and RG Vita.</p>
+<h3 id="my-device-will-not-power-off-turns-back-on-when-i-close-the-lid-or-will-not-power-on"><a class="toclink" href="#my-device-will-not-power-off-turns-back-on-when-i-close-the-lid-or-will-not-power-on">My device will not power off, turns back on when I close the lid, or will not power on</a></h3>
+<p>After switching to GammaOS from another OS (Rocknix in particular), the power controller can be left in a state the GammaOS kernel does not expect. The symptoms arrive together: the device will not power off, turns itself back on when you close the lid, drains to empty overnight, or will not power on after charging.</p>
+<p class="callout warn">The fix is to reset the power controller by disconnecting the battery: open the back cover, unplug the battery for 10 to 15 minutes, then reconnect it. No reinstall is needed. This has mainly been seen on the Anbernic RG DS.</p>
+<h3 id="how-do-i-get-back-to-nano-from-full-android"><a class="toclink" href="#how-do-i-get-back-to-nano-from-full-android">How do I get back to Nano from full Android?</a></h3>
+<p>Nano and full Android (desktop or TV mode) are two boot targets on the same system, controlled by a single setting, so your games, saves and apps stay in place either way. To return to Nano, use that setting rather than reinstalling. The full walkthrough, including why you might boot to Android for a native app or the Play Store, is on <a href="atv-desktop-features.html">Desktop Mode Features</a>.</p>
 <h3 id="more-help"><a class="toclink" href="#more-help">More help</a></h3>
 <ul>
 <li><a href="controls-os.html">OS Controls</a> and <a href="controls-retroarch.html">RetroArch Controls</a></li>
@@ -155,8 +178,15 @@
 <p>Yes. Highlight the game, press Options and choose <strong>Set Boxart</strong>, then pick any image from your Photos. It is copied into the cover cache and shows up immediately in every theme. Use <strong>Reset Boxart</strong> to remove it. This is the easiest way to give cover art to homebrew, undubs, prototypes and romhacks that the scraper cannot match by filename. If you prefer, the game's <strong>Information</strong> page shows the exact cover file path so you can drop your own image there manually.</p>
 <h3 id="a-games-name-is-wrong-or-the-scraper-cannot-match-it-can-i-fix-it"><a class="toclink" href="#a-games-name-is-wrong-or-the-scraper-cannot-match-it-can-i-fix-it">A game's name is wrong or the scraper cannot match it. Can I fix it?</a></h3>
 <p>Open the game's Options menu and choose <strong>Rename / Edit Title</strong> to type the correct name. The new name is used everywhere (game lists, Recently Played, search and the Information page) and is also used as the scraper search query, so you can rename a game and then run <strong>Scrape This Game</strong> to fetch the right art and details. To scrape one game under a different name without renaming the file, use <strong>Scrape with Custom Name...</strong>. Renaming to an empty title reverts to the filename.</p>
-<h3 id="how-do-i-transfer-roms-and-files-over-usb"><a class="toclink" href="#how-do-i-transfer-roms-and-files-over-usb">How do I transfer ROMs and files over USB?</a></h3>
-<p>Connect the device to a PC, then go to <strong>Settings &gt; USB &amp; Docking</strong> and select <strong>File Transfer (MTP)</strong>. The device appears as a drive on your PC; switch back to <strong>Charge Only</strong> when you are done. On a brand-new install MTP can be reluctant until you have launched a game once. If MTP still does not show storage, a file manager such as MiXplorer from Applications is a reliable alternative.</p>
+<h3 id="how-do-i-transfer-roms-and-files-onto-my-device"><a class="toclink" href="#how-do-i-transfer-roms-and-files-onto-my-device">How do I transfer ROMs and files onto my device?</a></h3>
+<p>Connect the device to a PC, then go to <strong>Settings &gt; USB &amp; Docking</strong> and select <strong>File Transfer (MTP)</strong>. The device appears as a drive on your PC; switch back to <strong>Charge Only</strong> when you are done. On a brand-new install MTP can be reluctant until you have launched a game once.</p>
+<p>If MTP does not connect or your PC does not see storage, try these in order:</p>
+<ul>
+<li><strong>Check the cable and port.</strong> Use a data cable, not a charge-only one, and try a different USB port. On the TrimUI Brick, use the <strong>bottom charging port</strong>, not the OTG port next to the shoulder buttons.</li>
+<li><strong>Use ADB Explorer.</strong> <a href="https://github.com/Alex4SSB/ADB-Explorer">ADB Explorer</a> is the recommended alternative when MTP is unreliable. It browses and copies files over ADB and does not depend on MTP.</li>
+<li><strong>Use a network share.</strong> Copy files over Wi-Fi with SMB, FTP or WebDAV, no cable needed. See <a href="network-shares.html">Network Shares</a>.</li>
+</ul>
+<p class="callout warn">On a device that boots from its SD card (the A133P handhelds such as the TrimUI Brick and the MagicX Zero 28), do not remove the card and put it in your PC to copy games. Those cards hold an encrypted Android partition layout, so a computer will not show your storage. That is expected, not a fault. Use MTP, ADB Explorer or a network share instead.</p>
 <h3 id="how-do-i-hide-game-systems-or-home-categories-i-dont-use"><a class="toclink" href="#how-do-i-hide-game-systems-or-home-categories-i-dont-use">How do I hide game systems or home categories I don't use?</a></h3>
 <p>Go to <strong>Settings &gt; Theme Settings &gt; Home Categories</strong>. Use X to hide or show a category and L1/R1 to reorder them. To hide individual rows inside a category (for example specific game systems), drill into that category and toggle the rows there. Quick Menu always stays first, Settings cannot be hidden, and at least one category must remain visible. Changes are saved and apply live across XMB, DSi and Minima.</p>
 <h3 id="how-do-i-pin-my-favourite-apps-to-the-home"><a class="toclink" href="#how-do-i-pin-my-favourite-apps-to-the-home">How do I pin my favourite apps to the home?</a></h3>
@@ -191,7 +221,7 @@
 <li><a href="#how-do-i-mark-a-game-as-a-favourite">How do I mark a game as a favourite?</a></li>
 <li><a href="#can-i-set-my-own-box-art-from-an-image-on-the-device">Can I set my own box art from an image on the device?</a></li>
 <li><a href="#a-games-name-is-wrong-or-the-scraper-cannot-match-it-can-i-fix-it">A game&#x27;s name is wrong or the scraper cannot match it. Can I fix it?</a></li>
-<li><a href="#how-do-i-transfer-roms-and-files-over-usb">How do I transfer ROMs and files over USB?</a></li>
+<li><a href="#how-do-i-transfer-roms-and-files-onto-my-device">How do I transfer ROMs and files onto my device?</a></li>
 <li><a href="#how-do-i-hide-game-systems-or-home-categories-i-dont-use">How do I hide game systems or home categories I don&#x27;t use?</a></li>
 <li><a href="#how-do-i-pin-my-favourite-apps-to-the-home">How do I pin my favourite apps to the home?</a></li>
 <li><a href="#can-i-keep-an-app-running-in-the-background-when-i-leave-it">Can I keep an app running in the background when I leave it?</a></li>

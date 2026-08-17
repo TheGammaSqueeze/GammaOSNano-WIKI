@@ -39,6 +39,7 @@
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
 <li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
+<li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
@@ -102,6 +103,8 @@
 <li>Put Game Boy Advance games in <code>/sdcard/ROMs/gba/</code></li>
 </ul>
 <p>SD card, internal storage, and USB all work, so use whichever you like. Nano scans them all.</p>
+<p>To get the files there in the first place, connect over USB (<strong>File Transfer / MTP</strong>), use <a href="https://github.com/Alex4SSB/ADB-Explorer">ADB Explorer</a>, or copy over a <a href="network-shares.html">network share</a>. The <a href="faq.html">FAQ</a> walks through each method.</p>
+<p class="callout warn">On a device that boots from its SD card (the A133P handhelds like the TrimUI Brick and MagicX Zero 28), do not pull the card and put it in your PC to copy games onto it. The card holds an encrypted Android partition layout, so your computer will not show your storage. Use MTP, ADB Explorer or a network share instead.</p>
 <p>You do not have to unzip anything special or rename your files, as long as the file extension matches what the system expects (see the table).</p>
 <h2 id="systems-folders-and-file-types"><a class="toclink" href="#systems-folders-and-file-types">Systems, folders, and file types</a></h2>
 <p>Here are the systems Nano knows out of the box, the folder each one uses, and the file extensions it looks for.</p>

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Network Shares - GammaOS Nano</title>
-<meta name="description" content="Mount SMB, NFS, WebDAV and FTP shares as if they were local.">
+<title>Installing GammaOS - GammaOS Nano</title>
+<meta name="description" content="Choosing an SD card, the flashing tools that work, and getting a fresh install to boot.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -39,7 +39,7 @@
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
 <li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
-<li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a class="active" href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
@@ -72,7 +72,7 @@
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
 <li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
-<li><a class="active" href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Settings</div><ul>
 <li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
@@ -93,52 +93,56 @@
     
     <div class="prose has-toc">
       <article class="article">
-        <p class="lead">Keep your games, music, photos, and video on a computer or NAS and let your handheld reach them over the network. Once a share is mounted, it behaves just like storage on the device itself.</p>
-<p>You will find this feature under <strong>Settings &gt; Network Shares</strong>.</p>
-<h2 id="supported-protocols"><a class="toclink" href="#supported-protocols">Supported protocols</a></h2>
-<p>GammaOS Nano can connect to four kinds of network share:</p>
-<table>
-<thead>
-<tr>
-<th>Protocol</th>
-<th>Common use</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>SMB</td>
-<td>Windows shared folders and most NAS boxes</td>
-</tr>
-<tr>
-<td>NFS</td>
-<td>Linux and Unix file servers</td>
-</tr>
-<tr>
-<td>WebDAV</td>
-<td>Web-based file storage</td>
-</tr>
-<tr>
-<td>FTP</td>
-<td>Classic file transfer servers</td>
-</tr>
-</tbody>
-</table>
-<p class="callout note">Make sure Wi-Fi is connected before you try to mount a share. See <a href="network.html">Wi-Fi &amp; Bluetooth</a> if you need to get online first.</p>
-<h2 id="where-your-shares-appear"><a class="toclink" href="#where-your-shares-appear">Where your shares appear</a></h2>
-<p>Once a share is connected, it shows up in the <strong>File Explorer</strong> so you can browse and manage its files right on the handheld.</p>
-<p>You can also add a share to the media libraries. When you do, the files on it are scanned like local storage, so any music, photos, and video on the share appear in your <a href="media.html">Music, Photos &amp; Video</a> categories automatically.</p>
-<h2 id="reference"><a class="toclink" href="#reference">Reference</a></h2>
-<p>For the full Settings tree and every option around Network Shares, see the <a href="settings-reference.html">Settings reference</a>.</p>
+        <p class="lead">GammaOS ships as a per-device image that you write to your device's storage, usually an SD card. This page covers picking a card, which flashing tools work (and which to avoid), and what to do when a fresh install will not boot. Exact steps differ by handheld, so always follow the <a href="https://github.com/TheGammaSqueeze/GammaOSNext/wiki/GammaOS-Next-Installation">device install guides on the GammaOS Next wiki</a> for your model.</p>
+<h2 id="pick-the-right-sd-card"><a class="toclink" href="#pick-the-right-sd-card">Pick the right SD card</a></h2>
+<p>On many handhelds, especially the A133P devices like the TrimUI Brick and the MagicX Zero 28, GammaOS boots directly from the SD card, so the card is the whole system and its speed matters.</p>
+<ul>
+<li>Use an <strong>A2</strong>-rated card where possible for the best performance and load times.</li>
+<li>An <strong>A1</strong> card works fine, but expect slower loading and longer waits.</li>
+<li>Stick to good-quality, known-brand cards. If a card will not boot at all, try a different one; some large cards have been reported not to boot on certain devices.</li>
+</ul>
+<p class="callout warn">Once GammaOS is installed on a device that boots from SD, do not put that card back into a PC to copy games onto it. The card holds an encrypted Android partition layout, so your computer will not show your usable storage. That is expected. Transfer files with MTP, <a href="https://github.com/Alex4SSB/ADB-Explorer">ADB Explorer</a> or a network share instead. See <a href="faq.html">How do I transfer ROMs and files onto my device?</a> for the details.</p>
+<h2 id="write-the-image-with-a-reliable-tool"><a class="toclink" href="#write-the-image-with-a-reliable-tool">Write the image with a reliable tool</a></h2>
+<p>Use a tool that writes the image exactly as-is:</p>
+<ul>
+<li><strong>Raspberry Pi Imager</strong> or <strong>Rufus</strong> (choose the write-image / DD option) are known-good.</li>
+<li><strong>Avoid Balena Etcher, Ventoy and Etchdroid.</strong> These have been reported to leave GammaOS hanging on the boot logo. If you flashed with one of these and the device sticks on the logo, re-flash with one of the tools above.</li>
+<li>If you flash on a Rockchip device with an RKImage or RK flasher, run it on a real Windows or Linux machine, not inside a virtual machine. The card often will not format correctly in a VM.</li>
+<li>Some SteamOS-based Linux distributions can interfere with the boot partition. A standard Windows or Linux host is the safer choice.</li>
+</ul>
+<h2 id="device-specific-steps"><a class="toclink" href="#device-specific-steps">Device-specific steps</a></h2>
+<p>Flashing differs from one handheld to the next: the partitions, drivers and any extra patches are not the same across devices, so the most important step is to follow the install guide for your exact model. These live on the GammaOS Next wiki:</p>
+<ul>
+<li><a href="https://github.com/TheGammaSqueeze/GammaOSNext/wiki/GammaOS-Next-Installation">GammaOS Next Installation</a> is the main install guide and the place to start.</li>
+<li><a href="https://github.com/TheGammaSqueeze/GammaOSNext/wiki/GammaOS-Next-Installation-for-Allwinner-SD-Card-Devices">Installation for Allwinner SD-Card Devices</a> covers the A133P SD-boot handhelds, such as the TrimUI Brick and MagicX Zero 28.</li>
+<li><a href="https://github.com/TheGammaSqueeze/GammaOSNext/wiki/GammaOS-Installation-Guide-for-Anbernic-RG557,-RG477M,-and-RG477V-%28SP-Flash-Tool,-Full-and-Lite-Builds%29">Installation Guide for the Anbernic RG557, RG477M and RG477V</a> is a device-specific example using SP Flash Tool.</li>
+</ul>
+<p class="callout note">Some devices need extra care while flashing, such as powering fully off and removing every SD card and USB drive first so the device does not try to boot from the wrong place. Always defer to your device's own guide over any general advice here.</p>
+<h2 id="first-boot"><a class="toclink" href="#first-boot">First boot</a></h2>
+<p>The first boot after a flash takes longer than usual while the system sets itself up, and the device may reboot once on its own. Give it a few minutes.</p>
+<p>If it stays stuck on the boot logo on the very first try, the flash is the usual culprit: re-flash with Raspberry Pi Imager or Rufus (see above) rather than Balena Etcher, and make sure you used a good card.</p>
+<p>Once it boots, head to <a href="getting-started.html">Getting Started</a> to finish setup, connect Wi-Fi and add your first games. Not sure which build to install? See the editions rundown in <a href="what-is-nano.html">What Is GammaOS Nano?</a>.</p>
+<h2 id="related-pages"><a class="toclink" href="#related-pages">Related pages</a></h2>
+<ul>
+<li><a href="https://github.com/TheGammaSqueeze/GammaOSNext/wiki/GammaOS-Next-Installation">GammaOS Next install guides (wiki)</a></li>
+<li><a href="getting-started.html">Getting Started</a></li>
+<li><a href="what-is-nano.html">What Is GammaOS Nano?</a></li>
+<li><a href="faq.html">FAQ and Troubleshooting</a></li>
+</ul>
         <footer class="page-foot">
           <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
         </footer>
       </article>
       <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
-<li><a href="#supported-protocols">Supported protocols</a>
+<li><a href="#pick-the-right-sd-card">Pick the right SD card</a>
 </li>
-<li><a href="#where-your-shares-appear">Where your shares appear</a>
+<li><a href="#write-the-image-with-a-reliable-tool">Write the image with a reliable tool</a>
 </li>
-<li><a href="#reference">Reference</a>
+<li><a href="#device-specific-steps">Device-specific steps</a>
+</li>
+<li><a href="#first-boot">First boot</a>
+</li>
+<li><a href="#related-pages">Related pages</a>
 </li>
 </ul></div></div>
     </div>

@@ -21,6 +21,11 @@ The base folder is `ROMs` at the top of your storage. Inside it, make one folder
 
 SD card, internal storage, and USB all work, so use whichever you like. Nano scans them all.
 
+To get the files there in the first place, connect over USB (**File Transfer / MTP**), use [ADB Explorer](https://github.com/Alex4SSB/ADB-Explorer), or copy over a [network share](network-shares.html). The [FAQ](faq.html) walks through each method.
+
+On a device that boots from its SD card (the A133P handhelds like the TrimUI Brick and MagicX Zero 28), do not pull the card and put it in your PC to copy games onto it. The card holds an encrypted Android partition layout, so your computer will not show your storage. Use MTP, ADB Explorer or a network share instead.
+{: .callout .warn }
+
 You do not have to unzip anything special or rename your files, as long as the file extension matches what the system expects (see the table).
 
 ## Systems, folders, and file types

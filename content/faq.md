@@ -80,6 +80,41 @@ Force a restart of the home:
 
 Either one restarts a frozen or dead home screen.
 
+### The home screen feels laggy or the device runs hot
+
+The GammaOS XMB theme, with its flowing wave and glass icons, is the heaviest home to draw. On lower-powered devices, the TrimUI Brick for example, it can stutter and warm the device up. Two things help, and both take effect right away:
+
+- Switch to a lighter home in **Settings > Theme Settings > Home Theme**. The **DSi** and **Minima** themes are much lighter than XMB.
+- Keep XMB but turn on its **Half Resolution** toggles (Wave, Icons and Clock) in **Theme Settings**. Each renders that layer at half size for a large speed-up while the menu text stays crisp.
+
+### A game crashes back to the menu, especially under load
+
+Being dropped back to the home is usually a crashing core or a device throttling under load, not a safety feature. Try:
+
+- Set **Performance Mode** to **Max Performance** in the [Quick Menu](quick-menu.html) (hold <span class="btnchip">Power</span>). This keeps the CPU from slowing down under load.
+- Change the core or emulator for that system in **Settings > Game Settings > Game Systems**. A different core is often more stable for demanding systems like Nintendo 64.
+
+On a low-memory device, a first-time RetroArch setup can also crash once; force a restart (hold <span class="btnchip">Power</span>) and run it again, and the second attempt usually succeeds.
+
+### Where does RetroArch keep my saves?
+
+By default RetroArch stores save files and save states in the same folder as the game. You can change where they go in **RetroArch > Settings > Directory** (Save Files and Save States). When moving to another device, ordinary in-game saves (`.srm`) transfer reliably; save states are tied to the exact core version and may not carry across. For the built-in DS emulator, see [DraStic Nano](drastic-nano.html) instead.
+
+### Wi-Fi keeps dropping after sleep, or will not hold on my mesh network
+
+If Wi-Fi drops when the screen sleeps or the lid closes, it normally reconnects on wake; if it does not, toggle Wi-Fi off and on in **Network Settings**. If the device keeps dropping, or reboots, on a mesh network or a mixed 2.4/5GHz network, connect it to a dedicated **2.4GHz** access point (or your router's 2.4GHz band under its own name). This has been the reliable fix on the RG DS and RG Vita.
+
+### My device will not power off, turns back on when I close the lid, or will not power on
+
+After switching to GammaOS from another OS (Rocknix in particular), the power controller can be left in a state the GammaOS kernel does not expect. The symptoms arrive together: the device will not power off, turns itself back on when you close the lid, drains to empty overnight, or will not power on after charging.
+
+The fix is to reset the power controller by disconnecting the battery: open the back cover, unplug the battery for 10 to 15 minutes, then reconnect it. No reinstall is needed. This has mainly been seen on the Anbernic RG DS.
+{: .callout .warn }
+
+### How do I get back to Nano from full Android?
+
+Nano and full Android (desktop or TV mode) are two boot targets on the same system, controlled by a single setting, so your games, saves and apps stay in place either way. To return to Nano, use that setting rather than reinstalling. The full walkthrough, including why you might boot to Android for a native app or the Play Store, is on [Desktop Mode Features](atv-desktop-features.html).
+
 ### More help
 
 - [OS Controls](controls-os.html) and [RetroArch Controls](controls-retroarch.html)
@@ -103,9 +138,18 @@ Yes. Highlight the game, press Options and choose **Set Boxart**, then pick any 
 
 Open the game's Options menu and choose **Rename / Edit Title** to type the correct name. The new name is used everywhere (game lists, Recently Played, search and the Information page) and is also used as the scraper search query, so you can rename a game and then run **Scrape This Game** to fetch the right art and details. To scrape one game under a different name without renaming the file, use **Scrape with Custom Name...**. Renaming to an empty title reverts to the filename.
 
-### How do I transfer ROMs and files over USB?
+### How do I transfer ROMs and files onto my device?
 
-Connect the device to a PC, then go to **Settings > USB & Docking** and select **File Transfer (MTP)**. The device appears as a drive on your PC; switch back to **Charge Only** when you are done. On a brand-new install MTP can be reluctant until you have launched a game once. If MTP still does not show storage, a file manager such as MiXplorer from Applications is a reliable alternative.
+Connect the device to a PC, then go to **Settings > USB & Docking** and select **File Transfer (MTP)**. The device appears as a drive on your PC; switch back to **Charge Only** when you are done. On a brand-new install MTP can be reluctant until you have launched a game once.
+
+If MTP does not connect or your PC does not see storage, try these in order:
+
+- **Check the cable and port.** Use a data cable, not a charge-only one, and try a different USB port. On the TrimUI Brick, use the **bottom charging port**, not the OTG port next to the shoulder buttons.
+- **Use ADB Explorer.** [ADB Explorer](https://github.com/Alex4SSB/ADB-Explorer) is the recommended alternative when MTP is unreliable. It browses and copies files over ADB and does not depend on MTP.
+- **Use a network share.** Copy files over Wi-Fi with SMB, FTP or WebDAV, no cable needed. See [Network Shares](network-shares.html).
+
+On a device that boots from its SD card (the A133P handhelds such as the TrimUI Brick and the MagicX Zero 28), do not remove the card and put it in your PC to copy games. Those cards hold an encrypted Android partition layout, so a computer will not show your storage. That is expected, not a fault. Use MTP, ADB Explorer or a network share instead.
+{: .callout .warn }
 
 ### How do I hide game systems or home categories I don't use?
 
