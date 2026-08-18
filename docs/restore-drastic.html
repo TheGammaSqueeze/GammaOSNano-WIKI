@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restore DraStic (RG DS) - GammaOS Nano</title>
+<meta name="description" content="Reinstall DraStic Nano and its default configuration on the RG DS from a PC over ADB, and restore the DraStic system properties.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.png">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <img class="brand-mark" src="assets/img/brand/gammaos-logo-tile.png" alt="GammaOS logo" width="28" height="28">
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
+<li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+<li><a href="theme-settings.html"><span class="nav-ico">🖼️</span>Wallpapers &amp; Theme Settings</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+<li><a href="custom-boxart.html"><span class="nav-ico">🖼️</span>Custom Boxart and Backup</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+<li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
+<li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
+<li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+<li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+<li><a href="adb-and-logs.html"><span class="nav-ico">🧰</span>ADB Setup and Logs</a></li>
+<li><a class="active" href="restore-drastic.html"><span class="nav-ico">🔧</span>Restore DraStic (RG DS)</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">If DraStic on your RG DS stops launching, loses its configuration, or you just want to reset it to the
+way it shipped, you can put back the exact app and default config that GammaOS installs on first boot,
+plus the DraStic system properties, from a computer over ADB. This page is the end to end procedure.</p>
+<p class="callout note">This restores the <strong>DraStic app and its default config</strong> (the files under the app's own data folder)
+and the <strong>DraStic properties</strong>. It does <strong>not</strong> touch your games or saves: ROMs and save files on
+internal storage (<code>/sdcard/ROMs</code>) are left alone.</p>
+<h2 id="what-you-need"><a class="toclink" href="#what-you-need">What you need</a></h2>
+<ul>
+<li>A computer with <strong>ADB</strong> installed and your RG DS connected over USB with <strong>USB debugging</strong> on. New
+  to this? <a href="adb-and-logs.html">ADB Setup and Logs</a> gets you set up in a couple of minutes.</li>
+<li><strong>Root ADB.</strong> The steps write to protected system folders, so they run <code>adb root</code> first. This works
+  on the standard GammaOS builds.</li>
+</ul>
+<p class="callout tip">The files used below (<code>drastic_r2.6.0.4a.apk</code> and <code>drastic.tar.gz</code>) already live on the device in
+<code>/system/etc</code>, so you do not need to download anything.</p>
+<h2 id="step-1-reinstall-drastic-and-its-default-config"><a class="toclink" href="#step-1-reinstall-drastic-and-its-default-config">Step 1: reinstall DraStic and its default config</a></h2>
+<p>Open a terminal or Command Prompt on your computer and run:</p>
+<div class="codehilite"><pre><span></span><code>adb root
+adb wait-for-device
+adb shell <span class="s1">&#39;pm install -r /system/etc/drastic_r2.6.0.4a.apk&#39;</span>
+adb shell <span class="s1">&#39;</span>
+<span class="s1">u=$(stat -c &quot;%U&quot; /data/data/com.dsemu.drastic)</span>
+<span class="s1">g=$(stat -c &quot;%G&quot; /data/data/com.dsemu.drastic)</span>
+<span class="s1">tar -xf /system/etc/drastic.tar.gz -C /</span>
+<span class="s1">rm -f /data/data/com.dsemu.drastic/files/DraStic/shaders/SMAA.dfx /data/data/com.dsemu.drastic/files/DraStic/shaders/Scanline.dfx /data/data/com.dsemu.drastic/files/DraStic/shaders/scanline.dsd</span>
+<span class="s1">rm -rf /data/data/com.dsemu.drastic/files/DraStic/shaders/smaa</span>
+<span class="s1">chown -R $u:$g /data/data/com.dsemu.drastic</span>
+<span class="s1">pm grant com.dsemu.drastic android.permission.RECORD_AUDIO</span>
+<span class="s1">pm grant com.dsemu.drastic android.permission.BLUETOOTH_CONNECT</span>
+<span class="s1">appops set --uid com.dsemu.drastic RECORD_AUDIO allow</span>
+<span class="s1">&#39;</span>
+</code></pre></div>
+
+<p>What each part does:</p>
+<ul>
+<li><code>pm install -r ...</code> installs (or reinstalls, keeping data) the DraStic APK.</li>
+<li><code>tar -xf drastic.tar.gz -C /</code> unpacks the default DraStic configuration into the app's data folder.</li>
+<li>The two <code>rm</code> lines remove the SMAA and Scanline shaders. SMAA forces a desktop GLSL path that does
+  not exist on the Mali GPU, so DraStic crashes if it is selected; Scanline is unwanted. GammaOS ships
+  without them, and this prunes any left over from an older install.</li>
+<li><code>chown -R</code> gives the unpacked files back to DraStic (a tar extract lands them as <code>root</code>, and DraStic
+  cannot read its own data until the owner is fixed).</li>
+<li><code>pm grant</code> and <code>appops set</code> restore the microphone and Bluetooth permissions DraStic expects.</li>
+</ul>
+<p class="callout note">If <code>pm install</code> reports that the file does not exist, your build may ship a different DraStic version.
+Find the exact name with <code>adb shell 'ls /system/etc/drastic_*.apk'</code> and use that path.</p>
+<h2 id="step-2-restore-the-drastic-properties"><a class="toclink" href="#step-2-restore-the-drastic-properties">Step 2: restore the DraStic properties</a></h2>
+<p>These are the DraStic-related system properties GammaOS sets on the RG DS. They persist across reboots.</p>
+<div class="codehilite"><pre><span></span><code>adb root
+adb shell <span class="s1">&#39;</span>
+<span class="s1">setprop persist.gammaos.nano.drastic_nano 1</span>
+<span class="s1">setprop persist.gammaos.nano.triple_buffer 1</span>
+<span class="s1">setprop persist.gammaos.nano.vsync 1</span>
+<span class="s1">setprop persist.gammaos.ultra_low_power_saving_freeze_exclude_packages com.dsemu.drastic</span>
+<span class="s1">&#39;</span>
+adb reboot
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>persist.gammaos.nano.drastic_nano</code></td>
+<td><code>1</code></td>
+<td>Turns on DraStic Nano, the built-in DraStic front end and overlay.</td>
+</tr>
+<tr>
+<td><code>persist.gammaos.nano.triple_buffer</code></td>
+<td><code>1</code></td>
+<td>Quick Resume smoothness: enables the 4-slot buffer ring that hides short GPU stalls. Defaults to on in code; set here to lock it.</td>
+</tr>
+<tr>
+<td><code>persist.gammaos.nano.vsync</code></td>
+<td><code>1</code></td>
+<td>Quick Resume smoothness: paces rendering to the display flip on the RG DS dual-screen setup. Defaults to on in code; set here to lock it.</td>
+</tr>
+<tr>
+<td><code>persist.gammaos.ultra_low_power_saving_freeze_exclude_packages</code></td>
+<td><code>com.dsemu.drastic</code></td>
+<td>Keeps DraStic running under the ultra-low-power saving mode instead of freezing it.</td>
+</tr>
+</tbody>
+</table>
+<p class="callout note">DraStic Nano runs as a GammaOS Nano overlay, so it also relies on the Nano overlay being enabled
+(<code>persist.gammaos.nano.overlay=1</code>), which is the default on the RG DS.</p>
+<h2 id="step-3-verify"><a class="toclink" href="#step-3-verify">Step 3: verify</a></h2>
+<p>After the reboot:</p>
+<ul>
+<li>Open DraStic from the Applications category (or launch a DS game) and confirm it starts and plays.</li>
+<li>Confirm the properties took, if you want to double check:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>adb shell getprop persist.gammaos.nano.drastic_nano
+adb shell getprop persist.gammaos.ultra_low_power_saving_freeze_exclude_packages
+</code></pre></div>
+
+<h2 id="full-reset-optional"><a class="toclink" href="#full-reset-optional">Full reset (optional)</a></h2>
+<p>Step 1 keeps any files you added to DraStic's own data folder. To wipe DraStic's internal data back to
+a completely clean state first, uninstall it before Step 1:</p>
+<div class="codehilite"><pre><span></span><code>adb root
+adb shell <span class="s1">&#39;pm uninstall com.dsemu.drastic&#39;</span>
+</code></pre></div>
+
+<p class="callout note">Then run Step 1 and Step 2 as above. Your ROMs and save files on <code>/sdcard/ROMs</code> are not affected by
+the uninstall, but any DraStic settings, cheats, or save states kept inside the app's own data folder
+are removed and replaced with the defaults.</p>
+<h2 id="troubleshooting"><a class="toclink" href="#troubleshooting">Troubleshooting</a></h2>
+<ul>
+<li><strong><code>adb root</code> says it cannot run as root.</strong> Make sure the device is actually running GammaOS, not
+  stock firmware. See <a href="adb-and-logs.html">ADB Setup and Logs</a>.</li>
+<li><strong>DraStic installs but has no sound or cannot record.</strong> Re-run the <code>pm grant</code> and <code>appops</code> lines from
+  Step 1; the microphone permission is what DraStic uses for the DS microphone.</li>
+<li><strong>DraStic starts then closes when you pick a shader.</strong> An old SMAA or Scanline shader is still
+  present. Re-run the two <code>rm</code> lines from Step 1.</li>
+<li><strong>DraStic will not launch after a restore.</strong> Confirm ownership was fixed:
+  <code>adb shell 'ls -ld /data/data/com.dsemu.drastic'</code> should show the DraStic app user, not <code>root</code>.
+  Re-run the <code>chown -R</code> line from Step 1 if it shows <code>root</code>.</li>
+</ul>
+<h2 id="related-pages"><a class="toclink" href="#related-pages">Related pages</a></h2>
+<ul>
+<li><a href="drastic-nano.html">DraStic Nano</a></li>
+<li><a href="controls-drastic.html">DraStic Nano Controls</a></li>
+<li><a href="adb-and-logs.html">ADB Setup and Logs</a></li>
+</ul>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#what-you-need">What you need</a>
+</li>
+<li><a href="#step-1-reinstall-drastic-and-its-default-config">Step 1: reinstall DraStic and its default config</a>
+</li>
+<li><a href="#step-2-restore-the-drastic-properties">Step 2: restore the DraStic properties</a>
+</li>
+<li><a href="#step-3-verify">Step 3: verify</a>
+</li>
+<li><a href="#full-reset-optional">Full reset (optional)</a>
+</li>
+<li><a href="#troubleshooting">Troubleshooting</a>
+</li>
+<li><a href="#related-pages">Related pages</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
