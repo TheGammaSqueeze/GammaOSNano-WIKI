@@ -53,6 +53,30 @@ From here you can:
 - **Remove** delete the cover, the background, or both.
 - **Bulk Import** and **Bulk Export** manage the whole library in one go.
 
+### Scrape art automatically
+
+The easiest way to fill a library is to let the tool **scrape** covers and backgrounds from [ScreenScraper.fr](https://screenscraper.fr) for you, from your PC. GammaOS's ScreenScraper account is built in, so it works out of the box with no signup.
+
+![Scraping in the desktop app](assets/img/shots/boxart_scrape_gui.png)
+
+- Select a game and choose **Scrape This Game**, or fill the whole library with **Scrape Library...** (only games missing art are fetched, unless you tick overwrite).
+- The **Region** defaults to **World**, which gives the widest set of art and international titles. Change it to USA, Europe or Japan if you prefer.
+- Optionally add your own free ScreenScraper account under **Account...** for higher scraping quota.
+
+From the command line:
+
+```bash
+gammaos-boxart scrape nes/Spacegulls.nes         # one game
+gammaos-boxart scrape-all                         # whole library (missing art only)
+gammaos-boxart scrape-all nes --overwrite         # one system, re-scrape
+gammaos-boxart scrape-all --region us             # pick a region
+gammaos-boxart scrape-all --ss-user NAME --ss-pass PW   # use your own account
+```
+
+![Scraping from the command line](assets/img/shots/boxart_scrape_cli.png)
+
+It matches games the same way GammaOS Nano does on the device (by CRC and filename per system), so you get the same results without loading down the handheld. Scraped art is written to the same place as everything else, so it shows in the XMB, DSi and Minima themes.
+
 ### The command line
 
 Every action is also a command, which is handy for scripting or batching.

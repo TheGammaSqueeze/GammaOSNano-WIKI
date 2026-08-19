@@ -128,6 +128,24 @@
 <li><strong>Remove</strong> delete the cover, the background, or both.</li>
 <li><strong>Bulk Import</strong> and <strong>Bulk Export</strong> manage the whole library in one go.</li>
 </ul>
+<h3 id="scrape-art-automatically"><a class="toclink" href="#scrape-art-automatically">Scrape art automatically</a></h3>
+<p>The easiest way to fill a library is to let the tool <strong>scrape</strong> covers and backgrounds from <a href="https://screenscraper.fr">ScreenScraper.fr</a> for you, from your PC. GammaOS's ScreenScraper account is built in, so it works out of the box with no signup.</p>
+<p><img alt="Scraping in the desktop app" src="assets/img/shots/boxart_scrape_gui.png" /></p>
+<ul>
+<li>Select a game and choose <strong>Scrape This Game</strong>, or fill the whole library with <strong>Scrape Library...</strong> (only games missing art are fetched, unless you tick overwrite).</li>
+<li>The <strong>Region</strong> defaults to <strong>World</strong>, which gives the widest set of art and international titles. Change it to USA, Europe or Japan if you prefer.</li>
+<li>Optionally add your own free ScreenScraper account under <strong>Account...</strong> for higher scraping quota.</li>
+</ul>
+<p>From the command line:</p>
+<div class="codehilite"><pre><span></span><code>gammaos-boxart scrape nes/Spacegulls.nes         <span class="c1"># one game</span>
+gammaos-boxart scrape-all                         <span class="c1"># whole library (missing art only)</span>
+gammaos-boxart scrape-all nes --overwrite         <span class="c1"># one system, re-scrape</span>
+gammaos-boxart scrape-all --region us             <span class="c1"># pick a region</span>
+gammaos-boxart scrape-all --ss-user NAME --ss-pass PW   <span class="c1"># use your own account</span>
+</code></pre></div>
+
+<p><img alt="Scraping from the command line" src="assets/img/shots/boxart_scrape_cli.png" /></p>
+<p>It matches games the same way GammaOS Nano does on the device (by CRC and filename per system), so you get the same results without loading down the handheld. Scraped art is written to the same place as everything else, so it shows in the XMB, DSi and Minima themes.</p>
 <h3 id="the-command-line"><a class="toclink" href="#the-command-line">The command line</a></h3>
 <p>Every action is also a command, which is handy for scripting or batching.</p>
 <p><img alt="The GammaOS Boxart Tool command line" src="assets/img/shots/boxart_tool_cli.png" /></p>
@@ -251,6 +269,7 @@ adb shell <span class="s1">&#39;setprop ctl.stop gammaos-nano; setprop ctl.start
 <li><a href="#what-you-need">What you need</a></li>
 <li><a href="#download">Download</a></li>
 <li><a href="#the-desktop-app">The desktop app</a></li>
+<li><a href="#scrape-art-automatically">Scrape art automatically</a></li>
 <li><a href="#the-command-line">The command line</a></li>
 <li><a href="#bulk-backup-and-restore">Bulk backup and restore</a></li>
 </ul>
