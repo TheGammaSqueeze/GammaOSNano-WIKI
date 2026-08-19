@@ -55,21 +55,25 @@ From here you can:
 
 ### Scrape art automatically
 
-The easiest way to fill a library is to let the tool **scrape** covers and backgrounds from [ScreenScraper.fr](https://screenscraper.fr) for you, from your PC. GammaOS's ScreenScraper account is built in, so it works out of the box with no signup.
+The easiest way to fill a library is to let the tool **scrape** covers and backgrounds for you, from your PC, from [ScreenScraper](https://screenscraper.fr) or [TheGamesDB](https://thegamesdb.net). GammaOS's ScreenScraper account is built in, so ScreenScraper works out of the box with no signup.
 
 ![Scraping in the desktop app](assets/img/shots/boxart_scrape_gui.png)
 
-- Select a game and choose **Scrape This Game**, or fill the whole library with **Scrape Library...** (only games missing art are fetched, unless you tick overwrite).
-- The **Region** defaults to **World**, which gives the widest set of art and international titles. Change it to USA, Europe or Japan if you prefer.
-- Optionally add your own free ScreenScraper account under **Account...** for higher scraping quota.
+- Pick the **Source** (ScreenScraper or TheGamesDB) and **Region** (default **World**, the widest set of art and international titles). Under **Credentials...**, a personal ScreenScraper account is optional (higher quota) and TheGamesDB needs your own free API key.
+- Highlight one or more games (Ctrl or Shift click, or search then select) and choose **Scrape Selected**, or fill the whole library with **Scrape Library...** (only games missing art are fetched, unless you tick overwrite).
+- For a game that does not auto-match, use **Search & Choose...**: type keywords, then pick exactly which result and which art to apply.
+
+![Searching the scraper and choosing a result](assets/img/shots/boxart_scrape_search.png)
 
 From the command line:
 
 ```bash
 gammaos-boxart scrape nes/Spacegulls.nes         # one game
+gammaos-boxart scrape nes/Spacegulls.nes --title "Space Gulls"   # override the search term
 gammaos-boxart scrape-all                         # whole library (missing art only)
 gammaos-boxart scrape-all nes --overwrite         # one system, re-scrape
 gammaos-boxart scrape-all --region us             # pick a region
+gammaos-boxart scrape-all --source thegamesdb --tgdb-key KEY     # use TheGamesDB
 gammaos-boxart scrape-all --ss-user NAME --ss-pass PW   # use your own account
 ```
 

@@ -129,18 +129,21 @@
 <li><strong>Bulk Import</strong> and <strong>Bulk Export</strong> manage the whole library in one go.</li>
 </ul>
 <h3 id="scrape-art-automatically"><a class="toclink" href="#scrape-art-automatically">Scrape art automatically</a></h3>
-<p>The easiest way to fill a library is to let the tool <strong>scrape</strong> covers and backgrounds from <a href="https://screenscraper.fr">ScreenScraper.fr</a> for you, from your PC. GammaOS's ScreenScraper account is built in, so it works out of the box with no signup.</p>
+<p>The easiest way to fill a library is to let the tool <strong>scrape</strong> covers and backgrounds for you, from your PC, from <a href="https://screenscraper.fr">ScreenScraper</a> or <a href="https://thegamesdb.net">TheGamesDB</a>. GammaOS's ScreenScraper account is built in, so ScreenScraper works out of the box with no signup.</p>
 <p><img alt="Scraping in the desktop app" src="assets/img/shots/boxart_scrape_gui.png" /></p>
 <ul>
-<li>Select a game and choose <strong>Scrape This Game</strong>, or fill the whole library with <strong>Scrape Library...</strong> (only games missing art are fetched, unless you tick overwrite).</li>
-<li>The <strong>Region</strong> defaults to <strong>World</strong>, which gives the widest set of art and international titles. Change it to USA, Europe or Japan if you prefer.</li>
-<li>Optionally add your own free ScreenScraper account under <strong>Account...</strong> for higher scraping quota.</li>
+<li>Pick the <strong>Source</strong> (ScreenScraper or TheGamesDB) and <strong>Region</strong> (default <strong>World</strong>, the widest set of art and international titles). Under <strong>Credentials...</strong>, a personal ScreenScraper account is optional (higher quota) and TheGamesDB needs your own free API key.</li>
+<li>Highlight one or more games (Ctrl or Shift click, or search then select) and choose <strong>Scrape Selected</strong>, or fill the whole library with <strong>Scrape Library...</strong> (only games missing art are fetched, unless you tick overwrite).</li>
+<li>For a game that does not auto-match, use <strong>Search &amp; Choose...</strong>: type keywords, then pick exactly which result and which art to apply.</li>
 </ul>
+<p><img alt="Searching the scraper and choosing a result" src="assets/img/shots/boxart_scrape_search.png" /></p>
 <p>From the command line:</p>
 <div class="codehilite"><pre><span></span><code>gammaos-boxart scrape nes/Spacegulls.nes         <span class="c1"># one game</span>
+gammaos-boxart scrape nes/Spacegulls.nes --title <span class="s2">&quot;Space Gulls&quot;</span>   <span class="c1"># override the search term</span>
 gammaos-boxart scrape-all                         <span class="c1"># whole library (missing art only)</span>
 gammaos-boxart scrape-all nes --overwrite         <span class="c1"># one system, re-scrape</span>
 gammaos-boxart scrape-all --region us             <span class="c1"># pick a region</span>
+gammaos-boxart scrape-all --source thegamesdb --tgdb-key KEY     <span class="c1"># use TheGamesDB</span>
 gammaos-boxart scrape-all --ss-user NAME --ss-pass PW   <span class="c1"># use your own account</span>
 </code></pre></div>
 
