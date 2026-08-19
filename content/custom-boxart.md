@@ -62,6 +62,9 @@ The easiest way to fill a library is to let the tool **scrape** covers and backg
 - Pick the **Source** (ScreenScraper or TheGamesDB) and **Region** (default **World**, the widest set of art and international titles). Under **Credentials...**, a personal ScreenScraper account is optional (higher quota) and TheGamesDB needs your own free API key.
 - Highlight one or more games (Ctrl or Shift click, or search then select) and choose **Scrape Selected**, or fill the whole library with **Scrape Library...** (only games missing art are fetched, unless you tick overwrite).
 - For a game that does not auto-match, use **Search & Choose...**: type keywords, then pick exactly which result and which art to apply.
+- Scraping shows a live progress dialog and a summary of the results (how many covers and backgrounds were applied, and how many were skipped, had no match, or errored), so you always know how it went.
+
+![The scrape progress and result summary](assets/img/shots/boxart_scrape_progress.png)
 
 ![Searching the scraper and choosing a result](assets/img/shots/boxart_scrape_search.png)
 
