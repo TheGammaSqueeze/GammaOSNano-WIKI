@@ -47,11 +47,14 @@ Launch the app (or `gammaos-boxart-gui` from source). It connects to your device
 
 From here you can:
 
-- **Set / Replace Cover** pick any image for the boxart thumbnail; the tool pushes it and restarts Nano so it appears right away.
+- **Set / Replace Cover** pick any image for the boxart thumbnail; the tool pushes it and refreshes Nano so it appears right away.
 - **Set / Replace Background** pick the full-screen fan-art image shown behind the game.
+- **Edit Title** rename any game, even after scraping; the new name shows everywhere Nano displays it.
 - **Save Cover As** pull an existing cover back to your PC.
 - **Remove** delete the cover, the background, or both.
 - **Bulk Import** and **Bulk Export** manage the whole library in one go.
+
+On builds that support it, Nano reloads your changes in place with no restart; on older builds the tool restarts Nano for you. Either way, the list shows each game's on-device **path** so you can tell similarly named games apart.
 
 ### Scrape art automatically
 
@@ -82,7 +85,7 @@ gammaos-boxart scrape-all --ss-user NAME --ss-pass PW   # use your own account
 
 ![Scraping from the command line](assets/img/shots/boxart_scrape_cli.png)
 
-It matches games the same way GammaOS Nano does on the device (by CRC and filename per system), so you get the same results without loading down the handheld. Scraped art is written to the same place as everything else, so it shows in the XMB, DSi and Minima themes.
+It matches games the same way GammaOS Nano does on the device (by CRC and filename per system), so you get the same results without loading down the handheld. Scraping also fills the same metadata Nano's own scraper does (description, genre, players, rating, release date, developer and publisher), so the in-game Information page is complete, not just the images. Scraped art is written to the same place as everything else, so it shows in the XMB, DSi and Minima themes.
 
 ### The command line
 
@@ -95,6 +98,7 @@ gammaos-boxart list                         # every game, boxart marked
 gammaos-boxart set nes/Spacegulls.nes cover.png       # add or replace the cover
 gammaos-boxart set nes/Spacegulls.nes bg.jpg --fan    # add or replace the background
 gammaos-boxart get nes/Spacegulls.nes -o out.png      # pull the cover to your PC
+gammaos-boxart title nes/Spacegulls.nes "Space Gulls" # set (or, with no name, clear) the title
 gammaos-boxart remove nes/Spacegulls.nes --both       # remove the cover and background
 gammaos-boxart export ./my-covers                     # back up every cover and background
 gammaos-boxart import ./my-covers                     # bulk import a folder
@@ -158,7 +162,7 @@ If you would rather understand the format or edit it by hand, here is exactly ho
 
 `names.json` is the same shape with `{ "rom", "name" }` items and just renames a game.
 
-Nano reads `index.json` once at startup, so after any change you must restart Nano for it to show. It also refuses to save over an `index.json` it cannot read, so a bad edit will not wipe your library, but you should still keep a backup (use `export`).
+Older Nano builds read `index.json` once at startup, so after any change you must restart Nano for it to show. Newer builds reload it in place when the tool asks them to (via the `sys.gammaos.nano.scrape_reload` property), so changes appear with no restart. Either way, Nano refuses to save over an `index.json` it cannot read, so a bad edit will not wipe your library, but you should still keep a backup (use `export`).
 {: .callout .note }
 
 ## Doing it by hand

@@ -122,12 +122,14 @@
 <p><img alt="The GammaOS Boxart Tool desktop app" src="assets/img/shots/boxart_tool_gui.png" /></p>
 <p>From here you can:</p>
 <ul>
-<li><strong>Set / Replace Cover</strong> pick any image for the boxart thumbnail; the tool pushes it and restarts Nano so it appears right away.</li>
+<li><strong>Set / Replace Cover</strong> pick any image for the boxart thumbnail; the tool pushes it and refreshes Nano so it appears right away.</li>
 <li><strong>Set / Replace Background</strong> pick the full-screen fan-art image shown behind the game.</li>
+<li><strong>Edit Title</strong> rename any game, even after scraping; the new name shows everywhere Nano displays it.</li>
 <li><strong>Save Cover As</strong> pull an existing cover back to your PC.</li>
 <li><strong>Remove</strong> delete the cover, the background, or both.</li>
 <li><strong>Bulk Import</strong> and <strong>Bulk Export</strong> manage the whole library in one go.</li>
 </ul>
+<p>On builds that support it, Nano reloads your changes in place with no restart; on older builds the tool restarts Nano for you. Either way, the list shows each game's on-device <strong>path</strong> so you can tell similarly named games apart.</p>
 <h3 id="scrape-art-automatically"><a class="toclink" href="#scrape-art-automatically">Scrape art automatically</a></h3>
 <p>The easiest way to fill a library is to let the tool <strong>scrape</strong> covers and backgrounds for you, from your PC, from <a href="https://screenscraper.fr">ScreenScraper</a> or <a href="https://thegamesdb.net">TheGamesDB</a>. GammaOS's ScreenScraper account is built in, so ScreenScraper works out of the box with no signup.</p>
 <p><img alt="Scraping in the desktop app" src="assets/img/shots/boxart_scrape_gui.png" /></p>
@@ -150,7 +152,7 @@ gammaos-boxart scrape-all --ss-user NAME --ss-pass PW   <span class="c1"># use y
 </code></pre></div>
 
 <p><img alt="Scraping from the command line" src="assets/img/shots/boxart_scrape_cli.png" /></p>
-<p>It matches games the same way GammaOS Nano does on the device (by CRC and filename per system), so you get the same results without loading down the handheld. Scraped art is written to the same place as everything else, so it shows in the XMB, DSi and Minima themes.</p>
+<p>It matches games the same way GammaOS Nano does on the device (by CRC and filename per system), so you get the same results without loading down the handheld. Scraping also fills the same metadata Nano's own scraper does (description, genre, players, rating, release date, developer and publisher), so the in-game Information page is complete, not just the images. Scraped art is written to the same place as everything else, so it shows in the XMB, DSi and Minima themes.</p>
 <h3 id="the-command-line"><a class="toclink" href="#the-command-line">The command line</a></h3>
 <p>Every action is also a command, which is handy for scripting or batching.</p>
 <p><img alt="The GammaOS Boxart Tool command line" src="assets/img/shots/boxart_tool_cli.png" /></p>
@@ -158,6 +160,7 @@ gammaos-boxart scrape-all --ss-user NAME --ss-pass PW   <span class="c1"># use y
 gammaos-boxart <span class="nb">set</span> nes/Spacegulls.nes cover.png       <span class="c1"># add or replace the cover</span>
 gammaos-boxart <span class="nb">set</span> nes/Spacegulls.nes bg.jpg --fan    <span class="c1"># add or replace the background</span>
 gammaos-boxart get nes/Spacegulls.nes -o out.png      <span class="c1"># pull the cover to your PC</span>
+gammaos-boxart title nes/Spacegulls.nes <span class="s2">&quot;Space Gulls&quot;</span> <span class="c1"># set (or, with no name, clear) the title</span>
 gammaos-boxart remove nes/Spacegulls.nes --both       <span class="c1"># remove the cover and background</span>
 gammaos-boxart <span class="nb">export</span> ./my-covers                     <span class="c1"># back up every cover and background</span>
 gammaos-boxart import ./my-covers                     <span class="c1"># bulk import a folder</span>
@@ -235,7 +238,7 @@ gammaos-boxart import ./my-covers                     <span class="c1"># bulk im
 </tbody>
 </table>
 <p><code>names.json</code> is the same shape with <code>{ "rom", "name" }</code> items and just renames a game.</p>
-<p class="callout note">Nano reads <code>index.json</code> once at startup, so after any change you must restart Nano for it to show. It also refuses to save over an <code>index.json</code> it cannot read, so a bad edit will not wipe your library, but you should still keep a backup (use <code>export</code>).</p>
+<p class="callout note">Older Nano builds read <code>index.json</code> once at startup, so after any change you must restart Nano for it to show. Newer builds reload it in place when the tool asks them to (via the <code>sys.gammaos.nano.scrape_reload</code> property), so changes appear with no restart. Either way, Nano refuses to save over an <code>index.json</code> it cannot read, so a bad edit will not wipe your library, but you should still keep a backup (use <code>export</code>).</p>
 <h2 id="doing-it-by-hand"><a class="toclink" href="#doing-it-by-hand">Doing it by hand</a></h2>
 <p>If you want to skip the tool, the same result is a few ADB commands (root, as above):</p>
 <div class="codehilite"><pre><span></span><code>adb root
