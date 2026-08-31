@@ -46,7 +46,7 @@ Select any system to open its editor. Every field below can be changed, so you c
 | **Launch Args** | Extra arguments passed at launch. |
 | **Extensions** | The file types this system scans for, comma-separated (for example `iso, chd, gz`). |
 | **Scan Folders** | Which folders to search for games. Use the folder picker, or leave the default `ROMs/<id>/`. |
-| **Icon** | The system's icon. Choose from a grid of built-in icons, or use your own PNG. |
+| **Icon** | The system's icon. Choose from a grid of built-in icons, or press <span class="btnchip">X</span> in the grid to import your own PNG. See [Custom system icons](#custom-system-icons). |
 | **Icon Tint** | Recolour the icon from 21 swatches, or set a custom RGB colour. |
 | **Scraper / Username / Password** | An optional per-system override for the cover-art scraper. See [Boxart & Metadata](boxart.html). |
 | **Scrape This System** | Fetch boxart and metadata for every game in this system now. |
@@ -89,6 +89,61 @@ The order systems appear on the home screen is separate from how you sort the ti
 ## Adding a whole new system
 
 The editor is also how you add a console Nano does not list yet. Scroll to the top of the Game Systems list, choose **Add New System...**, and pick your emulator. For a full worked example (adding AetherSX2 for PlayStation 2, step by step), see [Add a Custom System](custom-system.html).
+
+## Custom system icons
+
+Every system has an **Icon** field in its editor. Selecting it opens the icon grid, a searchable set of hundreds of built-in console and platform glyphs. Press <span class="btnchip">Y</span> to filter by name, highlight the one you want, and press <span class="btnchip">Cross</span> to assign it.
+
+### Import your own PNG
+
+If none of the built-in glyphs suit you, you can bring your own image:
+
+1. Open the system's **Icon** field to show the icon grid.
+2. Press <span class="btnchip">X</span> (Import PNG). A file browser opens at your storage.
+3. Browse to your image and select it. Nano copies it into its own storage and sets it as the system's icon straight away.
+
+Your file is copied, so you can delete the original afterwards and the icon still works. If you later delete the custom system, its imported icon is cleaned up with it.
+
+**Icon requirements**
+{: .callout .note }
+
+- **Format:** PNG (recommended) or JPG. PNG is preferred because it keeps transparency.
+- **Shape:** square. A non-square image is stretched to fit, so trim it to 1:1 first.
+- **Size:** at least 8x8 pixels. Around 256x256 is a good target; anything larger is just scaled down and wastes space.
+- **Transparency:** use a transparent background (PNG) so only your artwork shows, not a solid block behind it.
+- **Colour:** the built-in glyphs are single-colour and respond to the **Icon Tint** setting. A full-colour PNG is shown as-is, untinted, so if you want the tint swatches to affect your icon, supply a white or light silhouette on a transparent background.
+
+### Interim method over ADB (older builds)
+
+If your build does not yet have the in-menu **Import PNG** button, you can set a custom icon by hand over [ADB](adb-and-logs.html). Nano reads its systems from `/data/system/nano_systems.json` and accepts a `file:` icon reference that points at any image on the device.
+
+1. Copy your PNG into Nano's icon folder (create it if needed), naming it after the system's id:
+
+   ```bash
+   adb shell mkdir -p /data/system/nano_user_icons
+   adb push myicon.png /data/system/nano_user_icons/<system-id>.png
+   ```
+
+2. Pull the systems file, edit it, and push it back:
+
+   ```bash
+   adb pull /data/system/nano_systems.json .
+   ```
+
+   Find your system in the JSON and set its icon `ref` to the file path:
+
+   ```json
+   "icon": { "ref": "file:/data/system/nano_user_icons/<system-id>.png", "tintR": 1, "tintG": 1, "tintB": 1 }
+   ```
+
+   ```bash
+   adb push nano_systems.json /data/system/nano_systems.json
+   ```
+
+3. Reboot, or restart Nano, so the new config is read.
+
+The `<system-id>` is the `id` value shown next to each system in the same JSON file. Do not drop your PNG into `/system/` (it is read-only), and avoid the `/data/system/nano_xmb/icons_retroarch/` override folder: putting files there makes the icon grid show only that folder and hides all the built-in glyphs.
+{: .callout .warn }
 
 ## Related pages
 

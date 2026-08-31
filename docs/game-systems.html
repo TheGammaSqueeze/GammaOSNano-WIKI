@@ -165,7 +165,7 @@
 </tr>
 <tr>
 <td><strong>Icon</strong></td>
-<td>The system's icon. Choose from a grid of built-in icons, or use your own PNG.</td>
+<td>The system's icon. Choose from a grid of built-in icons, or press <span class="btnchip">X</span> in the grid to import your own PNG. See <a href="#custom-system-icons">Custom system icons</a>.</td>
 </tr>
 <tr>
 <td><strong>Icon Tint</strong></td>
@@ -207,6 +207,46 @@
 <p><img alt="Game category sort" src="assets/img/shots/wn_game_sort.png" /></p>
 <h2 id="adding-a-whole-new-system"><a class="toclink" href="#adding-a-whole-new-system">Adding a whole new system</a></h2>
 <p>The editor is also how you add a console Nano does not list yet. Scroll to the top of the Game Systems list, choose <strong>Add New System...</strong>, and pick your emulator. For a full worked example (adding AetherSX2 for PlayStation 2, step by step), see <a href="custom-system.html">Add a Custom System</a>.</p>
+<h2 id="custom-system-icons"><a class="toclink" href="#custom-system-icons">Custom system icons</a></h2>
+<p>Every system has an <strong>Icon</strong> field in its editor. Selecting it opens the icon grid, a searchable set of hundreds of built-in console and platform glyphs. Press <span class="btnchip">Y</span> to filter by name, highlight the one you want, and press <span class="btnchip">Cross</span> to assign it.</p>
+<h3 id="import-your-own-png"><a class="toclink" href="#import-your-own-png">Import your own PNG</a></h3>
+<p>If none of the built-in glyphs suit you, you can bring your own image:</p>
+<ol>
+<li>Open the system's <strong>Icon</strong> field to show the icon grid.</li>
+<li>Press <span class="btnchip">X</span> (Import PNG). A file browser opens at your storage.</li>
+<li>Browse to your image and select it. Nano copies it into its own storage and sets it as the system's icon straight away.</li>
+</ol>
+<p>Your file is copied, so you can delete the original afterwards and the icon still works. If you later delete the custom system, its imported icon is cleaned up with it.</p>
+<p class="callout note"><strong>Icon requirements</strong></p>
+<ul>
+<li><strong>Format:</strong> PNG (recommended) or JPG. PNG is preferred because it keeps transparency.</li>
+<li><strong>Shape:</strong> square. A non-square image is stretched to fit, so trim it to 1:1 first.</li>
+<li><strong>Size:</strong> at least 8x8 pixels. Around 256x256 is a good target; anything larger is just scaled down and wastes space.</li>
+<li><strong>Transparency:</strong> use a transparent background (PNG) so only your artwork shows, not a solid block behind it.</li>
+<li><strong>Colour:</strong> the built-in glyphs are single-colour and respond to the <strong>Icon Tint</strong> setting. A full-colour PNG is shown as-is, untinted, so if you want the tint swatches to affect your icon, supply a white or light silhouette on a transparent background.</li>
+</ul>
+<h3 id="interim-method-over-adb-older-builds"><a class="toclink" href="#interim-method-over-adb-older-builds">Interim method over ADB (older builds)</a></h3>
+<p>If your build does not yet have the in-menu <strong>Import PNG</strong> button, you can set a custom icon by hand over <a href="adb-and-logs.html">ADB</a>. Nano reads its systems from <code>/data/system/nano_systems.json</code> and accepts a <code>file:</code> icon reference that points at any image on the device.</p>
+<ol>
+<li>Copy your PNG into Nano's icon folder (create it if needed), naming it after the system's id:</li>
+</ol>
+<p><code>bash
+   adb shell mkdir -p /data/system/nano_user_icons
+   adb push myicon.png /data/system/nano_user_icons/&lt;system-id&gt;.png</code></p>
+<ol start="2">
+<li>Pull the systems file, edit it, and push it back:</li>
+</ol>
+<p><code>bash
+   adb pull /data/system/nano_systems.json .</code></p>
+<p>Find your system in the JSON and set its icon <code>ref</code> to the file path:</p>
+<p><code>json
+   "icon": { "ref": "file:/data/system/nano_user_icons/&lt;system-id&gt;.png", "tintR": 1, "tintG": 1, "tintB": 1 }</code></p>
+<p><code>bash
+   adb push nano_systems.json /data/system/nano_systems.json</code></p>
+<ol start="3">
+<li>Reboot, or restart Nano, so the new config is read.</li>
+</ol>
+<p class="callout warn">The <code>&lt;system-id&gt;</code> is the <code>id</code> value shown next to each system in the same JSON file. Do not drop your PNG into <code>/system/</code> (it is read-only), and avoid the <code>/data/system/nano_xmb/icons_retroarch/</code> override folder: putting files there makes the icon grid show only that folder and hides all the built-in glyphs.</p>
 <h2 id="related-pages"><a class="toclink" href="#related-pages">Related pages</a></h2>
 <ul>
 <li><a href="adding-games.html">Adding Games</a> for where to put your ROM files.</li>
@@ -237,6 +277,12 @@
 <li><a href="#sorting-the-game-category-y">Sorting the Game category (Y)</a>
 </li>
 <li><a href="#adding-a-whole-new-system">Adding a whole new system</a>
+</li>
+<li><a href="#custom-system-icons">Custom system icons</a>
+<ul>
+<li><a href="#import-your-own-png">Import your own PNG</a></li>
+<li><a href="#interim-method-over-adb-older-builds">Interim method over ADB (older builds)</a></li>
+</ul>
 </li>
 <li><a href="#related-pages">Related pages</a>
 </li>
