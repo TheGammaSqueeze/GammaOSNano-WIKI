@@ -230,19 +230,15 @@
 <ol>
 <li>Copy your PNG into Nano's icon folder (create it if needed), naming it after the system's id:</li>
 </ol>
-<p><code>bash
-   adb shell mkdir -p /data/system/nano_user_icons
+<p><code>adb shell mkdir -p /data/system/nano_user_icons
    adb push myicon.png /data/system/nano_user_icons/&lt;system-id&gt;.png</code></p>
 <ol start="2">
 <li>Pull the systems file, edit it, and push it back:</li>
 </ol>
-<p><code>bash
-   adb pull /data/system/nano_systems.json .</code></p>
+<p><code>adb pull /data/system/nano_systems.json .</code></p>
 <p>Find your system in the JSON and set its icon <code>ref</code> to the file path:</p>
-<p><code>json
-   "icon": { "ref": "file:/data/system/nano_user_icons/&lt;system-id&gt;.png", "tintR": 1, "tintG": 1, "tintB": 1 }</code></p>
-<p><code>bash
-   adb push nano_systems.json /data/system/nano_systems.json</code></p>
+<p><code>"icon": { "ref": "file:/data/system/nano_user_icons/&lt;system-id&gt;.png", "tintR": 1, "tintG": 1, "tintB": 1 }</code></p>
+<p><code>adb push nano_systems.json /data/system/nano_systems.json</code></p>
 <ol start="3">
 <li>Reboot, or restart Nano, so the new config is read.</li>
 </ol>

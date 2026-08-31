@@ -119,24 +119,24 @@ If your build does not yet have the in-menu **Import PNG** button, you can set a
 
 1. Copy your PNG into Nano's icon folder (create it if needed), naming it after the system's id:
 
-   ```bash
+   ```
    adb shell mkdir -p /data/system/nano_user_icons
    adb push myicon.png /data/system/nano_user_icons/<system-id>.png
    ```
 
 2. Pull the systems file, edit it, and push it back:
 
-   ```bash
+   ```
    adb pull /data/system/nano_systems.json .
    ```
 
    Find your system in the JSON and set its icon `ref` to the file path:
 
-   ```json
+   ```
    "icon": { "ref": "file:/data/system/nano_user_icons/<system-id>.png", "tintR": 1, "tintG": 1, "tintB": 1 }
    ```
 
-   ```bash
+   ```
    adb push nano_systems.json /data/system/nano_systems.json
    ```
 
