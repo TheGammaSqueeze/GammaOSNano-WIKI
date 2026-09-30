@@ -38,11 +38,13 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
-<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 <li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
 <li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
 <li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
 <li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
@@ -74,6 +76,7 @@
 <div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
 <li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
 <li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Settings</div><ul>
 <li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
@@ -83,6 +86,7 @@
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a class="active" href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
 <li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -141,15 +145,20 @@
 <h2 id="what-happens-when-you-slide"><a class="toclink" href="#what-happens-when-you-slide">What happens when you slide</a></h2>
 <p>Two rows decide the actions:</p>
 <ul>
-<li><strong>On Slide Down</strong>: what happens when you slide the screen. Choose from Rotate, Sleep, Wake, Launch, or the PSP Clock (you can pick more than one).</li>
+<li><strong>On Slide Down</strong>: what happens when you slide the screen. Choose from Rotate, Restore Natural, Sleep, Wake, Launch App, Close App or PSP Clock (tick as many as you like, then press OK to save).</li>
 <li><strong>On Slide Up</strong>: what happens when you slide it back.</li>
 </ul>
 <p>Supporting options:</p>
 <ul>
 <li><strong>Sleep Delay</strong>: how long to wait before sleeping (for the Sleep action).</li>
 <li><strong>Rotation Angle</strong>: the angle used by the Rotate action (for example 90 degrees).</li>
-<li><strong>Slide Launch Target</strong>: the app or mode to open (for the Launch action).</li>
+<li><strong>Slide Launch Target</strong>: the app to open with the Launch App action (see below).</li>
 </ul>
+<h3 id="choosing-the-slide-launch-target"><a class="toclink" href="#choosing-the-slide-launch-target">Choosing the Slide Launch Target</a></h3>
+<p><strong>Slide Launch Target</strong> reads Not Set until you choose something. Select it and a <strong>Launch Target</strong> list of your installed apps opens. Pick an app, then pick which of its screens (activities) to open; <strong>Default activity</strong> is first and is the right choice for almost every app. The row then shows the app (and activity) you picked.</p>
+<p><img alt="The Slide Launch Target row" class="wide" src="assets/img/shots/v143_xmb_slide_launch_target.png" /></p>
+<h3 id="close-app"><a class="toclink" href="#close-app">Close App</a></h3>
+<p>Add <strong>Close App</strong> to a slide action to force-stop the launched app when you slide. A typical pairing is Launch App on Slide Down and Close App on Slide Up, so sliding opens your chosen app and sliding back closes it again.</p>
 <h2 id="square-panel-landscape-lock-rg-rotate"><a class="toclink" href="#square-panel-landscape-lock-rg-rotate">Square-panel landscape lock (RG Rotate)</a></h2>
 <p>On the RG Rotate's square 720x720 panel there is no aspect ratio to tell portrait from landscape apart, so games could end up rendering into only half the screen. Nano now forces launched apps to landscape in both slide positions, so a game fills the panel whether the device is open or closed.</p>
 <h2 id="rotation-in-normal-android"><a class="toclink" href="#rotation-in-normal-android">Rotation in normal Android</a></h2>
@@ -166,12 +175,17 @@
 </figure>
 
 <p><img alt="The clock and parallax options" src="assets/img/shots/xmb_slide_clock.png" /></p>
-<p>Two options tune how it looks:</p>
+<p>These rows at the bottom of Slide Behaviour tune the clock:</p>
 <ul>
 <li><strong>Show Clock On Slide</strong>: turn the clock on or off when you slide.</li>
+<li><strong>Freeze App Under Clock</strong> (default Off): pauses the game underneath while the slide clock is up, and it carries on when the clock goes away. The frame behind the clock stays pixel-crisp while it is paused.</li>
 <li><strong>Clock Live Backdrop</strong>: when on, whatever is behind the clock (your game or the home) shows through and refracts behind the glass, instead of a flat backdrop.</li>
-<li><strong>Parallax Calibration</strong>: tunes the subtle parallax effect that shifts the clock as you tilt the device, using the motion sensor.</li>
+<li><strong>Parallax</strong> (default On): the subtle effect that shifts the clock as you tilt the device, using the motion sensor.</li>
+<li><strong>Parallax Strength</strong>: Subtle, Normal (default), Strong, Extra Strong or Maximum.</li>
+<li><strong>Parallax Direction</strong>: how the clock moves with the tilt. <strong>Peek Behind</strong> (default) moves the clock against the tilt, as if you were peeking around it, <strong>Follow Tilt</strong> moves it the same way you tilt, and <strong>Invert X Only</strong> / <strong>Invert Y Only</strong> follow the tilt on one axis only, for when just one direction feels backwards on your device.</li>
 </ul>
+<p>These three friendly rows replace the old raw Parallax Calibration field, so there is no number string to type any more.</p>
+<p><img alt="Freeze App Under Clock and the parallax rows" class="wide" src="assets/img/shots/v143_xmb_slide_clock_rows.png" /></p>
 <p class="callout tip">The clock reads the time from your device, so make sure your <a href="settings-reference.html">Date and Time</a> is set. Turn on <strong>Clock Live Backdrop</strong> for the nicest effect while a game is running behind it.</p>
 <h2 id="where-to-go-next"><a class="toclink" href="#where-to-go-next">Where to go next</a></h2>
 <ul>
@@ -186,6 +200,10 @@
 <li><a href="#telling-gammaos-about-your-slide-sensor">Telling GammaOS about your slide sensor</a>
 </li>
 <li><a href="#what-happens-when-you-slide">What happens when you slide</a>
+<ul>
+<li><a href="#choosing-the-slide-launch-target">Choosing the Slide Launch Target</a></li>
+<li><a href="#close-app">Close App</a></li>
+</ul>
 </li>
 <li><a href="#square-panel-landscape-lock-rg-rotate">Square-panel landscape lock (RG Rotate)</a>
 </li>

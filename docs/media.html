@@ -38,11 +38,13 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
-<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 <li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
 <li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
 <li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
 <li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
@@ -74,6 +76,7 @@
 <div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
 <li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
 <li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Settings</div><ul>
 <li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
@@ -83,6 +86,7 @@
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
 <li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -161,7 +165,30 @@
 <li>Volume</li>
 <li>Multi-audio-track selection (tracks are labeled by language)</li>
 <li>Subtitle and caption selection</li>
+<li>Chapter jumps and Scene Search</li>
+<li>Global Shaders without leaving the video</li>
 </ul>
+<p>Big files are no trouble: seeking, chapter jumps and switching audio tracks on large MKV files no longer crash, freeze or drift out of sync.</p>
+<h3 id="the-control-panel"><a class="toclink" href="#the-control-panel">The control panel</a></h3>
+<p>Press the top face button (<span class="btnchip">Triangle</span>, labelled <span class="btnchip">X</span> on most handhelds) during playback to open the control panel, a PlayStation-style grid of icons over the video. Move to an icon and its name shows under the grid; press <span class="btnchip">A</span> to use it. The seek bar at the bottom shows a tick for each chapter.</p>
+<p><img alt="The video player control panel" class="wide" src="assets/img/shots/v143_video_control_panel.png" /></p>
+<h3 id="subtitles-including-embedded-mkv-tracks"><a class="toclink" href="#subtitles-including-embedded-mkv-tracks">Subtitles, including embedded MKV tracks</a></h3>
+<p>Open <strong>Subtitle Options</strong> from the control panel. The list starts with <strong>Off</strong>, followed by every subtitle track the player found:</p>
+<ul>
+<li>Tracks embedded inside MKV (Matroska) files, both SubRip (SRT) and ASS/SSA, named with their track title and type.</li>
+<li>External <code>.srt</code> and <code>.vtt</code> subtitle files with the same name as the video, in the same folder.</li>
+<li>Closed captions CC1 to CC4 for <code>.ts</code> recordings that carry them.</li>
+</ul>
+<p><img alt="Choosing an embedded subtitle track" class="wide" src="assets/img/shots/v143_video_subtitle_tracks.png" /></p>
+<p>ASS/SSA subtitles are drawn as they were typeset: signs and song lyrics keep their position on screen, their size and their colours, so an anime release shows styled signs at the top and dialogue at the bottom just as intended.</p>
+<p><img alt="A typeset ASS subtitle track with a styled sign and dialogue" class="wide" src="assets/img/shots/v143_video_ass_subtitles.png" /></p>
+<h3 id="scene-search-chapter-previews"><a class="toclink" href="#scene-search-chapter-previews">Scene Search (chapter previews)</a></h3>
+<p><strong>Scene Search</strong> in the control panel opens a grid of the video's chapters, each labelled "Chapter N" with its start time and a real preview frame from that point. The previews are prepared in the background as soon as a video opens, so the grid is ready by the time you want it. Pick a chapter to jump straight there.</p>
+<h3 id="global-shaders-from-the-player"><a class="toclink" href="#global-shaders-from-the-player">Global Shaders from the player</a></h3>
+<p>Choose <strong>Global Shaders</strong> in the control panel to put a display shader over the video without going back to the Quick Menu: <strong>Off</strong>, <strong>CRT</strong>, <strong>LCD3x</strong>, <strong>LCD</strong>, <strong>Blur Fill</strong>, <strong>Custom (Vulkan)</strong> or <strong>Custom (GLSL)</strong>. It is the same system shader as <a href="quick-menu.html#global-shaders">Global Shaders in the Quick Menu</a>, so the choice stays in place after you leave the video.</p>
+<p><img alt="Global Shaders opened from the video player" class="wide" src="assets/img/shots/v143_video_global_shaders.png" /></p>
+<h3 id="leaving-the-player"><a class="toclink" href="#leaving-the-player">Leaving the player</a></h3>
+<p>Backing out of the video player stops the video and its sound straight away in every theme. (In the DSi and Minima themes the audio used to keep playing after you left.)</p>
 <h3 id="change-a-videos-icon"><a class="toclink" href="#change-a-videos-icon">Change a video's icon</a></h3>
 <p>In the video player, open the Options menu and choose <strong>Change Icon</strong> to grab the current frame and use it as that video's thumbnail in the column. Pause on the frame you want first.</p>
 <h3 id="iptv"><a class="toclink" href="#iptv">IPTV</a></h3>
@@ -174,8 +201,44 @@
 <p>Press <strong>Y</strong> in the Photo, Video or Music library to cycle its sort modes. The final mode in the cycle groups the library by its parent folder, so files are organised the same way they sit on disk. Your choice is remembered separately for each library.</p>
 <h2 id="media-as-wallpaper"><a class="toclink" href="#media-as-wallpaper">Media as wallpaper</a></h2>
 <p>You can set a photo or a video as your home wallpaper. When you are choosing a video wallpaper, the focused clip plays a live preview in its grid cell before you pick it, so you can see how it looks in motion.</p>
-<p>A <strong>Wallpaper Dimming</strong> setting (0 to 70%, default 25%) lays a scrim over photo and video wallpapers so bright images do not wash out the icons and text. Find it in Theme Settings. See <a href="what-s-new-since-1-4.html">What's New</a> for more on the media changes.</p>
+<p class="callout note">On devices with 1 GB of memory (such as the TrimUI Brick), video wallpapers larger than 720p are refused, because decoding them in the background could exhaust the memory and reboot the device. Use a 720p or smaller clip there.</p>
+<p>A <strong>Wallpaper Dimming</strong> setting (0 to 70%, default 25%) lays a scrim over photo and video wallpapers so bright images do not wash out the icons and text. Find it in Theme Settings. See <a href="what-s-new-since-1-4.html">What's New in 1.4.1</a> for more on the media changes.</p>
 <p><img alt="Adjustable wallpaper dimming" src="assets/img/shots/wn_wallpaper_dimming.png" /></p>
+<h2 id="playlists"><a class="toclink" href="#playlists">Playlists</a></h2>
+<p>Photo, Music and Video each have a <strong>Playlists</strong> item, and playlists can be managed from every home theme (XMB, DSi and Minima). Everything lives in the <span class="btnchip">X</span> Options menu:</p>
+<table>
+<thead>
+<tr>
+<th>Where you are</th>
+<th>Option</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>On a track, photo or video</td>
+<td><strong>Add to Playlist</strong></td>
+<td>Add it to an existing playlist, or pick <strong>New Playlist...</strong> to create one and add it in one go.</td>
+</tr>
+<tr>
+<td>Inside a playlist</td>
+<td><strong>Remove from Playlist</strong></td>
+<td>Take the item out of the playlist (the file itself is kept).</td>
+</tr>
+<tr>
+<td>Inside a playlist</td>
+<td><strong>Reorder &gt; Move Up / Move Down</strong></td>
+<td>Change the item's position in the playlist.</td>
+</tr>
+<tr>
+<td>On a playlist row</td>
+<td><strong>Delete Playlist</strong></td>
+<td>Delete the whole playlist (the files are kept).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sound-effects-and-headphones"><a class="toclink" href="#sound-effects-and-headphones">Sound effects and headphones</a></h2>
+<p>The home's navigation sounds and music keep working after you plug in or unplug headphones; they no longer go silent until a restart. The on-screen volume level also follows the real volume after a headset change.</p>
 <h2 id="per-item-options"><a class="toclink" href="#per-item-options">Per-item Options</a></h2>
 <p>Highlight any track, photo, or video and open the Options menu for actions specific to that item (for example, deleting or adding to a playlist). For the full breakdown of what each Options menu offers, see <a href="context-menus.html">Context menus</a>.</p>
         <footer class="page-foot">
@@ -196,6 +259,11 @@
 </li>
 <li><a href="#video">Video</a>
 <ul>
+<li><a href="#the-control-panel">The control panel</a></li>
+<li><a href="#subtitles-including-embedded-mkv-tracks">Subtitles, including embedded MKV tracks</a></li>
+<li><a href="#scene-search-chapter-previews">Scene Search (chapter previews)</a></li>
+<li><a href="#global-shaders-from-the-player">Global Shaders from the player</a></li>
+<li><a href="#leaving-the-player">Leaving the player</a></li>
 <li><a href="#change-a-videos-icon">Change a video&#x27;s icon</a></li>
 <li><a href="#iptv">IPTV</a></li>
 </ul>
@@ -205,6 +273,10 @@
 <li><a href="#sort-and-folder-view">Sort and folder view</a>
 </li>
 <li><a href="#media-as-wallpaper">Media as wallpaper</a>
+</li>
+<li><a href="#playlists">Playlists</a>
+</li>
+<li><a href="#sound-effects-and-headphones">Sound effects and headphones</a>
 </li>
 <li><a href="#per-item-options">Per-item Options</a>
 </li>

@@ -12,11 +12,15 @@ Welcome to the GammaOS Nano wiki. This is your friendly, complete guide to getti
 
 New here? Start with [Getting Started](getting-started.html), then explore whatever catches your eye. Every page cross-links to the ones next to it, so you can wander freely.
 
+**Just updated?** GammaOS Nano 1.4.2 and 1.4.3 bring an ES-DE theme engine, Syncthing, a GPU 3D renderer for DS games, your own DS cheat files and much more. Take the tour in [What's New since 1.4.1](what-s-new-since-1-4-1.html).
+{: .callout .tip }
+
 ## Jump in
 
 <div class="cards">
+  <a class="card" href="what-s-new-since-1-4-1.html"><span class="card-ico">✨</span><span class="card-kicker">Get Started</span><h3>What's New since 1.4.1</h3><p>Everything new in 1.4.2 and 1.4.3.</p></a>
   <a class="card" href="getting-started.html"><span class="card-ico">🚀</span><span class="card-kicker">Get Started</span><h3>Getting Started</h3><p>First boot, Wi-Fi, and your first games.</p></a>
-  <a class="card" href="themes.html"><span class="card-ico">🎨</span><span class="card-kicker">The Interface</span><h3>Home Themes</h3><p>Three looks, one interface.</p></a>
+  <a class="card" href="themes.html"><span class="card-ico">🎨</span><span class="card-kicker">The Interface</span><h3>Home Themes</h3><p>Four looks, one interface.</p></a>
   <a class="card" href="controls-os.html"><span class="card-ico">🎮</span><span class="card-kicker">Controls</span><h3>Controls Cheat Sheet</h3><p>Every button, everywhere.</p></a>
   <a class="card" href="adding-games.html"><span class="card-ico">📥</span><span class="card-kicker">Games</span><h3>Adding Games</h3><p>Drop in ROMs and rescan.</p></a>
   <a class="card" href="custom-system.html"><span class="card-ico">🛠️</span><span class="card-kicker">Games</span><h3>Add a Custom System</h3><p>Wire up any emulator you like.</p></a>
@@ -28,13 +32,15 @@ New here? Start with [Getting Started](getting-started.html), then explore whate
 
 ## Three themes, one interface
 
-GammaOS Nano ships with three switchable home themes. Pick the one you love in Settings > Theme Settings > Home Theme, and switch any time you feel like a change.
+GammaOS Nano ships with three built-in home themes, plus support for ES-DE themes. Pick the one you love in Settings > Theme Settings > Home Theme, and switch any time you feel like a change.
 
 <div class="theme-trio">
   <figure><img src="assets/img/shots/xmb_home.png" alt="GammaOS XMB theme"><figcaption><b>GammaOS XMB</b><br>PlayStation 3 style</figcaption></figure>
   <figure><img src="assets/img/shots/dsi_home.png" alt="DSi Menu theme"><figcaption><b>DSi Menu</b><br>Nintendo DSi style</figcaption></figure>
   <figure><img src="assets/img/shots/min_home.png" alt="Minima theme"><figcaption><b>Minima</b><br>Minimal list style</figcaption></figure>
 </div>
+
+There is a fourth choice too: **Custom / ES-DE** renders real EmulationStation-DE theme sets, with a built-in theme downloader (see [ES-DE Themes](esde-themes.html)).
 
 Want the full tour of what each theme offers? Head to [Home Themes](themes.html).
 

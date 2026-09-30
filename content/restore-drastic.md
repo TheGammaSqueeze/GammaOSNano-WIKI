@@ -3,17 +3,36 @@ title: Restore DraStic (RG DS)
 group: Help
 order: 3
 icon: 🔧
-desc: Reinstall DraStic Nano and its default configuration on the RG DS from a PC over ADB, and restore the DraStic system properties.
+desc: Reinstall the stock DraStic app and its default configuration on the RG DS from a PC over ADB, and restore the DraStic system properties.
 ---
 
-If DraStic on your RG DS stops launching, loses its configuration, or you just want to reset it to the
-way it shipped, you can put back the exact app and default config that GammaOS installs on first boot,
-plus the DraStic system properties, from a computer over ADB. This page is the end to end procedure.
+If the stock DraStic app on your RG DS stops launching, loses its configuration, or you just want to
+reset it to the way it shipped, you can put back the exact app and default config that GammaOS installs
+on first boot, plus the DraStic system properties, from a computer over ADB. This page is the end to end
+procedure.
 {: .lead }
 
+## Do you need this page?
+
+Since GammaOS 1.4.2, DS games from the Game menu run on the built-in [DraStic Nano](drastic-nano.html),
+which ships everything it needs in the system and **does not use the DraStic app at all**. Its saves
+live in `/sdcard/drastic-nano`, not in the app's folder. So reinstalling the app will not change how
+DS games from the Game menu play, and you do not need it for DraStic Nano.
+
+This page is still useful when:
+
+- you want the **stock DraStic app** itself back (for example to open it from Applications), or its
+  configuration has broken;
+- DS games from the Game menu open the stock DraStic app instead of DraStic Nano. That means the
+  DraStic Nano switch property was lost: [Step 2](#step-2-restore-the-drastic-properties) puts it back.
+
+If a DS game misbehaves in DraStic Nano, look at the [DraStic Nano](drastic-nano.html) page first
+(for example turn the experimental GPU 3D renderer off).
+{: .callout .tip }
+
 This restores the **DraStic app and its default config** (the files under the app's own data folder)
-and the **DraStic properties**. It does **not** touch your games or saves: ROMs and save files on
-internal storage (`/sdcard/ROMs`) are left alone.
+and the **DraStic properties**. It does **not** touch your games or DraStic Nano's saves: ROMs
+(`/sdcard/ROMs`) and the `drastic-nano` folder are left alone.
 {: .callout .note }
 
 ## What you need
@@ -23,7 +42,7 @@ internal storage (`/sdcard/ROMs`) are left alone.
 - **Root ADB.** The steps write to protected system folders, so they run `adb root` first. This works
   on the standard GammaOS builds.
 
-The files used below (`drastic_r2.6.0.4a.apk` and `drastic.tar.gz`) already live on the device in
+The files used below (`drastic_r2.6.0.4a.apk` and `drastic.tar.zst`) already live on the device in
 `/system/etc`, so you do not need to download anything.
 {: .callout .tip }
 
@@ -38,7 +57,7 @@ adb shell 'pm install -r /system/etc/drastic_r2.6.0.4a.apk'
 adb shell '
 u=$(stat -c "%U" /data/data/com.dsemu.drastic)
 g=$(stat -c "%G" /data/data/com.dsemu.drastic)
-tar -xf /system/etc/drastic.tar.gz -C /
+zstd -dc /system/etc/drastic.tar.zst | tar -x -P -C /
 rm -f /data/data/com.dsemu.drastic/files/DraStic/shaders/SMAA.dfx /data/data/com.dsemu.drastic/files/DraStic/shaders/Scanline.dfx /data/data/com.dsemu.drastic/files/DraStic/shaders/scanline.dsd
 rm -rf /data/data/com.dsemu.drastic/files/DraStic/shaders/smaa
 chown -R $u:$g /data/data/com.dsemu.drastic
@@ -51,7 +70,9 @@ appops set --uid com.dsemu.drastic RECORD_AUDIO allow
 What each part does:
 
 - `pm install -r ...` installs (or reinstalls, keeping data) the DraStic APK.
-- `tar -xf drastic.tar.gz -C /` unpacks the default DraStic configuration into the app's data folder.
+- `zstd -dc drastic.tar.zst | tar -x -P -C /` unpacks the default DraStic configuration into the app's
+  data folder. (Builds before 1.4.2 shipped it as `drastic.tar.gz`; on those, use
+  `tar -xf /system/etc/drastic.tar.gz -C /` instead.)
 - The two `rm` lines remove the SMAA and Scanline shaders. SMAA forces a desktop GLSL path that does
   not exist on the Mali GPU, so DraStic crashes if it is selected; Scanline is unwanted. GammaOS ships
   without them, and this prunes any left over from an older install.
@@ -80,7 +101,7 @@ adb reboot
 
 | Property | Value | What it does |
 |----------|-------|--------------|
-| `persist.gammaos.nano.drastic_nano` | `1` | Turns on DraStic Nano, the built-in DraStic front end and overlay. |
+| `persist.gammaos.nano.drastic_nano` | `1` | Sends DS games from the Game menu to DraStic Nano, the built-in DS player, instead of the stock app. |
 | `persist.gammaos.nano.triple_buffer` | `1` | Quick Resume smoothness: enables the 4-slot buffer ring that hides short GPU stalls. Defaults to on in code; set here to lock it. |
 | `persist.gammaos.nano.vsync` | `1` | Quick Resume smoothness: paces rendering to the display flip on the RG DS dual-screen setup. Defaults to on in code; set here to lock it. |
 | `persist.gammaos.ultra_low_power_saving_freeze_exclude_packages` | `com.dsemu.drastic` | Keeps DraStic running under the ultra-low-power saving mode instead of freezing it. |
@@ -93,7 +114,8 @@ DraStic Nano runs as a GammaOS Nano overlay, so it also relies on the Nano overl
 
 After the reboot:
 
-- Open DraStic from the Applications category (or launch a DS game) and confirm it starts and plays.
+- Open DraStic from the Applications category and confirm it starts. Launch a DS game from the Game
+  menu and confirm it opens in DraStic Nano (a short tap of Back shows the DraStic Nano menu).
 - Confirm the properties took, if you want to double check:
 
 ```bash
@@ -111,9 +133,11 @@ adb root
 adb shell 'pm uninstall com.dsemu.drastic'
 ```
 
-Then run Step 1 and Step 2 as above. Your ROMs and save files on `/sdcard/ROMs` are not affected by
-the uninstall, but any DraStic settings, cheats, or save states kept inside the app's own data folder
-are removed and replaced with the defaults.
+Then run Step 1 and Step 2 as above. Your ROMs on `/sdcard/ROMs` and DraStic Nano's `drastic-nano`
+folder are not affected by the uninstall, but any DraStic app settings, cheats, or save states kept
+inside the app's own data folder are removed and replaced with the defaults. If you still have saves
+there that you want in DraStic Nano, use **Import DraStic saves** on DraStic Nano's General page
+before uninstalling.
 {: .callout .note }
 
 ## Troubleshooting

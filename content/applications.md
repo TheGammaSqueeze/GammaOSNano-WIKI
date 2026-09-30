@@ -9,7 +9,7 @@ desc: Launch and manage installed apps from the Game category.
 Your installed apps live right alongside your games. GammaOS Nano gathers them into an **Applications** entry inside the Game category, so a standalone emulator, a store app, or any other program is only a couple of button presses away.
 {: .lead }
 
-Several app features are new since 1.4 (pinning apps to the home, Keep Running in Background, the bundled browser and more). See [What's New](what-s-new-since-1-4.html) for the full list.
+Several app features are new since 1.4 (pinning apps to the home, Keep Running in Background, the bundled browser and more). See [What's New in 1.4.1](what-s-new-since-1-4.html) for the full list.
 
 ## Where to find your apps
 
@@ -24,6 +24,21 @@ Apps installed from Google Play, F-Droid or Aurora now appear in the default App
 ## Launching an app
 
 Selecting an app launches it, and the handoff works exactly like starting a game: the home menu steps aside, the app takes over the screen, and when you exit the app you return to the home menu right where you left off.
+
+### Faster launches and a quicker way back
+
+- **Faster app launches on 1 GB devices.** While a game or app runs, the home hands back the graphics memory it was holding, so on 1 GB handhelds RetroArch opens in about 6 seconds instead of up to 22, and Mupen64Plus AE starts straight into the game.
+- **Instant return after a DS game.** The home stays loaded in the background while a DS game runs in DraStic Nano, so it is back in a fraction of a second when you quit the game, on the same system you launched from.
+- **Lower idle power at the home.** When nothing on screen is moving, the DSi, Minima and ES-DE homes stop redrawing, dropping from about 45 percent of a CPU core to under 3 percent. Leaving the device sitting on the menu costs far less battery.
+- **Sleep after the Screen Timeout.** The home and the boot intro now let the device go to sleep after the Screen Timeout you set in Android (**Settings > Display Settings > Screen Timeout**).
+
+### Landscape apps on portrait screens
+
+On handhelds with a portrait panel, apps that only run in landscape (for example PPSSPP and Flycast) now show upright and fill the screen, instead of appearing sideways or letterboxed.
+
+### Installing APKs from file managers and stores
+
+File managers and app stores (F-Droid, Aurora Store and others) can install APKs directly. Android normally asks you to allow each such app to "install unknown apps" through a per-app switch that you cannot reach in Nano; GammaOS now grants that for you, so the install simply goes ahead.
 
 ## Per-app Options
 
@@ -94,6 +109,21 @@ Sign in to your Google account while in Android mode. If sign-in fails with "the
 ## Run on Primary Screen (dual-screen devices)
 
 On dual-screen (DS-style) handhelds, an app's Options menu adds **Run on Primary Screen**. Turn it on to make a dual-screen app run on the main panel. Nano can also prompt you automatically when it detects an app that suits this, and the Control Center yields the bottom panel to an app that owns it.
+
+On the RG DS and RG DS Plus, apps that span both screens now render at the panels' full native resolution (1024x1536 across the two screens) instead of an upscaled 640x960, so they look noticeably sharper.
+
+## The bottom screen while an app runs (RG DS)
+
+On the RG DS and RG DS Plus, a single-screen app or game runs on the top panel and the bottom panel becomes the **Control Center**: brightness and volume sliders, quick tiles, live gauges, and an Applications page that runs a second app on the bottom screen. See [Control Center (RG DS)](control-center.html).
+
+## Mouse mode
+
+Some apps expect a mouse or touch input. Hold <span class="btnchip">Select</span> + <span class="btnchip">R1</span> (or tap the **Mouse** tile in the [Control Center](control-center.html#the-mouse-tile)) to turn GammaPad's virtual mouse on and off.
+
+- Turning mouse mode on or off no longer relaunches the running app, and games such as Sonic Mania no longer crash when you do it.
+- If an app quits or crashes while mouse mode is on, the home switches mouse mode off as soon as it is back, so the d-pad and sticks work straight away without a restart.
+
+Pointer speed and scrolling are set in [Gamepad & Remapping](gamepad-settings.html#touch-mouse).
 
 ## Standalone emulator apps
 

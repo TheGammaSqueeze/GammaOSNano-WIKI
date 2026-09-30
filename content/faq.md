@@ -63,7 +63,7 @@ Run the scraper: **Settings > Game Settings > Boxart Scraper**, then **Scrape Al
 
 ### How do I switch home themes?
 
-Go to **Settings > Theme Settings > Home Theme** and pick **GammaOS XMB**, **DSi Menu**, or **Minima**. Applying restarts the home so the new look takes effect right away. See [Themes](themes.html) for what each one looks like.
+Go to **Settings > Theme Settings > Home Theme** and pick **GammaOS XMB**, **DSi Menu**, **Minima**, or **Custom / ES-DE** (EmulationStation-DE theme sets, see [ES-DE Themes](esde-themes.html)). The new look applies right away. See [Themes](themes.html) for what each one looks like.
 
 ### The screen is too dark or a shader broke the display
 
@@ -85,7 +85,7 @@ Either one restarts a frozen or dead home screen.
 The GammaOS XMB theme, with its flowing wave and glass icons, is the heaviest home to draw. On lower-powered devices, the TrimUI Brick for example, it can stutter and warm the device up. Two things help, and both take effect right away:
 
 - Switch to a lighter home in **Settings > Theme Settings > Home Theme**. The **DSi** and **Minima** themes are much lighter than XMB.
-- Keep XMB but turn on its **Half Resolution** toggles (Wave, Icons and Clock) in **Theme Settings**. Each renders that layer at half size for a large speed-up while the menu text stays crisp.
+- Keep XMB but turn on its **Half Resolution: Wave** and **Half Resolution: Clock** toggles in **Theme Settings**. Each renders that layer at half size for a large speed-up while the menu text stays crisp.
 
 ### A game crashes back to the menu, especially under load
 
@@ -103,6 +103,8 @@ By default RetroArch stores save files and save states in the same folder as the
 ### Wi-Fi keeps dropping after sleep, or will not hold on my mesh network
 
 If Wi-Fi drops when the screen sleeps or the lid closes, it normally reconnects on wake; if it does not, toggle Wi-Fi off and on in **Network Settings**. If the device keeps dropping, or reboots, on a mesh network or a mixed 2.4/5GHz network, connect it to a dedicated **2.4GHz** access point (or your router's 2.4GHz band under its own name). This has been the reliable fix on the RG DS and RG Vita.
+
+On the **RG DS Plus**, Wi-Fi that looked connected after sleep but loaded nothing was a driver fault fixed in 1.4.3; update if you still see it.
 
 ### My device will not power off, turns back on when I close the lid, or will not power on
 
@@ -129,9 +131,69 @@ microG is a community-collected setup, not officially endorsed or supported by G
 - [Settings Reference](settings-reference.html) and [GammaOS Toolbox](gammaos-toolbox.html)
 - [ADB Setup and Logs](adb-and-logs.html) to connect a PC and collect logs for support
 
-## New in this release
+## New in 1.4.2 and 1.4.3
 
-Common questions about the features added since GammaOS Nano 1.4.
+Common questions about the changes in GammaOS Nano 1.4.2 and 1.4.3. For the full tour, see [What's New since 1.4.1](what-s-new-since-1-4-1.html).
+
+### Why does Bluetooth stay off now?
+
+That is on purpose. A fresh install starts with Bluetooth off, the setup wizard no longer has a Bluetooth step, and opening or scanning the device list no longer switches the radio back on behind your back. Bluetooth only turns on when you turn it on: use the Bluetooth toggle in the Quick Menu (hold <span class="btnchip">Power</span>) or the Bluetooth and Accessories screen. See [Connectivity](network.html).
+
+### How do I get Quick Resume back?
+
+Quick Resume is now off by default, so every boot starts at the home. Turn it on in **Settings > Game Settings > Quick Resume**, or from **Quick Menu > Quick Resume**. It works for RetroArch and DraStic Nano games. See [Quick Resume](quick-resume.html).
+
+### The home stayed frozen after I left a resumed DS game
+
+This was the "quick resume loop": after holding <span class="btnchip">Back</span> to leave a DS game that Quick Resume had brought back, the screen could freeze on the last frame with no home, and a reboot resumed the game again. It is fixed in 1.4.3. Leaving a resumed game always brings the home back, and if the device resumes a game twice in a row without any button press, the next boot lands on the home instead. If you are still on an older build, hold <span class="btnchip">Back</span> for 10 seconds to restart the home, then update.
+
+### My d-pad and sticks stopped working after an app crashed in mouse mode
+
+Since 1.4.3 the home switches mouse mode off as soon as it is back in front, so if an app quits or crashes while mouse mode is on, the d-pad and sticks work again without a restart. Switching mouse mode on or off (<span class="btnchip">Select</span> + <span class="btnchip">R1</span>, or the Mouse tile in the [Control Center](control-center.html)) also no longer relaunches or crashes the app you are in. See [Gamepad Settings](gamepad-settings.html).
+
+### Do I still need the DraStic app (APK) for DS games?
+
+No. Since 1.4.2 everything DraStic Nano needs ships inside GammaOS, and it needs no BIOS. Your saves, save states, shaders, cheats and per-game settings live in the `drastic-nano` folder on internal storage. On first launch DraStic Nano offers to import saves from an old DraStic install. See [DraStic Nano](drastic-nano.html).
+
+### Where do my own DS cheat files go?
+
+Put R4 style `usrcheat.dat` files in `drastic-nano/cheats` on internal storage, or pick another folder in **Settings > Game Settings > DraStic Cheats Folder**. They are merged with the built-in cheats when a DS game starts. In the game, the Cheats page shows how many cheat files were found, and its **Show** filter can list only **Built-in** or only **Custom** cheats.
+
+### Can a DS game use its own performance mode?
+
+Yes. In the game, set **Performance** on the General page the way you want, then choose **Create Per-Game Override**. The override stores every setting for that game, including the performance mode. The game switches to its own mode when it starts, and your usual mode comes back when you exit, even after a crash or a reboot mid-game.
+
+### How do I move my box art to the SD card?
+
+Go to **Settings > Game Settings > Boxart Scraper > Boxart Folder** and pick your SD card (or any folder). Existing covers and backgrounds are moved over, and the art follows the card when it is reinserted. **Use Default Folder** puts it back on internal storage. To delete one system's downloaded art, open it in **Game Systems** and choose **Clear Boxart**. See [Boxart](boxart.html).
+
+### How do I make the home open on my DS games?
+
+Use **Settings > Theme Settings > Startup Menu**. It lists the default, every category and every game system that has games. Pick **Nintendo DS** (or any other system) and the home opens there at boot. See [Theme Settings](theme-settings.html).
+
+### How do I get ES-DE themes?
+
+Choose **Custom / ES-DE** in **Settings > Theme Settings > Home Theme**. The Slate theme is preinstalled. Press <span class="btnchip">Start</span> for the UI Settings menu, then open **Theme Downloader** to download themes from the official ES-DE list, and pick one under **Theme**. You can also copy ES-DE theme folders into `ES-DE/themes` on internal storage. **Nano Settings** in the same menu opens the normal settings. See [ES-DE Themes](esde-themes.html).
+
+### RG DS Plus: Wi-Fi was dead after the device slept
+
+Fixed in 1.4.3. On the RG DS Plus, Wi-Fi could look connected after waking but load nothing, then drop and refuse to reconnect until a reboot, which also made box art scraping fail. Wi-Fi now comes back about two seconds after waking.
+
+### RG DS Plus: touch ignored my taps right after waking
+
+Fixed in 1.4.3. The touchscreen could ignore taps for up to ten seconds after waking from deep sleep, in DS games and on the home. The first tap after a wake now lands.
+
+### RG DS Plus: headphones and the low latency DS audio
+
+Since 1.4.3 the low latency audio in DraStic Nano also plays through the headphone jack on the RG DS Plus, not only through the speakers. Plugging headphones in switches over automatically, and the speaker EQ is bypassed while they are in.
+
+### RG DS Plus: the device switched off during setup on battery
+
+A freshly flashed RG DS Plus could power off part way through the setup wizard unless a charger was connected. This is fixed in 1.4.3. On an older build, keep the charger plugged in for the first setup.
+
+## New in 1.4.1
+
+Common questions about the features added in GammaOS Nano 1.4.1.
 
 ### How do I mark a game as a favourite?
 
@@ -184,7 +246,7 @@ If the emulator for that game is not installed, Nano now shows a short warning m
 
 ### Does the DSi theme have a dark mode?
 
-Yes. Switch to the DSi theme, then in **Settings > Theme Settings** turn on **Dark Theme**. The whole DSi look flips to light text and icons on a dark field, and it applies immediately. The DSi theme also follows your accent **Colour** setting.
+Yes. Switch to the DSi theme, then in **Settings > Theme Settings** turn on **DSi Dark Theme**. The whole DSi look flips to light text and icons on a dark field, and it applies immediately. The DSi theme also follows your accent **Colour** setting.
 
 ### How do I paste a URL or long text into a text field?
 
@@ -196,11 +258,11 @@ Create a `.m3u` playlist file listing the disc images and place it alongside the
 
 ### Can I move where DraStic keeps its saves?
 
-Yes. Go to **Settings > Game Settings > DraStic Data Folder** and choose a folder on shared storage. drastic-nano and the standalone DraStic app then use that same location, so your saves, config and BIOS live in one place you can reach outside the app.
+Yes. Go to **Settings > Game Settings > DraStic Data Folder** and choose any folder, including the SD card, removable storage or a network share. Your saves, save states and shader overrides move there (by default they live in `drastic-nano` on internal storage). The in-game Save States page shows the folders currently in use, and **Use Default Folder** puts them back. DraStic Nano does not need the standalone DraStic app.
 
 ### DraStic runs slowly on my device. What can I try?
 
-Open the in-game overlay and go to Video. Turn on **Half Resolution** to render at half size and upscale (a big speed-up on fill-bound panels, at the cost of a softer image). You can also try **16-Bit Layout** to cut bandwidth. **SF Vsync Lock** is off by default and only helps once the frame already fits inside the vblank. All three are opt-in and safe to toggle live. The optional **FPS Counter** in the same menu helps you see the effect.
+Open the in-game overlay and go to Video. Turn on **Half Resolution** to render at half size and upscale (a big speed-up on fill-bound panels, at the cost of a softer image). You can also try **16-bit Framebuffers** to cut bandwidth. Both are opt-in and safe to toggle live. If you use **Hi-res 3D**, the experimental **GPU 3D Renderer** moves the 3D work off the CPU. The **FPS Counter** in the same menu shows two readouts, **BLIT** (what reaches the screen) and **GAME** (the real emulation speed), so you can see the effect.
 
 ### Streaming apps like Disney+ show a DRM or certification error. Any fix?
 

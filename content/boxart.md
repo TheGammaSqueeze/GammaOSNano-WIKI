@@ -26,12 +26,27 @@ Open it at **Settings > Game Settings > Boxart Scraper**. From there you can set
 | **Overwrite Existing** | Re-fetch art you already have (default Off). |
 | **ScreenScraper account** | Optional username and password. If left blank, built-in developer credentials are used. |
 | **TheGamesDB API key** | Optional key, if you use TheGamesDB. |
+| **Boxart Folder** | Where downloaded art is kept: internal storage (default) or a folder you pick, such as on the SD card. See [Keep box art on the SD card](#keep-box-art-on-the-sd-card). |
 | **Scrape All Systems** | Start downloading art and details for your whole library. |
 
-When you choose **Scrape All Systems**, a background thread works through your games during idle time, so you can keep using Nano while it runs. Downloaded art is cached on the device.
+When you choose **Scrape All Systems**, a background thread works through your games during idle time, so you can keep using Nano while it runs. The screen stays awake while scraping is in progress, so the device no longer drops off to sleep (and loses its connection) half way through a big library. Downloaded art is cached on the device.
+
+Scraped names prefer an **English** region title (US, World, Europe and so on) where the database has one, instead of a title in another language.
 
 You do not need to create an account to scrape from ScreenScraper. The account fields are optional and only speed things up if you have your own login.
 {: .callout .tip }
+
+## Keep box art on the SD card
+
+Covers and background art for a big library can take a lot of internal storage. You can keep them on the SD card (or other removable storage) instead:
+
+1. Open **Settings > Game Settings > Boxart Scraper**.
+2. Choose **Boxart Folder**.
+3. Pick a folder. The list starts with **Use Default Folder** (internal storage), then Internal storage, the SD card and any removable storage.
+
+![The Boxart Folder row in Boxart Scraper](assets/img/shots/v143_dsi_boxart_folder_row.png){: .dual }
+
+Your existing art is moved to the new folder for you, and the row then shows the folder's name (or **Default**). The art follows the card: if the card is removed the art is hidden until it comes back, and it reappears at boot or as soon as you put the card back in. Custom titles you set with Rename / Edit Title stay on internal storage, so they are kept either way.
 
 ## Per-game boxart
 
@@ -61,7 +76,7 @@ Your manual rename always wins. If you rename a game and later scrape it, the sc
 
 ## Scraped titles replace the filename
 
-Once a game has been scraped, its matched title (not the raw filename) shows in the **Game** category and in search, and title sorting follows that matched title. This keeps lists tidy when your files have terse or coded names.
+Once a game has been scraped, its matched title (not the raw filename) shows in the **Game** category and in search, and title sorting follows that matched title. This keeps lists tidy when your files have terse or coded names. This is the default behaviour (**Show Display Names** is on): games list and sort by their scraped or custom name. It is on by default and has no row in the XMB, DSi or Minima menus.
 
 The shown name follows a clear order of precedence:
 
@@ -97,6 +112,12 @@ To manage covers in bulk, back them all up, or add your own art from a PC, see [
 ## Per-system scraping
 
 You can also scrape one system at a time from the **Game Systems** editor. Each system has a **Scrape This System** action, plus optional scraper account fields to override the global setting for just that system. See [Game Systems](game-systems.html).
+
+To start a system over, its **Clear Boxart** action deletes that system's downloaded covers and background art (after a **Cancel** / **Clear Boxart** confirmation). See [Clear Boxart](game-systems.html#clear-boxart).
+
+## Changes from the PC Boxart Tool
+
+If you manage art from a computer with the GammaOS Boxart Tool, your changes (new covers, backgrounds and titles) appear on the device straight away, with no need to restart the home. See [Custom Boxart and Backup](custom-boxart.html).
 
 ## Related pages
 

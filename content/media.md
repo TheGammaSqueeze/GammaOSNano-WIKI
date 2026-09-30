@@ -79,6 +79,44 @@ The full-screen player gives you:
 - Volume
 - Multi-audio-track selection (tracks are labeled by language)
 - Subtitle and caption selection
+- Chapter jumps and Scene Search
+- Global Shaders without leaving the video
+
+Big files are no trouble: seeking, chapter jumps and switching audio tracks on large MKV files no longer crash, freeze or drift out of sync.
+
+### The control panel
+
+Press the top face button (<span class="btnchip">Triangle</span>, labelled <span class="btnchip">X</span> on most handhelds) during playback to open the control panel, a PlayStation-style grid of icons over the video. Move to an icon and its name shows under the grid; press <span class="btnchip">A</span> to use it. The seek bar at the bottom shows a tick for each chapter.
+
+![The video player control panel](assets/img/shots/v143_video_control_panel.png){: .wide }
+
+### Subtitles, including embedded MKV tracks
+
+Open **Subtitle Options** from the control panel. The list starts with **Off**, followed by every subtitle track the player found:
+
+- Tracks embedded inside MKV (Matroska) files, both SubRip (SRT) and ASS/SSA, named with their track title and type.
+- External `.srt` and `.vtt` subtitle files with the same name as the video, in the same folder.
+- Closed captions CC1 to CC4 for `.ts` recordings that carry them.
+
+![Choosing an embedded subtitle track](assets/img/shots/v143_video_subtitle_tracks.png){: .wide }
+
+ASS/SSA subtitles are drawn as they were typeset: signs and song lyrics keep their position on screen, their size and their colours, so an anime release shows styled signs at the top and dialogue at the bottom just as intended.
+
+![A typeset ASS subtitle track with a styled sign and dialogue](assets/img/shots/v143_video_ass_subtitles.png){: .wide }
+
+### Scene Search (chapter previews)
+
+**Scene Search** in the control panel opens a grid of the video's chapters, each labelled "Chapter N" with its start time and a real preview frame from that point. The previews are prepared in the background as soon as a video opens, so the grid is ready by the time you want it. Pick a chapter to jump straight there.
+
+### Global Shaders from the player
+
+Choose **Global Shaders** in the control panel to put a display shader over the video without going back to the Quick Menu: **Off**, **CRT**, **LCD3x**, **LCD**, **Blur Fill**, **Custom (Vulkan)** or **Custom (GLSL)**. It is the same system shader as [Global Shaders in the Quick Menu](quick-menu.html#global-shaders), so the choice stays in place after you leave the video.
+
+![Global Shaders opened from the video player](assets/img/shots/v143_video_global_shaders.png){: .wide }
+
+### Leaving the player
+
+Backing out of the video player stops the video and its sound straight away in every theme. (In the DSi and Minima themes the audio used to keep playing after you left.)
 
 ### Change a video's icon
 
@@ -105,9 +143,27 @@ Press **Y** in the Photo, Video or Music library to cycle its sort modes. The fi
 
 You can set a photo or a video as your home wallpaper. When you are choosing a video wallpaper, the focused clip plays a live preview in its grid cell before you pick it, so you can see how it looks in motion.
 
-A **Wallpaper Dimming** setting (0 to 70%, default 25%) lays a scrim over photo and video wallpapers so bright images do not wash out the icons and text. Find it in Theme Settings. See [What's New](what-s-new-since-1-4.html) for more on the media changes.
+On devices with 1 GB of memory (such as the TrimUI Brick), video wallpapers larger than 720p are refused, because decoding them in the background could exhaust the memory and reboot the device. Use a 720p or smaller clip there.
+{: .callout .note }
+
+A **Wallpaper Dimming** setting (0 to 70%, default 25%) lays a scrim over photo and video wallpapers so bright images do not wash out the icons and text. Find it in Theme Settings. See [What's New in 1.4.1](what-s-new-since-1-4.html) for more on the media changes.
 
 ![Adjustable wallpaper dimming](assets/img/shots/wn_wallpaper_dimming.png)
+
+## Playlists
+
+Photo, Music and Video each have a **Playlists** item, and playlists can be managed from every home theme (XMB, DSi and Minima). Everything lives in the <span class="btnchip">X</span> Options menu:
+
+| Where you are | Option | What it does |
+| --- | --- | --- |
+| On a track, photo or video | **Add to Playlist** | Add it to an existing playlist, or pick **New Playlist...** to create one and add it in one go. |
+| Inside a playlist | **Remove from Playlist** | Take the item out of the playlist (the file itself is kept). |
+| Inside a playlist | **Reorder > Move Up / Move Down** | Change the item's position in the playlist. |
+| On a playlist row | **Delete Playlist** | Delete the whole playlist (the files are kept). |
+
+## Sound effects and headphones
+
+The home's navigation sounds and music keep working after you plug in or unplug headphones; they no longer go silent until a restart. The on-screen volume level also follows the real volume after a headset change.
 
 ## Per-item Options
 

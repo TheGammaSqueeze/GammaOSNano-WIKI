@@ -31,6 +31,10 @@ Once a share is connected, it shows up in the **File Explorer** so you can brows
 
 You can also add a share to the media libraries. When you do, the files on it are scanned like local storage, so any music, photos, and video on the share appear in your [Music, Photos & Video](media.html) categories automatically.
 
+## Syncthing
+
+The last row in **Settings > Network Shares** is **Syncthing**. Instead of mounting a folder that lives on another computer, Syncthing keeps a copy of a folder on the handheld and on your other devices, and keeps the copies identical. It is the easy way to have your game saves on your PC or phone automatically, and it keeps working in the background while you play. See [Syncthing](syncthing.html) for the full walkthrough.
+
 ## Reference
 
 For the full Settings tree and every option around Network Shares, see the [Settings reference](settings-reference.html).

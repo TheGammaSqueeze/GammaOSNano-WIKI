@@ -32,14 +32,24 @@ These defaults are already correct for supported devices. You only touch them if
 
 Two rows decide the actions:
 
-- **On Slide Down**: what happens when you slide the screen. Choose from Rotate, Sleep, Wake, Launch, or the PSP Clock (you can pick more than one).
+- **On Slide Down**: what happens when you slide the screen. Choose from Rotate, Restore Natural, Sleep, Wake, Launch App, Close App or PSP Clock (tick as many as you like, then press OK to save).
 - **On Slide Up**: what happens when you slide it back.
 
 Supporting options:
 
 - **Sleep Delay**: how long to wait before sleeping (for the Sleep action).
 - **Rotation Angle**: the angle used by the Rotate action (for example 90 degrees).
-- **Slide Launch Target**: the app or mode to open (for the Launch action).
+- **Slide Launch Target**: the app to open with the Launch App action (see below).
+
+### Choosing the Slide Launch Target
+
+**Slide Launch Target** reads Not Set until you choose something. Select it and a **Launch Target** list of your installed apps opens. Pick an app, then pick which of its screens (activities) to open; **Default activity** is first and is the right choice for almost every app. The row then shows the app (and activity) you picked.
+
+![The Slide Launch Target row](assets/img/shots/v143_xmb_slide_launch_target.png){: .wide }
+
+### Close App
+
+Add **Close App** to a slide action to force-stop the launched app when you slide. A typical pairing is Launch App on Slide Down and Close App on Slide Up, so sliding opens your chosen app and sliding back closes it again.
 
 ## Square-panel landscape lock (RG Rotate)
 
@@ -65,11 +75,18 @@ The slide clock now appears over a running game in the DSi and Minima themes as 
 
 ![The clock and parallax options](assets/img/shots/xmb_slide_clock.png)
 
-Two options tune how it looks:
+These rows at the bottom of Slide Behaviour tune the clock:
 
 - **Show Clock On Slide**: turn the clock on or off when you slide.
+- **Freeze App Under Clock** (default Off): pauses the game underneath while the slide clock is up, and it carries on when the clock goes away. The frame behind the clock stays pixel-crisp while it is paused.
 - **Clock Live Backdrop**: when on, whatever is behind the clock (your game or the home) shows through and refracts behind the glass, instead of a flat backdrop.
-- **Parallax Calibration**: tunes the subtle parallax effect that shifts the clock as you tilt the device, using the motion sensor.
+- **Parallax** (default On): the subtle effect that shifts the clock as you tilt the device, using the motion sensor.
+- **Parallax Strength**: Subtle, Normal (default), Strong, Extra Strong or Maximum.
+- **Parallax Direction**: how the clock moves with the tilt. **Peek Behind** (default) moves the clock against the tilt, as if you were peeking around it, **Follow Tilt** moves it the same way you tilt, and **Invert X Only** / **Invert Y Only** follow the tilt on one axis only, for when just one direction feels backwards on your device.
+
+These three friendly rows replace the old raw Parallax Calibration field, so there is no number string to type any more.
+
+![Freeze App Under Clock and the parallax rows](assets/img/shots/v143_xmb_slide_clock_rows.png){: .wide }
 
 The clock reads the time from your device, so make sure your [Date and Time](settings-reference.html) is set. Turn on **Clock Live Backdrop** for the nicest effect while a game is running behind it.
 {: .callout .tip }

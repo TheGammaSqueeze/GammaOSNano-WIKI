@@ -6,7 +6,7 @@ icon: 🖥️
 desc: What you get when you boot GammaOS into normal Android (desktop and TV mode) instead of the Nano launcher.
 ---
 
-GammaOS can boot straight into the Nano launcher or into normal Android (desktop and TV mode). Desktop mode is the full Android experience with a launcher, a status bar and a notification shade, and it is where you install and manage apps that expect a normal phone or tablet environment. This page covers the features that only apply in desktop mode. For the Nano launcher itself, see [What Is GammaOS Nano](what-is-nano.html) and [What's New since 1.4](what-s-new-since-1-4.html).
+GammaOS can boot straight into the Nano launcher or into normal Android (desktop and TV mode). Desktop mode is the full Android experience with a launcher, a status bar and a notification shade, and it is where you install and manage apps that expect a normal phone or tablet environment. This page covers the features that only apply in desktop mode. For the Nano launcher itself, see [What Is GammaOS Nano](what-is-nano.html) and [What's New since 1.4.1](what-s-new-since-1-4-1.html).
 {: .lead }
 
 ## Switching between Nano and desktop mode
@@ -30,6 +30,14 @@ Open and close the shade with the **ALL_APPS** key on your controller or keyboar
 
 Desktop mode now ships the complete Android Settings app rather than the cut down TV Settings. The Settings dashboard also surfaces **GammaOS Toolbox** and shortcuts to the hardware control apps, so the device specific options sit alongside the standard Android ones. See the [Settings Reference](settings-reference.html) and [GammaOS Toolbox](gammaos-toolbox.html) for what each option does.
 
+## Automatic permissions for frontends and emulators
+
+The storage and microphone permissions that Nano grants automatically now apply in desktop mode too. A frontend or emulator started from the normal Android launcher gets its storage (and microphone) access without a string of permission prompts, and the grants stay in place after the app is updated from a store. You can still revoke them in the Settings app.
+
+## Syncthing in Settings and TV Settings
+
+The built-in [Syncthing](syncthing.html) service can be controlled from the Settings app (and TV Settings on TV builds) in desktop mode, as well as from Network Shares in Nano. It is the same service with the same folders and devices either way, so a folder you set up in Nano keeps syncing after you boot into Android.
+
 ## Screen orientation in normal Android
 
 A **GammaOS > Screen Orientation** screen lets you set Auto, Landscape or Portrait (with clamping) for normal Android, and the choice persists between Nano and desktop mode. On the RG Rotate the hardware slider is respected in normal Android too, so rotating the panel rotates the desktop as expected. For the Nano side of rotation and the slide clock, see [Slide and Rotate Clock](slide-rotation.html).
@@ -37,6 +45,10 @@ A **GammaOS > Screen Orientation** screen lets you set Auto, Landscape or Portra
 ## Dual-screen home and per-app primary screen
 
 On dual-screen devices desktop mode keeps a launcher on both displays, so each screen has its own home. Apps that are built for two screens (such as Cocoon Shell) can be set to **Run on Primary Screen**, and the system shows an auto-detect prompt the first time it sees such an app. When one of these apps takes over the bottom panel, the Control Center yields the bottom panel to it so the two do not fight over the same screen. The matching per-app toggle in the Nano launcher is covered in [Applications](applications.html).
+
+The dual-screen secondary launcher now ships on the **Lite** and **Full** images too.
+
+On the RG DS and RG DS Plus, dual-stack apps (apps that span both panels as one tall screen) render at the panels' native **1024x1536** instead of an upscaled 640x960, so text and graphics are much sharper.
 
 ## Per-display volume
 

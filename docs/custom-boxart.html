@@ -38,11 +38,13 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
-<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 <li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
 <li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
 <li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
 <li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
@@ -74,6 +76,7 @@
 <div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
 <li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
 <li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Settings</div><ul>
 <li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
@@ -83,6 +86,7 @@
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
 <li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -129,7 +133,7 @@
 <li><strong>Remove</strong> delete the cover, the background, or both.</li>
 <li><strong>Bulk Import</strong> and <strong>Bulk Export</strong> manage the whole library in one go.</li>
 </ul>
-<p>On builds that support it, Nano reloads your changes in place with no restart; on older builds the tool restarts Nano for you. Either way, the list shows each game's on-device <strong>path</strong> so you can tell similarly named games apart.</p>
+<p>Nano reloads your changes in place, so new covers, backgrounds and titles appear on the device straight away without restarting the home (on builds older than 1.4.2 the tool restarts Nano for you instead). Either way, the list shows each game's on-device <strong>path</strong> so you can tell similarly named games apart.</p>
 <h3 id="scrape-art-automatically"><a class="toclink" href="#scrape-art-automatically">Scrape art automatically</a></h3>
 <p>The easiest way to fill a library is to let the tool <strong>scrape</strong> covers and backgrounds for you, from your PC, from <a href="https://screenscraper.fr">ScreenScraper</a> or <a href="https://thegamesdb.net">TheGamesDB</a>. GammaOS's ScreenScraper account is built in, so ScreenScraper works out of the box with no signup.</p>
 <p><img alt="Scraping in the desktop app" src="assets/img/shots/boxart_scrape_gui.png" /></p>
@@ -181,6 +185,7 @@ gammaos-boxart import ./my-covers                     <span class="c1"># bulk im
     &lt;key&gt;.fan.jpg     a game&#39;s fan art
 </code></pre></div>
 
+<p>That is the default location. If you picked a <strong>Boxart Folder</strong> on the device (for example on the SD card, see <a href="boxart.html#keep-box-art-on-the-sd-card">Keep box art on the SD card</a>), the images and <code>index.json</code> live in that folder instead, while <code>names.json</code> always stays in <code>/data/system/nano_scrape/</code>.</p>
 <p><code>&lt;key&gt;</code> is the game's ROM path run through a 64-bit <strong>FNV-1a</strong> hash, written as 16 lowercase hex digits. It is only a filename convention: Nano loads a cover from the path stored in the manifest, so what really matters is the <code>index.json</code> entry.</p>
 <h3 id="indexjson"><a class="toclink" href="#indexjson">index.json</a></h3>
 <p><code>index.json</code> is an object with a <code>version</code> and an <code>items</code> array. Each item ties one ROM to its art and metadata. Only non-empty fields are written.</p>
@@ -238,7 +243,7 @@ gammaos-boxart import ./my-covers                     <span class="c1"># bulk im
 </tbody>
 </table>
 <p><code>names.json</code> is the same shape with <code>{ "rom", "name" }</code> items and just renames a game.</p>
-<p class="callout note">Older Nano builds read <code>index.json</code> once at startup, so after any change you must restart Nano for it to show. Newer builds reload it in place when the tool asks them to (via the <code>sys.gammaos.nano.scrape_reload</code> property), so changes appear with no restart. Either way, Nano refuses to save over an <code>index.json</code> it cannot read, so a bad edit will not wipe your library, but you should still keep a backup (use <code>export</code>).</p>
+<p class="callout note">Nano builds older than 1.4.2 read <code>index.json</code> once at startup, so after any change you must restart Nano for it to show. Current builds reload it in place when the tool asks them to (via the <code>sys.gammaos.nano.scrape_reload</code> property), so changes appear with no restart. Either way, Nano refuses to save over an <code>index.json</code> it cannot read, so a bad edit will not wipe your library, but you should still keep a backup (use <code>export</code>).</p>
 <h2 id="doing-it-by-hand"><a class="toclink" href="#doing-it-by-hand">Doing it by hand</a></h2>
 <p>If you want to skip the tool, the same result is a few ADB commands (root, as above):</p>
 <div class="codehilite"><pre><span></span><code>adb root

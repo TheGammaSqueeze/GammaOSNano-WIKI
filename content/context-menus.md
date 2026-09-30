@@ -18,6 +18,8 @@ Highlight anything (a game, an app, a song, a folder) and press the **Options bu
 
 The menu contents change based on what you selected. The first bold row is the default action, which you can also trigger just by pressing <span class="btnchip">A</span> on the item.
 
+In the DSi theme, the top screen reminds you of these buttons: <span class="btnchip">X</span> **Options** in the bottom-left corner, and whatever <span class="btnchip">Y</span> does for the highlighted item (**Sort**, **Pin**, **Unpin** or **Info**) in the bottom-right corner. See [Home Themes](themes.html#button-legends-on-the-top-screen).
+
 ![Options menu on a game](assets/img/shots/xmb_ctx_game.png)
 
 The Options menu, its submenus, and every dialog it opens are side panels that share the same frosted chrome. They are fully controller-driven (D-pad plus A/B) and touch-capable: tap a row to select and activate it, drag to scroll, drag a slider track, tap Yes/No/OK, or tap the dimmed area to cancel.
@@ -66,10 +68,10 @@ More on managing installed apps is on the [Applications](applications.html) page
 
 | Entry | What it does |
 |-------|--------------|
-| Manage Game System | Jump straight into that system's editor (emulator, scan folders, icon, and more) |
+| Manage Game System | Jump straight into that system's editor (emulator, scan folders, icon, scraping, Clear Boxart and more) |
 | Information | System details |
 
-Manage Game System is the fast way back into the editor covered in [Custom System](custom-system.html).
+Manage Game System is the fast way back into the editor covered in [Custom System](custom-system.html) and [Game Systems](game-systems.html). Its **Clear Boxart** row deletes that system's downloaded covers and background art after a Cancel / Clear Boxart confirmation.
 
 ## On a collection
 

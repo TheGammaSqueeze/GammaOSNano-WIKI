@@ -26,6 +26,8 @@ Gamepad Settings is organized into sections: Controllers, Sticks & D-Pad, Button
 Turn **Controller Enable** on before the other options take effect. It starts the GammaOS controller service that does the merging, swapping, and remapping.
 {: .callout .note }
 
+With **Hide Source Device** on, apps see only the virtual pad. A bug that made the hidden source controller reappear next to the virtual pad after a reboot (so games saw two controllers) is fixed.
+
 ## Sticks & D-Pad
 
 | Option | What it does | Default |
@@ -74,6 +76,13 @@ Under **Button Mapping** you can reassign inputs. This is the part people ask ab
 Remapping is applied live: when you save, the controller layer reloads and your new mapping takes effect right away, no reboot needed. Your layout also persists across reboots.
 {: .callout .tip }
 
+### Trigger to axis while keeping the button
+
+Some games want analog triggers (for example gas and brake in a racing game) while your handheld's L2 and R2 are plain digital buttons. GammaPad's button-to-axis rules turn a button press into a full analog trigger value, and a rule can now also **keep the original button**, sending both the analog value and the button press. That way games that read L2/R2 as triggers and games (or menus) that read them as buttons both work with the same setup.
+
+This option is not in the XMB or DSi Gamepad Settings menu. It is a text field named **Button to Trigger Axis** in the older full list of gamepad settings, for power users. Each rule is `button:axis:value:keep`, separated by commas; a 1 in the last field keeps the button. For example `312:10:32767:1,313:9:32767:1` sends L2 as the brake axis and R2 as the gas axis at full value while keeping both as buttons too. Leave the last field out (or set it to 0) for the old axis-only behaviour.
+{: .callout .note }
+
 ### Where else you can remap
 
 The same remapping is available from three places, all writing the same settings:
@@ -103,7 +112,7 @@ Beyond remapping, the DSi and Minima home themes gained the same fast list navig
 ## Touch & Mouse
 
 - **Screen Map** maps controller input to on-screen touch zones, so a pad can drive touch-only apps.
-- **Mouse Mode** turns the pad into a mouse pointer. Hold the configured combo to toggle it, then the stick moves the cursor. You can tune Stick Speed, D-Pad Speed, Boost, and Scroll Speed.
+- **Mouse Mode** turns the pad into a mouse pointer. Hold the configured combo (<span class="btnchip">Select</span> + <span class="btnchip">R1</span> by default) to toggle it, then the stick moves the cursor. You can tune Stick Speed, D-Pad Speed, Boost, and Scroll Speed. On the RG DS and RG DS Plus the **Mouse** tile in the [Control Center](control-center.html#the-mouse-tile) toggles it too. Toggling it no longer relaunches the running app, and if the app quits or crashes with mouse mode on, the home switches it off again for you.
 
 ## Where to go next
 

@@ -40,7 +40,7 @@ Here are the systems Nano knows out of the box, the folder each one uses, and th
 | Game Boy Color | `gbc` | .gbc .gb |
 | Game Boy Advance | `gba` | .gba |
 | Nintendo 64 | `n64` | .n64 .v64 .z64 .bin .ndd |
-| Nintendo DS | `nds` | .nds |
+| Nintendo DS | `nds` | .nds .zip |
 | Genesis / Mega Drive | `genesis` | .md .gen .smd .bin |
 | Master System | `mastersystem` | .sms .sg |
 | Game Gear | `gamegear` | .gg |
@@ -50,7 +50,19 @@ Here are the systems Nano knows out of the box, the folder each one uses, and th
 | Neo Geo Pocket | `ngpc` | .ngp .ngc .npc |
 | PICO-8 | `pico8` | .p8 .png |
 
-Every system here can be changed, and you can add your own. See [Game Systems](game-systems.html) to edit any of these, and [Add a Custom System](custom-system.html) to create a new one.
+Every system here can be changed, and you can add your own.
+
+### Nintendo DS games and saves
+
+DS games can be plain `.nds` files or zipped. A zipped DS ROM is unpacked when you start it, with a loading screen and progress bar while it extracts, and it keeps its save states like any other game.
+
+DS saves and save states are not kept next to your ROMs. The built-in [DraStic Nano](drastic-nano.html) writes them to the `drastic-nano` folder on internal storage (`drastic-nano/saves` and `drastic-nano/savestates`), which you can move to the SD card or anywhere else with **Settings > Game Settings > DraStic Data Folder**. See [Save location and your DraStic folder](drastic-nano.html#save-location-and-your-drastic-folder).
+
+### Arcade folders
+
+Arcade systems each scan their own folders only, so adding CPS1, FBNeo or MAME does not pull in the other arcade folders. Use `mame` (or the generic `arcade`) for MAME, `fbneo` (or `fba`) for FBNeo, and `cps1`, `cps2`, `cps3` for the CP System boards.
+
+Vertical (TATE) arcade games have their own **Arcade (Vertical)** system. Put them in a folder named `VARCADE`, `VERTICAL`, `TATE`, `TATEGAME` or `verticalarcade` (any case) and the system is added automatically, playing with MAME by default or FBNeo. See [Arcade (Vertical)](game-systems.html#arcade-vertical). See [Game Systems](game-systems.html) to edit any of these, and [Add a Custom System](custom-system.html) to create a new one.
 
 ## Scanning your games in
 

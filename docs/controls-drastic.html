@@ -38,11 +38,13 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
-<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 <li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
 <li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
 <li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
 <li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
@@ -74,6 +76,7 @@
 <div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
 <li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
 <li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Settings</div><ul>
 <li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
@@ -83,6 +86,7 @@
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
 <li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -100,6 +104,7 @@
 <h2 id="playing-a-ds-game"><a class="toclink" href="#playing-a-ds-game">Playing a DS game</a></h2>
 <p>The DS buttons map one-to-one to your handheld's face buttons, D-Pad, shoulders, and Start/Select: Up, Down, Left, Right, <span class="btnchip">A</span>, <span class="btnchip">B</span>, <span class="btnchip">X</span>, <span class="btnchip">Y</span>, <span class="btnchip">L</span>, <span class="btnchip">R</span>, <span class="btnchip">Start</span>, and <span class="btnchip">Select</span>.</p>
 <p>The DS bottom (touch) screen is driven by your touch panel, so you can tap and drag with a finger like a stylus. On devices without a touch panel, or when you prefer buttons, a virtual touch cursor lets the D-Pad or left stick move a pointer over the bottom screen, with <span class="btnchip">A</span> tapping or holding the stylus.</p>
+<p>Touch works the moment the device wakes from sleep, and keeps working after you press the D-Pad. Controllers you connect after the game has started are picked up too.</p>
 <h2 id="in-game-shortcuts"><a class="toclink" href="#in-game-shortcuts">In-game shortcuts</a></h2>
 <table>
 <thead>
@@ -111,15 +116,35 @@
 <tbody>
 <tr>
 <td><span class="btnchip">Back</span> (short press)</td>
-<td>Open or close the in-game overlay menu (the game pauses while it is open)</td>
+<td>Open or close the in-game menu (the game pauses while it is open)</td>
 </tr>
 <tr>
-<td><span class="btnchip">Back</span> (long hold, about 1.5 seconds)</td>
-<td>Exit the game and return to the Nano home</td>
+<td><span class="btnchip">Back</span> (hold)</td>
+<td>Exit the game and return to the Nano home. The sound mutes at once and the home is back in about 2 seconds, on the system you launched from.</td>
 </tr>
 <tr>
-<td><span class="btnchip">Power</span> (long hold)</td>
-<td>Raise the Nano in-game overlay over the game (opens on the Quick Menu); press <span class="btnchip">B</span> or hold <span class="btnchip">Power</span> again to resume</td>
+<td><span class="btnchip">R2</span> (default)</td>
+<td>Fast forward on or off</td>
+</tr>
+<tr>
+<td><span class="btnchip">L2</span> (default)</td>
+<td>Swap the two DS screens</td>
+</tr>
+<tr>
+<td><span class="btnchip">R3</span> (default)</td>
+<td>Virtual touch cursor on or off</td>
+</tr>
+<tr>
+<td><span class="btnchip">Power</span> (tap)</td>
+<td>Sleep the device</td>
+</tr>
+<tr>
+<td><span class="btnchip">Power</span> (hold, about 1.5 seconds)</td>
+<td>Open the DraStic in-game menu, the same menu as a short Back press</td>
+</tr>
+<tr>
+<td><span class="btnchip">Power</span> (hold, about 5 seconds)</td>
+<td>Save your place and power off</td>
 </tr>
 <tr>
 <td>Touch panel</td>
@@ -131,26 +156,77 @@
 </tr>
 </tbody>
 </table>
-<p class="callout tip">A short tap of <span class="btnchip">Back</span> opens the overlay menu (and pauses the game); a long hold of <span class="btnchip">Back</span> exits to the home. Same button, two lengths of press.</p>
-<p class="callout note">If you power the device off from the overlay's Quick Menu while a game is running, <a href="quick-resume.html">Quick Resume</a> saves your spot first, so you will not lose progress.</p>
-<h2 id="the-overlay-menu"><a class="toclink" href="#the-overlay-menu">The overlay menu</a></h2>
-<p>A short <span class="btnchip">Back</span> press opens the in-game overlay, which pauses the game and gives you save states, video and audio options, control rebinding, cheats, and achievements. There is a lot in there, so it has its own page.</p>
-<p class="callout note">The overlay now opens on a <strong>General</strong> tab by default, gathering the everyday actions (Brightness, Performance, Restart Game, Exit Game, Power Off, Reboot) in one place. The <strong>Video</strong> section also gained two vertical layout presets (<strong>Big Top + Small</strong> and <strong>Big Top + Tiny</strong>) for stacking the two DS screens. See <a href="drastic-nano.html">DraStic Nano</a> for the full overlay reference.</p>
-<p>For every setting in the overlay (screen layout, shaders, save states, cheats, achievements, firmware user data, and more), see the full <a href="drastic-nano.html">DraStic Nano</a> page.</p>
-<h2 id="bindable-quick-actions"><a class="toclink" href="#bindable-quick-actions">Bindable quick actions</a></h2>
-<p>Beyond the DS face buttons, DraStic Nano can bind two extra quick actions to any button, set under the overlay's <strong>Menu &gt; Controls</strong>:</p>
+<p class="callout tip">A short tap of <span class="btnchip">Back</span> opens the menu (and pauses the game); a hold of <span class="btnchip">Back</span> exits to the home. Same button, two lengths of press.</p>
+<p class="callout note">Powering off from the in-game menu (or with the long Power hold) saves your spot first, and with <a href="quick-resume.html">Quick Resume</a> turned on the next boot drops you straight back into the game.</p>
+<h2 id="fast-forward"><a class="toclink" href="#fast-forward">Fast forward</a></h2>
+<p>Fast forward is a <strong>press-to-toggle</strong>: press the Fast Forward button once to speed up and once more to go back to normal speed. You do not have to hold it. While it is on, an amber <strong>&gt;&gt;</strong> badge sits in the top-left corner so you always know, and your other buttons keep responding normally.</p>
+<p>How fast it goes is set by <strong>Fast Forward Speed</strong> on the menu's <strong>Video</strong> page: 110% to 300% of normal speed, or Uncapped. See <a href="drastic-nano.html#fast-forward">Fast forward</a>.</p>
+<h2 id="the-in-game-menu"><a class="toclink" href="#the-in-game-menu">The in-game menu</a></h2>
+<p>A short <span class="btnchip">Back</span> press opens the in-game menu, which pauses the game. Use <span class="btnchip">L</span> and <span class="btnchip">R</span> to switch between its pages (General, Save States, Video, Audio, Controls, Cheats, Achievements), Up and Down to move, <span class="btnchip">A</span> to select, Left or Right to change a value, and <span class="btnchip">B</span> to close it.</p>
 <ul>
-<li><strong>Save State</strong> and <strong>Load State</strong> target quick-save/quick-load slot 0. Once bound, they work even with the overlay closed, so you can quick-save and quick-load mid-game without pausing.</li>
-<li><strong>L3</strong> and <strong>R3</strong> (the stick clicks) are now freely rebindable to whatever you like.</li>
+<li><strong>General</strong> is where the menu opens: Brightness, <strong>Quick Save</strong> and <strong>Quick Load</strong> (slot 0), <strong>Undo Quick Save</strong> and <strong>Undo Quick Load</strong> when there is something to undo, Performance, DS Game Language, Restart Game, Exit Game, per-game overrides, Power Off and Reboot.</li>
+<li><strong>Power Off</strong> and <strong>Reboot</strong> ask you to confirm first, so a stray press cannot switch the device off.</li>
+<li>On the <strong>Cheats</strong> page, <span class="btnchip">L2</span> and <span class="btnchip">R2</span> page up and down through long cheat lists.</li>
 </ul>
+<p>For every setting in the menu (screen layout, shaders, GPU 3D, save states, cheats, achievements, and more), see the full <a href="drastic-nano.html">DraStic Nano</a> page.</p>
+<h2 id="changing-the-controls"><a class="toclink" href="#changing-the-controls">Changing the controls</a></h2>
+<p>Every binding lives on the menu's <strong>Controls</strong> page. Select an action with <span class="btnchip">A</span>, then press the button you want for it: any button on your pad can be used, including the stick clicks (<span class="btnchip">L3</span> and <span class="btnchip">R3</span>) and the triggers. Press Left on a row to clear its binding, or choose <strong>Restore Defaults</strong> to start over.</p>
+<p>The bindable actions are the DS buttons and D-Pad, plus these extras:</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Screen Swap</strong></td>
+<td><span class="btnchip">L2</span></td>
+<td>Swap the top and bottom screens</td>
+</tr>
+<tr>
+<td><strong>Fast Forward</strong></td>
+<td><span class="btnchip">R2</span></td>
+<td>Toggle fast forward</td>
+</tr>
+<tr>
+<td><strong>Menu</strong></td>
+<td><span class="btnchip">Back</span></td>
+<td>Open the in-game menu</td>
+</tr>
+<tr>
+<td><strong>Touch Cursor</strong></td>
+<td><span class="btnchip">R3</span></td>
+<td>Toggle the virtual touch cursor</td>
+</tr>
+<tr>
+<td><strong>Save State</strong></td>
+<td>Unmapped</td>
+<td>Quick-save to slot 0, even with the menu closed</td>
+</tr>
+<tr>
+<td><strong>Load State</strong></td>
+<td>Unmapped</td>
+<td>Quick-load slot 0, even with the menu closed</td>
+</tr>
+<tr>
+<td><strong>Close Lid</strong></td>
+<td>Unmapped</td>
+<td>Close or open the emulated DS lid, for games that react to it</td>
+</tr>
+</tbody>
+</table>
 <p class="callout tip">Binding a key to one action automatically clears it from any other action, so you cannot accidentally leave the same button doing two things.</p>
-<p class="callout note">Two different overlays, two different buttons: a short <span class="btnchip">Back</span> press opens DraStic's own in-game menu (save states, video, cheats), while holding <span class="btnchip">Power</span> raises the wider Nano overlay (Quick Menu, brightness, switch games) over the top. See <a href="controls-os.html#the-in-game-overlay">the in-game overlay</a>.</p>
+<p class="callout note">A quick save or load you did not mean can be taken back: open the menu and use <strong>Undo Quick Save</strong> or <strong>Undo Quick Load</strong> on the General page.</p>
+<p>The Controls page also has <strong>Physical Lid Closes DS Lid</strong> for devices with a real lid: when it is on, shutting the lid briefly pauses the game instead of sleeping the device straight away. See <a href="drastic-nano.html#close-lid">Close Lid</a>.</p>
 <h2 id="where-to-go-next"><a class="toclink" href="#where-to-go-next">Where to go next</a></h2>
 <ul>
 <li>Full DraStic Nano settings and features: <a href="drastic-nano.html">DraStic Nano</a></li>
 <li>Pick up exactly where you left off after a reboot: <a href="quick-resume.html">Quick Resume</a></li>
 <li>System-wide shortcuts (brightness, sleep, emergency restart): <a href="controls-os.html">Controls</a></li>
-<li>Everything added recently, including the new General tab and bindable save/load: <a href="what-s-new-since-1-4.html">What's New since 1.4</a></li>
+<li>Everything added recently: <a href="what-s-new-since-1-4-1.html">What's New since 1.4.1</a></li>
 </ul>
         <footer class="page-foot">
           <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
@@ -161,9 +237,11 @@
 </li>
 <li><a href="#in-game-shortcuts">In-game shortcuts</a>
 </li>
-<li><a href="#the-overlay-menu">The overlay menu</a>
+<li><a href="#fast-forward">Fast forward</a>
 </li>
-<li><a href="#bindable-quick-actions">Bindable quick actions</a>
+<li><a href="#the-in-game-menu">The in-game menu</a>
+</li>
+<li><a href="#changing-the-controls">Changing the controls</a>
 </li>
 <li><a href="#where-to-go-next">Where to go next</a>
 </li>

@@ -38,11 +38,13 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
-<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 <li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
 <li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
 <li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
 <li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
@@ -74,6 +76,7 @@
 <div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
 <li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
 <li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Settings</div><ul>
 <li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
@@ -83,6 +86,7 @@
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
 <li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -138,13 +142,27 @@
 <td>Optional key, if you use TheGamesDB.</td>
 </tr>
 <tr>
+<td><strong>Boxart Folder</strong></td>
+<td>Where downloaded art is kept: internal storage (default) or a folder you pick, such as on the SD card. See <a href="#keep-box-art-on-the-sd-card">Keep box art on the SD card</a>.</td>
+</tr>
+<tr>
 <td><strong>Scrape All Systems</strong></td>
 <td>Start downloading art and details for your whole library.</td>
 </tr>
 </tbody>
 </table>
-<p>When you choose <strong>Scrape All Systems</strong>, a background thread works through your games during idle time, so you can keep using Nano while it runs. Downloaded art is cached on the device.</p>
+<p>When you choose <strong>Scrape All Systems</strong>, a background thread works through your games during idle time, so you can keep using Nano while it runs. The screen stays awake while scraping is in progress, so the device no longer drops off to sleep (and loses its connection) half way through a big library. Downloaded art is cached on the device.</p>
+<p>Scraped names prefer an <strong>English</strong> region title (US, World, Europe and so on) where the database has one, instead of a title in another language.</p>
 <p class="callout tip">You do not need to create an account to scrape from ScreenScraper. The account fields are optional and only speed things up if you have your own login.</p>
+<h2 id="keep-box-art-on-the-sd-card"><a class="toclink" href="#keep-box-art-on-the-sd-card">Keep box art on the SD card</a></h2>
+<p>Covers and background art for a big library can take a lot of internal storage. You can keep them on the SD card (or other removable storage) instead:</p>
+<ol>
+<li>Open <strong>Settings &gt; Game Settings &gt; Boxart Scraper</strong>.</li>
+<li>Choose <strong>Boxart Folder</strong>.</li>
+<li>Pick a folder. The list starts with <strong>Use Default Folder</strong> (internal storage), then Internal storage, the SD card and any removable storage.</li>
+</ol>
+<p><img alt="The Boxart Folder row in Boxart Scraper" class="dual" src="assets/img/shots/v143_dsi_boxart_folder_row.png" /></p>
+<p>Your existing art is moved to the new folder for you, and the row then shows the folder's name (or <strong>Default</strong>). The art follows the card: if the card is removed the art is hidden until it comes back, and it reappears at boot or as soon as you put the card back in. Custom titles you set with Rename / Edit Title stay on internal storage, so they are kept either way.</p>
 <h2 id="per-game-boxart"><a class="toclink" href="#per-game-boxart">Per-game boxart</a></h2>
 <p>You can also handle a single game on its own. Highlight a game and press the Options button:</p>
 <table>
@@ -188,7 +206,7 @@
 <p><img alt="Rename / Edit Title" src="assets/img/shots/wn_rename_game.png" /></p>
 <p>Your manual rename always wins. If you rename a game and later scrape it, the scraped title does not overwrite the name you set.</p>
 <h2 id="scraped-titles-replace-the-filename"><a class="toclink" href="#scraped-titles-replace-the-filename">Scraped titles replace the filename</a></h2>
-<p>Once a game has been scraped, its matched title (not the raw filename) shows in the <strong>Game</strong> category and in search, and title sorting follows that matched title. This keeps lists tidy when your files have terse or coded names.</p>
+<p>Once a game has been scraped, its matched title (not the raw filename) shows in the <strong>Game</strong> category and in search, and title sorting follows that matched title. This keeps lists tidy when your files have terse or coded names. This is the default behaviour (<strong>Show Display Names</strong> is on): games list and sort by their scraped or custom name. It is on by default and has no row in the XMB, DSi or Minima menus.</p>
 <p>The shown name follows a clear order of precedence:</p>
 <ol>
 <li>A <strong>manual rename</strong> you set with Rename / Edit Title (highest priority).</li>
@@ -215,6 +233,9 @@
 <p class="callout tip">To manage covers in bulk, back them all up, or add your own art from a PC, see <a href="custom-boxart.html">Custom Boxart and Backup</a> and the GammaOS Boxart Tool.</p>
 <h2 id="per-system-scraping"><a class="toclink" href="#per-system-scraping">Per-system scraping</a></h2>
 <p>You can also scrape one system at a time from the <strong>Game Systems</strong> editor. Each system has a <strong>Scrape This System</strong> action, plus optional scraper account fields to override the global setting for just that system. See <a href="game-systems.html">Game Systems</a>.</p>
+<p>To start a system over, its <strong>Clear Boxart</strong> action deletes that system's downloaded covers and background art (after a <strong>Cancel</strong> / <strong>Clear Boxart</strong> confirmation). See <a href="game-systems.html#clear-boxart">Clear Boxart</a>.</p>
+<h2 id="changes-from-the-pc-boxart-tool"><a class="toclink" href="#changes-from-the-pc-boxart-tool">Changes from the PC Boxart Tool</a></h2>
+<p>If you manage art from a computer with the GammaOS Boxart Tool, your changes (new covers, backgrounds and titles) appear on the device straight away, with no need to restart the home. See <a href="custom-boxart.html">Custom Boxart and Backup</a>.</p>
 <h2 id="related-pages"><a class="toclink" href="#related-pages">Related pages</a></h2>
 <ul>
 <li><a href="custom-boxart.html">Custom Boxart and Backup</a> to manage covers in bulk or from a PC.</li>
@@ -229,6 +250,8 @@
       <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
 <li><a href="#the-boxart-scraper">The Boxart Scraper</a>
 </li>
+<li><a href="#keep-box-art-on-the-sd-card">Keep box art on the SD card</a>
+</li>
 <li><a href="#per-game-boxart">Per-game boxart</a>
 </li>
 <li><a href="#rename-and-edit-title">Rename and Edit Title</a>
@@ -242,6 +265,8 @@
 </ul>
 </li>
 <li><a href="#per-system-scraping">Per-system scraping</a>
+</li>
+<li><a href="#changes-from-the-pc-boxart-tool">Changes from the PC Boxart Tool</a>
 </li>
 <li><a href="#related-pages">Related pages</a>
 </li>

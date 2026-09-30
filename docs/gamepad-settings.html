@@ -38,11 +38,13 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
-<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 <li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
 <li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
 <li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
 <li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
@@ -74,6 +76,7 @@
 <div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
 <li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
 <li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Settings</div><ul>
 <li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
@@ -83,6 +86,7 @@
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
 <li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -131,6 +135,7 @@
 </tbody>
 </table>
 <p class="callout note">Turn <strong>Controller Enable</strong> on before the other options take effect. It starts the GammaOS controller service that does the merging, swapping, and remapping.</p>
+<p>With <strong>Hide Source Device</strong> on, apps see only the virtual pad. A bug that made the hidden source controller reappear next to the virtual pad after a reboot (so games saw two controllers) is fixed.</p>
 <h2 id="sticks-d-pad"><a class="toclink" href="#sticks-d-pad">Sticks &amp; D-Pad</a></h2>
 <table>
 <thead>
@@ -249,6 +254,9 @@
 </tbody>
 </table>
 <p class="callout tip">Remapping is applied live: when you save, the controller layer reloads and your new mapping takes effect right away, no reboot needed. Your layout also persists across reboots.</p>
+<h3 id="trigger-to-axis-while-keeping-the-button"><a class="toclink" href="#trigger-to-axis-while-keeping-the-button">Trigger to axis while keeping the button</a></h3>
+<p>Some games want analog triggers (for example gas and brake in a racing game) while your handheld's L2 and R2 are plain digital buttons. GammaPad's button-to-axis rules turn a button press into a full analog trigger value, and a rule can now also <strong>keep the original button</strong>, sending both the analog value and the button press. That way games that read L2/R2 as triggers and games (or menus) that read them as buttons both work with the same setup.</p>
+<p class="callout note">This option is not in the XMB or DSi Gamepad Settings menu. It is a text field named <strong>Button to Trigger Axis</strong> in the older full list of gamepad settings, for power users. Each rule is <code>button:axis:value:keep</code>, separated by commas; a 1 in the last field keeps the button. For example <code>312:10:32767:1,313:9:32767:1</code> sends L2 as the brake axis and R2 as the gas axis at full value while keeping both as buttons too. Leave the last field out (or set it to 0) for the old axis-only behaviour.</p>
 <h3 id="where-else-you-can-remap"><a class="toclink" href="#where-else-you-can-remap">Where else you can remap</a></h3>
 <p>The same remapping is available from three places, all writing the same settings:</p>
 <ul>
@@ -274,7 +282,7 @@
 <h2 id="touch-mouse"><a class="toclink" href="#touch-mouse">Touch &amp; Mouse</a></h2>
 <ul>
 <li><strong>Screen Map</strong> maps controller input to on-screen touch zones, so a pad can drive touch-only apps.</li>
-<li><strong>Mouse Mode</strong> turns the pad into a mouse pointer. Hold the configured combo to toggle it, then the stick moves the cursor. You can tune Stick Speed, D-Pad Speed, Boost, and Scroll Speed.</li>
+<li><strong>Mouse Mode</strong> turns the pad into a mouse pointer. Hold the configured combo (<span class="btnchip">Select</span> + <span class="btnchip">R1</span> by default) to toggle it, then the stick moves the cursor. You can tune Stick Speed, D-Pad Speed, Boost, and Scroll Speed. On the RG DS and RG DS Plus the <strong>Mouse</strong> tile in the <a href="control-center.html#the-mouse-tile">Control Center</a> toggles it too. Toggling it no longer relaunches the running app, and if the app quits or crashes with mouse mode on, the home switches it off again for you.</li>
 </ul>
 <h2 id="where-to-go-next"><a class="toclink" href="#where-to-go-next">Where to go next</a></h2>
 <ul>
@@ -298,6 +306,7 @@
 </li>
 <li><a href="#button-remapping">Button remapping</a>
 <ul>
+<li><a href="#trigger-to-axis-while-keeping-the-button">Trigger to axis while keeping the button</a></li>
 <li><a href="#where-else-you-can-remap">Where else you can remap</a></li>
 <li><a href="#in-emulator-binding-drastic-nano">In-emulator binding (DraStic Nano)</a></li>
 </ul>

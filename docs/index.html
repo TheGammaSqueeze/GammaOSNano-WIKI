@@ -38,11 +38,13 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
-<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 <li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
 <li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
 <li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
 <li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
@@ -74,6 +76,7 @@
 <div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
 <li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
 <li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Settings</div><ul>
 <li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
@@ -83,6 +86,7 @@
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
 <li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -117,10 +121,12 @@
       <article class="article">
         <p class="lead">Welcome to the GammaOS Nano wiki. This is your friendly, complete guide to getting the most out of your handheld: launching games, running emulators, playing your music and videos, browsing network shares, and tuning every setting to taste.</p>
 <p>New here? Start with <a href="getting-started.html">Getting Started</a>, then explore whatever catches your eye. Every page cross-links to the ones next to it, so you can wander freely.</p>
+<p class="callout tip"><strong>Just updated?</strong> GammaOS Nano 1.4.2 and 1.4.3 bring an ES-DE theme engine, Syncthing, a GPU 3D renderer for DS games, your own DS cheat files and much more. Take the tour in <a href="what-s-new-since-1-4-1.html">What's New since 1.4.1</a>.</p>
 <h2 id="jump-in"><a class="toclink" href="#jump-in">Jump in</a></h2>
 <div class="cards">
+  <a class="card" href="what-s-new-since-1-4-1.html"><span class="card-ico">✨</span><span class="card-kicker">Get Started</span><h3>What's New since 1.4.1</h3><p>Everything new in 1.4.2 and 1.4.3.</p></a>
   <a class="card" href="getting-started.html"><span class="card-ico">🚀</span><span class="card-kicker">Get Started</span><h3>Getting Started</h3><p>First boot, Wi-Fi, and your first games.</p></a>
-  <a class="card" href="themes.html"><span class="card-ico">🎨</span><span class="card-kicker">The Interface</span><h3>Home Themes</h3><p>Three looks, one interface.</p></a>
+  <a class="card" href="themes.html"><span class="card-ico">🎨</span><span class="card-kicker">The Interface</span><h3>Home Themes</h3><p>Four looks, one interface.</p></a>
   <a class="card" href="controls-os.html"><span class="card-ico">🎮</span><span class="card-kicker">Controls</span><h3>Controls Cheat Sheet</h3><p>Every button, everywhere.</p></a>
   <a class="card" href="adding-games.html"><span class="card-ico">📥</span><span class="card-kicker">Games</span><h3>Adding Games</h3><p>Drop in ROMs and rescan.</p></a>
   <a class="card" href="custom-system.html"><span class="card-ico">🛠️</span><span class="card-kicker">Games</span><h3>Add a Custom System</h3><p>Wire up any emulator you like.</p></a>
@@ -131,13 +137,14 @@
 </div>
 
 <h2 id="three-themes-one-interface"><a class="toclink" href="#three-themes-one-interface">Three themes, one interface</a></h2>
-<p>GammaOS Nano ships with three switchable home themes. Pick the one you love in Settings &gt; Theme Settings &gt; Home Theme, and switch any time you feel like a change.</p>
+<p>GammaOS Nano ships with three built-in home themes, plus support for ES-DE themes. Pick the one you love in Settings &gt; Theme Settings &gt; Home Theme, and switch any time you feel like a change.</p>
 <div class="theme-trio">
   <figure><img src="assets/img/shots/xmb_home.png" alt="GammaOS XMB theme"><figcaption><b>GammaOS XMB</b><br>PlayStation 3 style</figcaption></figure>
   <figure><img src="assets/img/shots/dsi_home.png" alt="DSi Menu theme"><figcaption><b>DSi Menu</b><br>Nintendo DSi style</figcaption></figure>
   <figure><img src="assets/img/shots/min_home.png" alt="Minima theme"><figcaption><b>Minima</b><br>Minimal list style</figcaption></figure>
 </div>
 
+<p>There is a fourth choice too: <strong>Custom / ES-DE</strong> renders real EmulationStation-DE theme sets, with a built-in theme downloader (see <a href="esde-themes.html">ES-DE Themes</a>).</p>
 <p>Want the full tour of what each theme offers? Head to <a href="themes.html">Home Themes</a>.</p>
 <h2 id="what-you-can-do"><a class="toclink" href="#what-you-can-do">What you can do</a></h2>
 <ul>

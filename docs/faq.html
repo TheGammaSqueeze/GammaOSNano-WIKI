@@ -38,11 +38,13 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
-<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 <li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
 <li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
 <li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
 <li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
@@ -74,6 +76,7 @@
 <div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
 <li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
 <li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Settings</div><ul>
 <li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
@@ -83,6 +86,7 @@
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
 <li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a class="active" href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -133,7 +137,7 @@
 <h3 id="my-games-have-no-boxart"><a class="toclink" href="#my-games-have-no-boxart">My games have no boxart</a></h3>
 <p>Run the scraper: <strong>Settings &gt; Game Settings &gt; Boxart Scraper</strong>, then <strong>Scrape All Systems</strong>. You can also scrape a single game from its <a href="context-menus.html">Options menu</a> with <strong>Scrape This Game</strong>. Art downloads in the background while you are idle. Full guide on the <a href="boxart.html">Boxart</a> page.</p>
 <h3 id="how-do-i-switch-home-themes"><a class="toclink" href="#how-do-i-switch-home-themes">How do I switch home themes?</a></h3>
-<p>Go to <strong>Settings &gt; Theme Settings &gt; Home Theme</strong> and pick <strong>GammaOS XMB</strong>, <strong>DSi Menu</strong>, or <strong>Minima</strong>. Applying restarts the home so the new look takes effect right away. See <a href="themes.html">Themes</a> for what each one looks like.</p>
+<p>Go to <strong>Settings &gt; Theme Settings &gt; Home Theme</strong> and pick <strong>GammaOS XMB</strong>, <strong>DSi Menu</strong>, <strong>Minima</strong>, or <strong>Custom / ES-DE</strong> (EmulationStation-DE theme sets, see <a href="esde-themes.html">ES-DE Themes</a>). The new look applies right away. See <a href="themes.html">Themes</a> for what each one looks like.</p>
 <h3 id="the-screen-is-too-dark-or-a-shader-broke-the-display"><a class="toclink" href="#the-screen-is-too-dark-or-a-shader-broke-the-display">The screen is too dark or a shader broke the display</a></h3>
 <p>Hold <span class="btnchip">Power</span> + <span class="btnchip">Select</span> together. This disables the system display shader, which is the escape hatch when a shader (like the CRT Shader) makes the screen unreadable. Then adjust or turn off the shader in the <a href="gammaos-toolbox.html">GammaOS Toolbox</a>.</p>
 <p>For a screen that is simply dim, hold <kbd>Select</kbd> + <kbd>Vol +</kbd> to brighten it.</p>
@@ -148,7 +152,7 @@
 <p>The GammaOS XMB theme, with its flowing wave and glass icons, is the heaviest home to draw. On lower-powered devices, the TrimUI Brick for example, it can stutter and warm the device up. Two things help, and both take effect right away:</p>
 <ul>
 <li>Switch to a lighter home in <strong>Settings &gt; Theme Settings &gt; Home Theme</strong>. The <strong>DSi</strong> and <strong>Minima</strong> themes are much lighter than XMB.</li>
-<li>Keep XMB but turn on its <strong>Half Resolution</strong> toggles (Wave, Icons and Clock) in <strong>Theme Settings</strong>. Each renders that layer at half size for a large speed-up while the menu text stays crisp.</li>
+<li>Keep XMB but turn on its <strong>Half Resolution: Wave</strong> and <strong>Half Resolution: Clock</strong> toggles in <strong>Theme Settings</strong>. Each renders that layer at half size for a large speed-up while the menu text stays crisp.</li>
 </ul>
 <h3 id="a-game-crashes-back-to-the-menu-especially-under-load"><a class="toclink" href="#a-game-crashes-back-to-the-menu-especially-under-load">A game crashes back to the menu, especially under load</a></h3>
 <p>Being dropped back to the home is usually a crashing core or a device throttling under load, not a safety feature. Try:</p>
@@ -161,6 +165,7 @@
 <p>By default RetroArch stores save files and save states in the same folder as the game. You can change where they go in <strong>RetroArch &gt; Settings &gt; Directory</strong> (Save Files and Save States). When moving to another device, ordinary in-game saves (<code>.srm</code>) transfer reliably; save states are tied to the exact core version and may not carry across. For the built-in DS emulator, see <a href="drastic-nano.html">DraStic Nano</a> instead.</p>
 <h3 id="wi-fi-keeps-dropping-after-sleep-or-will-not-hold-on-my-mesh-network"><a class="toclink" href="#wi-fi-keeps-dropping-after-sleep-or-will-not-hold-on-my-mesh-network">Wi-Fi keeps dropping after sleep, or will not hold on my mesh network</a></h3>
 <p>If Wi-Fi drops when the screen sleeps or the lid closes, it normally reconnects on wake; if it does not, toggle Wi-Fi off and on in <strong>Network Settings</strong>. If the device keeps dropping, or reboots, on a mesh network or a mixed 2.4/5GHz network, connect it to a dedicated <strong>2.4GHz</strong> access point (or your router's 2.4GHz band under its own name). This has been the reliable fix on the RG DS and RG Vita.</p>
+<p>On the <strong>RG DS Plus</strong>, Wi-Fi that looked connected after sleep but loaded nothing was a driver fault fixed in 1.4.3; update if you still see it.</p>
 <h3 id="my-device-will-not-power-off-turns-back-on-when-i-close-the-lid-or-will-not-power-on"><a class="toclink" href="#my-device-will-not-power-off-turns-back-on-when-i-close-the-lid-or-will-not-power-on">My device will not power off, turns back on when I close the lid, or will not power on</a></h3>
 <p>After switching to GammaOS from another OS (Rocknix in particular), the power controller can be left in a state the GammaOS kernel does not expect. The symptoms arrive together: the device will not power off, turns itself back on when you close the lid, drains to empty overnight, or will not power on after charging.</p>
 <p class="callout warn">The fix is to reset the power controller by disconnecting the battery: open the back cover, unplug the battery for 10 to 15 minutes, then reconnect it. No reinstall is needed. This has mainly been seen on the Anbernic RG DS.</p>
@@ -177,8 +182,38 @@
 <li><a href="settings-reference.html">Settings Reference</a> and <a href="gammaos-toolbox.html">GammaOS Toolbox</a></li>
 <li><a href="adb-and-logs.html">ADB Setup and Logs</a> to connect a PC and collect logs for support</li>
 </ul>
-<h2 id="new-in-this-release"><a class="toclink" href="#new-in-this-release">New in this release</a></h2>
-<p>Common questions about the features added since GammaOS Nano 1.4.</p>
+<h2 id="new-in-142-and-143"><a class="toclink" href="#new-in-142-and-143">New in 1.4.2 and 1.4.3</a></h2>
+<p>Common questions about the changes in GammaOS Nano 1.4.2 and 1.4.3. For the full tour, see <a href="what-s-new-since-1-4-1.html">What's New since 1.4.1</a>.</p>
+<h3 id="why-does-bluetooth-stay-off-now"><a class="toclink" href="#why-does-bluetooth-stay-off-now">Why does Bluetooth stay off now?</a></h3>
+<p>That is on purpose. A fresh install starts with Bluetooth off, the setup wizard no longer has a Bluetooth step, and opening or scanning the device list no longer switches the radio back on behind your back. Bluetooth only turns on when you turn it on: use the Bluetooth toggle in the Quick Menu (hold <span class="btnchip">Power</span>) or the Bluetooth and Accessories screen. See <a href="network.html">Connectivity</a>.</p>
+<h3 id="how-do-i-get-quick-resume-back"><a class="toclink" href="#how-do-i-get-quick-resume-back">How do I get Quick Resume back?</a></h3>
+<p>Quick Resume is now off by default, so every boot starts at the home. Turn it on in <strong>Settings &gt; Game Settings &gt; Quick Resume</strong>, or from <strong>Quick Menu &gt; Quick Resume</strong>. It works for RetroArch and DraStic Nano games. See <a href="quick-resume.html">Quick Resume</a>.</p>
+<h3 id="the-home-stayed-frozen-after-i-left-a-resumed-ds-game"><a class="toclink" href="#the-home-stayed-frozen-after-i-left-a-resumed-ds-game">The home stayed frozen after I left a resumed DS game</a></h3>
+<p>This was the "quick resume loop": after holding <span class="btnchip">Back</span> to leave a DS game that Quick Resume had brought back, the screen could freeze on the last frame with no home, and a reboot resumed the game again. It is fixed in 1.4.3. Leaving a resumed game always brings the home back, and if the device resumes a game twice in a row without any button press, the next boot lands on the home instead. If you are still on an older build, hold <span class="btnchip">Back</span> for 10 seconds to restart the home, then update.</p>
+<h3 id="my-d-pad-and-sticks-stopped-working-after-an-app-crashed-in-mouse-mode"><a class="toclink" href="#my-d-pad-and-sticks-stopped-working-after-an-app-crashed-in-mouse-mode">My d-pad and sticks stopped working after an app crashed in mouse mode</a></h3>
+<p>Since 1.4.3 the home switches mouse mode off as soon as it is back in front, so if an app quits or crashes while mouse mode is on, the d-pad and sticks work again without a restart. Switching mouse mode on or off (<span class="btnchip">Select</span> + <span class="btnchip">R1</span>, or the Mouse tile in the <a href="control-center.html">Control Center</a>) also no longer relaunches or crashes the app you are in. See <a href="gamepad-settings.html">Gamepad Settings</a>.</p>
+<h3 id="do-i-still-need-the-drastic-app-apk-for-ds-games"><a class="toclink" href="#do-i-still-need-the-drastic-app-apk-for-ds-games">Do I still need the DraStic app (APK) for DS games?</a></h3>
+<p>No. Since 1.4.2 everything DraStic Nano needs ships inside GammaOS, and it needs no BIOS. Your saves, save states, shaders, cheats and per-game settings live in the <code>drastic-nano</code> folder on internal storage. On first launch DraStic Nano offers to import saves from an old DraStic install. See <a href="drastic-nano.html">DraStic Nano</a>.</p>
+<h3 id="where-do-my-own-ds-cheat-files-go"><a class="toclink" href="#where-do-my-own-ds-cheat-files-go">Where do my own DS cheat files go?</a></h3>
+<p>Put R4 style <code>usrcheat.dat</code> files in <code>drastic-nano/cheats</code> on internal storage, or pick another folder in <strong>Settings &gt; Game Settings &gt; DraStic Cheats Folder</strong>. They are merged with the built-in cheats when a DS game starts. In the game, the Cheats page shows how many cheat files were found, and its <strong>Show</strong> filter can list only <strong>Built-in</strong> or only <strong>Custom</strong> cheats.</p>
+<h3 id="can-a-ds-game-use-its-own-performance-mode"><a class="toclink" href="#can-a-ds-game-use-its-own-performance-mode">Can a DS game use its own performance mode?</a></h3>
+<p>Yes. In the game, set <strong>Performance</strong> on the General page the way you want, then choose <strong>Create Per-Game Override</strong>. The override stores every setting for that game, including the performance mode. The game switches to its own mode when it starts, and your usual mode comes back when you exit, even after a crash or a reboot mid-game.</p>
+<h3 id="how-do-i-move-my-box-art-to-the-sd-card"><a class="toclink" href="#how-do-i-move-my-box-art-to-the-sd-card">How do I move my box art to the SD card?</a></h3>
+<p>Go to <strong>Settings &gt; Game Settings &gt; Boxart Scraper &gt; Boxart Folder</strong> and pick your SD card (or any folder). Existing covers and backgrounds are moved over, and the art follows the card when it is reinserted. <strong>Use Default Folder</strong> puts it back on internal storage. To delete one system's downloaded art, open it in <strong>Game Systems</strong> and choose <strong>Clear Boxart</strong>. See <a href="boxart.html">Boxart</a>.</p>
+<h3 id="how-do-i-make-the-home-open-on-my-ds-games"><a class="toclink" href="#how-do-i-make-the-home-open-on-my-ds-games">How do I make the home open on my DS games?</a></h3>
+<p>Use <strong>Settings &gt; Theme Settings &gt; Startup Menu</strong>. It lists the default, every category and every game system that has games. Pick <strong>Nintendo DS</strong> (or any other system) and the home opens there at boot. See <a href="theme-settings.html">Theme Settings</a>.</p>
+<h3 id="how-do-i-get-es-de-themes"><a class="toclink" href="#how-do-i-get-es-de-themes">How do I get ES-DE themes?</a></h3>
+<p>Choose <strong>Custom / ES-DE</strong> in <strong>Settings &gt; Theme Settings &gt; Home Theme</strong>. The Slate theme is preinstalled. Press <span class="btnchip">Start</span> for the UI Settings menu, then open <strong>Theme Downloader</strong> to download themes from the official ES-DE list, and pick one under <strong>Theme</strong>. You can also copy ES-DE theme folders into <code>ES-DE/themes</code> on internal storage. <strong>Nano Settings</strong> in the same menu opens the normal settings. See <a href="esde-themes.html">ES-DE Themes</a>.</p>
+<h3 id="rg-ds-plus-wi-fi-was-dead-after-the-device-slept"><a class="toclink" href="#rg-ds-plus-wi-fi-was-dead-after-the-device-slept">RG DS Plus: Wi-Fi was dead after the device slept</a></h3>
+<p>Fixed in 1.4.3. On the RG DS Plus, Wi-Fi could look connected after waking but load nothing, then drop and refuse to reconnect until a reboot, which also made box art scraping fail. Wi-Fi now comes back about two seconds after waking.</p>
+<h3 id="rg-ds-plus-touch-ignored-my-taps-right-after-waking"><a class="toclink" href="#rg-ds-plus-touch-ignored-my-taps-right-after-waking">RG DS Plus: touch ignored my taps right after waking</a></h3>
+<p>Fixed in 1.4.3. The touchscreen could ignore taps for up to ten seconds after waking from deep sleep, in DS games and on the home. The first tap after a wake now lands.</p>
+<h3 id="rg-ds-plus-headphones-and-the-low-latency-ds-audio"><a class="toclink" href="#rg-ds-plus-headphones-and-the-low-latency-ds-audio">RG DS Plus: headphones and the low latency DS audio</a></h3>
+<p>Since 1.4.3 the low latency audio in DraStic Nano also plays through the headphone jack on the RG DS Plus, not only through the speakers. Plugging headphones in switches over automatically, and the speaker EQ is bypassed while they are in.</p>
+<h3 id="rg-ds-plus-the-device-switched-off-during-setup-on-battery"><a class="toclink" href="#rg-ds-plus-the-device-switched-off-during-setup-on-battery">RG DS Plus: the device switched off during setup on battery</a></h3>
+<p>A freshly flashed RG DS Plus could power off part way through the setup wizard unless a charger was connected. This is fixed in 1.4.3. On an older build, keep the charger plugged in for the first setup.</p>
+<h2 id="new-in-141"><a class="toclink" href="#new-in-141">New in 1.4.1</a></h2>
+<p>Common questions about the features added in GammaOS Nano 1.4.1.</p>
 <h3 id="how-do-i-mark-a-game-as-a-favourite"><a class="toclink" href="#how-do-i-mark-a-game-as-a-favourite">How do I mark a game as a favourite?</a></h3>
 <p>Highlight the game and press the Options button, then choose <strong>Add to Favorites</strong>. A single cross-system <strong>Favorites</strong> list appears under the Game category (above Collections) as soon as you star your first game, and it disappears again when you remove your last. Use <strong>Remove from Favorites</strong> in the same menu to un-star.</p>
 <h3 id="can-i-set-my-own-box-art-from-an-image-on-the-device"><a class="toclink" href="#can-i-set-my-own-box-art-from-an-image-on-the-device">Can I set my own box art from an image on the device?</a></h3>
@@ -207,15 +242,15 @@
 <h3 id="why-does-a-game-show-a-black-screen-instead-of-launching"><a class="toclink" href="#why-does-a-game-show-a-black-screen-instead-of-launching">Why does a game show a black screen instead of launching?</a></h3>
 <p>If the emulator for that game is not installed, Nano now shows a short warning message instead of black-screening. Install the required RetroArch core or standalone emulator app, or set the correct emulator for that system in <strong>Settings &gt; Game Settings &gt; Game Systems</strong>, and try again.</p>
 <h3 id="does-the-dsi-theme-have-a-dark-mode"><a class="toclink" href="#does-the-dsi-theme-have-a-dark-mode">Does the DSi theme have a dark mode?</a></h3>
-<p>Yes. Switch to the DSi theme, then in <strong>Settings &gt; Theme Settings</strong> turn on <strong>Dark Theme</strong>. The whole DSi look flips to light text and icons on a dark field, and it applies immediately. The DSi theme also follows your accent <strong>Colour</strong> setting.</p>
+<p>Yes. Switch to the DSi theme, then in <strong>Settings &gt; Theme Settings</strong> turn on <strong>DSi Dark Theme</strong>. The whole DSi look flips to light text and icons on a dark field, and it applies immediately. The DSi theme also follows your accent <strong>Colour</strong> setting.</p>
 <h3 id="how-do-i-paste-a-url-or-long-text-into-a-text-field"><a class="toclink" href="#how-do-i-paste-a-url-or-long-text-into-a-text-field">How do I paste a URL or long text into a text field?</a></h3>
 <p>When the on-screen keyboard is open, press Y to paste whatever is on the system clipboard into the field. This saves typing out long URLs and passwords by hand.</p>
 <h3 id="my-multi-disc-ps1-game-shows-every-disc-separately-how-do-i-group-them"><a class="toclink" href="#my-multi-disc-ps1-game-shows-every-disc-separately-how-do-i-group-them">My multi-disc PS1 game shows every disc separately. How do I group them?</a></h3>
 <p>Create a <code>.m3u</code> playlist file listing the disc images and place it alongside them. Nano groups multi-disc games referenced by an <code>.m3u</code> into a single launchable entry and hides the individual discs. This is on by default. If your CD games are in subfolders, you can also enable <strong>Scan ROM Subfolders</strong> in GammaOS Toolbox so they are found.</p>
 <h3 id="can-i-move-where-drastic-keeps-its-saves"><a class="toclink" href="#can-i-move-where-drastic-keeps-its-saves">Can I move where DraStic keeps its saves?</a></h3>
-<p>Yes. Go to <strong>Settings &gt; Game Settings &gt; DraStic Data Folder</strong> and choose a folder on shared storage. drastic-nano and the standalone DraStic app then use that same location, so your saves, config and BIOS live in one place you can reach outside the app.</p>
+<p>Yes. Go to <strong>Settings &gt; Game Settings &gt; DraStic Data Folder</strong> and choose any folder, including the SD card, removable storage or a network share. Your saves, save states and shader overrides move there (by default they live in <code>drastic-nano</code> on internal storage). The in-game Save States page shows the folders currently in use, and <strong>Use Default Folder</strong> puts them back. DraStic Nano does not need the standalone DraStic app.</p>
 <h3 id="drastic-runs-slowly-on-my-device-what-can-i-try"><a class="toclink" href="#drastic-runs-slowly-on-my-device-what-can-i-try">DraStic runs slowly on my device. What can I try?</a></h3>
-<p>Open the in-game overlay and go to Video. Turn on <strong>Half Resolution</strong> to render at half size and upscale (a big speed-up on fill-bound panels, at the cost of a softer image). You can also try <strong>16-Bit Layout</strong> to cut bandwidth. <strong>SF Vsync Lock</strong> is off by default and only helps once the frame already fits inside the vblank. All three are opt-in and safe to toggle live. The optional <strong>FPS Counter</strong> in the same menu helps you see the effect.</p>
+<p>Open the in-game overlay and go to Video. Turn on <strong>Half Resolution</strong> to render at half size and upscale (a big speed-up on fill-bound panels, at the cost of a softer image). You can also try <strong>16-bit Framebuffers</strong> to cut bandwidth. Both are opt-in and safe to toggle live. If you use <strong>Hi-res 3D</strong>, the experimental <strong>GPU 3D Renderer</strong> moves the 3D work off the CPU. The <strong>FPS Counter</strong> in the same menu shows two readouts, <strong>BLIT</strong> (what reaches the screen) and <strong>GAME</strong> (the real emulation speed), so you can see the effect.</p>
 <h3 id="streaming-apps-like-disney-show-a-drm-or-certification-error-any-fix"><a class="toclink" href="#streaming-apps-like-disney-show-a-drm-or-certification-error-any-fix">Streaming apps like Disney+ show a DRM or certification error. Any fix?</a></h3>
 <p>Go to <strong>Settings &gt; GammaOS Toolbox</strong> and enable <strong>Widevine L3 Compatibility</strong>. This forces Widevine L3 mode, which resolves common DRM errors (such as the Disney+ error) on uncertified devices.</p>
         <footer class="page-foot">
@@ -223,7 +258,25 @@
         </footer>
       </article>
       <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
-<li><a href="#new-in-this-release">New in this release</a>
+<li><a href="#new-in-142-and-143">New in 1.4.2 and 1.4.3</a>
+<ul>
+<li><a href="#why-does-bluetooth-stay-off-now">Why does Bluetooth stay off now?</a></li>
+<li><a href="#how-do-i-get-quick-resume-back">How do I get Quick Resume back?</a></li>
+<li><a href="#the-home-stayed-frozen-after-i-left-a-resumed-ds-game">The home stayed frozen after I left a resumed DS game</a></li>
+<li><a href="#my-d-pad-and-sticks-stopped-working-after-an-app-crashed-in-mouse-mode">My d-pad and sticks stopped working after an app crashed in mouse mode</a></li>
+<li><a href="#do-i-still-need-the-drastic-app-apk-for-ds-games">Do I still need the DraStic app (APK) for DS games?</a></li>
+<li><a href="#where-do-my-own-ds-cheat-files-go">Where do my own DS cheat files go?</a></li>
+<li><a href="#can-a-ds-game-use-its-own-performance-mode">Can a DS game use its own performance mode?</a></li>
+<li><a href="#how-do-i-move-my-box-art-to-the-sd-card">How do I move my box art to the SD card?</a></li>
+<li><a href="#how-do-i-make-the-home-open-on-my-ds-games">How do I make the home open on my DS games?</a></li>
+<li><a href="#how-do-i-get-es-de-themes">How do I get ES-DE themes?</a></li>
+<li><a href="#rg-ds-plus-wi-fi-was-dead-after-the-device-slept">RG DS Plus: Wi-Fi was dead after the device slept</a></li>
+<li><a href="#rg-ds-plus-touch-ignored-my-taps-right-after-waking">RG DS Plus: touch ignored my taps right after waking</a></li>
+<li><a href="#rg-ds-plus-headphones-and-the-low-latency-ds-audio">RG DS Plus: headphones and the low latency DS audio</a></li>
+<li><a href="#rg-ds-plus-the-device-switched-off-during-setup-on-battery">RG DS Plus: the device switched off during setup on battery</a></li>
+</ul>
+</li>
+<li><a href="#new-in-141">New in 1.4.1</a>
 <ul>
 <li><a href="#how-do-i-mark-a-game-as-a-favourite">How do I mark a game as a favourite?</a></li>
 <li><a href="#can-i-set-my-own-box-art-from-an-image-on-the-device">Can I set my own box art from an image on the device?</a></li>

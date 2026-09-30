@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Home Themes - GammaOS Nano</title>
-<meta name="description" content="The three home themes and how to switch and customize them.">
+<meta name="description" content="The four home themes (XMB, DSi, Minima and ES-DE) and how to switch and customize them.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -38,11 +38,13 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
-<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 <li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a class="active" href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
 <li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
 <li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
 <li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
@@ -74,6 +76,7 @@
 <div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
 <li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
 <li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Settings</div><ul>
 <li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
@@ -83,6 +86,7 @@
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
 <li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -96,14 +100,14 @@
     
     <div class="prose has-toc">
       <article class="article">
-        <p class="lead">GammaOS Nano gives you three complete home themes in one interface. Pick the look you love and everything (games, media, apps, Settings) reshapes to match.</p>
+        <p class="lead">GammaOS Nano gives you four complete home themes in one interface: three of its own, plus a theme engine that draws real EmulationStation-DE theme sets. Pick the look you love and everything (games, media, apps, Settings) reshapes to match.</p>
 <div class="theme-trio">
   <figure><img src="assets/img/shots/xmb_home.png" alt="GammaOS XMB theme"><figcaption><b>GammaOS XMB</b><br>PlayStation 3 style</figcaption></figure>
   <figure><img src="assets/img/shots/dsi_home.png" alt="DSi Menu theme"><figcaption><b>DSi Menu</b><br>Nintendo DSi style</figcaption></figure>
   <figure><img src="assets/img/shots/min_home.png" alt="Minima theme"><figcaption><b>Minima</b><br>Minimal list style</figcaption></figure>
 </div>
 
-<p>All three themes launch the same games, play the same media, and share the same deep <a href="settings-reference.html">Settings</a>. They just wear it differently.</p>
+<p>All four themes launch the same games, play the same media, and share the same deep <a href="settings-reference.html">Settings</a>. They just wear it differently.</p>
 <figure class="ui-video-fig">
   <span class="ui-video-badge">Live demo</span>
   <video class="ui-video" autoplay loop muted playsinline poster="assets/video/ui-nav-poster.jpg">
@@ -148,6 +152,10 @@
 </tbody>
 </table>
 <p>Day/Night changes the lighting mood of the whole home. Leave it on Auto and it follows the time of day for you.</p>
+<h3 id="half-resolution-for-smoother-xmb"><a class="toclink" href="#half-resolution-for-smoother-xmb">Half Resolution for smoother XMB</a></h3>
+<p>On devices with a weaker GPU, two XMB-only rows in Theme Settings, <strong>Half Resolution: Wave</strong> and <strong>Half Resolution: Clock</strong>, draw just the wave or just the clock at half size and scale it up. The menu text and icons stay sharp while the frame rate holds. See <a href="theme-settings.html#half-resolution-wave-clock">Half Resolution: Wave / Clock</a>.</p>
+<h3 id="confirmations-in-the-clock-bar"><a class="toclink" href="#confirmations-in-the-clock-bar">Confirmations in the clock bar</a></h3>
+<p>When you change a setting, sort a list or pin an item, XMB now confirms it with a small "Setting changed" style toast drawn as frosted glass inside the clock bar, instead of a banner across the middle of the screen (pictured in <a href="theme-settings.html#setting-confirmations">Setting confirmations</a>).</p>
 <h3 id="xmb-on-portrait-and-small-panels"><a class="toclink" href="#xmb-on-portrait-and-small-panels">XMB on portrait and small panels</a></h3>
 <p>On small portrait panels XMB scales itself up so icons and text stay readable, and the User Guide uses the full screen width.</p>
 <p>On portrait panels the XMB option side panel marquee-scrolls the focused row instead of truncating a long label, so you can always read the whole option name.</p>
@@ -156,12 +164,51 @@
 <p><img alt="DSi carousel home" src="assets/img/shots/dsi_home.png" /></p>
 <p>Drill into a category (like Game) and you get a familiar list with boxart, the same as the other themes.</p>
 <p><img alt="DSi game list with boxart" src="assets/img/shots/dsi_romlist.png" /></p>
-<p>DSi has one option of its own on single-panel devices: a <strong>Single-Screen / Stacked</strong> layout choice. You can keep the carousel-only view (the default), or switch to a stacked layout with the status bar on top. Dual-screen devices always use both physical panels, so this choice is for single-panel handhelds.</p>
+<p>On single-panel devices DSi also offers a <strong>Single-Screen / Stacked</strong> layout choice. You can keep the carousel-only view (the default), or switch to a stacked layout with the status bar on top. Dual-screen devices always use both physical panels, so this choice is for single-panel handhelds.</p>
 <h3 id="dsi-dark-theme"><a class="toclink" href="#dsi-dark-theme">DSi Dark Theme</a></h3>
-<p>The DSi theme now has a dark variant. With the DSi theme active, turn on <strong>Dark Theme</strong> in Theme Settings and the whole DSi look flips live: the carousel, top screen, information page, dialogs, status bar and tile cards all switch to light text and icons on a dark field. It is a shared palette, so everything recolours together in one step, no restart needed.</p>
+<p>The DSi theme has a dark variant. With the DSi theme active, turn on <strong>DSi Dark Theme</strong> in Theme Settings and the whole DSi look flips live: the carousel, top screen, information page, dialogs, status bar and tile cards all switch to light text and icons on a dark field. It is a shared palette, so everything recolours together in one step, no restart needed.</p>
 <p><img alt="DSi Dark Theme" src="assets/img/shots/wn_dsi_dark_theme.png" /></p>
 <h3 id="dsi-accent-colour"><a class="toclink" href="#dsi-accent-colour">DSi accent colour</a></h3>
-<p>The DSi theme now follows the <strong>Colour</strong> accent setting like the other themes. Your accent recolours the glossy list buttons, the scrollbar, the carousel selection frame, the back button, the scroll arrows and the dialog borders, so the DSi chrome matches whichever accent you picked.</p>
+<p>The DSi theme follows the <strong>Colour</strong> accent setting like the other themes. Your accent recolours the glossy list buttons, the scrollbar, the carousel selection frame, the back button, the scroll arrows and the dialog borders, so the DSi chrome matches whichever accent you picked.</p>
+<p>The top screen follows your colour too. Any accent other than <strong>Original</strong> recolours the top-screen canvas, its text and the selection frame in the true hue you picked, including a <a href="#custom-colour-picker">Custom</a> colour.</p>
+<p><img alt="DSi home recoloured by a Custom accent colour" class="dual" src="assets/img/shots/v143_dsi_custom_accent.png" /></p>
+<h3 id="each-ds-games-own-icon-and-title"><a class="toclink" href="#each-ds-games-own-icon-and-title">Each DS game's own icon and title</a></h3>
+<p>DS games show the icon and name stored in the cartridge, just like on a real DSi. A DS ROM without a scraped name shows the title read from the ROM (for example "Pokemon White Version 2" rather than the file name), and a DS game without box art shows its own cartridge icon on the carousel tile.</p>
+<p><img alt="DS games with their own cartridge icons and ROM titles" class="dual" src="assets/img/shots/v143_dsi_rom_icons.png" /></p>
+<p>Two DSi rows in Theme Settings control this:</p>
+<ul>
+<li><strong>Titles From ROM</strong> (on by default): use the title stored in the cartridge for DS games that have no scraped name.</li>
+<li><strong>DS Icons On Tiles</strong> (off by default): keep each DS game's own cartridge icon on the carousel tile even when scraped box art exists. The box art still shows on the top screen.</li>
+</ul>
+<h3 id="background-effect-on-both-screens"><a class="toclink" href="#background-effect-on-both-screens">Background Effect on both screens</a></h3>
+<p>The animated background effects from XMB come to the DSi home. Pick one on the DSi <strong>Wallpaper</strong> row in Theme Settings (Snow, Rain, Confetti, Fireflies, Starfield, Aurora, XMB Wave and many more) and it plays behind a see-through canvas, name balloon and scroll rail on both screens. The DSi keeps its own choice, separate from the one XMB uses. See <a href="theme-settings.html#dsi-background-effect">DSi Background Effect</a> for the full list.</p>
+<figure class="ui-video-fig ar-23">
+  <span class="ui-video-badge">Live demo</span>
+  <video class="ui-video ar-23" autoplay loop muted playsinline poster="assets/video/dsi-effect-poster.jpg">
+    <source src="assets/video/dsi-effect.mp4" type="video/mp4">
+  </video>
+  <figcaption>The XMB Wave background effect behind the DSi home on both screens while the carousel scrolls (a real on-device capture, so the clip runs at a low frame rate).</figcaption>
+</figure>
+
+<h3 id="button-legends-on-the-top-screen"><a class="toclink" href="#button-legends-on-the-top-screen">Button legends on the top screen</a></h3>
+<p>The DSi top screen shows which buttons do what, DSi style, in its corners: <span class="btnchip">X</span> <strong>Options</strong> at the bottom left, and <span class="btnchip">Y</span> <strong>Sort</strong>, <strong>Pin</strong>, <strong>Unpin</strong> or <strong>Info</strong> at the bottom right, depending on what is highlighted. They appear automatically (there is no setting) and match the light or dark DSi look.</p>
+<p><img alt="DSi top screen with X Options and Y Sort legends" class="dual" src="assets/img/shots/v143_dsi_button_legends.png" /></p>
+<h3 id="launch-effect-plays-to-the-end"><a class="toclink" href="#launch-effect-plays-to-the-end">Launch effect plays to the end</a></h3>
+<p>When you start a game, the DSi launch effect (the tile lifts, a sparkle ring spins and the screen washes to white) now plays all the way through at 60 fps before the game appears. When you come back, the carousel is on the game you launched.</p>
+<figure class="ui-video-fig ar-43">
+  <span class="ui-video-badge">Live demo</span>
+  <video class="ui-video ar-43" autoplay loop muted playsinline poster="assets/video/dsi-launch-poster.jpg">
+    <source src="assets/video/dsi-launch.mp4" type="video/mp4">
+  </video>
+  <figcaption>The DSi launch effect on the bottom screen when starting a DS game.</figcaption>
+</figure>
+
+<h3 id="faster-tidier-dsi"><a class="toclink" href="#faster-tidier-dsi">Faster, tidier DSi</a></h3>
+<ul>
+<li><strong>60 fps, even in power saver.</strong> The DSi home draws far less per frame, so it holds 60 fps even in power saver mode, and it stops redrawing completely when nothing on screen moves.</li>
+<li><strong>Settings pages as lists.</strong> Game Settings and Theme Settings show as proper lists in the DSi theme, and the scroll bar lands exactly on the last card.</li>
+<li><strong>Battery percent.</strong> Turn on <strong>Show Battery Percent</strong> in Theme Settings to see the charge as a number beside the battery in the DSi status bar (Minima shows it in its status pill).</li>
+</ul>
 <h2 id="minima-nextui-style"><a class="toclink" href="#minima-nextui-style">Minima (NextUI style)</a></h2>
 <p>A clean, minimal vertical text list on a black canvas. The selected row is a bright white rounded capsule with inverted text, and there is a small accent status pill plus a bottom button-hint bar so you always know your controls. Scrolling is a smooth exponential glide. The main list keeps things text-only with no icons.</p>
 <p><img alt="Minima minimal list home" src="assets/img/shots/min_home.png" /></p>
@@ -177,19 +224,70 @@
 <li><strong>Portrait scaling.</strong> On portrait panels Minima scales by the short edge, so text and item density track the narrow dimension and stay readable.</li>
 <li><strong>Button-legend circles at large fonts.</strong> The A/B/Y glyph badges in the hint bar size correctly at large font settings, with the letters fitting neatly inside their rings.</li>
 </ul>
+<h2 id="custom-es-de-emulationstation-de-themes"><a class="toclink" href="#custom-es-de-emulationstation-de-themes">Custom / ES-DE (EmulationStation-DE themes)</a></h2>
+<p>The fourth theme renders real EmulationStation-DE theme sets inside Nano, with their variants, colour schemes, aspect ratios and per-game art. The Slate theme is preinstalled, a built-in Theme Downloader installs more from the official ES-DE themes list, and you can copy theme folders onto the device yourself. Games still launch through Nano with your usual emulators.</p>
+<p>Everything about it (the Start menu, downloading and adding themes, and how to get back to Nano's own settings) is on its own page: <a href="esde-themes.html">ES-DE Themes</a>.</p>
+<h2 id="charging-indicator"><a class="toclink" href="#charging-indicator">Charging indicator</a></h2>
+<p>In the DSi, XMB and Minima status bars, the battery icon shows a lightning bolt while the device is charging, on top of the colour change it already had, so you can tell at a glance that the charger is connected.</p>
 <h2 id="switching-themes"><a class="toclink" href="#switching-themes">Switching themes</a></h2>
 <p>Changing your whole home is one setting away.</p>
 <ol>
 <li>Open Settings &gt; <strong>Theme Settings</strong>.</li>
 <li>Choose <strong>Home Theme</strong>.</li>
-<li>Pick GammaOS XMB, DSi Menu, or Minima.</li>
+<li>Pick <strong>GammaOS XMB</strong>, <strong>DSi Menu</strong>, <strong>Minima</strong> or <strong>Custom / ES-DE</strong>.</li>
 </ol>
-<p class="callout note">Applying a new theme restarts the home so the new look loads cleanly. Give it a second and you are in the new interface.</p>
+<p class="callout note">The new theme applies straight away. From the ES-DE theme, the Home Theme row is reached through <strong>Start &gt; NANO SETTINGS &gt; Full Settings &gt; Theme Settings</strong> (see <a href="esde-themes.html#switching-back-to-another-theme">ES-DE Themes</a>).</p>
 <p>The same menus simply look different in each theme. A Settings screen in Minima (see <code>min_settings.png</code>) and an Options menu in DSi (see <code>dsi_optmenu.png</code>) show the exact same choices as their XMB counterparts, just dressed to match the theme you chose.</p>
-<h2 id="accent-colour-all-three-themes"><a class="toclink" href="#accent-colour-all-three-themes">Accent Colour (all three themes)</a></h2>
-<p>Under Settings &gt; Theme Settings &gt; <strong>Colour</strong> you get 21 accent choices that apply to whichever theme you are using:</p>
+<h2 id="accent-colour-xmb-dsi-and-minima"><a class="toclink" href="#accent-colour-xmb-dsi-and-minima">Accent Colour (XMB, DSi and Minima)</a></h2>
+<p>Under Settings &gt; Theme Settings &gt; <strong>Colour</strong> you get 21 preset accents plus a <strong>Custom...</strong> colour of your own, applied to whichever of the three Nano themes you are using (ES-DE themes bring their own colour schemes instead):</p>
 <p><strong>Original</strong> (each theme's signature colour: XMB uses a per-month hue, Minima a berry tone, DSi its azure), plus Yellow, Green, Pink, Dark Green, Light Purple, Teal, Dark Blue, Magenta, Orange, Brown, Red, Black, White, Gray, Blue, Cyan, Lime, Gold, Violet, and Crimson.</p>
-<p>The accent shows up differently in each theme. On XMB it tints the wave and menu accents, on Minima it colours the capsule and hint bar, and on DSi it hue-rotates the chrome. One colour, three personalities.</p>
+<p>The accent shows up differently in each theme. On XMB it tints the wave and menu accents, on Minima it colours the capsule and hint bar, and on DSi it recolours the chrome and the top screen. One colour, three personalities.</p>
+<h3 id="custom-colour-picker"><a class="toclink" href="#custom-colour-picker">Custom colour picker</a></h3>
+<p>Pick <strong>Custom...</strong> at the very end of the Colour list to open the full-screen <strong>Custom Colour</strong> picker and dial in any colour you like. The preview, the colour bar and the hex value update live as you move.</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="btnchip">D-Pad</span> / stick Left and Right</td>
+<td>Change the hue</td>
+</tr>
+<tr>
+<td><span class="btnchip">D-Pad</span> / stick Up and Down</td>
+<td>Change the brightness</td>
+</tr>
+<tr>
+<td><span class="btnchip">L1</span> / <span class="btnchip">R1</span></td>
+<td>Less or more saturation</td>
+</tr>
+<tr>
+<td><span class="btnchip">A</span></td>
+<td>Apply the colour</td>
+</tr>
+<tr>
+<td><span class="btnchip">B</span></td>
+<td>Cancel and keep your previous colour</td>
+</tr>
+<tr>
+<td>Hold <span class="btnchip">Select</span> (about a second)</td>
+<td>Exit the picker</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="The Custom Colour picker" class="wide" src="assets/img/shots/v143_dsi_custom_colour_picker.png" /></p>
+<figure class="ui-video-fig ar-43">
+  <span class="ui-video-badge">Live demo</span>
+  <video class="ui-video ar-43" autoplay loop muted playsinline poster="assets/video/colour-picker-poster.jpg">
+    <source src="assets/video/colour-picker.mp4" type="video/mp4">
+  </video>
+  <figcaption>Moving the hue and brightness in the Custom Colour picker; the hex value and colour bar follow live.</figcaption>
+</figure>
+
+<p>Once applied, the Colour row reads <strong>Custom</strong>, and the colour drives the accent in XMB, DSi and Minima live.</p>
 <h2 id="wallpapers"><a class="toclink" href="#wallpapers">Wallpapers</a></h2>
 <p>You can replace the default background with your own picture or a looping video, all from Settings &gt; Theme Settings.</p>
 <table>
@@ -231,7 +329,8 @@
 <h2 id="clocks-follow-your-time-and-date-format"><a class="toclink" href="#clocks-follow-your-time-and-date-format">Clocks follow your Time and Date Format</a></h2>
 <p>The DSi top-screen clock and the Minima status-pill clock both follow your <strong>Time Format</strong> (12 or 24 hour), and the DSi date follows your <strong>Date Format</strong>. Set these under Settings and every theme's clock matches.</p>
 <h2 id="keep-exploring"><a class="toclink" href="#keep-exploring">Keep exploring</a></h2>
-<p>For a tour of everything added since version 1.4, see <a href="what-s-new-since-1-4.html">What's New since 1.4</a>.</p>
+<p>For what changed in 1.4.2 and 1.4.3, see <a href="what-s-new-since-1-4.html">What's New since 1.4</a> and the <a href="esde-themes.html">ES-DE Themes</a> page.</p>
+<p>For a tour of the newest additions, see <a href="what-s-new-since-1-4-1.html">What's New since 1.4.1</a>; the earlier 1.4.1 changes are in <a href="what-s-new-since-1-4.html">What's New in 1.4.1</a>.</p>
 <p>See the full list of every option in the <a href="settings-reference.html">Settings reference</a>, and check the <a href="gammaos-toolbox.html">GammaOS Toolbox</a> for extra display and system tweaks that pair well with your chosen theme.</p>
         <footer class="page-foot">
           <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
@@ -240,6 +339,8 @@
       <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
 <li><a href="#gammaos-xmb-playstation-3-style">GammaOS XMB (PlayStation 3 style)</a>
 <ul>
+<li><a href="#half-resolution-for-smoother-xmb">Half Resolution for smoother XMB</a></li>
+<li><a href="#confirmations-in-the-clock-bar">Confirmations in the clock bar</a></li>
 <li><a href="#xmb-on-portrait-and-small-panels">XMB on portrait and small panels</a></li>
 </ul>
 </li>
@@ -247,6 +348,11 @@
 <ul>
 <li><a href="#dsi-dark-theme">DSi Dark Theme</a></li>
 <li><a href="#dsi-accent-colour">DSi accent colour</a></li>
+<li><a href="#each-ds-games-own-icon-and-title">Each DS game&#x27;s own icon and title</a></li>
+<li><a href="#background-effect-on-both-screens">Background Effect on both screens</a></li>
+<li><a href="#button-legends-on-the-top-screen">Button legends on the top screen</a></li>
+<li><a href="#launch-effect-plays-to-the-end">Launch effect plays to the end</a></li>
+<li><a href="#faster-tidier-dsi">Faster, tidier DSi</a></li>
 </ul>
 </li>
 <li><a href="#minima-nextui-style">Minima (NextUI style)</a>
@@ -254,9 +360,16 @@
 <li><a href="#minima-details">Minima details</a></li>
 </ul>
 </li>
+<li><a href="#custom-es-de-emulationstation-de-themes">Custom / ES-DE (EmulationStation-DE themes)</a>
+</li>
+<li><a href="#charging-indicator">Charging indicator</a>
+</li>
 <li><a href="#switching-themes">Switching themes</a>
 </li>
-<li><a href="#accent-colour-all-three-themes">Accent Colour (all three themes)</a>
+<li><a href="#accent-colour-xmb-dsi-and-minima">Accent Colour (XMB, DSi and Minima)</a>
+<ul>
+<li><a href="#custom-colour-picker">Custom colour picker</a></li>
+</ul>
 </li>
 <li><a href="#wallpapers">Wallpapers</a>
 </li>

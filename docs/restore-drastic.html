@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Restore DraStic (RG DS) - GammaOS Nano</title>
-<meta name="description" content="Reinstall DraStic Nano and its default configuration on the RG DS from a PC over ADB, and restore the DraStic system properties.">
+<meta name="description" content="Reinstall the stock DraStic app and its default configuration on the RG DS from a PC over ADB, and restore the DraStic system properties.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -38,11 +38,13 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
-<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 <li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
 <li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
 <li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
 <li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
@@ -74,6 +76,7 @@
 <div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
 <li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
 <li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Settings</div><ul>
 <li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
@@ -83,6 +86,7 @@
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
 <li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -96,12 +100,27 @@
     
     <div class="prose has-toc">
       <article class="article">
-        <p class="lead">If DraStic on your RG DS stops launching, loses its configuration, or you just want to reset it to the
-way it shipped, you can put back the exact app and default config that GammaOS installs on first boot,
-plus the DraStic system properties, from a computer over ADB. This page is the end to end procedure.</p>
+        <p class="lead">If the stock DraStic app on your RG DS stops launching, loses its configuration, or you just want to
+reset it to the way it shipped, you can put back the exact app and default config that GammaOS installs
+on first boot, plus the DraStic system properties, from a computer over ADB. This page is the end to end
+procedure.</p>
+<h2 id="do-you-need-this-page"><a class="toclink" href="#do-you-need-this-page">Do you need this page?</a></h2>
+<p>Since GammaOS 1.4.2, DS games from the Game menu run on the built-in <a href="drastic-nano.html">DraStic Nano</a>,
+which ships everything it needs in the system and <strong>does not use the DraStic app at all</strong>. Its saves
+live in <code>/sdcard/drastic-nano</code>, not in the app's folder. So reinstalling the app will not change how
+DS games from the Game menu play, and you do not need it for DraStic Nano.</p>
+<p>This page is still useful when:</p>
+<ul>
+<li>you want the <strong>stock DraStic app</strong> itself back (for example to open it from Applications), or its
+  configuration has broken;</li>
+<li>DS games from the Game menu open the stock DraStic app instead of DraStic Nano. That means the
+  DraStic Nano switch property was lost: <a href="#step-2-restore-the-drastic-properties">Step 2</a> puts it back.</li>
+</ul>
+<p class="callout tip">If a DS game misbehaves in DraStic Nano, look at the <a href="drastic-nano.html">DraStic Nano</a> page first
+(for example turn the experimental GPU 3D renderer off).</p>
 <p class="callout note">This restores the <strong>DraStic app and its default config</strong> (the files under the app's own data folder)
-and the <strong>DraStic properties</strong>. It does <strong>not</strong> touch your games or saves: ROMs and save files on
-internal storage (<code>/sdcard/ROMs</code>) are left alone.</p>
+and the <strong>DraStic properties</strong>. It does <strong>not</strong> touch your games or DraStic Nano's saves: ROMs
+(<code>/sdcard/ROMs</code>) and the <code>drastic-nano</code> folder are left alone.</p>
 <h2 id="what-you-need"><a class="toclink" href="#what-you-need">What you need</a></h2>
 <ul>
 <li>A computer with <strong>ADB</strong> installed and your RG DS connected over USB with <strong>USB debugging</strong> on. New
@@ -109,7 +128,7 @@ internal storage (<code>/sdcard/ROMs</code>) are left alone.</p>
 <li><strong>Root ADB.</strong> The steps write to protected system folders, so they run <code>adb root</code> first. This works
   on the standard GammaOS builds.</li>
 </ul>
-<p class="callout tip">The files used below (<code>drastic_r2.6.0.4a.apk</code> and <code>drastic.tar.gz</code>) already live on the device in
+<p class="callout tip">The files used below (<code>drastic_r2.6.0.4a.apk</code> and <code>drastic.tar.zst</code>) already live on the device in
 <code>/system/etc</code>, so you do not need to download anything.</p>
 <h2 id="step-1-reinstall-drastic-and-its-default-config"><a class="toclink" href="#step-1-reinstall-drastic-and-its-default-config">Step 1: reinstall DraStic and its default config</a></h2>
 <p>Open a terminal or Command Prompt on your computer and run:</p>
@@ -119,7 +138,7 @@ adb shell <span class="s1">&#39;pm install -r /system/etc/drastic_r2.6.0.4a.apk&
 adb shell <span class="s1">&#39;</span>
 <span class="s1">u=$(stat -c &quot;%U&quot; /data/data/com.dsemu.drastic)</span>
 <span class="s1">g=$(stat -c &quot;%G&quot; /data/data/com.dsemu.drastic)</span>
-<span class="s1">tar -xf /system/etc/drastic.tar.gz -C /</span>
+<span class="s1">zstd -dc /system/etc/drastic.tar.zst | tar -x -P -C /</span>
 <span class="s1">rm -f /data/data/com.dsemu.drastic/files/DraStic/shaders/SMAA.dfx /data/data/com.dsemu.drastic/files/DraStic/shaders/Scanline.dfx /data/data/com.dsemu.drastic/files/DraStic/shaders/scanline.dsd</span>
 <span class="s1">rm -rf /data/data/com.dsemu.drastic/files/DraStic/shaders/smaa</span>
 <span class="s1">chown -R $u:$g /data/data/com.dsemu.drastic</span>
@@ -132,7 +151,9 @@ adb shell <span class="s1">&#39;</span>
 <p>What each part does:</p>
 <ul>
 <li><code>pm install -r ...</code> installs (or reinstalls, keeping data) the DraStic APK.</li>
-<li><code>tar -xf drastic.tar.gz -C /</code> unpacks the default DraStic configuration into the app's data folder.</li>
+<li><code>zstd -dc drastic.tar.zst | tar -x -P -C /</code> unpacks the default DraStic configuration into the app's
+  data folder. (Builds before 1.4.2 shipped it as <code>drastic.tar.gz</code>; on those, use
+  <code>tar -xf /system/etc/drastic.tar.gz -C /</code> instead.)</li>
 <li>The two <code>rm</code> lines remove the SMAA and Scanline shaders. SMAA forces a desktop GLSL path that does
   not exist on the Mali GPU, so DraStic crashes if it is selected; Scanline is unwanted. GammaOS ships
   without them, and this prunes any left over from an older install.</li>
@@ -166,7 +187,7 @@ adb reboot
 <tr>
 <td><code>persist.gammaos.nano.drastic_nano</code></td>
 <td><code>1</code></td>
-<td>Turns on DraStic Nano, the built-in DraStic front end and overlay.</td>
+<td>Sends DS games from the Game menu to DraStic Nano, the built-in DS player, instead of the stock app.</td>
 </tr>
 <tr>
 <td><code>persist.gammaos.nano.triple_buffer</code></td>
@@ -190,7 +211,8 @@ adb reboot
 <h2 id="step-3-verify"><a class="toclink" href="#step-3-verify">Step 3: verify</a></h2>
 <p>After the reboot:</p>
 <ul>
-<li>Open DraStic from the Applications category (or launch a DS game) and confirm it starts and plays.</li>
+<li>Open DraStic from the Applications category and confirm it starts. Launch a DS game from the Game
+  menu and confirm it opens in DraStic Nano (a short tap of Back shows the DraStic Nano menu).</li>
 <li>Confirm the properties took, if you want to double check:</li>
 </ul>
 <div class="codehilite"><pre><span></span><code>adb shell getprop persist.gammaos.nano.drastic_nano
@@ -204,9 +226,11 @@ a completely clean state first, uninstall it before Step 1:</p>
 adb shell <span class="s1">&#39;pm uninstall com.dsemu.drastic&#39;</span>
 </code></pre></div>
 
-<p class="callout note">Then run Step 1 and Step 2 as above. Your ROMs and save files on <code>/sdcard/ROMs</code> are not affected by
-the uninstall, but any DraStic settings, cheats, or save states kept inside the app's own data folder
-are removed and replaced with the defaults.</p>
+<p class="callout note">Then run Step 1 and Step 2 as above. Your ROMs on <code>/sdcard/ROMs</code> and DraStic Nano's <code>drastic-nano</code>
+folder are not affected by the uninstall, but any DraStic app settings, cheats, or save states kept
+inside the app's own data folder are removed and replaced with the defaults. If you still have saves
+there that you want in DraStic Nano, use <strong>Import DraStic saves</strong> on DraStic Nano's General page
+before uninstalling.</p>
 <h2 id="troubleshooting"><a class="toclink" href="#troubleshooting">Troubleshooting</a></h2>
 <ul>
 <li><strong><code>adb root</code> says it cannot run as root.</strong> Make sure the device is actually running GammaOS, not
@@ -230,6 +254,8 @@ are removed and replaced with the defaults.</p>
         </footer>
       </article>
       <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#do-you-need-this-page">Do you need this page?</a>
+</li>
 <li><a href="#what-you-need">What you need</a>
 </li>
 <li><a href="#step-1-reinstall-drastic-and-its-default-config">Step 1: reinstall DraStic and its default config</a>

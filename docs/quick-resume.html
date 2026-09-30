@@ -38,11 +38,13 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
-<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 <li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
 <li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
 <li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
 <li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
@@ -74,6 +76,7 @@
 <div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
 <li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
 <li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Settings</div><ul>
 <li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
@@ -83,6 +86,7 @@
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
 <li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -101,16 +105,20 @@
 <p>When Quick Resume is on and you power off (or reboot) while a game is running, Nano quietly saves your exact spot first. On the next boot it relaunches that same game and restores the moment you left, so turning the handheld on feels like waking it from sleep.</p>
 <p class="callout note">Quick Resume is available for <strong>RetroArch games and DraStic (Nintendo DS) games only</strong>. Standalone emulators such as PPSSPP, AetherSX2, Flycast, and Mupen64Plus do not support it, so those simply start fresh.</p>
 <h2 id="turning-it-on-or-off"><a class="toclink" href="#turning-it-on-or-off">Turning it on or off</a></h2>
-<p>Quick Resume is <strong>on by default</strong>. On the home screen you can toggle it at any time:</p>
+<p>Quick Resume is <strong>off by default</strong>, so every boot starts at the home until you choose otherwise. Turn it on in either of two places:</p>
 <ul>
-<li>Press <span class="btnchip">R1</span> on the home to flip Quick Resume on or off.</li>
+<li><strong>Settings &gt; Game Settings &gt; Quick Resume</strong> (On or Off).</li>
+<li><strong>Quick Menu &gt; Quick Resume</strong>, which opens the same On/Off choice.</li>
 </ul>
-<p>When it is on, the next power off from inside a supported game arms the resume. When it is off, games always start from their own boot screen.</p>
+<p><img alt="Quick Resume in Game Settings" class="dual" src="assets/img/shots/v143_dsi_quick_resume_row.png" /></p>
+<p>The change applies from the next game you launch. When it is on, the next power off from inside a supported game arms the resume. When it is off, every boot starts at the home and games start from their own boot screen.</p>
 <h2 id="how-it-works-per-emulator"><a class="toclink" href="#how-it-works-per-emulator">How it works, per emulator</a></h2>
 <h3 id="drastic-nintendo-ds"><a class="toclink" href="#drastic-nintendo-ds">DraStic (Nintendo DS)</a></h3>
 <p>DraStic gets the most seamless Quick Resume. When you power off inside a DS game, Nano force-saves to DraStic's reserved autosave slot and, on the next boot, relaunches straight into the paused game with no load screen at all. It is as close to instant as it gets.</p>
 <p class="callout tip">If a previous save was cut short (for example the battery died mid-write), Nano notices the incomplete autosave, sets it aside, and boots that game fresh instead of loading something broken. Your other saves are untouched.</p>
 <p>One exception: RetroAchievements hardcore mode always boots fresh, because hardcore rules do not allow resuming from a saved state.</p>
+<p>Leaving a resumed DS game is always safe: hold <span class="btnchip">Back</span> as usual and the home comes back, even straight after a Quick Resume boot. (In 1.4.2 and earlier this could leave the screen frozen on the last frame, and a reboot resumed the game again. That loop is fixed in 1.4.3.)</p>
+<p class="callout note">As an extra safety net, if the device resumes a game twice in a row without you pressing any button in between, the next boot lands on the home instead of resuming a third time.</p>
 <h3 id="retroarch"><a class="toclink" href="#retroarch">RetroArch</a></h3>
 <p>For RetroArch games, powering off arms a resume marker with the core and the game. On the next boot Nano relaunches that game through RetroArch. RetroArch then handles restoring your progress with its own save and state system.</p>
 <h2 id="tips"><a class="toclink" href="#tips">Tips</a></h2>

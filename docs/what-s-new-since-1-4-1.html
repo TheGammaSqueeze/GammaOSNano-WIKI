@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What&#x27;s New since 1.4.1 - GammaOS Nano</title>
+<meta name="description" content="A tour of everything new in GammaOS Nano 1.4.2 and 1.4.3, from the ES-DE theme engine and Syncthing to the GPU 3D DS renderer and the Control Center.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.png">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <img class="brand-mark" src="assets/img/brand/gammaos-logo-tile.png" alt="GammaOS logo" width="28" height="28">
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+<li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a class="active" href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+<li><a href="theme-settings.html"><span class="nav-ico">🖼️</span>Wallpapers &amp; Theme Settings</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+<li><a href="custom-boxart.html"><span class="nav-ico">🖼️</span>Custom Boxart and Backup</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+<li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
+<li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
+<li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+<li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+<li><a href="adb-and-logs.html"><span class="nav-ico">🧰</span>ADB Setup and Logs</a></li>
+<li><a href="restore-drastic.html"><span class="nav-ico">🔧</span>Restore DraStic (RG DS)</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">GammaOS Nano 1.4.2 and 1.4.3 are two big releases centred on the built-in DS player and the dual-screen handhelds, with a new ES-DE theme engine, Syncthing built in, a much more colourful DSi theme and a long list of fixes. This page is a quick, user-facing tour grouped by area, with links to the pages that hold the full details. The screenshots were captured on an RG DS Plus running 1.4.3.</p>
+<p class="callout note">Looking for the previous release? See <a href="what-s-new-since-1-4.html">What's New in 1.4.1</a>.</p>
+<h2 id="themes-and-the-home-look"><a class="toclink" href="#themes-and-the-home-look">Themes and the home look</a></h2>
+<ul>
+<li>
+<p><strong>A fourth home theme: Custom / ES-DE.</strong> <strong>Settings &gt; Theme Settings &gt; Home Theme</strong> now offers <strong>GammaOS XMB</strong>, <strong>DSi Menu</strong>, <strong>Minima</strong> and <strong>Custom / ES-DE</strong>, and applies live. See <a href="themes.html">Home Themes</a>.</p>
+<p><img alt="Home Theme chooser with four themes" class="dual" src="assets/img/shots/v143_dsi_home_theme_picker.png" /></p>
+</li>
+<li>
+<p><strong>ES-DE theme engine.</strong> Custom / ES-DE renders real EmulationStation-DE theme sets with their variants, colour schemes and per-game art. The <strong>Slate</strong> theme comes preinstalled. See <a href="esde-themes.html">ES-DE Themes</a>.</p>
+</li>
+</ul>
+<figure class="ui-video-fig ar-43">
+  <span class="ui-video-badge">Live demo</span>
+  <video class="ui-video ar-43" autoplay loop muted playsinline poster="assets/video/esde-browse-poster.jpg">
+    <source src="assets/video/esde-browse.mp4" type="video/mp4">
+  </video>
+  <figcaption>Scrolling through systems in the ES-DE Slate theme.</figcaption>
+</figure>
+
+<ul>
+<li>
+<p><strong>ES-DE menu and Theme Downloader.</strong> Press <span class="btnchip">Start</span> in the ES-DE home to open <strong>UI Settings</strong>: pick a theme, variant, colour scheme, font size and aspect ratio, or open <strong>Theme Downloader</strong> to fetch any theme from the official ES-DE list. <strong>Nano Settings</strong> takes you to the normal settings. You can also drop ES-DE theme folders into <code>ES-DE/themes</code> on internal storage.</p>
+<p><img alt="ES-DE UI Settings menu" class="wide" src="assets/img/shots/v143_esde_ui_settings.png" /></p>
+<p><img alt="ES-DE Theme Downloader list" class="wide" src="assets/img/shots/v143_esde_theme_downloader.png" /></p>
+</li>
+<li>
+<p><strong>Startup Menu.</strong> <strong>Theme Settings &gt; Startup Menu</strong> picks where the home opens at boot: the default, any category, or straight into one game system such as your Nintendo DS list. See <a href="theme-settings.html">Theme Settings</a>.</p>
+<p><img alt="Startup Menu listing game systems" class="dual" src="assets/img/shots/v143_dsi_startup_menu_systems.png" /></p>
+</li>
+<li>
+<p><strong>Custom accent colour.</strong> The <strong>Colour</strong> setting gains 21 presets and a <strong>Custom...</strong> entry at the end. It opens a full-screen picker: d-pad left and right for hue, up and down for brightness, <span class="btnchip">L1</span> / <span class="btnchip">R1</span> for saturation, <span class="btnchip">A</span> to apply. The colour drives the XMB wave, the Minima accent and the DSi chrome, live.</p>
+</li>
+</ul>
+<figure class="ui-video-fig ar-43">
+  <span class="ui-video-badge">Live demo</span>
+  <video class="ui-video ar-43" autoplay loop muted playsinline poster="assets/video/colour-picker-poster.jpg">
+    <source src="assets/video/colour-picker.mp4" type="video/mp4">
+  </video>
+  <figcaption>Moving hue and brightness in the Custom Colour picker; the hex value updates live.</figcaption>
+</figure>
+
+<p><img alt="XMB with a custom accent on the RG DS Plus" class="dual" src="assets/img/shots/v143_xmb_custom_accent_dual.png" /></p>
+<ul>
+<li>
+<p><strong>DSi top screen follows your colour.</strong> Any accent other than Original recolours the DSi top-screen canvas, text, selection frame and scroll bar in its true hue.</p>
+<p><img alt="DSi home with a custom accent" class="dual" src="assets/img/shots/v143_dsi_custom_accent.png" /></p>
+</li>
+<li>
+<p><strong>DS games show their own icon and title (DSi).</strong> DS games without a scraped cover show the icon and name stored in the cartridge (<strong>Titles From ROM</strong>, on by default). New in 1.4.3, <strong>DS Icons On Tiles</strong> keeps the cartridge icon on the carousel tile even when box art exists; the box art still shows on the top screen.</p>
+<p><img alt="DSi carousel with cartridge icons and ROM titles" class="dual" src="assets/img/shots/v143_dsi_rom_icons.png" /></p>
+</li>
+<li>
+<p><strong>DSi Background Effect on both screens.</strong> The <strong>Wallpaper</strong> row in the DSi theme now offers animated effects (Snow, Rain, Confetti, Fireflies, Starfield, Aurora, XMB Wave and more) behind a see-through canvas, name balloon and scroll rail. The DSi keeps its own choice separate from XMB.</p>
+</li>
+</ul>
+<figure class="ui-video-fig ar-23">
+  <span class="ui-video-badge">Live demo</span>
+  <video class="ui-video ar-23" autoplay loop muted playsinline poster="assets/video/dsi-effect-poster.jpg">
+    <source src="assets/video/dsi-effect.mp4" type="video/mp4">
+  </video>
+  <figcaption>The XMB Wave background effect behind the DSi carousel on both screens (a real on-device capture, so the frame rate is low).</figcaption>
+</figure>
+
+<ul>
+<li>
+<p><strong>DSi button legends.</strong> X and Y prompts (Options, Sort, Pin, Info) sit in the top-screen corners, DSi style, in light and dark variants. See <a href="navigating.html">Navigating</a>.</p>
+<p><img alt="DSi top screen button legends" class="dual" src="assets/img/shots/v143_dsi_button_legends.png" /></p>
+</li>
+<li>
+<p><strong>DSi launch effect plays to the end.</strong> The tile lift, sparkle ring and white wash complete smoothly before the game appears, and the carousel comes back on the game you launched.</p>
+</li>
+</ul>
+<figure class="ui-video-fig ar-43">
+  <span class="ui-video-badge">Live demo</span>
+  <video class="ui-video ar-43" autoplay loop muted playsinline poster="assets/video/dsi-launch-poster.jpg">
+    <source src="assets/video/dsi-launch.mp4" type="video/mp4">
+  </video>
+  <figcaption>The DSi launch effect when starting a DS game.</figcaption>
+</figure>
+
+<ul>
+<li><strong>DSi settings as lists, and a faster DSi theme.</strong> Game Settings and Theme Settings show as lists in the DSi theme, the scroll bar lands on the last card, and the DSi home holds 60 fps even in power saver mode.</li>
+<li>
+<p><strong>Half Resolution for XMB.</strong> <strong>Half Resolution: Wave</strong> and <strong>Half Resolution: Clock</strong> render just those parts at half size, so weaker GPUs keep a full frame rate while the menu text stays sharp.</p>
+<p><img alt="Half Resolution: Wave in XMB Theme Settings" class="wide" src="assets/img/shots/v143_xmb_half_res_wave.png" /></p>
+</li>
+<li>
+<p><strong>Boot Sound, Menu Music and Show Battery Percent.</strong> Turn the boot chime off in any theme, the DSi menu music on or off, and show the charge as a number in the DSi and Minima status bars.</p>
+</li>
+<li><strong>Charging indicator.</strong> The battery icon in every theme shows a lightning bolt while charging.</li>
+<li>
+<p><strong>New confirmation toast.</strong> Setting, sort and pin confirmations appear as a compact corner card, and slot into the XMB clock bar as frosted glass.</p>
+<p><img alt="Battery percent and the compact Setting changed card" class="dual" src="assets/img/shots/v143_dsi_toast_battery_pct.png" /></p>
+</li>
+<li>
+<p><strong>Slide clock options.</strong> In <strong>Settings &gt; Slide Behaviour</strong>, <strong>Freeze App Under Clock</strong> pauses the game while the slide clock is up, and <strong>Parallax</strong>, <strong>Parallax Strength</strong> and <strong>Parallax Direction</strong> replace the old calibration field. See <a href="slide-rotation.html">Slide and Rotation</a>.</p>
+<p><img alt="Slide clock rows" class="wide" src="assets/img/shots/v143_xmb_slide_clock_rows.png" /></p>
+</li>
+<li>
+<p><strong>Right-to-left languages.</strong> Arabic and Hebrew render correctly everywhere, with over 800 translation fixes across all 14 languages.</p>
+</li>
+<li>
+<p><strong>Keyboard prompts on their own line.</strong> The on-screen keyboard shows what a field wants above the text you type.</p>
+<p><img alt="Keyboard prompt on its own line" class="dual" src="assets/img/shots/v143_osk_prompt_line.png" /></p>
+</li>
+<li>
+<p><strong>Minima dialogs page long text</strong> with <span class="btnchip">L</span> and <span class="btnchip">R</span> instead of cutting it off.</p>
+</li>
+</ul>
+<h2 id="game-library"><a class="toclink" href="#game-library">Game library</a></h2>
+<ul>
+<li><strong>Show Display Names.</strong> Games list and sort by their scraped or custom names by default instead of raw file names. See <a href="game-systems.html">Game Systems</a>.</li>
+<li>
+<p><strong>Boxart Folder.</strong> <strong>Game Settings &gt; Boxart Scraper &gt; Boxart Folder</strong> moves scraped covers and backgrounds to the SD card (or any folder). Existing art is moved over and follows the card at boot and when you reinsert it. See <a href="boxart.html">Boxart</a>.</p>
+<p><img alt="Boxart Folder row" class="dual" src="assets/img/shots/v143_dsi_boxart_folder_row.png" /></p>
+</li>
+<li>
+<p><strong>Clear Boxart per system.</strong> The Game Systems editor has a <strong>Clear Boxart</strong> action that deletes one system's downloaded covers and backgrounds.</p>
+<p><img alt="Clear Boxart confirmation" class="dual" src="assets/img/shots/v143_dsi_clear_boxart_confirm.png" /></p>
+</li>
+<li>
+<p><strong>Your own PNG as a system icon.</strong> Press <span class="btnchip">X</span> in the Game Systems icon grid to import any PNG or JPG. See <a href="custom-boxart.html">Custom Boxart</a> for making your own art.</p>
+<p><img alt="Game Systems icon grid with Import PNG hint" class="wide" src="assets/img/shots/v143_xmb_icon_grid.png" /></p>
+</li>
+<li>
+<p><strong>Manual system order sticks.</strong> Reorder systems with <span class="btnchip">L1</span> / <span class="btnchip">R1</span> in the editor and that is the order the home shows.</p>
+</li>
+<li><strong>Arcade systems stay separate.</strong> Adding CPS1, FBNeo or MAME no longer pulls in every other arcade folder, and a system with chosen scan folders scans only those.</li>
+<li><strong>Arcade (Vertical).</strong> Folders named VERTICAL, VARCADE, TATE or TateGame are added automatically as their own Arcade (Vertical) system with the FBNeo and MAME players. See <a href="adding-games.html">Adding Games</a>.</li>
+<li><strong>Search finds games in every system.</strong> Global search now considers every match and shows the best 250, so games in systems added last show up too. See <a href="search.html">Search</a>.</li>
+<li><strong>Back to the right system after a game,</strong> not the tile before it.</li>
+<li><strong>Box art reloads live</strong> when the PC GammaOS Boxart Tool changes it, scraped names prefer the English title, and the screen stays on while scraping.</li>
+</ul>
+<h2 id="apps-and-home"><a class="toclink" href="#apps-and-home">Apps and home</a></h2>
+<ul>
+<li>
+<p><strong>Quick Resume is now a choice, off by default.</strong> Turn it on in <strong>Settings &gt; Game Settings &gt; Quick Resume</strong> or from the Quick Menu. See <a href="quick-resume.html">Quick Resume</a>.</p>
+<p><img alt="Quick Resume row in Game Settings" class="dual" src="assets/img/shots/v143_dsi_quick_resume_row.png" /></p>
+</li>
+<li>
+<p><strong>No more quick resume loop.</strong> Holding <span class="btnchip">Back</span> after a resumed DS game always brings the home back, and two resumed sessions in a row with no button press make the next boot land on the home.</p>
+</li>
+<li><strong>Home returns instantly after a DS game.</strong> The home stays resident during a DraStic Nano session and is back in a fraction of a second.</li>
+<li><strong>Faster app launches on 1 GB devices.</strong> RetroArch opens in about 6 seconds instead of up to 22, and Mupen64Plus AE launches straight into the game.</li>
+<li><strong>Lower idle CPU.</strong> The DSi, Minima and ES-DE homes stop redrawing when nothing moves.</li>
+<li><strong>Mouse mode behaves.</strong> Switching mouse mode on or off no longer relaunches or crashes the app, and if an app quits while mouse mode is on, the home switches it off so the d-pad works again. See <a href="gamepad-settings.html">Gamepad Settings</a>.</li>
+<li><strong>Landscape-only apps on portrait devices</strong> such as PPSSPP and Flycast render upright and fill the panel.</li>
+<li><strong>Install apps from file managers and stores</strong> without hunting for the per-app install toggle. See <a href="applications.html">Applications</a>.</li>
+<li><strong>Device sleeps after the Android Screen Timeout</strong> you set, in the menu and on the boot intro.</li>
+<li>
+<p><strong>System Information and System Update.</strong> <strong>Settings &gt; System Settings &gt; System Information</strong> shows the GammaOS version and edition, Android version, build date and more. <strong>System Update</strong> only checks when you ask and explains the result in plain words. See <a href="settings-reference.html">Settings Reference</a>.</p>
+<p><img alt="System Update result in plain words" class="dual" src="assets/img/shots/v143_dsi_system_update_uptodate.png" /></p>
+</li>
+<li>
+<p><strong>Video wallpapers on 1 GB devices</strong> refuse clips above 720p so a wallpaper cannot drain memory.</p>
+</li>
+<li><strong>Network category hidden on 1 GB devices.</strong> Turn it back on in Home Categories if you need it.</li>
+<li><strong>Tidier Quick Settings.</strong> The unused Immersive Mode and Analog Calibration tiles are gone.</li>
+</ul>
+<h2 id="media"><a class="toclink" href="#media">Media</a></h2>
+<p>See <a href="media.html">Media</a> for the full player guide.</p>
+<ul>
+<li>
+<p><strong>Embedded MKV subtitles.</strong> The video player finds SubRip and ASS/SSA tracks inside MKV files and renders styled ASS subtitles with their positions, sizes and colours.</p>
+<p><img alt="Styled ASS subtitles" class="wide" src="assets/img/shots/v143_video_ass_subtitles.png" /></p>
+</li>
+<li>
+<p><strong>Chapter previews in Scene Search,</strong> pre-cached when a video opens.</p>
+</li>
+<li>
+<p><strong>Global Shaders from the video player.</strong> Pick Off, CRT, LCD3x, LCD, Blur Fill or a custom shader without leaving the video.</p>
+<p><img alt="Global Shaders from the video player" class="wide" src="assets/img/shots/v143_video_global_shaders.png" /></p>
+</li>
+<li>
+<p><strong>Large video files play reliably.</strong> Seeking, chapter jumps and audio track switches on big MKV files no longer crash or desync.</p>
+</li>
+<li><strong>Playlists everywhere.</strong> Add, remove and reorder tracks, videos and photos in Playlists from the Options menu in any theme.</li>
+<li><strong>Headphone fixes.</strong> Menu sounds survive a headphone plug, the volume overlay follows the real level, and the boot chime plays from the first second on the RG DS Plus speaker.</li>
+</ul>
+<h2 id="drastic-nano-ds-emulation"><a class="toclink" href="#drastic-nano-ds-emulation">DraStic Nano (DS emulation)</a></h2>
+<p>The full reference is on <a href="drastic-nano.html">DraStic Nano</a>, and the buttons on <a href="controls-drastic.html">DraStic Controls</a>.</p>
+<ul>
+<li><strong>No DraStic APK needed.</strong> Everything DraStic Nano needs ships in the system image. Your saves live in <code>drastic-nano</code> on internal storage, with an offer to import old DraStic saves on first launch.</li>
+<li>
+<p><strong>GPU 3D renderer (experimental).</strong> The DS 3D scene can render on the GPU at hi-res, with DS-accurate blending, toon shading and shadows. In 1.4.3 its textures and shading match DraStic's own renderer on fine detail, and Mario and Luigi rooms render correctly.</p>
+<p><img alt="A DS racing game on the GPU 3D renderer" class="dual" src="assets/img/shots/v143_drastic_gpu3d_mariokart.png" /></p>
+<p><img alt="Video page with GPU 3D Renderer" class="wide" src="assets/img/shots/v143_drastic_ov_video_gpu3d.png" /></p>
+</li>
+<li>
+<p><strong>Low-latency audio.</strong> Game audio delay drops from roughly 300 ms to a few tens of milliseconds, and the clicks and pops in heavy scenes are gone. Golden Sun speech and echo-heavy games such as Yoshi's Island DS sound as they do on hardware.</p>
+</li>
+<li><strong>Low latency on headphones (RG DS Plus).</strong> From 1.4.3 the low-latency audio also reaches the headphone jack on the RG DS Plus, not just the speakers.</li>
+<li><strong>Smoother frame pacing</strong> in heavy scenes, and a low-latency display path on the RG DS and RG DS Plus.</li>
+<li>
+<p><strong>Two FPS counters.</strong> <strong>BLIT</strong> shows the present rate and <strong>GAME</strong> the real emulation rate.</p>
+<p><img alt="BLIT and GAME FPS counters" class="dual" src="assets/img/shots/v143_drastic_fps_counters.png" /></p>
+</li>
+<li>
+<p><strong>Fast Forward Speed.</strong> Cap fast-forward from 110% to 300% in steps of 10, or leave it Uncapped. Fast-forward is a press-to-toggle with an amber badge, and no longer corrupts or flickers.</p>
+<p><img alt="Fast Forward Speed set to Uncapped" class="wide" src="assets/img/shots/v143_drastic_ov_ffspeed.png" /></p>
+</li>
+<li>
+<p><strong>Run-Ahead (experimental).</strong> An optional one-frame run-ahead lets a press reach the screen sooner. It can now be on together with the GPU 3D renderer.</p>
+</li>
+<li>
+<p><strong>38 RetroArch LCD and CRT shaders</strong> in the Shader row, adapted to any screen size.</p>
+<p><img alt="Shader row set to crt-lottes-fast" class="wide" src="assets/img/shots/v143_drastic_ov_shader_row.png" /></p>
+</li>
+<li>
+<p><strong>Per-game settings.</strong> <strong>Create Per-Game Override</strong> on the General page saves every setting for the current game, now including its Performance mode. Delete it and the global settings come back.</p>
+<p><img alt="Per-game override confirmation" class="dual" src="assets/img/shots/v143_drastic_ov_pergame_confirm.png" /></p>
+</li>
+<li>
+<p><strong>Undo Quick Save and Undo Quick Load,</strong> plus Quick Save and Quick Load right on the General page, and <strong>DS Game Language</strong>.</p>
+</li>
+<li>
+<p><strong>Save folders shown in the menu.</strong> The Save States page names the folders your saves and save states go to. <strong>DraStic Data Folder</strong> moves them anywhere, including the SD card or a network share.</p>
+<p><img alt="Save States page naming the folders" class="wide" src="assets/img/shots/v143_drastic_ov_savestates.png" /></p>
+</li>
+<li>
+<p><strong>Your own cheat files.</strong> Drop R4 style <code>usrcheat.dat</code> files into <code>drastic-nano/cheats</code> (or the folder picked in <strong>Game Settings &gt; DraStic Cheats Folder</strong>) and they merge with the built-in cheats. The Cheats page can filter Built-in and Custom, and <span class="btnchip">L2</span> / <span class="btnchip">R2</span> page long lists.</p>
+<p><img alt="Cheats page with the Cheat files row" class="wide" src="assets/img/shots/v143_drastic_ov_cheats.png" /></p>
+</li>
+<li>
+<p><strong>Close Lid button.</strong> A mappable <strong>Close Lid</strong> action toggles the DS hinge, and <strong>Physical Lid Closes DS Lid</strong> does it with the real lid.</p>
+<p><img alt="Close Lid binding row" class="wide" src="assets/img/shots/v143_drastic_ov_closelid.png" /></p>
+</li>
+<li>
+<p><strong>RetroAchievements toggles</strong> for the progress toast and challenge indicators.</p>
+</li>
+<li><strong>A snappier menu.</strong> The overlay opens without stalls, Power Off and Reboot ask for confirmation, every label is translated, the volume keys respond at once in heavy scenes, and a back-hold exit takes about 2 seconds with no screech.</li>
+<li><strong>Zipped ROMs</strong> show a loading screen and keep their save states, and in-game brightness is remembered.</li>
+</ul>
+<h2 id="dual-screen-devices-and-the-control-center"><a class="toclink" href="#dual-screen-devices-and-the-control-center">Dual-screen devices and the Control Center</a></h2>
+<ul>
+<li>
+<p><strong>Control Center.</strong> On the RG DS and RG DS Plus the bottom screen shows the Control Center while a single-screen game runs: brightness for each screen, quick tiles (Sleep Screen, Performance, Split Bright, Shader, Gamma EQ, Mouse, Screenshot, Wi-Fi), volume, temperatures and live CPU, GPU, power and RAM gauges. The CPU and GPU rings show the clock against the chip's top clock. See <a href="control-center.html">Control Center</a>.</p>
+<p><img alt="Control Center on the bottom screen" class="dual" src="assets/img/shots/v143_cc_dashboard.png" /></p>
+</li>
+<li>
+<p><strong>Screen options.</strong> Swipe to the third page for <strong>Double Tap to Wake</strong> and <strong>Screen Timeout</strong> for the bottom screen (also in <a href="gammaos-toolbox.html">GammaOS Toolbox</a>).</p>
+<p><img alt="Control Center screen options" class="wide" src="assets/img/shots/v143_cc_screen_options.png" /></p>
+</li>
+<li>
+<p><strong>Mouse tile</strong> toggles GammaPad's virtual mouse with the pointer on the top screen, and brightness set on the Control Center slider is kept.</p>
+</li>
+<li><strong>Layout rows hidden</strong> in DraStic Nano on the RG DS and RG DS Plus, where each DS screen has its own panel.</li>
+</ul>
+<h2 id="gamepad-and-navigation"><a class="toclink" href="#gamepad-and-navigation">Gamepad and navigation</a></h2>
+<ul>
+<li><strong>Faster list skipping.</strong> <span class="btnchip">L1</span> / <span class="btnchip">R1</span> page in XMB and <span class="btnchip">L2</span> / <span class="btnchip">R2</span> jump to the ends; in DSi and Minima the shoulder buttons jump by initial letter. See <a href="navigating.html">Navigating</a>.</li>
+<li><strong>Trigger to axis while keeping the button.</strong> GammaPad trigger-to-axis rules can send both the analog value and the original button.</li>
+<li>
+<p><strong>Slide Launch Target picker.</strong> Choose the app (and activity) the slide opens from a list, and a <strong>Close App</strong> action force-stops it. See <a href="slide-rotation.html">Slide and Rotation</a>.</p>
+<p><img alt="Slide Launch Target row" class="wide" src="assets/img/shots/v143_xmb_slide_launch_target.png" /></p>
+</li>
+</ul>
+<h2 id="network-and-bluetooth"><a class="toclink" href="#network-and-bluetooth">Network and Bluetooth</a></h2>
+<ul>
+<li>
+<p><strong>Syncthing built in.</strong> Sync saves and folders with your PC or phone from <strong>Settings &gt; Network Shares &gt; Syncthing</strong>: add folders and devices, accept pending requests and optionally open the web interface to your network. See <a href="syncthing.html">Syncthing</a>.</p>
+<p><img alt="Syncthing running" class="dual" src="assets/img/shots/v143_dsi_syncthing_running.png" /></p>
+</li>
+<li>
+<p><strong>Bluetooth stays off.</strong> A fresh install starts with Bluetooth off, the setup wizard no longer has a Bluetooth step, and scanning no longer switches it back on. Turn it on from Bluetooth &amp; Accessories or the Quick Menu. See <a href="network.html">Connectivity</a>.</p>
+</li>
+<li><strong>Wi-Fi after sleep (RG DS Plus).</strong> Wi-Fi now comes back about two seconds after waking instead of looking connected but loading nothing, which also fixes scraping that failed after a sleep.</li>
+<li><strong>SD card paths stay stable</strong> when a card is ejected or remounted, and the USB File Transfer switch really changes between MTP and charge only. See <a href="network-shares.html">Network Shares</a> for other ways to move files.</li>
+</ul>
+<h2 id="system-and-settings"><a class="toclink" href="#system-and-settings">System and settings</a></h2>
+<ul>
+<li><strong>Setup wizard finishes by itself.</strong> After configuration it counts down and moves on. On the RG DS Plus it now runs at 60 fps with a progress bar, centred screens and your language applied before the Wi-Fi step. See <a href="getting-started.html">Getting Started</a>.</li>
+<li><strong>Setup on battery (RG DS Plus).</strong> A freshly flashed RG DS Plus no longer switches itself off part way through setup when no charger is connected.</li>
+<li><strong>Touch right after waking (RG DS Plus).</strong> The touchscreen answers the first tap after waking from deep sleep, instead of ignoring taps for up to ten seconds.</li>
+<li><strong>Brightness remembered across boots,</strong> with no flashes while the system starts.</li>
+<li><strong>First-boot setup on 1 GB devices</strong> no longer runs out of memory and retries failed app installs, and setup is faster overall.</li>
+<li><strong>MTP transfers stay alive</strong> for the whole copy.</li>
+</ul>
+<h2 id="full-android-and-desktop-mode"><a class="toclink" href="#full-android-and-desktop-mode">Full-Android and desktop mode</a></h2>
+<p>See <a href="atv-desktop-features.html">Desktop Mode Features</a>.</p>
+<ul>
+<li><strong>Syncthing</strong> is also in Settings and TV Settings.</li>
+<li><strong>Auto-granted permissions</strong> apply to frontends launched from a normal launcher and stick after store updates.</li>
+<li><strong>Secondary-display home</strong> ships on the Lite and Full images.</li>
+<li><strong>Sharper dual-stack apps on the RG DS and RG DS Plus,</strong> rendered at the panels' native 1024x1536.</li>
+</ul>
+<h2 id="fixed"><a class="toclink" href="#fixed">Fixed</a></h2>
+<ul>
+<li>Settings screens (Network and Internet, Security, VPN, Wi-Fi Direct, credentials, Printing) no longer crash in nano, and apps using the Android keystore no longer crash.</li>
+<li>The framework follows the panel's real refresh rate instead of compositing at 30 Hz on 61 Hz panels.</li>
+<li>Large scraped and media libraries no longer lose covers, names and playlists.</li>
+<li>The home no longer crashes shortly after start on the RG DS Plus, and no longer comes back flipped after a DS session.</li>
+<li>Navigation sounds no longer take all audio down on the RK3568 handhelds, and menu sounds play after the setup wizard.</li>
+<li>Holding Back in RetroArch returns to the home instead of restarting the app, and stock DraStic no longer launches on wake.</li>
+<li>DraStic Nano cheats work again, a leftover exit request no longer quits the next game, and a factory-reset first launch no longer shows red panels.</li>
+<li>Touch in DS games works after pressing the d-pad, and rotated panels use the home's touch calibration.</li>
+<li>Leaving the video player in DSi or Minima stops the video and its audio.</li>
+<li>The Control Center Screenshot tile captures the game, not the Control Center.</li>
+<li>Quick Resume boots no longer hang, normal boots chime, and a stale overlay flag no longer wedges the home.</li>
+<li>The secondary panel is fully released during the setup wizard on dual-screen devices.</li>
+<li>DSi dark theme edges and scroll bar, clock contrast, stale values and missing checkboxes are fixed, and Minima glyphs stay readable on light accents.</li>
+<li>An XMB page skip plays one cursor sound instead of a clipping burst.</li>
+<li>The Slide On Key Up and Down dialogs have OK and Cancel, so ticked actions save.</li>
+<li>The hidden source controller no longer shows up next to the virtual pad after boot.</li>
+<li>Releasing a capped fast-forward no longer leaves heavy 3D scenes crawling, and the GPU 3D renderer and 4x supersampling apply with Threaded 3D off.</li>
+<li>Syncthing folders can be picked again from the Path row, and the Web Interface option really opens it to your network.</li>
+</ul>
+<p>Still stuck? The <a href="faq.html#new-in-142-and-143">FAQ</a> answers the most common questions about these releases.</p>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#themes-and-the-home-look">Themes and the home look</a>
+</li>
+<li><a href="#game-library">Game library</a>
+</li>
+<li><a href="#apps-and-home">Apps and home</a>
+</li>
+<li><a href="#media">Media</a>
+</li>
+<li><a href="#drastic-nano-ds-emulation">DraStic Nano (DS emulation)</a>
+</li>
+<li><a href="#dual-screen-devices-and-the-control-center">Dual-screen devices and the Control Center</a>
+</li>
+<li><a href="#gamepad-and-navigation">Gamepad and navigation</a>
+</li>
+<li><a href="#network-and-bluetooth">Network and Bluetooth</a>
+</li>
+<li><a href="#system-and-settings">System and settings</a>
+</li>
+<li><a href="#full-android-and-desktop-mode">Full-Android and desktop mode</a>
+</li>
+<li><a href="#fixed">Fixed</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

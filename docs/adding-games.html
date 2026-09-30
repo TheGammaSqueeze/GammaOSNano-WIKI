@@ -38,11 +38,13 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
-<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 <li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
 <li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
 <li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
 <li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
@@ -74,6 +76,7 @@
 <div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
 <li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
 <li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Settings</div><ul>
 <li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
@@ -83,6 +86,7 @@
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
 <li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -153,7 +157,7 @@
 <tr>
 <td>Nintendo DS</td>
 <td><code>nds</code></td>
-<td>.nds</td>
+<td>.nds .zip</td>
 </tr>
 <tr>
 <td>Genesis / Mega Drive</td>
@@ -197,7 +201,13 @@
 </tr>
 </tbody>
 </table>
-<p>Every system here can be changed, and you can add your own. See <a href="game-systems.html">Game Systems</a> to edit any of these, and <a href="custom-system.html">Add a Custom System</a> to create a new one.</p>
+<p>Every system here can be changed, and you can add your own.</p>
+<h3 id="nintendo-ds-games-and-saves"><a class="toclink" href="#nintendo-ds-games-and-saves">Nintendo DS games and saves</a></h3>
+<p>DS games can be plain <code>.nds</code> files or zipped. A zipped DS ROM is unpacked when you start it, with a loading screen and progress bar while it extracts, and it keeps its save states like any other game.</p>
+<p>DS saves and save states are not kept next to your ROMs. The built-in <a href="drastic-nano.html">DraStic Nano</a> writes them to the <code>drastic-nano</code> folder on internal storage (<code>drastic-nano/saves</code> and <code>drastic-nano/savestates</code>), which you can move to the SD card or anywhere else with <strong>Settings &gt; Game Settings &gt; DraStic Data Folder</strong>. See <a href="drastic-nano.html#save-location-and-your-drastic-folder">Save location and your DraStic folder</a>.</p>
+<h3 id="arcade-folders"><a class="toclink" href="#arcade-folders">Arcade folders</a></h3>
+<p>Arcade systems each scan their own folders only, so adding CPS1, FBNeo or MAME does not pull in the other arcade folders. Use <code>mame</code> (or the generic <code>arcade</code>) for MAME, <code>fbneo</code> (or <code>fba</code>) for FBNeo, and <code>cps1</code>, <code>cps2</code>, <code>cps3</code> for the CP System boards.</p>
+<p>Vertical (TATE) arcade games have their own <strong>Arcade (Vertical)</strong> system. Put them in a folder named <code>VARCADE</code>, <code>VERTICAL</code>, <code>TATE</code>, <code>TATEGAME</code> or <code>verticalarcade</code> (any case) and the system is added automatically, playing with MAME by default or FBNeo. See <a href="game-systems.html#arcade-vertical">Arcade (Vertical)</a>. See <a href="game-systems.html">Game Systems</a> to edit any of these, and <a href="custom-system.html">Add a Custom System</a> to create a new one.</p>
 <h2 id="scanning-your-games-in"><a class="toclink" href="#scanning-your-games-in">Scanning your games in</a></h2>
 <p>Once your files are in place, tell Nano to look for them:</p>
 <ol>
@@ -251,6 +261,10 @@
 <li><a href="#the-one-rule-per-system-folders">The one rule: per-system folders</a>
 </li>
 <li><a href="#systems-folders-and-file-types">Systems, folders, and file types</a>
+<ul>
+<li><a href="#nintendo-ds-games-and-saves">Nintendo DS games and saves</a></li>
+<li><a href="#arcade-folders">Arcade folders</a></li>
+</ul>
 </li>
 <li><a href="#scanning-your-games-in">Scanning your games in</a>
 </li>

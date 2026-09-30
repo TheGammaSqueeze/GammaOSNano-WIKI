@@ -15,7 +15,11 @@ The Game Systems editor is where you control every console in your library. You 
 2. Go to **Game Settings**.
 3. Choose **Game Systems**.
 
-You get a list of every system Nano knows, each with an On/Off toggle. The editor uses your home theme's own look, so it feels native whether you are on XMB or Minima.
+You get a list of every system Nano knows, each with an On/Off toggle. The editor uses your home theme's own look, so it feels native whether you are on XMB, DSi or Minima.
+
+In the DSi theme, Game Settings is a list with Game Systems at the top, followed by Quick Resume, Rescan Games, DraStic Data Folder, DraStic Cheats Folder and Boxart Scraper.
+
+![Game Settings list in the DSi theme](assets/img/shots/v143_dsi_game_settings_list.png){: .wide }
 
 <div class="theme-trio">
   <figure><img src="assets/img/shots/xmb_gamesystems.png" alt="Game Systems list in the XMB theme"><figcaption><b>GammaOS XMB</b></figcaption></figure>
@@ -24,11 +28,13 @@ You get a list of every system Nano knows, each with an On/Off toggle. The edito
 
 ## Turning systems on and off
 
-Each system has an **On/Off** toggle. Turn a system Off to hide it from the Game category (handy if you do not own any games for it). Turn it back On whenever you like. Turning a system off does not delete any files.
+Each system has an **On/Off** toggle (press <span class="btnchip">X</span> on a system in the list to flip it). Turn a system Off to hide it from the Game category (handy if you do not own any games for it). Turn it back On whenever you like. Turning a system off does not delete any files.
 
 ## Reordering systems
 
 To change the order systems appear in on the home screen, highlight a system and press <span class="btnchip">L1</span> or <span class="btnchip">R1</span> to move it up or down the list. Put your favourites at the top.
+
+The order you set here is exactly what the home shows. Reordering also sets the Game category's <span class="btnchip">Y</span> sort back to **Default** (the manual order), so a sort you picked earlier cannot hide your new order. See [Sorting the Game category (Y)](#sorting-the-game-category-y).
 
 ## Editing a system
 
@@ -50,6 +56,7 @@ Select any system to open its editor. Every field below can be changed, so you c
 | **Icon Tint** | Recolour the icon from 21 swatches, or set a custom RGB colour. |
 | **Scraper / Username / Password** | An optional per-system override for the cover-art scraper. See [Boxart & Metadata](boxart.html). |
 | **Scrape This System** | Fetch boxart and metadata for every game in this system now. |
+| **Clear Boxart** | Delete this system's downloaded covers and background art. See [Clear Boxart](#clear-boxart). |
 | **Reset-to-Default** | On built-in systems, restore the original settings. |
 | **Delete** | On custom systems, remove the system. |
 
@@ -68,6 +75,30 @@ The **Scan Folders** field lists which folders a system searches for games. It n
 
 When you remove a scan-source folder, Nano first asks you to confirm with a **Cancel** or **Remove Folder** dialog that shows the folder path, so you do not drop a source by accident. Removing a folder only stops Nano scanning it; your files are left in place.
 
+### Arcade systems stay separate
+
+Each arcade system only scans its own folders. Adding CPS1, FBNeo or MAME no longer pulls in every other arcade folder on your storage, so your CPS1 list shows only CPS1 games and MAME only MAME games. The generic `arcade` folder counts as MAME, and `fba` counts as FBNeo.
+
+If you choose scan folders for a system yourself, it scans **only** those folders, not its defaults as well.
+
+## Arcade (Vertical)
+
+Vertical (TATE) arcade games, the ones made for a portrait screen, get a system of their own called **Arcade (Vertical)**. Put them in a ROM folder named any of these (upper or lower case both work):
+
+- `VARCADE`
+- `VERTICAL`
+- `TATE`
+- `TATEGAME`
+- `verticalarcade`
+
+The system is added automatically from those folders and appears under **Game** once it has games. It runs them with MAME by default, with FBNeo available as the other choice (change it with the **Emulator** field). Before this, those folders were ignored or folded into MAME.
+
+## Clear Boxart
+
+To wipe the artwork for one system (for example before scraping it again from scratch), open the system in the editor and choose **Clear Boxart**. Nano asks you to confirm with **Cancel** or **Clear Boxart**, then deletes that system's downloaded covers and background art. Your games are not touched, and other systems keep their art.
+
+![Clear Boxart confirmation](assets/img/shots/v143_dsi_clear_boxart_confirm.png){: .dual }
+
 ## Missing-emulator warning
 
 If a system's libretro core or standalone emulator app is not installed, Nano tells you rather than launching into a black screen. When you try to start a game whose core `.so` or standalone package is missing, a short toast appears explaining what is needed. See [Emulators & Cores](emulators.html) for which core or app each system uses.
@@ -82,7 +113,7 @@ Nano walks the folders and, for each recognised system, links it to a built-in s
 
 ## Sorting the Game category (Y)
 
-The order systems appear on the home screen is separate from how you sort the tiles on screen. In the **Game** category, press <span class="btnchip">Y</span> to cycle the tile order: **Default**, **A to Z**, **Most Games**, and **By Manufacturer**. The choice persists across restarts, and it only changes the on-screen order. It never reorders or touches your actual games or systems.
+The order systems appear on the home screen is separate from how you sort the tiles on screen. In the **Game** category, press <span class="btnchip">Y</span> to cycle the tile order: **Default**, **A to Z**, **Most Games**, and **By Manufacturer**. **Default** is the order you set in the Game Systems editor. The choice persists across restarts, and it only changes the on-screen order. It never reorders or touches your actual games or systems.
 
 ![Game category sort](assets/img/shots/wn_game_sort.png)
 
@@ -92,15 +123,20 @@ The editor is also how you add a console Nano does not list yet. Scroll to the t
 
 ## Custom system icons
 
-Every system has an **Icon** field in its editor. Selecting it opens the icon grid, a searchable set of hundreds of built-in console and platform glyphs. Press <span class="btnchip">Y</span> to filter by name, highlight the one you want, and press <span class="btnchip">Cross</span> to assign it.
+Every system has an **Icon** field in its editor. Selecting it opens the icon grid (**Choose Icon**), a searchable set of hundreds of built-in console and platform glyphs. Press <span class="btnchip">Y</span> to filter by name, highlight the one you want, and press <span class="btnchip">Cross</span> to assign it.
+
+![The Choose Icon grid with the X: Import PNG hint](assets/img/shots/v143_xmb_icon_grid.png){: .wide }
 
 ### Import your own PNG
 
-If none of the built-in glyphs suit you, you can bring your own image:
+If none of the built-in glyphs suit you, you can use any PNG or JPG as the system's icon, right from the menu:
 
 1. Open the system's **Icon** field to show the icon grid.
-2. Press <span class="btnchip">X</span> (Import PNG). A file browser opens at your storage.
-3. Browse to your image and select it. Nano copies it into its own storage and sets it as the system's icon straight away.
+2. Press <span class="btnchip">X</span> (**Import PNG**, shown in the hint along the bottom). A file browser opens at your storage.
+3. Browse to your image and select it. Nano copies it into its own storage and sets it as the system's icon straight away. The **Icon** row then reads **Custom**.
+
+In this release, the icon grid can appear empty in the **DSi theme on dual-screen devices** (such as the RG DS Plus). If that happens, switch to the XMB theme (**Settings > Theme Settings > Home Theme**), set the icon there, and switch back. The icon you choose shows in every theme.
+{: .callout .warn }
 
 Your file is copied, so you can delete the original afterwards and the icon still works. If you later delete the custom system, its imported icon is cleaned up with it.
 
@@ -113,9 +149,9 @@ Your file is copied, so you can delete the original afterwards and the icon stil
 - **Transparency:** use a transparent background (PNG) so only your artwork shows, not a solid block behind it.
 - **Colour:** the built-in glyphs are single-colour and respond to the **Icon Tint** setting. A full-colour PNG is shown as-is, untinted, so if you want the tint swatches to affect your icon, supply a white or light silhouette on a transparent background.
 
-### Interim method over ADB (older builds)
+### Over ADB (older builds only)
 
-If your build does not yet have the in-menu **Import PNG** button, you can set a custom icon by hand over [ADB](adb-and-logs.html). Nano reads its systems from `/data/system/nano_systems.json` and accepts a `file:` icon reference that points at any image on the device.
+You do not need this on current builds: use **Import PNG** above. It is kept for older builds that do not have the in-menu button. On those, you can set a custom icon by hand over [ADB](adb-and-logs.html). Nano reads its systems from `/data/system/nano_systems.json` and accepts a `file:` icon reference that points at any image on the device.
 
 1. Copy your PNG into Nano's icon folder (create it if needed), naming it after the system's id:
 

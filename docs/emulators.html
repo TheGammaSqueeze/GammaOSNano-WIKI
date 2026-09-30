@@ -38,11 +38,13 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
-<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 <li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
 <li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
 <li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
 <li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
@@ -74,6 +76,7 @@
 <div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
 <li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
 <li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Settings</div><ul>
 <li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
@@ -83,6 +86,7 @@
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
 <li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -101,7 +105,7 @@
 <p>When you pick a game, Nano figures out which system it belongs to and launches it in one of two ways:</p>
 <ul>
 <li><strong>RetroArch cores (libretro).</strong> Most systems run inside RetroArch (<code>com.retroarch.aarch64</code>) using a small plug-in called a libretro core. One RetroArch install can run many systems by loading a different core for each.</li>
-<li><strong>Standalone emulator apps.</strong> A few systems run in their own dedicated app instead: Nintendo 64 uses Mupen64Plus, PSP uses PPSSPP, Dreamcast uses Flycast, and Nintendo DS uses the built-in <a href="drastic-nano.html">DraStic Nano</a>.</li>
+<li><strong>Standalone emulator apps.</strong> A few systems run in their own dedicated app instead: Nintendo 64 uses Mupen64Plus, PSP uses PPSSPP, Dreamcast uses Flycast, and Nintendo DS uses the built-in <a href="drastic-nano.html">DraStic Nano</a>, which is part of the system itself (no DraStic app needs to be installed).</li>
 </ul>
 <p>Either way the experience is the same from your side. Nano launches the emulator, briefly drops its own controller input during the handoff so no stray button press leaks into your game, and remembers where you were. When you exit, you land back on the same game highlighted on the home screen.</p>
 <p class="callout note">The built-in Nintendo DS emulator has its own dedicated page. See <a href="drastic-nano.html">DraStic Nano</a> for its controls and in-game options.</p>
@@ -160,7 +164,7 @@
 <td>Nintendo DS</td>
 <td>nds</td>
 <td>DraStic Nano (built-in)</td>
-<td>.nds</td>
+<td>.nds .zip</td>
 </tr>
 <tr>
 <td>Genesis / Mega Drive</td>
@@ -215,7 +219,7 @@
 <p>The "Folder" column is the subfolder name Nano scans under your ROMs directory. See <a href="adding-games.html">Adding games</a> for where to drop your files, and <a href="game-systems.html">Game Systems</a> to turn systems on or off.</p>
 <h2 id="bios-files-not-included"><a class="toclink" href="#bios-files-not-included">BIOS files (not included)</a></h2>
 <p>Nano does <strong>not</strong> ship any console BIOS or firmware files. Some systems refuse to boot without them, so you must supply your own for the consoles that need them (for example PlayStation, PS2, Dreamcast, Neo Geo, and Sega CD).</p>
-<p class="callout tip">Nintendo DS is the happy exception: the built-in <a href="drastic-nano.html">DraStic Nano</a> emulator has its own high-level BIOS emulation, so DS games run with no BIOS files at all.</p>
+<p class="callout tip">Nintendo DS is the happy exception: the built-in <a href="drastic-nano.html">DraStic Nano</a> emulator ships with everything it needs inside GammaOS, so DS games run with no BIOS files from you at all.</p>
 <p class="callout warn">BIOS files are copyrighted. Nano cannot legally include them, so you provide your own copies.</p>
 <p>Where the file goes depends on which kind of emulator runs the system:</p>
 <ul>
@@ -262,7 +266,7 @@
 </tr>
 </tbody>
 </table>
-<p class="callout note">Nintendo DS is different: the built-in <a href="drastic-nano.html">DraStic Nano</a> emulator does not use the RetroArch system folder at all. If you supply DS BIOS files, they live with the DraStic data folder (see <a href="drastic-nano.html">DraStic Nano</a>), and DS games run without them anyway thanks to DraStic's high-level BIOS emulation.</p>
+<p class="callout note">Nintendo DS is different: the built-in <a href="drastic-nano.html">DraStic Nano</a> emulator does not use the RetroArch system folder at all. The BIOS and firmware files it uses ship inside GammaOS, so there is nothing to copy. Your DS saves, save states, shaders and cheat files live in the <code>drastic-nano</code> folder on internal storage (see <a href="drastic-nano.html#save-location-and-your-drastic-folder">DraStic Nano</a>).</p>
 <h2 id="change-a-systems-core-or-emulator"><a class="toclink" href="#change-a-systems-core-or-emulator">Change a system's core or emulator</a></h2>
 <p>You are never locked into the defaults above. To swap the core or standalone emulator a system uses, open the <strong>Game Systems</strong> editor:</p>
 <ol>
@@ -275,9 +279,9 @@
 <h2 id="retroarch-controls-reminder"><a class="toclink" href="#retroarch-controls-reminder">RetroArch controls reminder</a></h2>
 <p>Inside a RetroArch game, a quick tap of the <span class="btnchip">Back</span> button opens the RetroArch menu, and holding <span class="btnchip">Back</span> exits back to the Nano home on the same game. You can also press <span class="btnchip">L3</span> + <span class="btnchip">R3</span> (click both sticks in) to open the menu, which is RetroArch's own built-in combo.</p>
 <p>For the full list, including how to reach states, options, and input rebinding, see <a href="controls-retroarch.html">RetroArch controls</a>.</p>
-<p>For the built-in DS emulator, see <a href="drastic-nano.html">DraStic Nano</a> for its own in-game overlay, screen layout tuning, FPS counter, and save/load-state bindings.</p>
+<p>For the built-in DS emulator, see <a href="drastic-nano.html">DraStic Nano</a> for its own in-game menu, GPU 3D renderer, per-game overrides, FPS counters, and save/load-state bindings.</p>
 <h2 id="known-limitations"><a class="toclink" href="#known-limitations">Known limitations</a></h2>
-<p>Per-game core-option overrides are not managed from the Nano launcher. To change a core setting for one game only (for example a different renderer or aspect ratio for a single title), use RetroArch's own <strong>Quick Menu &gt; Overrides</strong> inside the running game and save a game-specific override there. Nano's Game Systems editor changes settings for the whole system, not one game.</p>
+<p>Per-game core-option overrides are not managed from the Nano launcher (the built-in DraStic Nano is the exception: it has its own <a href="drastic-nano.html#per-game-overrides">per-game overrides</a>). To change a core setting for one game only (for example a different renderer or aspect ratio for a single title), use RetroArch's own <strong>Quick Menu &gt; Overrides</strong> inside the running game and save a game-specific override there. Nano's Game Systems editor changes settings for the whole system, not one game.</p>
 <h2 id="related-pages"><a class="toclink" href="#related-pages">Related pages</a></h2>
 <div class="cards">
   <a class="card" href="drastic-nano.html"><span class="card-ico">🟦</span><span class="card-kicker">Emulators</span><h3>DraStic Nano</h3><p>The built-in Nintendo DS emulator.</p></a>

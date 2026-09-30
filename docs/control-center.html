@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Control Center (RG DS) - GammaOS Nano</title>
+<meta name="description" content="The bottom-screen dashboard on the RG DS and RG DS Plus - brightness, volume, quick tiles, live gauges and an app launcher while a game runs on the top screen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.png">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <img class="brand-mark" src="assets/img/brand/gammaos-logo-tile.png" alt="GammaOS logo" width="28" height="28">
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+<li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+<li><a href="theme-settings.html"><span class="nav-ico">🖼️</span>Wallpapers &amp; Theme Settings</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+<li><a href="custom-boxart.html"><span class="nav-ico">🖼️</span>Custom Boxart and Backup</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+<li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
+<li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
+<li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+<li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a class="active" href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+<li><a href="adb-and-logs.html"><span class="nav-ico">🧰</span>ADB Setup and Logs</a></li>
+<li><a href="restore-drastic.html"><span class="nav-ico">🔧</span>Restore DraStic (RG DS)</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">On the Anbernic RG DS and RG DS Plus, a game or app that uses one screen runs on the top panel. Instead of leaving the bottom panel dark, GammaOS Nano turns it into the <strong>Control Center</strong>: a touch dashboard with brightness and volume sliders, one-tap tiles, live temperature and performance gauges, and a launcher for a second app.</p>
+<p><img alt="The Control Center on the bottom screen while a NES game runs on top" class="dual" src="assets/img/shots/v143_cc_dashboard.png" /></p>
+<h2 id="when-it-appears"><a class="toclink" href="#when-it-appears">When it appears</a></h2>
+<p>The Control Center shows up on its own. Start any single-screen game or app from the home (RetroArch, a standalone emulator, an Android app) and the bottom screen switches to the Control Center. Quit the game and it goes away as the home comes back.</p>
+<p>It does not appear when the app itself uses both screens: DS games in DraStic Nano, dual-screen apps and apps set to <strong>Run on Primary Screen</strong> (see <a href="applications.html#run-on-primary-screen-dual-screen-devices">Applications</a>) keep the bottom panel for themselves.</p>
+<p>Everything on it works by touch. Your buttons and sticks stay with the game on the top screen, so using the Control Center never interrupts your input.</p>
+<h2 id="moving-between-pages"><a class="toclink" href="#moving-between-pages">Moving between pages</a></h2>
+<p>There are three pages, marked by the dots along the bottom edge:</p>
+<ol>
+<li><strong>Control Center</strong>: the dashboard.</li>
+<li><strong>Applications</strong>: an app launcher for the bottom screen.</li>
+<li><strong>Screen Options</strong>: the bottom screen's sleep settings.</li>
+</ol>
+<p>Swipe left on the bottom screen to go to the next page and swipe right to go back. The Control Center always comes back on the dashboard page.</p>
+<h2 id="page-1-the-dashboard"><a class="toclink" href="#page-1-the-dashboard">Page 1: the dashboard</a></h2>
+<p>The header shows <strong>CONTROL CENTER</strong>, then the battery state (BAT on battery, CHG while charging), the charge percentage, the power draw in watts, and the time.</p>
+<h3 id="brightness"><a class="toclink" href="#brightness">Brightness</a></h3>
+<p>Two vertical sliders, <strong>TOP</strong> and <strong>BTM</strong>, set the brightness of each screen. Touch a slider and drag up or down. The change sticks: it is kept when you return to the home and survives a sleep and wake.</p>
+<h3 id="controls-tiles"><a class="toclink" href="#controls-tiles">Controls tiles</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tile</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sleep Screen</strong></td>
+<td>Fades the bottom screen to black to save power and stop it distracting you. Tap the dark bottom screen to wake it (or double-tap, see Screen Options).</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Cycles the performance mode: Stock, Powersave, Max. The tile shows the current mode.</td>
+</tr>
+<tr>
+<td><strong>Split Bright</strong></td>
+<td>Lets the two screens keep separate brightness levels instead of following one shared brightness.</td>
+</tr>
+<tr>
+<td><strong>Shader</strong></td>
+<td>Turns the system display shader on or off (the same shader as the Quick Menu's Global Shaders).</td>
+</tr>
+<tr>
+<td><strong>Gamma EQ</strong></td>
+<td>Turns the <a href="gammaeq.html">GammaEQ</a> speaker enhancements on or off.</td>
+</tr>
+<tr>
+<td><strong>Mouse</strong></td>
+<td>Turns GammaPad's virtual mouse on or off, with the pointer on the top screen (see below).</td>
+</tr>
+<tr>
+<td><strong>Screenshot</strong></td>
+<td>Saves a screenshot of the game on the top screen (not of the Control Center) to <strong>Pictures/Screenshots</strong>. While an app runs on the bottom screen this tile becomes <strong>Close App</strong>.</td>
+</tr>
+<tr>
+<td><strong>Wi-Fi</strong></td>
+<td>Turns Wi-Fi on or off.</td>
+</tr>
+</tbody>
+</table>
+<p>A tile that is switched on is highlighted.</p>
+<h3 id="volume"><a class="toclink" href="#volume">Volume</a></h3>
+<p><strong>ALL</strong> sets the overall volume. <strong>TOP</strong> and <strong>BTM</strong> set the volume of each screen separately; they only respond when <strong>Multi-Volume</strong> is turned on in the <a href="gammaos-toolbox.html#audio">GammaOS Toolbox</a>.</p>
+<h3 id="thermal-and-performance"><a class="toclink" href="#thermal-and-performance">Thermal and Performance</a></h3>
+<ul>
+<li><strong>THERMAL</strong> shows the SoC and GPU temperatures.</li>
+<li><strong>PERFORMANCE</strong> has four ring gauges: <strong>CPU</strong> clock (GHz), <strong>GPU</strong> clock (MHz), <strong>PWR</strong> (power draw in watts) and <strong>RAM</strong> in use (GB). The CPU and GPU rings fill against the chip's top clock, so a full ring means the chip is running flat out.</li>
+</ul>
+<h2 id="the-mouse-tile"><a class="toclink" href="#the-mouse-tile">The Mouse tile</a></h2>
+<p>Some Android apps and games expect a mouse or a touch screen on the screen they run on. The <strong>Mouse</strong> tile switches on GammaPad's virtual mouse: the left stick or d-pad moves a pointer on the <strong>top</strong> screen, <span class="btnchip">A</span> clicks, <span class="btnchip">Y</span> right-clicks, <span class="btnchip">B</span> goes back, holding <span class="btnchip">X</span> speeds the pointer up and the right stick scrolls, so you can drive a touch-only app without reaching for the top panel. It is the same mouse mode you get by holding <span class="btnchip">Select</span> + <span class="btnchip">R1</span>; see <a href="controls-mouse-keyboard.html">Mouse &amp; Keyboard</a> and <a href="gamepad-settings.html#touch-mouse">Gamepad &amp; Remapping</a> for its speed settings.</p>
+<ul>
+<li>Switching mouse mode on or off no longer relaunches or crashes the running app.</li>
+<li>If the app quits or crashes while mouse mode is on, mouse mode is switched off as soon as the home is back, so the d-pad and sticks work normally again.</li>
+</ul>
+<h2 id="page-2-applications"><a class="toclink" href="#page-2-applications">Page 2: Applications</a></h2>
+<p><img alt="The Applications page of the Control Center" class="wide" src="assets/img/shots/v143_cc_apps.png" /></p>
+<p>Tap an app to run it on the bottom screen, next to the game on top. Handy for a guide, a walkthrough in the browser, a music player or a chat app while you play.</p>
+<ul>
+<li>While a bottom-screen app is running, the Control Center steps aside so the app has the whole panel. When you close the app, the Control Center comes back.</li>
+<li>Starting another app from this page closes the previous bottom-screen app first.</li>
+<li>If you pick an app that uses both screens, it replaces what is running and takes over both panels.</li>
+</ul>
+<h2 id="page-3-screen-options"><a class="toclink" href="#page-3-screen-options">Page 3: Screen Options</a></h2>
+<p><img alt="The Screen Options page" class="wide" src="assets/img/shots/v143_cc_screen_options.png" /></p>
+<p>Tap a row to change it:</p>
+<table>
+<thead>
+<tr>
+<th>Row</th>
+<th>Options</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Double Tap to Wake</strong></td>
+<td>Off / On</td>
+<td>When on, a sleeping bottom screen needs two quick taps to wake, so an accidental brush of the panel while you hold the device does not light it up. Default Off.</td>
+</tr>
+<tr>
+<td><strong>Screen Timeout</strong></td>
+<td>Never, 15s, 30s, 1 min, 2 min, 5 min</td>
+<td>The bottom screen fades to sleep by itself after this long without a touch. Default 30s.</td>
+</tr>
+</tbody>
+</table>
+<p>The same two settings are in <strong>Settings &gt; GammaOS Toolbox</strong> as <strong>Control Centre Double Tap</strong> and <strong>Control Centre Timeout</strong>, where the timeout also offers 10 minutes. See <a href="gammaos-toolbox.html#control-centre-dual-screen-devices">GammaOS Toolbox</a>.</p>
+<h2 id="related-pages"><a class="toclink" href="#related-pages">Related pages</a></h2>
+<ul>
+<li><a href="applications.html">Applications</a> for Run on Primary Screen and dual-screen apps.</li>
+<li><a href="quick-menu.html">Quick Menu</a> for the overlay you raise over a game with <span class="btnchip">Power</span>.</li>
+<li><a href="gammaos-toolbox.html">GammaOS Toolbox</a> for Multi-Volume and the Control Centre rows.</li>
+</ul>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#when-it-appears">When it appears</a>
+</li>
+<li><a href="#moving-between-pages">Moving between pages</a>
+</li>
+<li><a href="#page-1-the-dashboard">Page 1: the dashboard</a>
+<ul>
+<li><a href="#brightness">Brightness</a></li>
+<li><a href="#controls-tiles">Controls tiles</a></li>
+<li><a href="#volume">Volume</a></li>
+<li><a href="#thermal-and-performance">Thermal and Performance</a></li>
+</ul>
+</li>
+<li><a href="#the-mouse-tile">The Mouse tile</a>
+</li>
+<li><a href="#page-2-applications">Page 2: Applications</a>
+</li>
+<li><a href="#page-3-screen-options">Page 3: Screen Options</a>
+</li>
+<li><a href="#related-pages">Related pages</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

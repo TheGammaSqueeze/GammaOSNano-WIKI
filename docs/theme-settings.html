@@ -38,11 +38,13 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
-<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 <li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
 <li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
 <li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
 <li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
@@ -74,6 +76,7 @@
 <div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
 <li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
 <li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Settings</div><ul>
 <li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
@@ -83,6 +86,7 @@
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
 <li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -96,9 +100,9 @@
     
     <div class="prose has-toc">
       <article class="article">
-        <p class="lead">Beyond the three home themes, Theme Settings is where you make the home your own: a still photo or a looping video wallpaper, a dimming scrim so bright art does not drown the menu, accent colour, fonts, and more. It all lives under Settings &gt; Theme Settings.</p>
+        <p class="lead">Beyond picking a home theme, Theme Settings is where you make the home your own: a still photo or a looping video wallpaper, a dimming scrim so bright art does not drown the menu, accent colour, where the home opens, sounds, fonts, and more. It all lives under Settings &gt; Theme Settings.</p>
 <p><img alt="Theme Settings" src="assets/img/shots/xmb_themesettings.png" /></p>
-<p>For the three home looks themselves (XMB, DSi, Minima), see <a href="themes.html">Home Themes</a>. This page focuses on wallpapers and the finer appearance controls.</p>
+<p>For the home looks themselves (XMB, DSi, Minima and Custom / ES-DE), see <a href="themes.html">Home Themes</a> and <a href="esde-themes.html">ES-DE Themes</a>. This page focuses on wallpapers and the finer appearance controls.</p>
 <h2 id="the-wallpaper-rows"><a class="toclink" href="#the-wallpaper-rows">The wallpaper rows</a></h2>
 <p><img alt="The wallpaper rows in Theme Settings" src="assets/img/shots/xmb_wallpaper_rows.png" /></p>
 <table>
@@ -209,26 +213,158 @@
 <li><strong>At least one category must stay visible.</strong> Nano will not let you hide the very last one.</li>
 </ul>
 <p>The same on-screen legend is shown on the editor screen itself, so you never have to guess the controls.</p>
+<h2 id="startup-menu"><a class="toclink" href="#startup-menu">Startup Menu</a></h2>
+<p><strong>Startup Menu</strong> picks where the home opens when the device boots. It works in every theme.</p>
+<ul>
+<li><strong>Default</strong> opens the home as usual.</li>
+<li>Any <strong>top-level category</strong> (Settings, Photo, Music, Video, Game and so on) opens the home on that category.</li>
+<li>Any <strong>game system</strong> that has games (NES, SNES, Game Boy, Nintendo DS...) drops you straight into that system's game list, so you can land in your DS library the moment the device is on.</li>
+</ul>
+<p><img alt="The Startup Menu chooser" class="dual" src="assets/img/shots/v143_dsi_startup_menu.png" /></p>
+<p>Scroll further down the same list to find your game systems:</p>
+<p><img alt="Startup Menu scrolled to the game systems" class="dual" src="assets/img/shots/v143_dsi_startup_menu_systems.png" /></p>
+<h2 id="colour"><a class="toclink" href="#colour">Colour</a></h2>
+<p><strong>Colour</strong> sets the accent for XMB (the wave), Minima (the capsule and hint bar) and DSi (the chrome and the top screen). There are 21 presets: Original, Yellow, Green, Pink, Dark Green, Light Purple, Teal, Dark Blue, Magenta, Orange, Brown, Red, Black, White, Gray, Blue, Cyan, Lime, Gold, Violet and Crimson.</p>
+<p><img alt="The Colour list in the DSi theme" class="wide" src="assets/img/shots/v143_dsi_colour_list.png" /></p>
+<h3 id="custom"><a class="toclink" href="#custom">Custom</a></h3>
+<p>The last entry, <strong>Custom...</strong>, opens the full-screen <strong>Custom Colour</strong> picker so you can choose any colour:</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="btnchip">D-Pad</span> / stick Left and Right</td>
+<td>Hue</td>
+</tr>
+<tr>
+<td><span class="btnchip">D-Pad</span> / stick Up and Down</td>
+<td>Brightness</td>
+</tr>
+<tr>
+<td><span class="btnchip">L1</span> / <span class="btnchip">R1</span></td>
+<td>Less or more saturation</td>
+</tr>
+<tr>
+<td><span class="btnchip">A</span></td>
+<td>Apply</td>
+</tr>
+<tr>
+<td><span class="btnchip">B</span></td>
+<td>Cancel</td>
+</tr>
+<tr>
+<td>Hold <span class="btnchip">Select</span> (about a second)</td>
+<td>Exit the picker</td>
+</tr>
+</tbody>
+</table>
+<p>After you apply it the row reads <strong>Custom</strong> and the colour shows up live in XMB, DSi and Minima. There is a live demo of the picker on the <a href="themes.html#custom-colour-picker">Home Themes</a> page.</p>
+<h2 id="half-resolution-wave-clock"><a class="toclink" href="#half-resolution-wave-clock">Half Resolution: Wave / Clock</a></h2>
+<p>Two XMB-only rows help weaker GPUs keep a full frame rate:</p>
+<ul>
+<li><strong>Half Resolution: Wave</strong> draws the PS3 wave at half size and scales it up.</li>
+<li><strong>Half Resolution: Clock</strong> does the same for the XMB clock.</li>
+</ul>
+<p>Both are Off by default and apply live. Only the wave or the clock is rendered smaller; the menu text and icons stay sharp. Turn them on if the XMB feels less than smooth on your device.</p>
+<p><img alt="Half Resolution: Wave and Half Resolution: Clock in XMB Theme Settings" class="wide" src="assets/img/shots/v143_xmb_half_res_wave.png" /></p>
+<h2 id="sounds"><a class="toclink" href="#sounds">Sounds</a></h2>
+<ul>
+<li><strong>Boot Sound</strong> (On by default, every theme): turn the boot chime on or off. The change applies from the next boot.</li>
+</ul>
+<p><img alt="The Boot Sound row with its description" class="dual" src="assets/img/shots/v143_dsi_boot_sound_row.png" /></p>
+<ul>
+<li><strong>Menu Music</strong> (On by default, DSi only): the looping DSi menu music.</li>
+<li><strong>Navigation Sounds</strong> (On by default, every theme): the cursor, select and back sound effects. The boot chime is not affected.</li>
+</ul>
+<h2 id="show-battery-percent"><a class="toclink" href="#show-battery-percent">Show Battery Percent</a></h2>
+<p><strong>Show Battery Percent</strong> (Off by default) shows the charge as a number next to the battery: in the status bar on the DSi theme and in the status pill on Minima. The row only appears in those two themes.</p>
+<p><img alt="Show Battery Percent in the DSi status bar, with the Setting changed card" class="dual" src="assets/img/shots/v143_dsi_toast_battery_pct.png" /></p>
+<p>In every theme except ES-DE, the battery icon also shows a lightning bolt while the device is charging.</p>
+<h2 id="setting-confirmations"><a class="toclink" href="#setting-confirmations">Setting confirmations</a></h2>
+<p>When you change a setting, sort a list or pin an item, a small confirmation now appears in a style that fits the theme:</p>
+<ul>
+<li><strong>DSi and Minima:</strong> a compact card in the corner (at the top right of the list on DSi, as in the screenshot above).</li>
+<li><strong>XMB:</strong> the message slides into the clock bar as frosted glass.</li>
+</ul>
+<p><img alt="XMB confirmation drawn inside the clock bar" class="wide" src="assets/img/shots/v143_xmb_toast_clockbar.png" /></p>
 <h2 id="rows-adapt-to-your-theme"><a class="toclink" href="#rows-adapt-to-your-theme">Rows adapt to your theme</a></h2>
 <p>Theme Settings only shows the rows that apply to the theme you are using, so the menu stays short and relevant. Options that belong to a theme you are not currently running are hidden until you switch to it.</p>
+<table>
+<thead>
+<tr>
+<th>Rows</th>
+<th>Shown in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Home Theme, Startup Menu, Colour, Font Size, Home Categories, Wallpaper Image, Video Wallpaper, Clear Wallpaper, Wallpaper Dimming, Boot Sound, Navigation Sounds</td>
+<td>Every theme</td>
+</tr>
+<tr>
+<td>Background, Font, Day/Night, Half Resolution: Wave, Half Resolution: Clock</td>
+<td>XMB only</td>
+</tr>
+<tr>
+<td>XMB Wave</td>
+<td>XMB and Minima</td>
+</tr>
+<tr>
+<td>Wallpaper (the background effect picker)</td>
+<td>XMB and DSi</td>
+</tr>
+<tr>
+<td>Background Colour, Long Names</td>
+<td>Minima only</td>
+</tr>
+<tr>
+<td>Show Battery Percent</td>
+<td>DSi and Minima</td>
+</tr>
+<tr>
+<td>DSi Dark Theme, Menu Music, Titles From ROM, DS Icons On Tiles, Dual Screen, Screen Gap</td>
+<td>DSi only</td>
+</tr>
+<tr>
+<td>Bottom Clock, Bottom Clock FPS, Bottom Wallpaper</td>
+<td>Dual-screen devices only, in any theme</td>
+</tr>
+</tbody>
+</table>
+<p>With the Custom / ES-DE theme active, the XMB-only rows are hidden too; ES-DE themes bring their own layouts and colours, set from the theme's <strong>UI SETTINGS</strong> menu (see <a href="esde-themes.html">ES-DE Themes</a>).</p>
 <h2 id="other-appearance-controls"><a class="toclink" href="#other-appearance-controls">Other appearance controls</a></h2>
 <p>Theme Settings also holds:</p>
 <ul>
-<li><strong>Colour</strong>: the accent colour, with 21 choices (see <a href="themes.html">Home Themes</a>). It now recolours the DSi chrome too.</li>
-<li><strong>Background</strong> and <strong>Font</strong>: overall background style and font look.</li>
+<li><strong>Background</strong> and <strong>Font</strong>: overall background style and font look (XMB).</li>
 <li><strong>Day/Night</strong>: the XMB lighting blend.</li>
 <li><strong>Background Colour</strong>: a solid colour for the Minima home (Minima only).</li>
-<li><strong>XMB Wave</strong>: also available in Minima as an opt-in alternative to the plain black canvas; the choice persists (Minima only).</li>
+<li><strong>Long Names</strong>: Scroll (the default) or Shrink to Fit for long names in the Minima list.</li>
+<li><strong>XMB Wave</strong>: also available in Minima as an opt-in alternative to the plain black canvas; the choice persists.</li>
 <li><strong>Bottom Clock</strong> and <strong>Bottom Clock FPS</strong>: the PSP-style clock on dual-screen devices.</li>
-<li><strong>Home Theme</strong>: switch between XMB, DSi, and Minima (this restarts the home).</li>
+<li><strong>Home Theme</strong>: switch between GammaOS XMB, DSi Menu, Minima and Custom / ES-DE. The new theme applies straight away.</li>
 </ul>
 <h3 id="dsi-only-rows"><a class="toclink" href="#dsi-only-rows">DSi-only rows</a></h3>
 <p>With the DSi theme active you also get:</p>
+<p><img alt="The DSi Theme Settings list" class="wide" src="assets/img/shots/v143_dsi_theme_settings_rows.png" /></p>
 <ul>
-<li><strong>Dark Theme</strong>: flip the whole DSi look to light-on-dark, live (see <a href="themes.html">Home Themes</a>).</li>
+<li><strong>DSi Dark Theme</strong>: flip the whole DSi look to light-on-dark, live (see <a href="themes.html">Home Themes</a>).</li>
+<li><strong>Menu Music</strong>: the DSi menu music, On by default.</li>
+<li><strong>Titles From ROM</strong> (On by default): DS games without a scraped name show the title stored in the cartridge instead of the file name.</li>
+<li><strong>DS Icons On Tiles</strong> (Off by default): keep each DS game's own cartridge icon on its carousel tile even when scraped box art exists. The box art still shows on the top screen.</li>
+</ul>
+<p><img alt="The DS Icons On Tiles row with its description" class="dual" src="assets/img/shots/v143_dsi_ds_icons_on_tiles_row.png" /></p>
+<ul>
+<li><strong>Wallpaper</strong>: the DSi background effect (see below).</li>
 <li><strong>Dual Screen</strong>: choose <strong>Auto</strong>, <strong>Top+Bottom</strong>, or <strong>Carousel-Only</strong> for how the two DSi screens are laid out.</li>
 <li><strong>Screen Gap</strong>: tune the spacing between the stacked screens on portrait panels.</li>
 </ul>
+<h3 id="dsi-background-effect"><a class="toclink" href="#dsi-background-effect">DSi Background Effect</a></h3>
+<p>On the DSi theme, the <strong>Wallpaper</strong> row picks an animated background effect that plays on both screens, behind the see-through canvas, name balloon and scroll rail. The choices are None, Snow, Rain, Confetti, Sparks, Fireflies, Bubbles, Starfield, Embers, Leaves, Plasma, Fire, Aurora, Ripple, Checkerboard, Spiral, XMB and XMB Wave. The DSi remembers its own choice, separate from the XMB one, so switching themes does not change either.</p>
+<p><img alt="The DSi background effect list" class="dual" src="assets/img/shots/v143_dsi_wallpaper_effect_picker.png" /></p>
 <p><img alt="DSi dual-screen settings" src="assets/img/shots/wn_dsi_dualscreen_settings.png" /></p>
 <p>On single-screen 4:3 DSi layouts, a top <strong>status bar</strong> reserves space for the clock, Wi-Fi, Bluetooth and date.</p>
 <p><img alt="DSi single-screen status bar" src="assets/img/shots/wn_dsi_statusbar.png" /></p>
@@ -236,7 +372,8 @@
 <p>The first-run setup wizard and the on-screen HUDs now render in whichever theme is active. Scraper progress and the setup wizard show the Minima or DSi look when you use those themes, and the brightness and volume HUD popups match the active theme too.</p>
 <h2 id="where-to-go-next"><a class="toclink" href="#where-to-go-next">Where to go next</a></h2>
 <ul>
-<li><a href="themes.html">Home Themes</a> for the three looks in detail.</li>
+<li><a href="themes.html">Home Themes</a> for the XMB, DSi and Minima looks in detail.</li>
+<li><a href="esde-themes.html">ES-DE Themes</a> for the fourth theme.</li>
 <li><a href="settings-reference.html">Settings Reference</a> for the whole Settings tree.</li>
 </ul>
         <footer class="page-foot">
@@ -256,11 +393,27 @@
 </li>
 <li><a href="#home-categories-editor">Home Categories editor</a>
 </li>
+<li><a href="#startup-menu">Startup Menu</a>
+</li>
+<li><a href="#colour">Colour</a>
+<ul>
+<li><a href="#custom">Custom</a></li>
+</ul>
+</li>
+<li><a href="#half-resolution-wave-clock">Half Resolution: Wave / Clock</a>
+</li>
+<li><a href="#sounds">Sounds</a>
+</li>
+<li><a href="#show-battery-percent">Show Battery Percent</a>
+</li>
+<li><a href="#setting-confirmations">Setting confirmations</a>
+</li>
 <li><a href="#rows-adapt-to-your-theme">Rows adapt to your theme</a>
 </li>
 <li><a href="#other-appearance-controls">Other appearance controls</a>
 <ul>
 <li><a href="#dsi-only-rows">DSi-only rows</a></li>
+<li><a href="#dsi-background-effect">DSi Background Effect</a></li>
 </ul>
 </li>
 <li><a href="#the-wizard-and-hud-follow-your-theme">The wizard and HUD follow your theme</a>

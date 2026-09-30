@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ES-DE Themes - GammaOS Nano</title>
+<meta name="description" content="The fourth home theme: real EmulationStation-DE theme sets inside Nano, with a built-in theme downloader.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.png">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <img class="brand-mark" src="assets/img/brand/gammaos-logo-tile.png" alt="GammaOS logo" width="28" height="28">
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+<li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a class="active" href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+<li><a href="theme-settings.html"><span class="nav-ico">🖼️</span>Wallpapers &amp; Theme Settings</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+<li><a href="custom-boxart.html"><span class="nav-ico">🖼️</span>Custom Boxart and Backup</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+<li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
+<li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
+<li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+<li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+<li><a href="adb-and-logs.html"><span class="nav-ico">🧰</span>ADB Setup and Logs</a></li>
+<li><a href="restore-drastic.html"><span class="nav-ico">🔧</span>Restore DraStic (RG DS)</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">Alongside XMB, DSi and Minima, GammaOS Nano has a fourth home theme: <strong>Custom / ES-DE</strong>. It draws real EmulationStation-DE theme sets, complete with their variants, colour schemes, aspect ratios and per-game art, so your library can wear any of the hundreds of themes made by the ES-DE community.</p>
+<p><img alt="The Slate ES-DE theme showing the system carousel" class="wide" src="assets/img/shots/v143_esde_slate_systems.png" /></p>
+<h2 id="what-it-is-and-what-it-is-not"><a class="toclink" href="#what-it-is-and-what-it-is-not">What it is (and what it is not)</a></h2>
+<p>The ES-DE theme is a home theme built into Nano. Nano reads an ES-DE theme set and renders its system and game list views itself, using your normal Nano game library, scraped box art and game details. When you start a game, Nano launches it exactly as it does from the other themes, with the same emulators and settings.</p>
+<p class="callout note">It does not install or run the ES-DE app. You do not need ES-DE on the device, and nothing about your games, systems or emulators changes when you switch to this theme.</p>
+<p>The <strong>Slate</strong> theme comes preinstalled, so the theme works the moment you pick it. More themes can be downloaded from the menu or copied onto the device by hand (both covered below).</p>
+<figure class="ui-video-fig ar-43">
+  <span class="ui-video-badge">Live demo</span>
+  <video class="ui-video ar-43" autoplay loop muted playsinline poster="assets/video/esde-browse-poster.jpg">
+    <source src="assets/video/esde-browse.mp4" type="video/mp4">
+  </video>
+  <figcaption>Scrolling through the game systems in the preinstalled Slate theme.</figcaption>
+</figure>
+
+<h2 id="switching-to-the-es-de-theme"><a class="toclink" href="#switching-to-the-es-de-theme">Switching to the ES-DE theme</a></h2>
+<ol>
+<li>Open <strong>Settings &gt; Theme Settings &gt; Home Theme</strong>.</li>
+<li>Pick <strong>Custom / ES-DE</strong>.</li>
+</ol>
+<p><img alt="The Home Theme chooser with Custom / ES-DE at the end" class="dual" src="assets/img/shots/v143_dsi_home_theme_picker.png" /></p>
+<p>The home switches over straight away. The Home Theme row's description text only mentions XMB, DSi and Minima, but Custom / ES-DE is the fourth choice in the list.</p>
+<h2 id="getting-around"><a class="toclink" href="#getting-around">Getting around</a></h2>
+<p>The ES-DE theme follows the ES-DE layout: a <strong>system view</strong> listing your game systems, and a <strong>game list</strong> for the system you open.</p>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="btnchip">D-Pad</span></td>
+<td>Move through systems in the system view, or through games in a game list</td>
+</tr>
+<tr>
+<td><span class="btnchip">A</span></td>
+<td>Open the highlighted system, or start the highlighted game</td>
+</tr>
+<tr>
+<td><span class="btnchip">B</span></td>
+<td>Go back from a game list to the system view</td>
+</tr>
+<tr>
+<td><span class="btnchip">Start</span></td>
+<td>Open the <strong>UI SETTINGS</strong> menu</td>
+</tr>
+</tbody>
+</table>
+<p>In a game list shown as a plain list, Left and Right flip to the previous or next system without going back. In a theme whose game list is a grid, Left and Right move between items in a row instead, and you press <span class="btnchip">B</span> to change system.</p>
+<p class="callout tip">Only enabled systems that have games are shown. Like ES-DE, the system view lists them alphabetically by their full system name, whatever order you set for the other themes. Box art, descriptions and other game details come from your scraped art, so scraping your library (see <a href="boxart.html">Boxart</a>) makes the ES-DE themes look their best.</p>
+<h2 id="the-ui-settings-menu"><a class="toclink" href="#the-ui-settings-menu">The UI SETTINGS menu</a></h2>
+<p>Press <span class="btnchip">Start</span> on the ES-DE home to open <strong>UI SETTINGS</strong>. It is styled like ES-DE's own menu and holds everything the theme needs.</p>
+<p><img alt="The ES-DE UI SETTINGS menu" class="wide" src="assets/img/shots/v143_esde_ui_settings.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Row</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>THEME DOWNLOADER</strong></td>
+<td>Browse and install themes from the official ES-DE themes list (needs internet, see below)</td>
+</tr>
+<tr>
+<td><strong>THEME</strong></td>
+<td>Pick which installed theme set the home uses</td>
+</tr>
+<tr>
+<td><strong>THEME VARIANT</strong></td>
+<td>Pick one of the theme's layouts, for example a carousel or a list (the choices come from the theme)</td>
+</tr>
+<tr>
+<td><strong>THEME COLOR SCHEME</strong></td>
+<td>Pick one of the theme's colour schemes, if it has any</td>
+</tr>
+<tr>
+<td><strong>THEME FONT SIZE</strong></td>
+<td>Pick one of the theme's font sizes, if it offers them</td>
+</tr>
+<tr>
+<td><strong>THEME ASPECT RATIO</strong></td>
+<td>Pick the layout made for your screen shape, for example 4:3 or 16:9</td>
+</tr>
+<tr>
+<td><strong>APPLICATIONS</strong></td>
+<td>A list of your installed apps; press A to launch one</td>
+</tr>
+<tr>
+<td><strong>NANO SETTINGS</strong></td>
+<td>Leave the ES-DE menu and open the normal Nano menus (Quick Menu and Full Settings)</td>
+</tr>
+</tbody>
+</table>
+<p>On the THEME, VARIANT, COLOR SCHEME, FONT SIZE and ASPECT RATIO rows, press Left or Right to cycle the value in place, or press <span class="btnchip">A</span> to open the full list and pick one. The home reloads with your choice right away. <span class="btnchip">B</span> closes the menu (or goes back one page from a list).</p>
+<p class="callout note">Not every theme offers every option. The choices on each row are the ones the current theme set actually provides, so a theme with a single layout shows just that one.</p>
+<p class="callout tip">Most ES-DE themes include layouts for several screen shapes. If a theme looks stretched or cramped, try a different <strong>THEME ASPECT RATIO</strong> that matches your panel (4:3 on most GammaOS handhelds).</p>
+<h2 id="downloading-themes"><a class="toclink" href="#downloading-themes">Downloading themes</a></h2>
+<p>The <strong>THEME DOWNLOADER</strong> installs themes straight from the official ES-DE themes list.</p>
+<ol>
+<li>Make sure you are connected to Wi-Fi (see <a href="network.html">Network</a>).</li>
+<li>Press <span class="btnchip">Start</span>, choose <strong>THEME DOWNLOADER</strong> and press <span class="btnchip">A</span>. The list is fetched the first time you open it ("Fetching theme list...").</li>
+<li>Scroll to a theme. Each entry shows how many variants, colour schemes and aspect ratios it has.</li>
+<li>Press <span class="btnchip">A</span> to install it. A progress bar shows while it downloads and unpacks, and the theme is marked <strong>INSTALLED</strong> once it is done.</li>
+<li>Press <span class="btnchip">B</span> to go back, then pick your new theme on the <strong>THEME</strong> row.</li>
+</ol>
+<p><img alt="The THEME DOWNLOADER list" class="wide" src="assets/img/shots/v143_esde_theme_downloader.png" /></p>
+<p>If the list does not load, the downloader shows a message asking you to check Wi-Fi. Connect to a network and open the downloader again.</p>
+<p class="callout note">Themes can be large (some are hundreds of megabytes with videos and artwork), so leave the device on and connected until the install finishes.</p>
+<h2 id="adding-themes-by-hand"><a class="toclink" href="#adding-themes-by-hand">Adding themes by hand</a></h2>
+<p>You can also copy an ES-DE theme onto the device yourself, for example one you downloaded on a PC. Nano looks for themes in the same folder the ES-DE app uses on Android:</p>
+<p><code>Internal storage/ES-DE/themes</code></p>
+<ol>
+<li>Get the theme on your PC and unzip it if needed.</li>
+<li>Copy the theme's folder into <code>ES-DE/themes</code> on the device's internal storage (create the <code>ES-DE</code> and <code>themes</code> folders if they do not exist yet). The theme's own folder must sit directly inside <code>themes</code>, with its <code>capabilities.xml</code> file at the top of that folder, for example <code>ES-DE/themes/my-theme/capabilities.xml</code>.</li>
+<li>Open <strong>UI SETTINGS</strong> and pick the theme on the <strong>THEME</strong> row.</li>
+</ol>
+<p>To get the folder onto the device, use USB file transfer (MTP) first. If that does not work for you, <a href="https://github.com/Alex4SSB/ADB-Explorer">ADB Explorer</a> is a good second choice, or copy it over a network share (see <a href="network-shares.html">Network Shares</a>).</p>
+<p class="callout tip">A downloaded theme zip often wraps everything in an extra folder (for example <code>my-theme-main/my-theme/...</code>). If the theme does not appear in the list, check that <code>capabilities.xml</code> is one level inside <code>themes</code>, not two.</p>
+<h2 id="getting-back-to-nano-settings"><a class="toclink" href="#getting-back-to-nano-settings">Getting back to Nano settings</a></h2>
+<p>Everything in Nano's own menus is still one step away:</p>
+<ol>
+<li>Press <span class="btnchip">Start</span> and choose <strong>NANO SETTINGS</strong>.</li>
+<li>Pick <strong>Quick Menu</strong> for the global actions, or <strong>Full Settings</strong> for the whole Settings tree.</li>
+<li>Press <span class="btnchip">B</span> to back out, and you land on the ES-DE home again.</li>
+</ol>
+<h3 id="switching-back-to-another-theme"><a class="toclink" href="#switching-back-to-another-theme">Switching back to another theme</a></h3>
+<p>Go to <strong>Start &gt; NANO SETTINGS &gt; Full Settings &gt; Theme Settings &gt; Home Theme</strong> and pick <strong>GammaOS XMB</strong>, <strong>DSi Menu</strong> or <strong>Minima</strong>. Your ES-DE theme choice is remembered, so switching back later picks up where you left off.</p>
+<h2 id="tips"><a class="toclink" href="#tips">Tips</a></h2>
+<ul>
+<li><strong>Heavy themes on 1 GB devices.</strong> Some ES-DE themes are packed with animation, video and large artwork. On devices with 1 GB of memory these can be slow to load and scroll. If a theme feels sluggish, try a lighter one (Slate is a good baseline) or a simpler variant of the same theme.</li>
+<li><strong>Idle is cheap.</strong> When nothing on screen is moving, the ES-DE home stops redrawing, so leaving it on a static screen barely uses the CPU.</li>
+<li><strong>Scrape first.</strong> Themes that show covers, screenshots or descriptions look empty for games without scraped art. See <a href="boxart.html">Boxart</a>.</li>
+<li><strong>Same games everywhere.</strong> Turning systems on or off or editing them in <a href="game-systems.html">Game Systems</a> changes what the ES-DE theme shows too (only the order differs, since ES-DE themes sort systems alphabetically).</li>
+</ul>
+<h2 id="related"><a class="toclink" href="#related">Related</a></h2>
+<ul>
+<li><a href="themes.html">Home Themes</a> for the other three looks.</li>
+<li><a href="theme-settings.html">Wallpapers &amp; Theme Settings</a> for the settings shared by every theme.</li>
+</ul>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#what-it-is-and-what-it-is-not">What it is (and what it is not)</a>
+</li>
+<li><a href="#switching-to-the-es-de-theme">Switching to the ES-DE theme</a>
+</li>
+<li><a href="#getting-around">Getting around</a>
+</li>
+<li><a href="#the-ui-settings-menu">The UI SETTINGS menu</a>
+</li>
+<li><a href="#downloading-themes">Downloading themes</a>
+</li>
+<li><a href="#adding-themes-by-hand">Adding themes by hand</a>
+</li>
+<li><a href="#getting-back-to-nano-settings">Getting back to Nano settings</a>
+<ul>
+<li><a href="#switching-back-to-another-theme">Switching back to another theme</a></li>
+</ul>
+</li>
+<li><a href="#tips">Tips</a>
+</li>
+<li><a href="#related">Related</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

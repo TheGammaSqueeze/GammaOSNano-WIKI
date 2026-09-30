@@ -33,6 +33,15 @@ Some Toolbox options depend on your exact handheld's hardware. If a switch does 
 If a shader such as the CRT Shader ever makes the screen unreadable, hold <span class="btnchip">Power</span> + <span class="btnchip">Select</span> to disable the system display shader.
 {: .callout .warn }
 
+## Control Centre (dual-screen devices)
+
+On dual-screen handhelds (RG DS and RG DS Plus) the Toolbox has two rows for the bottom-screen [Control Center](control-center.html). They only appear on dual-screen devices, and they are the same settings as the Control Center's own Screen Options page.
+
+| Option | Default | What it does |
+|--------|---------|--------------|
+| **Control Centre Double Tap** | Off | When on, the sleeping bottom screen needs two quick taps to wake, so brushing the panel by accident does not light it up. |
+| **Control Centre Timeout** | 30 seconds | How long the bottom screen stays lit without a touch before it fades to sleep: 15 seconds, 30 seconds, 1, 2, 5 or 10 minutes, or Never. |
+
 ## Performance and power
 
 | Option | What it does |

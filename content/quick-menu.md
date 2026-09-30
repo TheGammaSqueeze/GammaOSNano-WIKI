@@ -33,7 +33,7 @@ The Quick Menu is your fast lane to the settings you reach for most: brightness,
 | **Kill Background Apps** | Force-stops background apps, sparing the one in front |
 | **Kill All Apps** | Force-stops all third-party apps |
 | **Screen Orientation** | Force an app's orientation (shown only over a running app); the choice is remembered per app and persists between Nano and normal Android |
-| **Quick Resume** | Toggles [Quick Resume](quick-resume.html) on or off |
+| **Quick Resume** | Turns [Quick Resume](quick-resume.html) On or Off (off by default). The same switch is in **Settings > Game Settings > Quick Resume** |
 | **Power** | A submenu: Restart, Power Off, Recovery, Safe Mode, Boot Android |
 
 ![More Quick Menu items: USB, Close Apps, Quick Resume](assets/img/shots/xmb_quickmenu2.png)
@@ -61,7 +61,7 @@ If a shader ever makes the screen unreadable, hold <span class="btnchip">Power</
 
 ## Quick Settings tiles
 
-The Quick Settings page is a grid of one-tap toggles, including Wi-Fi, Bluetooth, Performance Mode, Global Shaders, GammaRGB, GammaEQ, Screen Map, Deep Sleep Mode, External as Primary, Immersive Mode, ABXY Swap, D-Pad/Analog Swap, Global Sensitivity, Analog Calibration, and stick inversion. Tap one to flip it.
+The Quick Settings page is a grid of one-tap toggles, including Wi-Fi, Bluetooth, Performance Mode, Global Shaders, GammaRGB, GammaEQ, Screen Map, Deep Sleep Mode, External as Primary, ABXY Swap, D-Pad/Analog Swap, Global Sensitivity, and stick inversion. Tap one to flip it. The unused Immersive Mode and Analog Calibration tiles have been removed to keep the grid tidy.
 
 ## USB Settings
 

@@ -38,11 +38,13 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
-<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 <li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
 <li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
 <li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
 <li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
@@ -74,6 +76,7 @@
 <div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
 <li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
 <li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Settings</div><ul>
 <li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
@@ -83,6 +86,7 @@
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
 <li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -103,16 +107,19 @@
 <li>Go to <strong>Game Settings</strong>.</li>
 <li>Choose <strong>Game Systems</strong>.</li>
 </ol>
-<p>You get a list of every system Nano knows, each with an On/Off toggle. The editor uses your home theme's own look, so it feels native whether you are on XMB or Minima.</p>
+<p>You get a list of every system Nano knows, each with an On/Off toggle. The editor uses your home theme's own look, so it feels native whether you are on XMB, DSi or Minima.</p>
+<p>In the DSi theme, Game Settings is a list with Game Systems at the top, followed by Quick Resume, Rescan Games, DraStic Data Folder, DraStic Cheats Folder and Boxart Scraper.</p>
+<p><img alt="Game Settings list in the DSi theme" class="wide" src="assets/img/shots/v143_dsi_game_settings_list.png" /></p>
 <div class="theme-trio">
   <figure><img src="assets/img/shots/xmb_gamesystems.png" alt="Game Systems list in the XMB theme"><figcaption><b>GammaOS XMB</b></figcaption></figure>
   <figure><img src="assets/img/shots/min_gamesystems.png" alt="Game Systems editor in the Minima theme"><figcaption><b>Minima</b></figcaption></figure>
 </div>
 
 <h2 id="turning-systems-on-and-off"><a class="toclink" href="#turning-systems-on-and-off">Turning systems on and off</a></h2>
-<p>Each system has an <strong>On/Off</strong> toggle. Turn a system Off to hide it from the Game category (handy if you do not own any games for it). Turn it back On whenever you like. Turning a system off does not delete any files.</p>
+<p>Each system has an <strong>On/Off</strong> toggle (press <span class="btnchip">X</span> on a system in the list to flip it). Turn a system Off to hide it from the Game category (handy if you do not own any games for it). Turn it back On whenever you like. Turning a system off does not delete any files.</p>
 <h2 id="reordering-systems"><a class="toclink" href="#reordering-systems">Reordering systems</a></h2>
 <p>To change the order systems appear in on the home screen, highlight a system and press <span class="btnchip">L1</span> or <span class="btnchip">R1</span> to move it up or down the list. Put your favourites at the top.</p>
+<p>The order you set here is exactly what the home shows. Reordering also sets the Game category's <span class="btnchip">Y</span> sort back to <strong>Default</strong> (the manual order), so a sort you picked earlier cannot hide your new order. See <a href="#sorting-the-game-category-y">Sorting the Game category (Y)</a>.</p>
 <h2 id="editing-a-system"><a class="toclink" href="#editing-a-system">Editing a system</a></h2>
 <p>Select any system to open its editor. Every field below can be changed, so you can point a system at a different emulator, add file types, or give it a new icon.</p>
 <table>
@@ -180,6 +187,10 @@
 <td>Fetch boxart and metadata for every game in this system now.</td>
 </tr>
 <tr>
+<td><strong>Clear Boxart</strong></td>
+<td>Delete this system's downloaded covers and background art. See <a href="#clear-boxart">Clear Boxart</a>.</td>
+</tr>
+<tr>
 <td><strong>Reset-to-Default</strong></td>
 <td>On built-in systems, restore the original settings.</td>
 </tr>
@@ -196,6 +207,22 @@
 <h2 id="scan-folders-and-default-locations"><a class="toclink" href="#scan-folders-and-default-locations">Scan folders and default locations</a></h2>
 <p>The <strong>Scan Folders</strong> field lists which folders a system searches for games. It now also shows the built-in default folders (for example <code>ROMs/nes/</code>) with the number of games found in each, so you can see at a glance where to drop your ROMs. A default folder that has no games yet is shown as <strong>Default (empty)</strong>.</p>
 <p>When you remove a scan-source folder, Nano first asks you to confirm with a <strong>Cancel</strong> or <strong>Remove Folder</strong> dialog that shows the folder path, so you do not drop a source by accident. Removing a folder only stops Nano scanning it; your files are left in place.</p>
+<h3 id="arcade-systems-stay-separate"><a class="toclink" href="#arcade-systems-stay-separate">Arcade systems stay separate</a></h3>
+<p>Each arcade system only scans its own folders. Adding CPS1, FBNeo or MAME no longer pulls in every other arcade folder on your storage, so your CPS1 list shows only CPS1 games and MAME only MAME games. The generic <code>arcade</code> folder counts as MAME, and <code>fba</code> counts as FBNeo.</p>
+<p>If you choose scan folders for a system yourself, it scans <strong>only</strong> those folders, not its defaults as well.</p>
+<h2 id="arcade-vertical"><a class="toclink" href="#arcade-vertical">Arcade (Vertical)</a></h2>
+<p>Vertical (TATE) arcade games, the ones made for a portrait screen, get a system of their own called <strong>Arcade (Vertical)</strong>. Put them in a ROM folder named any of these (upper or lower case both work):</p>
+<ul>
+<li><code>VARCADE</code></li>
+<li><code>VERTICAL</code></li>
+<li><code>TATE</code></li>
+<li><code>TATEGAME</code></li>
+<li><code>verticalarcade</code></li>
+</ul>
+<p>The system is added automatically from those folders and appears under <strong>Game</strong> once it has games. It runs them with MAME by default, with FBNeo available as the other choice (change it with the <strong>Emulator</strong> field). Before this, those folders were ignored or folded into MAME.</p>
+<h2 id="clear-boxart"><a class="toclink" href="#clear-boxart">Clear Boxart</a></h2>
+<p>To wipe the artwork for one system (for example before scraping it again from scratch), open the system in the editor and choose <strong>Clear Boxart</strong>. Nano asks you to confirm with <strong>Cancel</strong> or <strong>Clear Boxart</strong>, then deletes that system's downloaded covers and background art. Your games are not touched, and other systems keep their art.</p>
+<p><img alt="Clear Boxart confirmation" class="dual" src="assets/img/shots/v143_dsi_clear_boxart_confirm.png" /></p>
 <h2 id="missing-emulator-warning"><a class="toclink" href="#missing-emulator-warning">Missing-emulator warning</a></h2>
 <p>If a system's libretro core or standalone emulator app is not installed, Nano tells you rather than launching into a black screen. When you try to start a game whose core <code>.so</code> or standalone package is missing, a short toast appears explaining what is needed. See <a href="emulators.html">Emulators &amp; Cores</a> for which core or app each system uses.</p>
 <h2 id="auto-add-whole-systems-from-a-folder"><a class="toclink" href="#auto-add-whole-systems-from-a-folder">Auto-add whole systems from a folder</a></h2>
@@ -203,19 +230,21 @@
 <p>Nano walks the folders and, for each recognised system, links it to a built-in system or creates a new one for it. Empty folders and media-only folders are skipped. When it finishes it shows a summary of what was added, including any systems that still need an emulator installed to run.</p>
 <p><img alt="Bulk auto-add systems" src="assets/img/shots/wn_bulk_autoadd.png" /></p>
 <h2 id="sorting-the-game-category-y"><a class="toclink" href="#sorting-the-game-category-y">Sorting the Game category (Y)</a></h2>
-<p>The order systems appear on the home screen is separate from how you sort the tiles on screen. In the <strong>Game</strong> category, press <span class="btnchip">Y</span> to cycle the tile order: <strong>Default</strong>, <strong>A to Z</strong>, <strong>Most Games</strong>, and <strong>By Manufacturer</strong>. The choice persists across restarts, and it only changes the on-screen order. It never reorders or touches your actual games or systems.</p>
+<p>The order systems appear on the home screen is separate from how you sort the tiles on screen. In the <strong>Game</strong> category, press <span class="btnchip">Y</span> to cycle the tile order: <strong>Default</strong>, <strong>A to Z</strong>, <strong>Most Games</strong>, and <strong>By Manufacturer</strong>. <strong>Default</strong> is the order you set in the Game Systems editor. The choice persists across restarts, and it only changes the on-screen order. It never reorders or touches your actual games or systems.</p>
 <p><img alt="Game category sort" src="assets/img/shots/wn_game_sort.png" /></p>
 <h2 id="adding-a-whole-new-system"><a class="toclink" href="#adding-a-whole-new-system">Adding a whole new system</a></h2>
 <p>The editor is also how you add a console Nano does not list yet. Scroll to the top of the Game Systems list, choose <strong>Add New System...</strong>, and pick your emulator. For a full worked example (adding AetherSX2 for PlayStation 2, step by step), see <a href="custom-system.html">Add a Custom System</a>.</p>
 <h2 id="custom-system-icons"><a class="toclink" href="#custom-system-icons">Custom system icons</a></h2>
-<p>Every system has an <strong>Icon</strong> field in its editor. Selecting it opens the icon grid, a searchable set of hundreds of built-in console and platform glyphs. Press <span class="btnchip">Y</span> to filter by name, highlight the one you want, and press <span class="btnchip">Cross</span> to assign it.</p>
+<p>Every system has an <strong>Icon</strong> field in its editor. Selecting it opens the icon grid (<strong>Choose Icon</strong>), a searchable set of hundreds of built-in console and platform glyphs. Press <span class="btnchip">Y</span> to filter by name, highlight the one you want, and press <span class="btnchip">Cross</span> to assign it.</p>
+<p><img alt="The Choose Icon grid with the X: Import PNG hint" class="wide" src="assets/img/shots/v143_xmb_icon_grid.png" /></p>
 <h3 id="import-your-own-png"><a class="toclink" href="#import-your-own-png">Import your own PNG</a></h3>
-<p>If none of the built-in glyphs suit you, you can bring your own image:</p>
+<p>If none of the built-in glyphs suit you, you can use any PNG or JPG as the system's icon, right from the menu:</p>
 <ol>
 <li>Open the system's <strong>Icon</strong> field to show the icon grid.</li>
-<li>Press <span class="btnchip">X</span> (Import PNG). A file browser opens at your storage.</li>
-<li>Browse to your image and select it. Nano copies it into its own storage and sets it as the system's icon straight away.</li>
+<li>Press <span class="btnchip">X</span> (<strong>Import PNG</strong>, shown in the hint along the bottom). A file browser opens at your storage.</li>
+<li>Browse to your image and select it. Nano copies it into its own storage and sets it as the system's icon straight away. The <strong>Icon</strong> row then reads <strong>Custom</strong>.</li>
 </ol>
+<p class="callout warn">In this release, the icon grid can appear empty in the <strong>DSi theme on dual-screen devices</strong> (such as the RG DS Plus). If that happens, switch to the XMB theme (<strong>Settings &gt; Theme Settings &gt; Home Theme</strong>), set the icon there, and switch back. The icon you choose shows in every theme.</p>
 <p>Your file is copied, so you can delete the original afterwards and the icon still works. If you later delete the custom system, its imported icon is cleaned up with it.</p>
 <p class="callout note"><strong>Icon requirements</strong></p>
 <ul>
@@ -225,8 +254,8 @@
 <li><strong>Transparency:</strong> use a transparent background (PNG) so only your artwork shows, not a solid block behind it.</li>
 <li><strong>Colour:</strong> the built-in glyphs are single-colour and respond to the <strong>Icon Tint</strong> setting. A full-colour PNG is shown as-is, untinted, so if you want the tint swatches to affect your icon, supply a white or light silhouette on a transparent background.</li>
 </ul>
-<h3 id="interim-method-over-adb-older-builds"><a class="toclink" href="#interim-method-over-adb-older-builds">Interim method over ADB (older builds)</a></h3>
-<p>If your build does not yet have the in-menu <strong>Import PNG</strong> button, you can set a custom icon by hand over <a href="adb-and-logs.html">ADB</a>. Nano reads its systems from <code>/data/system/nano_systems.json</code> and accepts a <code>file:</code> icon reference that points at any image on the device.</p>
+<h3 id="over-adb-older-builds-only"><a class="toclink" href="#over-adb-older-builds-only">Over ADB (older builds only)</a></h3>
+<p>You do not need this on current builds: use <strong>Import PNG</strong> above. It is kept for older builds that do not have the in-menu button. On those, you can set a custom icon by hand over <a href="adb-and-logs.html">ADB</a>. Nano reads its systems from <code>/data/system/nano_systems.json</code> and accepts a <code>file:</code> icon reference that points at any image on the device.</p>
 <ol>
 <li>Copy your PNG into Nano's icon folder (create it if needed), naming it after the system's id:</li>
 </ol>
@@ -265,6 +294,13 @@
 <li><a href="#a-quicker-way-in">A quicker way in</a>
 </li>
 <li><a href="#scan-folders-and-default-locations">Scan folders and default locations</a>
+<ul>
+<li><a href="#arcade-systems-stay-separate">Arcade systems stay separate</a></li>
+</ul>
+</li>
+<li><a href="#arcade-vertical">Arcade (Vertical)</a>
+</li>
+<li><a href="#clear-boxart">Clear Boxart</a>
 </li>
 <li><a href="#missing-emulator-warning">Missing-emulator warning</a>
 </li>
@@ -277,7 +313,7 @@
 <li><a href="#custom-system-icons">Custom system icons</a>
 <ul>
 <li><a href="#import-your-own-png">Import your own PNG</a></li>
-<li><a href="#interim-method-over-adb-older-builds">Interim method over ADB (older builds)</a></li>
+<li><a href="#over-adb-older-builds-only">Over ADB (older builds only)</a></li>
 </ul>
 </li>
 <li><a href="#related-pages">Related pages</a>

@@ -14,7 +14,7 @@ Nano does not emulate games itself (other than the built-in DraStic DS emulator)
 When you pick a game, Nano figures out which system it belongs to and launches it in one of two ways:
 
 - **RetroArch cores (libretro).** Most systems run inside RetroArch (`com.retroarch.aarch64`) using a small plug-in called a libretro core. One RetroArch install can run many systems by loading a different core for each.
-- **Standalone emulator apps.** A few systems run in their own dedicated app instead: Nintendo 64 uses Mupen64Plus, PSP uses PPSSPP, Dreamcast uses Flycast, and Nintendo DS uses the built-in [DraStic Nano](drastic-nano.html).
+- **Standalone emulator apps.** A few systems run in their own dedicated app instead: Nintendo 64 uses Mupen64Plus, PSP uses PPSSPP, Dreamcast uses Flycast, and Nintendo DS uses the built-in [DraStic Nano](drastic-nano.html), which is part of the system itself (no DraStic app needs to be installed).
 
 Either way the experience is the same from your side. Nano launches the emulator, briefly drops its own controller input during the handoff so no stray button press leaks into your game, and remembers where you were. When you exit, you land back on the same game highlighted on the home screen.
 
@@ -40,7 +40,7 @@ Here is what each system uses out of the box, along with the game file types Nan
 | Game Boy Color | gbc | Gambatte (libretro) | .gbc .gb |
 | Game Boy Advance | gba | gpSP (libretro) | .gba |
 | Nintendo 64 | n64 | Mupen64Plus (standalone) | .n64 .v64 .z64 .bin .ndd |
-| Nintendo DS | nds | DraStic Nano (built-in) | .nds |
+| Nintendo DS | nds | DraStic Nano (built-in) | .nds .zip |
 | Genesis / Mega Drive | genesis | Genesis Plus GX (libretro) | .md .gen .smd .bin |
 | Master System | mastersystem | Genesis Plus GX (libretro) | .sms .sg |
 | Game Gear | gamegear | Genesis Plus GX (libretro) | .gg |
@@ -56,7 +56,7 @@ The "Folder" column is the subfolder name Nano scans under your ROMs directory. 
 
 Nano does **not** ship any console BIOS or firmware files. Some systems refuse to boot without them, so you must supply your own for the consoles that need them (for example PlayStation, PS2, Dreamcast, Neo Geo, and Sega CD).
 
-Nintendo DS is the happy exception: the built-in [DraStic Nano](drastic-nano.html) emulator has its own high-level BIOS emulation, so DS games run with no BIOS files at all.
+Nintendo DS is the happy exception: the built-in [DraStic Nano](drastic-nano.html) emulator ships with everything it needs inside GammaOS, so DS games run with no BIOS files from you at all.
 {: .callout .tip }
 
 BIOS files are copyrighted. Nano cannot legally include them, so you provide your own copies.
@@ -86,7 +86,7 @@ Put these in `/storage/emulated/0/RetroArch/system`, keeping the exact filename.
 | Dreamcast (dreamcast) | `dc_bios.bin`, `dc_flash.bin` | Flycast standalone imports these in its own settings instead. |
 | Neo Geo (neogeo) | `neogeo.zip` | The BIOS is supplied as a named archive. |
 
-Nintendo DS is different: the built-in [DraStic Nano](drastic-nano.html) emulator does not use the RetroArch system folder at all. If you supply DS BIOS files, they live with the DraStic data folder (see [DraStic Nano](drastic-nano.html)), and DS games run without them anyway thanks to DraStic's high-level BIOS emulation.
+Nintendo DS is different: the built-in [DraStic Nano](drastic-nano.html) emulator does not use the RetroArch system folder at all. The BIOS and firmware files it uses ship inside GammaOS, so there is nothing to copy. Your DS saves, save states, shaders and cheat files live in the `drastic-nano` folder on internal storage (see [DraStic Nano](drastic-nano.html#save-location-and-your-drastic-folder)).
 {: .callout .note }
 
 ## Change a system's core or emulator
@@ -107,11 +107,11 @@ Inside a RetroArch game, a quick tap of the <span class="btnchip">Back</span> bu
 
 For the full list, including how to reach states, options, and input rebinding, see [RetroArch controls](controls-retroarch.html).
 
-For the built-in DS emulator, see [DraStic Nano](drastic-nano.html) for its own in-game overlay, screen layout tuning, FPS counter, and save/load-state bindings.
+For the built-in DS emulator, see [DraStic Nano](drastic-nano.html) for its own in-game menu, GPU 3D renderer, per-game overrides, FPS counters, and save/load-state bindings.
 
 ## Known limitations
 
-Per-game core-option overrides are not managed from the Nano launcher. To change a core setting for one game only (for example a different renderer or aspect ratio for a single title), use RetroArch's own **Quick Menu > Overrides** inside the running game and save a game-specific override there. Nano's Game Systems editor changes settings for the whole system, not one game.
+Per-game core-option overrides are not managed from the Nano launcher (the built-in DraStic Nano is the exception: it has its own [per-game overrides](drastic-nano.html#per-game-overrides)). To change a core setting for one game only (for example a different renderer or aspect ratio for a single title), use RetroArch's own **Quick Menu > Overrides** inside the running game and save a game-specific override there. Nano's Game Systems editor changes settings for the whole system, not one game.
 
 ## Related pages
 

@@ -18,6 +18,14 @@ The first time your handheld starts, GammaOS Nano runs a short setup to get you 
 
 If you would rather skip Wi-Fi for now, you can. You can always connect later from Settings, and the steps below show you how.
 
+Once the system configuration is done, the wizard finishes by itself: a short countdown shows on screen and then it moves on without you, so there is no need to guess which button to press.
+
+A few things are worth knowing about a fresh install:
+
+- **Bluetooth starts off.** The setup has no Bluetooth step. When you want to pair a controller or headphones, turn Bluetooth on from the Quick Menu (hold <span class="btnchip">Power</span>) or the Bluetooth and Accessories screen. It stays off until you turn it on. See [Connectivity](network.html).
+- **Quick Resume starts off.** Every boot starts at the home. If you would like the handheld to drop straight back into the game you were playing, turn on **Settings > Game Settings > Quick Resume** (also in the Quick Menu). See [Quick Resume](quick-resume.html).
+- **You choose where the home opens.** **Settings > Theme Settings > Startup Menu** lets the home open on any category, or straight into one game system such as your Nintendo DS list.
+
 ## Finding your way around
 
 Everything lives under a small set of categories on the home screen. Move sideways to change category and up or down to move through the items. To open the settings, go to the **Settings** category and pick the option you want.
@@ -54,12 +62,12 @@ GammaOS Nano does not include any console BIOS files, and some systems need one 
 
 ## Switching themes
 
-GammaOS Nano has three home themes, and switching is instant:
+GammaOS Nano has four home themes, and switching is instant:
 
 1. Open **Settings > Theme Settings > Home Theme**.
-2. Choose **GammaOS XMB**, **DSi Menu**, or **Minima**.
+2. Choose **GammaOS XMB**, **DSi Menu**, **Minima**, or **Custom / ES-DE**.
 
-The home restarts into your chosen look. You can also change the accent colour, set a wallpaper, and more from Theme Settings. See [Home Themes](themes.html) for the full tour.
+The home switches to your chosen look straight away. **Custom / ES-DE** runs EmulationStation-DE theme sets, with the Slate theme preinstalled and a built-in downloader for more; see [ES-DE Themes](esde-themes.html). You can also change the accent colour, set a wallpaper, and more from Theme Settings. See [Home Themes](themes.html) for the full tour.
 
 ## Where to next
 

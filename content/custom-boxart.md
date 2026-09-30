@@ -54,7 +54,7 @@ From here you can:
 - **Remove** delete the cover, the background, or both.
 - **Bulk Import** and **Bulk Export** manage the whole library in one go.
 
-On builds that support it, Nano reloads your changes in place with no restart; on older builds the tool restarts Nano for you. Either way, the list shows each game's on-device **path** so you can tell similarly named games apart.
+Nano reloads your changes in place, so new covers, backgrounds and titles appear on the device straight away without restarting the home (on builds older than 1.4.2 the tool restarts Nano for you instead). Either way, the list shows each game's on-device **path** so you can tell similarly named games apart.
 
 ### Scrape art automatically
 
@@ -128,6 +128,8 @@ If you would rather understand the format or edit it by hand, here is exactly ho
     <key>.fan.jpg     a game's fan art
 ```
 
+That is the default location. If you picked a **Boxart Folder** on the device (for example on the SD card, see [Keep box art on the SD card](boxart.html#keep-box-art-on-the-sd-card)), the images and `index.json` live in that folder instead, while `names.json` always stays in `/data/system/nano_scrape/`.
+
 `<key>` is the game's ROM path run through a 64-bit **FNV-1a** hash, written as 16 lowercase hex digits. It is only a filename convention: Nano loads a cover from the path stored in the manifest, so what really matters is the `index.json` entry.
 
 ### index.json
@@ -162,7 +164,7 @@ If you would rather understand the format or edit it by hand, here is exactly ho
 
 `names.json` is the same shape with `{ "rom", "name" }` items and just renames a game.
 
-Older Nano builds read `index.json` once at startup, so after any change you must restart Nano for it to show. Newer builds reload it in place when the tool asks them to (via the `sys.gammaos.nano.scrape_reload` property), so changes appear with no restart. Either way, Nano refuses to save over an `index.json` it cannot read, so a bad edit will not wipe your library, but you should still keep a backup (use `export`).
+Nano builds older than 1.4.2 read `index.json` once at startup, so after any change you must restart Nano for it to show. Current builds reload it in place when the tool asks them to (via the `sys.gammaos.nano.scrape_reload` property), so changes appear with no restart. Either way, Nano refuses to save over an `index.json` it cannot read, so a bad edit will not wipe your library, but you should still keep a backup (use `export`).
 {: .callout .note }
 
 ## Doing it by hand

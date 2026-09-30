@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Syncthing - GammaOS Nano</title>
+<meta name="description" content="Keep your saves and folders in sync with a PC, phone or another handheld using the built-in Syncthing service.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.png">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <img class="brand-mark" src="assets/img/brand/gammaos-logo-tile.png" alt="GammaOS logo" width="28" height="28">
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+<li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+<li><a href="theme-settings.html"><span class="nav-ico">🖼️</span>Wallpapers &amp; Theme Settings</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+<li><a href="custom-boxart.html"><span class="nav-ico">🖼️</span>Custom Boxart and Backup</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a class="active" href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+<li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
+<li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
+<li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+<li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+<li><a href="adb-and-logs.html"><span class="nav-ico">🧰</span>ADB Setup and Logs</a></li>
+<li><a href="restore-drastic.html"><span class="nav-ico">🔧</span>Restore DraStic (RG DS)</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">Syncthing keeps a folder on your handheld and a folder on another device identical, over your own network, with no cloud account. Change a file on one side and it appears on the other a moment later. GammaOS Nano ships the official Syncthing service built in, and you control it entirely from the home menu.</p>
+<h2 id="why-use-it"><a class="toclink" href="#why-use-it">Why use it</a></h2>
+<p>The classic use is saves. Play a DS game on the handheld, and the save is already on your PC (or your phone, or your second handheld) when you sit down there. Other good uses:</p>
+<ul>
+<li>Keep the DraStic save folder the same on two handhelds, so you can carry on the same game on either.</li>
+<li>Back up RetroArch saves and save states to a PC automatically.</li>
+<li>Drop ROMs, music or videos into a folder on your PC and have them arrive on the handheld.</li>
+</ul>
+<p>Syncthing runs in the background, including while games and apps are open, so a save you make in a game is sent without you going back to the home. It only works while both devices are on and can reach each other (on the same Wi-Fi, or over the internet through Syncthing's own discovery and relays).</p>
+<p class="callout note">You need Syncthing on the other device too. It is free for Windows, macOS and Linux from <a href="https://syncthing.net/">syncthing.net</a>, and on Android phones there are Syncthing apps as well.</p>
+<h2 id="turn-it-on"><a class="toclink" href="#turn-it-on">Turn it on</a></h2>
+<p>Go to <strong>Settings &gt; Network Shares</strong> and pick <strong>Syncthing</strong>, the last row.</p>
+<p><img alt="Network Shares with the Syncthing row" class="dual" src="assets/img/shots/v143_dsi_network_shares.png" /></p>
+<p>Turn the <strong>Syncthing</strong> toggle on. After a few seconds <strong>Status</strong> changes from Starting... to Running (with the Syncthing version), and the rest of the rows appear. While Syncthing is stopped you only see the toggle and Status.</p>
+<p><img alt="Syncthing running" class="dual" src="assets/img/shots/v143_dsi_syncthing_running.png" /></p>
+<h2 id="the-syncthing-rows"><a class="toclink" href="#the-syncthing-rows">The Syncthing rows</a></h2>
+<table>
+<thead>
+<tr>
+<th>Row</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Syncthing</strong></td>
+<td>Starts or stops the Syncthing service.</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td>Stopped, Starting... or Running with the version. The description shows the uptime and any connection problems.</td>
+</tr>
+<tr>
+<td><strong>This Device</strong></td>
+<td>This handheld's name. Select it to show the full Device ID you need for pairing.</td>
+</tr>
+<tr>
+<td><strong>Folders</strong></td>
+<td>The folders you share, and <strong>Add Folder</strong> to share a new one.</td>
+</tr>
+<tr>
+<td><strong>Devices</strong></td>
+<td>The other devices you sync with (and how many are connected), and <strong>Add Device</strong> to pair a new one.</td>
+</tr>
+<tr>
+<td><strong>Pending Requests</strong></td>
+<td>Devices that want to connect and folders other devices offer to this one.</td>
+</tr>
+<tr>
+<td><strong>Options</strong></td>
+<td>Device name, discovery, relays and upload/download limits.</td>
+</tr>
+<tr>
+<td><strong>Web Interface</strong></td>
+<td>Opens Syncthing's own web page to other computers on your network (off by default, see below).</td>
+</tr>
+<tr>
+<td><strong>Restart Syncthing</strong></td>
+<td>Restarts the service. Syncing pauses for a few seconds.</td>
+</tr>
+<tr>
+<td><strong>Logs</strong></td>
+<td>Syncthing's recent log, handy when something will not connect.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="step-1-pair-the-other-device"><a class="toclink" href="#step-1-pair-the-other-device">Step 1: pair the other device</a></h2>
+<p>Syncthing devices find each other by a <strong>Device ID</strong>, a long code of 56 letters and digits shown in groups of 7. Both devices have to add each other. You only type one ID; the other side can simply accept.</p>
+<p><strong>Add your PC on the handheld:</strong></p>
+<ol>
+<li>On your PC, open Syncthing and find its Device ID (in the Syncthing web page on the PC: <strong>Actions &gt; Show ID</strong>).</li>
+<li>On the handheld, open <strong>Devices &gt; Add Device</strong>. The on-screen keyboard asks for the Device ID of the other device. Type it in (the dashes are optional).</li>
+<li>A <strong>New Device</strong> page opens. Give it a <strong>Name</strong> if you like (shown on this device only), then choose <strong>Save Device</strong>.</li>
+<li>On the PC, Syncthing shows a message that a new device wants to connect. Accept it.</li>
+</ol>
+<p><strong>Or let the other side add the handheld:</strong></p>
+<ol>
+<li>On the handheld, select <strong>This Device</strong>. A dialog shows the full Device ID. Type that ID into Syncthing on the other device (<strong>Add Remote Device</strong> on a PC).</li>
+<li>On the handheld, open <strong>Pending Requests</strong>. The other device is listed as "Wants to connect". Select it and choose <strong>Add Device</strong>, then <strong>Save Device</strong> on the page that opens. (Choose <strong>Ignore</strong> to turn the request down.)</li>
+</ol>
+<p>After a short while the device shows as connected in <strong>Devices</strong>.</p>
+<h2 id="step-2-share-a-folder"><a class="toclink" href="#step-2-share-a-folder">Step 2: share a folder</a></h2>
+<p>Once the other device is added, share a folder with it:</p>
+<ol>
+<li>Open <strong>Folders &gt; Add Folder</strong>. A <strong>New Folder</strong> page opens.</li>
+</ol>
+<p><img alt="The New Folder page" class="dual" src="assets/img/shots/v143_dsi_syncthing_new_folder.png" /></p>
+<ol start="2">
+<li><strong>Label</strong>: a friendly name, shown on this device only. The on-screen keyboard opens with the prompt on its own line above the text you type.</li>
+</ol>
+<p><img alt="Typing a folder label on the on-screen keyboard" class="dual" src="assets/img/shots/v143_osk_prompt_line.png" /></p>
+<ol start="3">
+<li><strong>Folder ID</strong>: filled in with a random ID. It must match the ID used for this folder on the other devices. If you are creating the folder here first, keep it (or type something readable such as <code>drastic-saves</code>); the other side will pick the same ID up when it accepts the folder.</li>
+<li><strong>Path</strong>: select it to browse the handheld's storage. Move into the folder you want to sync and choose <strong>Select This Folder</strong>. Folders on internal storage and on an SD card both work. The path cannot be changed after the folder is saved.</li>
+<li><strong>Folder Type</strong>:
+   - <strong>Send &amp; Receive</strong> (the default): changes flow both ways.
+   - <strong>Send Only</strong>: this handheld sends its changes but ignores changes from other devices.
+   - <strong>Receive Only</strong>: this handheld takes changes from other devices but does not send its own.</li>
+<li><strong>Shared With</strong>: tick the devices this folder should sync with.</li>
+<li>Choose <strong>Save Folder</strong> at the top of the page.</li>
+</ol>
+<p>The other device now receives an offer for the folder. On a PC, accept it and pick where the folder should live there.</p>
+<p class="callout tip">The New Folder page has a few more rows you can leave at their defaults: <strong>File Versioning</strong> (keep old copies of changed or deleted files), <strong>Full Rescan Interval</strong>, <strong>Watch for Changes</strong> (notice changes as they happen) and <strong>Ignore Permissions</strong> (recommended on Android storage, and turned on for you on SD cards).</p>
+<h3 id="accepting-a-folder-from-another-device"><a class="toclink" href="#accepting-a-folder-from-another-device">Accepting a folder from another device</a></h3>
+<p>If the other device shares a folder with the handheld first, it appears in <strong>Pending Requests</strong> as "Folder offered". Select it and choose <strong>Add Folder</strong>. The New Folder page opens with the Folder ID and Label already filled in and the offering device ticked in Shared With. Pick a <strong>Path</strong>, then <strong>Save Folder</strong>.</p>
+<h3 id="managing-a-folder-later"><a class="toclink" href="#managing-a-folder-later">Managing a folder later</a></h3>
+<p>Open a folder from <strong>Folders</strong> to see its state (Up to Date, Syncing and so on), how much is in sync, and extra actions: <strong>Paused</strong>, <strong>Rescan Now</strong>, <strong>Ignore Patterns</strong> (files and folders that should not sync) and <strong>Remove Folder</strong>. Removing a folder only stops syncing; the files on the handheld are kept.</p>
+<h2 id="worked-example-drastic-saves-with-a-pc"><a class="toclink" href="#worked-example-drastic-saves-with-a-pc">Worked example: DraStic saves with a PC</a></h2>
+<p>DraStic Nano keeps its game saves in <strong>Internal storage/drastic-nano/saves</strong> (the DraStic Nano Save States page shows the exact folders if you moved them with Game Settings &gt; DraStic Data Folder). To mirror them to your PC:</p>
+<ol>
+<li>Install Syncthing on the PC and open its web page (it opens in your browser when Syncthing starts).</li>
+<li>On the handheld, turn on <strong>Settings &gt; Network Shares &gt; Syncthing</strong>.</li>
+<li>Pair the two: <strong>Devices &gt; Add Device</strong> on the handheld with the PC's Device ID, <strong>Save Device</strong>, then accept the handheld on the PC.</li>
+<li>On the handheld: <strong>Folders &gt; Add Folder</strong>.
+   - <strong>Label</strong>: DraStic saves
+   - <strong>Folder ID</strong>: drastic-saves
+   - <strong>Path</strong>: Internal storage &gt; drastic-nano &gt; saves, then <strong>Select This Folder</strong>
+   - <strong>Folder Type</strong>: Send &amp; Receive
+   - <strong>Shared With</strong>: tick your PC
+   - <strong>Save Folder</strong></li>
+<li>On the PC, accept the "drastic-saves" folder offer and choose a folder for it, for example <code>Documents\DS saves</code>.</li>
+</ol>
+<p>From now on, every in-game save appears on the PC within seconds while the handheld is on Wi-Fi. To carry the same saves on a second handheld, share the same Folder ID with it too.</p>
+<p class="callout warn">Save states live next door in <strong>drastic-nano/savestates</strong>. Add them as a second folder the same way if you want them synced as well. Avoid playing the same game on two devices at the same time: the last save written wins, and Syncthing keeps the other copy as a conflict file.</p>
+<h2 id="the-web-interface"><a class="toclink" href="#the-web-interface">The web interface</a></h2>
+<p>Syncthing has a full web page with every advanced option. On the handheld it is only open to the handheld itself by default, so nobody on your network can reach it. To manage Syncthing from a browser on your PC or phone:</p>
+<ol>
+<li>Select <strong>Web Interface</strong> and choose <strong>On (available on the network)</strong>.</li>
+<li>Enter a username (it suggests <code>gammaos</code>), then a password of at least 4 characters. The web page always asks for these when it is open to the network.</li>
+<li>Syncthing restarts, and the row's description shows the address to open, in the form <code>http://&lt;handheld IP address&gt;:8384</code>. You can also find the IP address in <strong>Settings &gt; System Settings &gt; System Information</strong>.</li>
+</ol>
+<p><img alt="The Web Interface row" class="dual" src="assets/img/shots/v143_dsi_syncthing_web_interface.png" /></p>
+<p>To close it again, choose <strong>Off (this device only)</strong>. Everything in the web page is also reachable from the handheld menus, so you never need it for the basics.</p>
+<h2 id="battery-and-background-use"><a class="toclink" href="#battery-and-background-use">Battery and background use</a></h2>
+<ul>
+<li>Syncthing keeps running in the background while you play, including inside games and apps, so there is nothing to start before you play.</li>
+<li>It uses some battery and network while it scans and transfers. If you only sync now and then, turn the <strong>Syncthing</strong> toggle off when you do not need it.</li>
+<li>Syncthing is also available from Settings and TV Settings when you boot into full Android (see <a href="atv-desktop-features.html">Desktop Mode Features</a>); it is the same service with the same folders.</li>
+</ul>
+<h2 id="related-pages"><a class="toclink" href="#related-pages">Related pages</a></h2>
+<ul>
+<li><a href="network-shares.html">Network Shares</a> for SMB, NFS, WebDAV and FTP shares.</li>
+<li><a href="network.html">Wi-Fi &amp; Bluetooth</a> to get online first.</li>
+<li><a href="drastic-nano.html">DraStic Nano</a> for where DS saves and save states live.</li>
+</ul>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#why-use-it">Why use it</a>
+</li>
+<li><a href="#turn-it-on">Turn it on</a>
+</li>
+<li><a href="#the-syncthing-rows">The Syncthing rows</a>
+</li>
+<li><a href="#step-1-pair-the-other-device">Step 1: pair the other device</a>
+</li>
+<li><a href="#step-2-share-a-folder">Step 2: share a folder</a>
+<ul>
+<li><a href="#accepting-a-folder-from-another-device">Accepting a folder from another device</a></li>
+<li><a href="#managing-a-folder-later">Managing a folder later</a></li>
+</ul>
+</li>
+<li><a href="#worked-example-drastic-saves-with-a-pc">Worked example: DraStic saves with a PC</a>
+</li>
+<li><a href="#the-web-interface">The web interface</a>
+</li>
+<li><a href="#battery-and-background-use">Battery and background use</a>
+</li>
+<li><a href="#related-pages">Related pages</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

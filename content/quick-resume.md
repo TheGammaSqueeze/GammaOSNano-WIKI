@@ -18,11 +18,14 @@ Quick Resume is available for **RetroArch games and DraStic (Nintendo DS) games 
 
 ## Turning it on or off
 
-Quick Resume is **on by default**. On the home screen you can toggle it at any time:
+Quick Resume is **off by default**, so every boot starts at the home until you choose otherwise. Turn it on in either of two places:
 
-- Press <span class="btnchip">R1</span> on the home to flip Quick Resume on or off.
+- **Settings > Game Settings > Quick Resume** (On or Off).
+- **Quick Menu > Quick Resume**, which opens the same On/Off choice.
 
-When it is on, the next power off from inside a supported game arms the resume. When it is off, games always start from their own boot screen.
+![Quick Resume in Game Settings](assets/img/shots/v143_dsi_quick_resume_row.png){: .dual }
+
+The change applies from the next game you launch. When it is on, the next power off from inside a supported game arms the resume. When it is off, every boot starts at the home and games start from their own boot screen.
 
 ## How it works, per emulator
 
@@ -34,6 +37,11 @@ If a previous save was cut short (for example the battery died mid-write), Nano 
 {: .callout .tip }
 
 One exception: RetroAchievements hardcore mode always boots fresh, because hardcore rules do not allow resuming from a saved state.
+
+Leaving a resumed DS game is always safe: hold <span class="btnchip">Back</span> as usual and the home comes back, even straight after a Quick Resume boot. (In 1.4.2 and earlier this could leave the screen frozen on the last frame, and a reboot resumed the game again. That loop is fixed in 1.4.3.)
+
+As an extra safety net, if the device resumes a game twice in a row without you pressing any button in between, the next boot lands on the home instead of resuming a third time.
+{: .callout .note }
 
 ### RetroArch
 

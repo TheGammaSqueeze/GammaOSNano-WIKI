@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Wi-Fi &amp; Bluetooth - GammaOS Nano</title>
-<meta name="description" content="Connect Wi-Fi and Bluetooth with the setup wizard.">
+<meta name="description" content="Connect Wi-Fi and Bluetooth, and what changed for Bluetooth, sleep and SD cards.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -38,11 +38,13 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
-<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 <li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
 <li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
 <li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
 <li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
@@ -74,6 +76,7 @@
 <div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
 <li><a class="active" href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
 <li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Settings</div><ul>
 <li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
@@ -83,6 +86,7 @@
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
 <li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -108,7 +112,7 @@
 <li>Entering your WPA2 password.</li>
 <li>Pairing a Bluetooth device.</li>
 </ol>
-<p>This is the same wizard you meet during first-time setup, so if you skipped Wi-Fi back then you can finish the job here. See <a href="getting-started.html">Getting started</a> for the first-boot walkthrough.</p>
+<p>The Wi-Fi part is the same step you meet during first-time setup, so if you skipped Wi-Fi back then you can finish the job here. First-time setup no longer has a Bluetooth step: a fresh install starts with Bluetooth off, and you turn it on here, in Bluetooth &amp; Accessories or from the Quick Menu when you want it. See <a href="getting-started.html">Getting started</a> for the first-boot walkthrough.</p>
 <p>The wizard no longer blanks out after idle time and now renders in the Minima theme as well as XMB and DSi. As you type a Wi-Fi password it is shown in the clear so you can check it before you connect, and networks whose names contain spaces connect correctly.</p>
 <p><img alt="Show Wi-Fi password in clear" src="assets/img/shots/wn_wifi_show_password.png" /></p>
 <h3 id="if-wi-fi-is-off"><a class="toclink" href="#if-wi-fi-is-off">If Wi-Fi is off</a></h3>
@@ -122,8 +126,11 @@
 <h2 id="bluetooth"><a class="toclink" href="#bluetooth">Bluetooth</a></h2>
 <p>Bluetooth pairing lives in the same wizard, and the Bluetooth and Accessories screen shows the on/off toggle even when Bluetooth is currently off, so you can turn it back on without hunting for it.</p>
 <p><img alt="Bluetooth toggle in System Settings" src="assets/img/shots/wn_bt_toggle.png" /></p>
+<p><strong>Bluetooth stays off when you turn it off.</strong> Opening the device list or scanning for devices no longer switches the radio back on behind your back. Only the Turn On toggle (or the Bluetooth tile in the Quick Menu) turns Bluetooth on, so it stays off and saves battery until you decide otherwise.</p>
 <p>Device scanning uses native discovery, so nearby devices appear reliably. An already-paired device can be re-registered, and pairing codes are shown clearly so you can confirm them on both ends. Scanning, pairing and connecting all have real timeouts (Bluetooth pairing waits up to 80 seconds), so a slow accessory no longer leaves the screen hanging.</p>
 <p><img alt="BT register/pairing codes" src="assets/img/shots/wn_bt_register.png" /></p>
+<h2 id="wi-fi-after-sleep-rg-ds-plus"><a class="toclink" href="#wi-fi-after-sleep-rg-ds-plus">Wi-Fi after sleep (RG DS Plus)</a></h2>
+<p>On the RG DS Plus, Wi-Fi used to look connected after waking from sleep while nothing actually loaded, then drop and refuse to reconnect until a reboot (this is also what made boxart scraping fail after the device slept). Since 1.4.3 the Wi-Fi comes back by itself about two seconds after the device wakes.</p>
 <h2 id="test-your-connection"><a class="toclink" href="#test-your-connection">Test your connection</a></h2>
 <p>Use <strong>Internet Connection Test</strong> to confirm your handheld can actually reach the internet after connecting. It is a handy check if a download or scrape is not working as expected.</p>
 <p class="callout note">If a boxart scrape or an online media browser fails, run the Internet Connection Test first to rule out a dropped connection.</p>
@@ -133,8 +140,10 @@
 <p><img alt="Live Wi-Fi/BT HUD" src="assets/img/shots/wn_network_hud.png" /></p>
 <p>On single-screen 4:3 DSi layouts, a top status bar reserves space for the clock, Wi-Fi, Bluetooth and date, so the same connectivity indicators are visible in the DSi theme.</p>
 <p><img alt="DSi single-screen status bar" src="assets/img/shots/wn_dsi_statusbar.png" /></p>
+<h2 id="sd-card-paths-stay-stable"><a class="toclink" href="#sd-card-paths-stay-stable">SD card paths stay stable</a></h2>
+<p>An SD card that is ejected and put back, or remounted, keeps the same volume id, so anything that points into it (a Syncthing folder, a Boxart Folder, a DraStic Data Folder or a ROM scan folder) keeps working instead of breaking after a remount.</p>
 <h2 id="next-steps"><a class="toclink" href="#next-steps">Next steps</a></h2>
-<p>Once you are online, you can mount SMB, NFS, WebDAV, and FTP shares so files on another computer or NAS appear as if they were local. Head to <a href="network-shares.html">Network Shares</a> to set those up.</p>
+<p>Once you are online, you can mount SMB, NFS, WebDAV, and FTP shares so files on another computer or NAS appear as if they were local. Head to <a href="network-shares.html">Network Shares</a> to set those up, or use <a href="syncthing.html">Syncthing</a> to keep folders such as your saves in sync with a PC or phone.</p>
         <footer class="page-foot">
           <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
         </footer>
@@ -150,9 +159,13 @@
 </li>
 <li><a href="#bluetooth">Bluetooth</a>
 </li>
+<li><a href="#wi-fi-after-sleep-rg-ds-plus">Wi-Fi after sleep (RG DS Plus)</a>
+</li>
 <li><a href="#test-your-connection">Test your connection</a>
 </li>
 <li><a href="#status-at-a-glance">Status at a glance</a>
+</li>
+<li><a href="#sd-card-paths-stay-stable">SD card paths stay stable</a>
 </li>
 <li><a href="#next-steps">Next steps</a>
 </li>

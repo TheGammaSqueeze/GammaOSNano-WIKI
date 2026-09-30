@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Getting Around - GammaOS Nano</title>
-<meta name="description" content="Moving around the menus with a controller, plus hold-to-scroll and page-skip.">
+<meta name="description" content="Moving around the menus with a controller, plus hold-to-scroll, page-skip and letter jumps.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -38,11 +38,13 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
-<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 <li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
 <li><a class="active" href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
 <li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
 <li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
@@ -74,6 +76,7 @@
 <div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
 <li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
 <li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Settings</div><ul>
 <li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
@@ -83,6 +86,7 @@
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
 <li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -134,18 +138,19 @@
 <li><span class="btnchip">Y</span> on any app pins or unpins it to the home. Pinned apps gather in a <strong>Pinned Apps</strong> row under Game, kept across restarts.</li>
 <li><span class="btnchip">Select</span> opens global <a href="search.html">Search</a> from anywhere on the home.</li>
 </ul>
-<p>When you sort games, switch to a folder view or pin an item, a centred banner confirms the change. It now renders at a readable size with a solid backdrop in all three themes.</p>
-<p><img alt="Larger sort/pin banner" src="assets/img/shots/wn_sort_banner.png" /></p>
+<p>When you sort games, switch to a folder view, pin an item or change a setting, a short confirmation appears: a compact card in the corner on DSi and Minima, and a frosted-glass message inside the clock bar on XMB. See <a href="theme-settings.html#setting-confirmations">Setting confirmations</a>.</p>
 <h2 id="hold-to-scroll-faster"><a class="toclink" href="#hold-to-scroll-faster">Hold to scroll faster</a></h2>
 <p>Long libraries are no problem. Hold a D-Pad direction and the list starts to accelerate: it begins after a short delay, then speeds up the longer you hold, so a big collection flies by. Let go to stop on the item you want. This accelerating scroll now works in DSi and Minima game lists too, not just XMB.</p>
 <p class="callout note">The DSi carousel at the top level scrolls at a steady, gentle pace, and only kicks into the accelerating scroll once you drill into a list. Minima and DSi keep that same carousel cadence at the top level.</p>
-<h2 id="page-skip-and-reordering-with-l1-r1"><a class="toclink" href="#page-skip-and-reordering-with-l1-r1">Page-skip and reordering with L1 / R1</a></h2>
-<p>The shoulder buttons give you big jumps and quick reordering:</p>
+<h2 id="faster-list-skipping-with-the-shoulder-buttons"><a class="toclink" href="#faster-list-skipping-with-the-shoulder-buttons">Faster list skipping with the shoulder buttons</a></h2>
+<p>The shoulder buttons give you big jumps through long lists:</p>
 <ul>
-<li>Inside a drilled game or media list, <span class="btnchip">L1</span> jumps back 10 items and <span class="btnchip">R1</span> jumps forward 10 items. This is the fastest way through a large library, and it now works in DSi and Minima lists too.</li>
-<li>On the home level (on a game-system row), <span class="btnchip">L1</span> and <span class="btnchip">R1</span> reorder that system up or down the list.</li>
-<li>Also at the home level, <span class="btnchip">L1</span> can toggle XMB / text mode and <span class="btnchip">R1</span> can toggle Quick Resume.</li>
+<li><strong>XMB:</strong> <span class="btnchip">L1</span> jumps back a page (10 items) and <span class="btnchip">R1</span> jumps forward a page in the list you are on. A page jump plays a single cursor sound instead of a burst.</li>
+<li><strong>DSi and Minima:</strong> inside a game or media list, <span class="btnchip">L1</span> and <span class="btnchip">R1</span> jump by initial letter. In an alphabetical list, <span class="btnchip">R1</span> goes to the first game of the next letter and <span class="btnchip">L1</span> goes back to the start of the current letter (press again for the previous letter). Games starting with a number or symbol share one group at the top. In a list that is not alphabetical (a settings page, or Recently Played) they jump a page of 10 instead.</li>
+<li><span class="btnchip">L2</span> and <span class="btnchip">R2</span> do the same jumps as <span class="btnchip">L1</span> and <span class="btnchip">R1</span>, so use whichever pair is comfortable.</li>
 </ul>
+<p class="callout tip">Combine them: jump to the right letter with the shoulder buttons, then hold the D-Pad to glide the last few rows.</p>
+<p>L1 and R1 also reorder things in the editors that support it: a system in <strong>Settings &gt; Game Settings &gt; Game Systems</strong> (see <a href="game-systems.html">Game Systems</a>) and a category in <strong>Home Categories</strong> (see <a href="theme-settings.html#home-categories-editor">Wallpapers &amp; Theme Settings</a>).</p>
 <p>On single-screen DSi, Game Information pages across <span class="btnchip">L1</span> / <span class="btnchip">R1</span> instead of overlapping, so a long synopsis turns one clean page at a time.</p>
 <h2 id="lists-wrap-around"><a class="toclink" href="#lists-wrap-around">Lists wrap around</a></h2>
 <p>You never hit a dead end. Press Up on the first item and you wrap to the last item, and press Down on the last item to wrap back to the first. This wrap-around now applies in DSi and Minima lists as well, so the last item loops straight back to the first. The analog stick and HAT behave exactly like the D-Pad, so use whichever feels natural.</p>
@@ -156,6 +161,9 @@
 <h2 id="touch-mouse-and-keyboard"><a class="toclink" href="#touch-mouse-and-keyboard">Touch, mouse and keyboard</a></h2>
 <p>If your handheld has a touch panel, tap a row to select and activate it, drag to scroll a list, and fling the DSi carousel (it snaps to the nearest slot). You can also drag slider tracks, tap Yes/No/OK in dialogs, and tap the dimmed area around a dialog to cancel.</p>
 <p>USB mice and keyboards work too. For the full mapping, see <a href="controls-mouse-keyboard.html">Mouse and Keyboard</a>.</p>
+<h2 id="typing-with-the-on-screen-keyboard"><a class="toclink" href="#typing-with-the-on-screen-keyboard">Typing with the on-screen keyboard</a></h2>
+<p>Whenever Nano needs text (a search, a Wi-Fi password, a system name, a Syncthing folder label or device ID), the on-screen keyboard opens. The guidance for the field, such as "Folder label", sits on its own line above the text you are typing, so a long prompt never crowds your entry (pictured on the <a href="syncthing.html">Syncthing</a> page).</p>
+<p>On the keyboard, <span class="btnchip">L1</span> toggles Shift, <span class="btnchip">R1</span> switches between letters and symbols, <span class="btnchip">Y</span> pastes from the clipboard and <span class="btnchip">Start</span> submits. The full list is in <a href="controls-os.html">OS Controls</a>.</p>
 <h2 id="learn-more"><a class="toclink" href="#learn-more">Learn more</a></h2>
 <p>For the complete button chart and the system-wide shortcuts (like brightness and the Power menu), see <a href="controls-os.html">OS Controls</a>. To master the Options button, head to <a href="context-menus.html">Context Menus</a>.</p>
         <footer class="page-foot">
@@ -167,13 +175,15 @@
 </li>
 <li><a href="#hold-to-scroll-faster">Hold to scroll faster</a>
 </li>
-<li><a href="#page-skip-and-reordering-with-l1-r1">Page-skip and reordering with L1 / R1</a>
+<li><a href="#faster-list-skipping-with-the-shoulder-buttons">Faster list skipping with the shoulder buttons</a>
 </li>
 <li><a href="#lists-wrap-around">Lists wrap around</a>
 </li>
 <li><a href="#spotting-favourites-and-pinned-apps">Spotting Favourites and Pinned Apps</a>
 </li>
 <li><a href="#touch-mouse-and-keyboard">Touch, mouse and keyboard</a>
+</li>
+<li><a href="#typing-with-the-on-screen-keyboard">Typing with the on-screen keyboard</a>
 </li>
 <li><a href="#learn-more">Learn more</a>
 </li>

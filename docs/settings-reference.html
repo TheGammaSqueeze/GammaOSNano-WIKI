@@ -38,11 +38,13 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
-<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 <li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
 <li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
 <li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
 <li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
@@ -74,6 +76,7 @@
 <div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
 <li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
 <li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Settings</div><ul>
 <li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
@@ -83,6 +86,7 @@
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
 <li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -124,7 +128,7 @@
 </tr>
 <tr>
 <td><strong>System Update</strong></td>
-<td>Install a system update over the air or from USB.</td>
+<td>Update the GammaOS system software over the internet or from a package on your storage (see <a href="#system-update">System Update</a> below).</td>
 </tr>
 </tbody>
 </table>
@@ -139,30 +143,44 @@
 </thead>
 <tbody>
 <tr>
+<td><strong>Game Systems</strong></td>
+<td>Enable, disable, reorder, and edit every game system.</td>
+</tr>
+<tr>
+<td><strong>Quick Resume</strong></td>
+<td>Off (default) or On. When on, the device boots straight back into the RetroArch or DraStic game you were playing; when off, every boot starts at the home. Also in the Quick Menu. See <a href="quick-resume.html">Quick Resume</a>.</td>
+</tr>
+<tr>
 <td><strong>Rescan Games</strong></td>
 <td>Re-scan your ROM folders after adding or removing files.</td>
+</tr>
+<tr>
+<td><strong>DraStic Data Folder</strong></td>
+<td>Where DraStic Nano keeps your saves, save states, shaders and overrides. Shows Default (Internal storage/drastic-nano) until you pick a folder; <strong>Use Default Folder</strong> goes back. See <a href="drastic-nano.html">DraStic Nano</a>.</td>
+</tr>
+<tr>
+<td><strong>DraStic Cheats Folder</strong></td>
+<td>Where DraStic Nano looks for your own R4-style <code>usrcheat.dat</code> cheat files, merged with the built-in cheats when a DS game starts. Shows Default (drastic-nano/cheats) until you pick a folder.</td>
 </tr>
 <tr>
 <td><strong>Boxart Scraper</strong></td>
 <td>Download cover art and metadata (see below).</td>
 </tr>
-<tr>
-<td><strong>Game Systems</strong></td>
-<td>Enable, disable, reorder, and edit every game system.</td>
-</tr>
 </tbody>
 </table>
 <h3 id="game-systems-editor"><a class="toclink" href="#game-systems-editor">Game Systems editor</a></h3>
-<p>Opening <strong>Game Systems</strong> lists every system with an On/Off toggle. Reorder systems with <span class="btnchip">L1</span> and <span class="btnchip">R1</span>. Open a system to edit these fields:</p>
+<p>Opening <strong>Game Systems</strong> lists every system with an On/Off toggle. Press <span class="btnchip">X</span> to switch the focused system on or off, and reorder systems with <span class="btnchip">L1</span> and <span class="btnchip">R1</span>. Your manual order is what the home shows (it also resets the Game category's sort to Default; press <span class="btnchip">Y</span> on the Game category to cycle Default, A - Z, Most Games and By Manufacturer). Open a system to edit these fields:</p>
 <ul>
+<li><strong>Enabled</strong></li>
 <li><strong>Display Name</strong> and <strong>Short Name</strong></li>
 <li><strong>Launch Type</strong> (Libretro Core or Custom Package)</li>
 <li><strong>Emulator</strong> (a searchable core or app picker)</li>
 <li><strong>Core .so</strong>, <strong>Package</strong>, <strong>Intent Template</strong>, <strong>Launch Args</strong></li>
 <li><strong>Extensions</strong> (comma-separated file types this system accepts)</li>
 <li><strong>Scan Folders</strong> (a folder picker, or the default <code>ROMs/&lt;id&gt;/</code>)</li>
-<li><strong>Icon</strong> (a grid of icons or a custom PNG) and <strong>Icon Tint</strong> (21 swatches or a custom RGB colour)</li>
+<li><strong>Icon</strong> (a grid of icons; press <span class="btnchip">X</span> in the grid to import your own PNG or JPG from the file browser, and the row then reads Custom) and <strong>Icon Tint</strong> (21 swatches or a custom RGB colour)</li>
 <li>A per-system <strong>Scraper</strong> with optional username and password, plus <strong>Scrape This System</strong></li>
+<li><strong>Clear Boxart</strong>, which asks Cancel / Clear Boxart and then deletes that system's downloaded covers and background art (handy before a fresh scrape)</li>
 <li><strong>Reset-to-Default</strong> for built-in systems, or <strong>Delete</strong> for custom ones</li>
 </ul>
 <p>To add a system that is not in the list, use <strong>Add New System...</strong> at the bottom. Full steps are on the <a href="custom-system.html">Custom System</a> page.</p>
@@ -215,6 +233,11 @@
 <td><strong>Scrape All Systems</strong></td>
 <td>-</td>
 <td>Kick off a full-library scrape.</td>
+</tr>
+<tr>
+<td><strong>Boxart Folder</strong></td>
+<td>Default</td>
+<td>Where scraped covers and background art are stored. Pick <strong>Use Default Folder</strong>, or a folder on Internal storage, the SD card or removable storage. Existing art is moved to the new folder, and art on an SD card follows the card at boot and when you insert it.</td>
 </tr>
 </tbody>
 </table>
@@ -284,11 +307,16 @@
 </tr>
 <tr>
 <td><strong>USB &amp; Docking</strong></td>
-<td>Set the USB connection to <strong>File Transfer (MTP)</strong> or <strong>Charge Only</strong>, so you can move files to a PC without ADB.</td>
+<td>Set the USB connection to <strong>File Transfer (MTP)</strong> or <strong>Charge Only</strong>, so you can move files to a PC without ADB. The switch really changes the mode now.</td>
+</tr>
+<tr>
+<td><strong>System Information</strong></td>
+<td>A read-only page: System Software (GammaOS version and edition), Android Version, Model, Security Patch Level, Build Date, Serial Number, MAC Address, IP Address and System Storage. It scrolls in XMB and is split into pages in DSi and Minima.</td>
 </tr>
 </tbody>
 </table>
 <p><img alt="USB File Transfer (MTP)" src="assets/img/shots/wn_usb_mtp.png" /></p>
+<p><img alt="System Information in the DSi theme" class="dual" src="assets/img/shots/v143_dsi_system_information.png" /></p>
 <p>Apps that declare storage and microphone permissions are granted automatically (you can still revoke them later in the full Settings app), and permission dialogs are controller-navigable, with the confirm button focused and activated by your controller.</p>
 <h2 id="developer-options"><a class="toclink" href="#developer-options">Developer Options</a></h2>
 <p>For power users and debugging. Leave these off unless you know you need them.</p>
@@ -334,11 +362,15 @@
 <tbody>
 <tr>
 <td><strong>Home Theme</strong></td>
-<td>Switch between GammaOS XMB, DSi Menu, and Minima (applying restarts the home).</td>
+<td>Switch between GammaOS XMB, DSi Menu, Minima and Custom / ES-DE (the ES-DE theme engine). Applies live. See <a href="themes.html">Home Themes</a>.</td>
+</tr>
+<tr>
+<td><strong>Startup Menu</strong></td>
+<td>Which place the home opens on at boot: Default, any top-level category, or any game system that has games. All themes.</td>
 </tr>
 <tr>
 <td><strong>Colour</strong></td>
-<td>Accent colour, 21 options including each theme's Original.</td>
+<td>Accent colour for the XMB wave, the Minima accent and the DSi chrome: 21 presets including each theme's Original, plus <strong>Custom...</strong> at the end, which opens a colour picker (left/right = hue, up/down = brightness, L1/R1 = saturation, A = apply, B = cancel). The row then reads Custom.</td>
 </tr>
 <tr>
 <td><strong>Background</strong></td>
@@ -346,7 +378,7 @@
 </tr>
 <tr>
 <td><strong>Wallpaper</strong> and <strong>Wallpaper Image</strong></td>
-<td>Pick a photo for the home background.</td>
+<td>Pick a photo for the home background. In the DSi theme, <strong>Wallpaper</strong> is the Background Effect list (None, Snow, Rain, Confetti, Sparks, Fireflies, Bubbles, Starfield, Embers, Leaves, Plasma, Fire, Aurora, Ripple, Checkerboard, Spiral, XMB, XMB Wave), kept separate from the XMB choice.</td>
 </tr>
 <tr>
 <td><strong>Bottom Wallpaper</strong></td>
@@ -373,6 +405,14 @@
 <td>Turn the PS3 wave on or off (auto-off when a wallpaper is set). Also available as an opt-in in Minima.</td>
 </tr>
 <tr>
+<td><strong>Half Resolution: Wave</strong> (XMB)</td>
+<td>Renders the wave at half size and scales it up, so weaker GPUs keep a full frame rate. Menu text stays sharp. Off by default.</td>
+</tr>
+<tr>
+<td><strong>Half Resolution: Clock</strong> (XMB)</td>
+<td>The same for the clock graphics. Off by default.</td>
+</tr>
+<tr>
 <td><strong>Font</strong></td>
 <td>XMB font style (Original / Rounded / Pop).</td>
 </tr>
@@ -383,6 +423,30 @@
 <tr>
 <td><strong>Day/Night</strong></td>
 <td>XMB lighting (Auto / Day / Morning / Dusk / Evening / Night; default Night).</td>
+</tr>
+<tr>
+<td><strong>Boot Sound</strong></td>
+<td>Play the boot chime (default On, all themes, takes effect at the next boot).</td>
+</tr>
+<tr>
+<td><strong>Navigation Sounds</strong></td>
+<td>The launcher's menu sound effects.</td>
+</tr>
+<tr>
+<td><strong>Menu Music (DSi)</strong></td>
+<td>The DSi menu background music (default On).</td>
+</tr>
+<tr>
+<td><strong>Show Battery Percent (DSi, Minima)</strong></td>
+<td>Show the charge as a number next to the battery icon (default Off).</td>
+</tr>
+<tr>
+<td><strong>Titles From ROM (DSi)</strong></td>
+<td>DS games without a scraped name show the title stored in the cartridge (default On).</td>
+</tr>
+<tr>
+<td><strong>DS Icons On Tiles (DSi)</strong></td>
+<td>Keep each DS game's own cartridge icon on the carousel tile even when box art has been scraped; the box art still shows on the top screen (default Off).</td>
 </tr>
 <tr>
 <td><strong>Dark Theme (DSi)</strong></td>
@@ -561,27 +625,43 @@
 </tr>
 <tr>
 <td><strong>On Slide Down / On Slide Up</strong></td>
-<td>Choose an action: Rotate, Sleep, Wake, Launch, or PSP Clock.</td>
+<td>What happens when you slide the screen down or back up: Rotate, Restore Natural, Sleep, Wake, Launch App, Close App (force-stops the launched app) and PSP Clock. Tick more than one, then OK.</td>
 </tr>
 <tr>
-<td><strong>Sleep delay</strong></td>
+<td><strong>Sleep Delay</strong></td>
 <td>How long before sleeping after a slide.</td>
 </tr>
 <tr>
-<td><strong>Rotation angle</strong></td>
+<td><strong>Rotation Angle</strong></td>
 <td>Angle to rotate the screen on a slide.</td>
 </tr>
 <tr>
-<td><strong>Launch target</strong></td>
-<td>App to open on a slide (with the Launch action).</td>
+<td><strong>Slide Launch Target</strong></td>
+<td>The app to open with the Launch App action: pick an app, then an activity ("Default activity" first). Shows Not Set until chosen.</td>
 </tr>
 <tr>
-<td><strong>Show clock on slide</strong> and <strong>Live backdrop</strong></td>
-<td>Visual extras for the slide.</td>
+<td><strong>Show Clock On Slide</strong></td>
+<td>Show the PSP-style clock when you slide.</td>
 </tr>
 <tr>
-<td><strong>Parallax calibration</strong></td>
-<td>Fine-tune the motion effect.</td>
+<td><strong>Freeze App Under Clock</strong></td>
+<td>Pause the game while the slide clock is up (default Off).</td>
+</tr>
+<tr>
+<td><strong>Clock Live Backdrop</strong></td>
+<td>Let the game or home show through behind the clock glass.</td>
+</tr>
+<tr>
+<td><strong>Parallax</strong></td>
+<td>The tilt parallax effect on the clock (default On).</td>
+</tr>
+<tr>
+<td><strong>Parallax Strength</strong></td>
+<td>Subtle, Normal (default), Strong, Extra Strong or Maximum.</td>
+</tr>
+<tr>
+<td><strong>Parallax Direction</strong></td>
+<td>Peek Behind (default), Follow Tilt, Invert X Only or Invert Y Only.</td>
 </tr>
 </tbody>
 </table>
@@ -693,7 +773,7 @@
 <tbody>
 <tr>
 <td><strong><a href="gammaos-toolbox.html">GammaOS Toolbox</a></strong></td>
-<td>Power-user tweaks: performance, display, audio, swap, the RetroArch Back Button, and more.</td>
+<td>Power-user tweaks: performance, display, audio, swap, the RetroArch Back Button, and more. On dual-screen devices it also holds <strong>Control Centre Double Tap</strong> (two taps to wake the sleeping bottom screen) and <strong>Control Centre Timeout</strong> (15 seconds to 10 minutes or Never, default 30 seconds) for the <a href="control-center.html">Control Center</a>.</td>
 </tr>
 <tr>
 <td><strong>GammaRGB</strong></td>
@@ -707,10 +787,13 @@
 <td><strong>File Explorer</strong></td>
 <td>Browse and manage the files on your device.</td>
 </tr>
+<tr>
+<td><strong><a href="network-shares.html">Network Shares</a></strong></td>
+<td>Connect SMB, NFS, WebDAV, and FTP shares. The last row, <strong>Syncthing</strong>, turns on the built-in <a href="syncthing.html">Syncthing</a> service and holds its Status, This Device, Folders, Devices, Pending Requests, Options, Web Interface, Restart Syncthing and Logs rows.</td>
+</tr>
 </tbody>
 </table>
-<p>If you see a <strong>Storage</strong> row, its status text only reports how much space is used or free; it is not where you manage files. To browse, move, delete, or format storage, open <strong>Applications &gt; Files</strong> (the standard file manager, fully controller-navigable) or the <strong>File Explorer</strong> row above.
-| <strong><a href="network-shares.html">Network Shares</a></strong> | Connect SMB, NFS, WebDAV, and FTP shares. |</p>
+<p>If you see a <strong>Storage</strong> row, its status text only reports how much space is used or free; it is not where you manage files. To browse, move, delete, or format storage, open <strong>Applications &gt; Files</strong> (the standard file manager, fully controller-navigable) or the <strong>File Explorer</strong> row above.</p>
 <p><img alt="RGB d-pad HSV picker" src="assets/img/shots/wn_rgb_picker.png" /></p>
 <h2 id="quick-menu"><a class="toclink" href="#quick-menu">Quick Menu</a></h2>
 <p>The Quick Menu gives you fast access to brightness, performance, shaders, USB mode, and power, from the home or right over a running game. It has its own page: <a href="quick-menu.html">Quick Menu</a>.</p>
@@ -725,16 +808,40 @@
 <li><strong>Notifications</strong></li>
 <li><strong>USB Settings</strong> (Charging only / MTP / PTP / RNDIS)</li>
 <li><strong>Close / Kill Apps</strong></li>
+<li><strong>Quick Resume</strong> (On/Off)</li>
 <li>A <strong>Power</strong> submenu (Restart / Power Off / Recovery / Safe Mode / Boot Android)</li>
 </ul>
 <p class="callout warn">If a screen shader ever makes the display unreadable, hold <span class="btnchip">Power</span> + <span class="btnchip">Select</span> together to disable the system display shader. This is the emergency escape hatch.</p>
+<h2 id="system-update"><a class="toclink" href="#system-update">System Update</a></h2>
+<p><strong>Settings &gt; System Update</strong> offers two ways to update:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Update via Internet</strong></td>
+<td>Checks for the latest GammaOS system software, then downloads and installs it. The check only runs when you choose this.</td>
+</tr>
+<tr>
+<td><strong>Update via Storage Media</strong></td>
+<td>Looks for a GammaOS update <code>.zip</code> that you copied to the root of your storage and installs it.</td>
+</tr>
+</tbody>
+</table>
+<p>The result is always in plain words. When there is nothing newer you see "The system software is up to date" with your current version, and network, server or connection problems are explained with what to try next instead of an error code. Do not turn the power off while an update downloads or installs; the device restarts by itself when it is done.</p>
+<p><img alt="System Update reporting that the software is up to date" class="dual" src="assets/img/shots/v143_dsi_system_update_uptodate.png" /></p>
 <h2 id="related-pages"><a class="toclink" href="#related-pages">Related pages</a></h2>
 <ul>
 <li><a href="themes.html">Home Themes</a></li>
 <li><a href="gammaos-toolbox.html">GammaOS Toolbox</a></li>
 <li><a href="adding-games.html">Adding Games</a> and <a href="game-systems.html">Game Systems</a></li>
 <li><a href="boxart.html">Boxart</a></li>
-<li><a href="network.html">Network</a> and <a href="network-shares.html">Network Shares</a></li>
+<li><a href="network.html">Network</a>, <a href="network-shares.html">Network Shares</a> and <a href="syncthing.html">Syncthing</a></li>
+<li><a href="control-center.html">Control Center (RG DS)</a></li>
 <li><a href="faq.html">FAQ and Troubleshooting</a></li>
 </ul>
         <footer class="page-foot">
@@ -780,6 +887,8 @@
 <li><a href="#tools-and-extras-their-own-rows">Tools and extras (their own rows)</a>
 </li>
 <li><a href="#quick-menu">Quick Menu</a>
+</li>
+<li><a href="#system-update">System Update</a>
 </li>
 <li><a href="#related-pages">Related pages</a>
 </li>

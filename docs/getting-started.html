@@ -38,11 +38,13 @@
 <div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
 <li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
 <li><a class="active" href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
-<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4</a></li>
 <li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
 <li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
 <li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
 <li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
 <li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
@@ -74,6 +76,7 @@
 <div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
 <li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
 <li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Settings</div><ul>
 <li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
@@ -83,6 +86,7 @@
 <li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
 <li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
 <li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-group-title">Help</div><ul>
 <li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
@@ -101,6 +105,13 @@
 <h2 id="first-boot-the-setup"><a class="toclink" href="#first-boot-the-setup">First boot: the setup</a></h2>
 <p>The first time your handheld starts, GammaOS Nano runs a short setup to get you going. It covers the basics, including connecting to Wi-Fi so your device knows the date, time, and can reach online features. Follow the on-screen prompts and confirm each step.</p>
 <p>If you would rather skip Wi-Fi for now, you can. You can always connect later from Settings, and the steps below show you how.</p>
+<p>Once the system configuration is done, the wizard finishes by itself: a short countdown shows on screen and then it moves on without you, so there is no need to guess which button to press.</p>
+<p>A few things are worth knowing about a fresh install:</p>
+<ul>
+<li><strong>Bluetooth starts off.</strong> The setup has no Bluetooth step. When you want to pair a controller or headphones, turn Bluetooth on from the Quick Menu (hold <span class="btnchip">Power</span>) or the Bluetooth and Accessories screen. It stays off until you turn it on. See <a href="network.html">Connectivity</a>.</li>
+<li><strong>Quick Resume starts off.</strong> Every boot starts at the home. If you would like the handheld to drop straight back into the game you were playing, turn on <strong>Settings &gt; Game Settings &gt; Quick Resume</strong> (also in the Quick Menu). See <a href="quick-resume.html">Quick Resume</a>.</li>
+<li><strong>You choose where the home opens.</strong> <strong>Settings &gt; Theme Settings &gt; Startup Menu</strong> lets the home open on any category, or straight into one game system such as your Nintendo DS list.</li>
+</ul>
 <h2 id="finding-your-way-around"><a class="toclink" href="#finding-your-way-around">Finding your way around</a></h2>
 <p>Everything lives under a small set of categories on the home screen. Move sideways to change category and up or down to move through the items. To open the settings, go to the <strong>Settings</strong> category and pick the option you want.</p>
 <p>New to the controls? The <a href="controls-os.html">Controls cheat sheet</a> lists every button. On most handhelds you confirm with <span class="btnchip">A</span>, go back with <span class="btnchip">B</span>, and open an item's Options menu with <span class="btnchip">X</span>.</p>
@@ -126,12 +137,12 @@
 <p>If a system does not show up yet, make sure it is turned on in Settings &gt; Game Settings &gt; Game Systems. For the full walkthrough, folder tips, and multi-disc games, see <a href="adding-games.html">Adding Games</a> and <a href="game-systems.html">Game Systems</a>.</p>
 <p class="callout tip">GammaOS Nano does not include any console BIOS files, and some systems need one to run. You supply your own BIOS files and place them where the emulator expects. See <a href="emulators.html">Emulators</a> for details.</p>
 <h2 id="switching-themes"><a class="toclink" href="#switching-themes">Switching themes</a></h2>
-<p>GammaOS Nano has three home themes, and switching is instant:</p>
+<p>GammaOS Nano has four home themes, and switching is instant:</p>
 <ol>
 <li>Open <strong>Settings &gt; Theme Settings &gt; Home Theme</strong>.</li>
-<li>Choose <strong>GammaOS XMB</strong>, <strong>DSi Menu</strong>, or <strong>Minima</strong>.</li>
+<li>Choose <strong>GammaOS XMB</strong>, <strong>DSi Menu</strong>, <strong>Minima</strong>, or <strong>Custom / ES-DE</strong>.</li>
 </ol>
-<p>The home restarts into your chosen look. You can also change the accent colour, set a wallpaper, and more from Theme Settings. See <a href="themes.html">Home Themes</a> for the full tour.</p>
+<p>The home switches to your chosen look straight away. <strong>Custom / ES-DE</strong> runs EmulationStation-DE theme sets, with the Slate theme preinstalled and a built-in downloader for more; see <a href="esde-themes.html">ES-DE Themes</a>. You can also change the accent colour, set a wallpaper, and more from Theme Settings. See <a href="themes.html">Home Themes</a> for the full tour.</p>
 <h2 id="where-to-next"><a class="toclink" href="#where-to-next">Where to next</a></h2>
 <ul>
 <li>Learn the layout in <a href="what-is-nano.html">What Is GammaOS Nano?</a></li>
