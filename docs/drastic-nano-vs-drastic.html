@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DraStic Nano vs DraStic - GammaOS Nano</title>
+<meta name="description" content="&quot;Every difference between DraStic Nano and the stock DraStic app: the emulation, audio, microphone, 3D and pacing fixes injected into the core, with the games they were found in.&quot;">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/brand/favicon.png">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="brand" href="index.html">
+    <img class="brand-mark" src="assets/img/brand/gammaos-logo-tile.png" alt="GammaOS logo" width="28" height="28">
+    <span class="brand-text">GammaOS <b>Nano</b></span>
+  </a>
+  <div class="search" role="search">
+    <input id="search-input" type="text" placeholder="Search the wiki..." autocomplete="off" aria-label="Search">
+    <div id="search-results" class="search-results" hidden></div>
+  </div>
+  <div class="topbar-actions">
+    <a class="ghost-btn" href="https://github.com/TheGammaSqueeze" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-btn" aria-label="Toggle dark mode" onclick="toggleTheme()"><span class="theme-ico"></span></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <a class="nav-home" href="index.html"><span class="nav-home-mark">&#9670;</span> Home</a>
+<div class="nav-group"><div class="nav-group-title">Get Started</div><ul>
+<li><a href="what-is-nano.html"><span class="nav-ico">✨</span>What Is GammaOS Nano?</a></li>
+<li><a href="getting-started.html"><span class="nav-ico">🚀</span>Getting Started</a></li>
+<li><a href="installing-flashing.html"><span class="nav-ico">💾</span>Installing GammaOS</a></li>
+<li><a href="what-s-new-since-1-4-1.html"><span class="nav-ico">✨</span>What&#x27;s New since 1.4.1</a></li>
+<li><a href="what-s-new-since-1-4.html"><span class="nav-ico">✨</span>What&#x27;s New in 1.4.1</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">The Interface</div><ul>
+<li><a href="themes.html"><span class="nav-ico">🎨</span>Home Themes</a></li>
+<li><a href="esde-themes.html"><span class="nav-ico">🖌️</span>ES-DE Themes</a></li>
+<li><a href="navigating.html"><span class="nav-ico">🧭</span>Getting Around</a></li>
+<li><a href="search.html"><span class="nav-ico">🔎</span>Search</a></li>
+<li><a href="context-menus.html"><span class="nav-ico">🗂️</span>Context Menus</a></li>
+<li><a href="theme-settings.html"><span class="nav-ico">🖼️</span>Wallpapers &amp; Theme Settings</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Controls</div><ul>
+<li><a href="controls-os.html"><span class="nav-ico">🎮</span>Controls</a></li>
+<li><a href="controls-retroarch.html"><span class="nav-ico">🕹️</span>RetroArch Controls</a></li>
+<li><a href="controls-drastic.html"><span class="nav-ico">🖊️</span>DraStic Nano Controls</a></li>
+<li><a href="controls-mouse-keyboard.html"><span class="nav-ico">⌨️</span>Mouse &amp; Keyboard</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Games</div><ul>
+<li><a href="adding-games.html"><span class="nav-ico">📥</span>Adding Games</a></li>
+<li><a href="game-systems.html"><span class="nav-ico">🗃️</span>Game Systems</a></li>
+<li><a href="custom-system.html"><span class="nav-ico">➕</span>Add a Custom System</a></li>
+<li><a href="collections.html"><span class="nav-ico">⭐</span>Collections &amp; Recently Played</a></li>
+<li><a href="boxart.html"><span class="nav-ico">🖼️</span>Boxart &amp; Metadata</a></li>
+<li><a href="custom-boxart.html"><span class="nav-ico">🖼️</span>Custom Boxart and Backup</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Emulators</div><ul>
+<li><a href="emulators.html"><span class="nav-ico">💾</span>Emulators &amp; Cores</a></li>
+<li><a href="drastic-nano.html"><span class="nav-ico">🟦</span>DraStic Nano</a></li>
+<li><a class="active" href="drastic-nano-vs-drastic.html"><span class="nav-ico">🔬</span>DraStic Nano vs DraStic</a></li>
+<li><a href="quick-resume.html"><span class="nav-ico">⏯️</span>Quick Resume</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Media &amp; Apps</div><ul>
+<li><a href="media.html"><span class="nav-ico">🎵</span>Music, Photos &amp; Video</a></li>
+<li><a href="applications.html"><span class="nav-ico">📱</span>Applications</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Connectivity</div><ul>
+<li><a href="network.html"><span class="nav-ico">📶</span>Wi-Fi &amp; Bluetooth</a></li>
+<li><a href="network-shares.html"><span class="nav-ico">🗄️</span>Network Shares</a></li>
+<li><a href="syncthing.html"><span class="nav-ico">🔄</span>Syncthing</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Settings</div><ul>
+<li><a href="quick-menu.html"><span class="nav-ico">⚡</span>Quick Menu</a></li>
+<li><a href="settings-reference.html"><span class="nav-ico">⚙️</span>Settings Reference</a></li>
+<li><a href="gammaos-toolbox.html"><span class="nav-ico">🧰</span>GammaOS Toolbox</a></li>
+<li><a href="gamepad-settings.html"><span class="nav-ico">🎯</span>Gamepad &amp; Remapping</a></li>
+<li><a href="gammaeq.html"><span class="nav-ico">🎚️</span>GammaEQ (Audio)</a></li>
+<li><a href="slide-rotation.html"><span class="nav-ico">🕰️</span>Slide &amp; Rotate Clock</a></li>
+<li><a href="atv-desktop-features.html"><span class="nav-ico">🖥️</span>Desktop Mode Features</a></li>
+<li><a href="control-center.html"><span class="nav-ico">🎛️</span>Control Center (RG DS)</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-group-title">Help</div><ul>
+<li><a href="faq.html"><span class="nav-ico">❓</span>FAQ and Troubleshooting</a></li>
+<li><a href="adb-and-logs.html"><span class="nav-ico">🧰</span>ADB Setup and Logs</a></li>
+<li><a href="restore-drastic.html"><span class="nav-ico">🔧</span>Restore DraStic (RG DS)</a></li>
+</ul></div>
+    </nav>
+  </aside>
+
+  <main id="main" class="content">
+    
+    <div class="prose has-toc">
+      <article class="article">
+        <p class="lead">DraStic Nano runs the same DraStic emulation core as the DraStic app (r2.6.0.4a), but it hosts that core in its own player and corrects it while it runs. This page lists what is different from playing in the stock DraStic app: the bugs in the core that are fixed, what was added around it, and what was deliberately left alone. Each entry names the game the problem was found in, so you can see what it looks or sounds like.</p>
+<p class="callout note">For how to use DraStic Nano itself (the menu, layouts, saves and every option), see <a href="drastic-nano.html">DraStic Nano</a>. This page is about what changes under the hood.</p>
+<h2 id="how-drastic-nano-runs-the-drastic-core"><a class="toclink" href="#how-drastic-nano-runs-the-drastic-core">How DraStic Nano runs the DraStic core</a></h2>
+<p>The DraStic app is an Android app: a Java front end that loads the emulation library and draws through Android's normal display path. DraStic Nano keeps the library and replaces everything around it.</p>
+<ul>
+<li><strong>No app needed.</strong> The DraStic library, BIOS files, firmware, game database and default shaders ship inside GammaOS. DraStic Nano loads the library directly into its own process and answers the few calls it expects from its Java side itself, so the core runs exactly as it would inside the app without the app being installed.</li>
+<li><strong>Drawn straight to the panels.</strong> On the RG DS and RG DS Plus the two DS screens go to the two panels directly, without Android's compositor in between. Single-screen devices use a normal Android surface.</li>
+<li><strong>Fixes are applied in memory.</strong> When a game starts, DraStic Nano patches the loaded copy of the core: single instructions changed, or short detours that call corrected code and return. The library file on the system is never modified, and every patch checks that the code it replaces is exactly what it expects before writing, so it never patches the wrong thing.</li>
+<li><strong>Checked against melonDS and real hardware.</strong> Most fixes below were found by running the same save state in melonDS (a highly accurate DS emulator) and comparing the output frame by frame or sample by sample. The microphone work was checked against a real DS Lite recorded at the same moment, using test ROMs written for the purpose.</li>
+</ul>
+<h2 id="emulation-accuracy-fixes"><a class="toclink" href="#emulation-accuracy-fixes">Emulation accuracy fixes</a></h2>
+<p>These are bugs in the DraStic core itself. The stock DraStic app has all of them.</p>
+<h3 id="pokemon-ranger-top-screen-panels-drift-off-position"><a class="toclink" href="#pokemon-ranger-top-screen-panels-drift-off-position">Pokemon Ranger: top screen panels drift off position</a></h3>
+<p>On a real DS, some display registers can be written but not read back, and reading them returns zero. These include the background scroll positions, the rotation and scaling settings, the window sizes, mosaic, the brightness fade and the main memory display FIFO. DraStic returned whatever value was last written to them.</p>
+<p>Pokemon Ranger slides the panels on its top screen by reading a scroll register back, adding an offset and writing the result, on every scanline. On DraStic each write built on the one before, so after every slide the panels kept the leftover: the header went off the top of the screen, the map and the text boxes shifted, and the layout changed again with every press of Start.</p>
+<p>DraStic Nano makes those registers read as zero on both screens, exactly like the hardware and melonDS. The check costs nothing measurable. A check across 18 other games found that none of them read those registers in the scenes tested, so nothing else changes.</p>
+<h3 id="hotel-dusk-backdrops-bob-and-characters-flicker"><a class="toclink" href="#hotel-dusk-backdrops-bob-and-characters-flicker">Hotel Dusk: backdrops bob and characters flicker</a></h3>
+<p>The DS takes the 3D rendering settings for the next frame (the DISP3DCNT register, which controls things like alpha blending) at the very start of the vertical blank. DraStic read them later in the frame, after the game had already written the value meant for the frame after. Every frame was rendered with its neighbour's settings.</p>
+<p>Hotel Dusk changes this register every frame and draws its top screen in two alternating passes. With the settings one frame off, one pass lost its alpha blending: the backdrop bobbed up and down, the character portrait flickered between old and new frames, and the head crossfade after loading a state jumped back. DraStic Nano captures the settings at the start of the vertical blank, as the DS does, at the cost of one memory read and write per frame. Verified frame by frame against melonDS.</p>
+<h3 id="hotel-dusk-with-hi-res-3d-crash-after-loading-a-state"><a class="toclink" href="#hotel-dusk-with-hi-res-3d-crash-after-loading-a-state">Hotel Dusk with Hi-res 3D: crash after loading a state</a></h3>
+<p>With Hi-res 3D on, DraStic keeps a high resolution copy of every captured video memory bank, but its capture code assumes the capture is the full 256 pixels wide. A small 128x128 capture that ends at the end of a bank wrote its last line 256 bytes past the end of that buffer, and Hotel Dusk crashed on the first frame after a state load. DraStic Nano gives that buffer enough room for the worst case.</p>
+<h3 id="the-ds-birthday-reaches-games-one-month-late"><a class="toclink" href="#the-ds-birthday-reaches-games-one-month-late">The DS birthday reaches games one month late</a></h3>
+<p>DraStic's firmware builder adds one to the birthday month, so a birthday set as January 28 reaches games as February 28. The DraStic app has the same bug. DraStic Nano corrects it, so games see the date you set. This was found with a test ROM that reads back exactly what a game sees of the system settings.</p>
+<h2 id="sound-fixes"><a class="toclink" href="#sound-fixes">Sound fixes</a></h2>
+<h3 id="golden-sun-dark-dawn-speech-and-ds-reverb-and-echo"><a class="toclink" href="#golden-sun-dark-dawn-speech-and-ds-reverb-and-echo">Golden Sun Dark Dawn speech, and DS reverb and echo</a></h3>
+<p>Some DS games build reverb or stream speech by recording the console's own audio output back into memory (the SPU capture units) and playing it again. The DS moves the recording and the playback one sample at a time. DraStic moves both in blocks, so the playback regularly read memory the recording had cleared but not yet refilled.</p>
+<p>In Golden Sun Dark Dawn this turned the voiced speech scratchy: 137 dropouts of up to 9 ms in one scene where melonDS has none. The same technique is behind the reverb in Animal Crossing, Mario Kart DS, Kirby Super Star Ultra, Lufia, the Boktai ports and the Need for Speed games.</p>
+<p>DraStic Nano fixes this in three steps:
+- <strong>The capture rings are repaired.</strong> Before each mix the gaps are bridged, and the real data is put back afterwards, because the game's own echo code reads it. Golden Sun's dropouts went from 137 to 9 threshold-grazing pairs.
+- <strong>The DS sound routing is emulated.</strong> The console's SOUNDCNT register decides which channels reach the speaker and which only feed the capture. DraStic Nano now reads it from the game, so Golden Sun's echo comes from the capture ring the way the DS does it.
+- <strong>Speech samples are interpolated smoothly.</strong> They are read with a 4-tap interpolation instead of nearest neighbour, which removes a grinding sound while keeping the highs.</p>
+<p>The result matches melonDS to within about a decibel up to 12 kHz. Games that do not use capture keep DraStic's own audio path and CPU cost.</p>
+<h3 id="yoshis-island-ds-the-pipe-sound-loops-forever"><a class="toclink" href="#yoshis-island-ds-the-pipe-sound-loops-forever">Yoshi's Island DS: the pipe sound loops forever</a></h3>
+<p>Yoshi's Island DS plays its sound through both capture units in 8-bit mode as a cave echo. DraStic's 8-bit capture added every new sample on top of the old one even in the normal overwrite mode, so each lap of the ring summed onto the last. The echo never decayed, drifted and clipped, and was heard as the pipe sound looping forever, with a click every 93 ms and the music buried underneath. Fixed, together with the 8-bit ring length. The game's cave music now matches melonDS: overall level within 0.2 dB, every frequency band within 1.6 dB, and the echo delay 92.6 against 93.1 ms.</p>
+<h3 id="crackles-in-heavy-scenes"><a class="toclink" href="#crackles-in-heavy-scenes">Crackles in heavy scenes</a></h3>
+<p>DraStic's mixer turns the emulated CPU time since its last call into audio samples. A frame that ends a little late mixes 736 samples and the next one 734, but the output always advanced by 735. So every short frame left one stale sample behind, and every long frame lost one.</p>
+<p>On Golden Sun Dark Dawn this was heard as bursts of clicks about a minute into a busy scene, and the clicks lined up exactly with runs of those uneven frames. DraStic Nano evens every frame out to exactly 735 samples, carrying any surplus over to the next frame and padding a small shortfall.</p>
+<h3 id="pops-after-an-underrun-and-a-click-every-few-seconds"><a class="toclink" href="#pops-after-an-underrun-and-a-click-every-few-seconds">Pops after an underrun, and a click every few seconds</a></h3>
+<ul>
+<li><strong>Pops after an underrun.</strong> DraStic counts its queued audio buffers, including the silent filler it adds after an underrun, so after each underrun the count was one short. It then overfilled the queue, and a whole 33 ms chunk was rejected and lost, heard as a pop. DraStic Nano re-reads the real queue depth before every submit.</li>
+<li><strong>A click every six seconds.</strong> The audio is produced for exactly 60 frames a second, while the panels refresh slightly slower (59.83 Hz on the RG DS family), so the queue slowly filled up and DraStic dropped a whole chunk about every six seconds. DraStic Nano resamples the stream continuously to match the real output rate.</li>
+<li><strong>Smaller audio steps.</strong> DraStic's four 67 ms output buffers are split into eight 33 ms buffers in the same memory: the same total buffering and latency, half the step.</li>
+<li><strong>State loads.</strong> The output is filled ahead of a state load, so a load no longer leaves a gap.</li>
+</ul>
+<h3 id="low-latency-audio"><a class="toclink" href="#low-latency-audio">Low latency audio</a></h3>
+<p>The DraStic app plays through Android's normal audio mixer, about 300 ms behind the game. Where the hardware supports it, DraStic Nano plays through an exclusive low latency stream instead: a few tens of milliseconds on the RG DS Plus and RG DS. It falls back to DraStic's own player on hardware without a low latency path, and re-applies the GammaEQ speaker tuning, which the low latency path would otherwise skip.</p>
+<h3 id="smaller-sound-fixes"><a class="toclink" href="#smaller-sound-fixes">Smaller sound fixes</a></h3>
+<ul>
+<li><strong>No screech when exiting.</strong> The output stops the instant you ask to leave, so nothing the emulator emits while it saves and shuts down reaches the speaker.</li>
+<li><strong>The volume keys respond at once.</strong> In a heavy scene the volume moves within a few milliseconds of the press instead of up to a second later.</li>
+</ul>
+<h2 id="microphone-fixes"><a class="toclink" href="#microphone-fixes">Microphone fixes</a></h2>
+<p>The DS microphone in DraStic chops, repeats, distorts and is too quiet for speech recognition. All of this was measured against a DS Lite recorded at the same moment, with a test ROM written to record, play back and analyse microphone input on any emulator or console.</p>
+<ul>
+<li><strong>Repeated and missing audio.</strong> DraStic hands the game the next of its five recording buffers whether or not that buffer has been refilled. Whenever the emulator ran slightly ahead of the microphone, the game heard audio from 83.6 ms earlier: about a quarter of a loud recording was exact copies of earlier sound, with holes of room noise in the middle of words. DraStic Nano feeds the game from its own queue, in order, and absorbs the small clock difference smoothly.</li>
+<li><strong>Distortion.</strong> DraStic squares every sample, which crushes quiet speech and clips anything over half volume. DraStic Nano uses a straight, linear response.</li>
+<li><strong>The game's gain was ignored.</strong> A DS game sets its microphone amplifier to 20x, 40x, 80x or 160x, and its speech recognition is tuned for that level. DraStic ignores it and applies one fixed level: Brain Age sets 160x and heard the voice at less than 60 percent of the level a DS Lite delivers. DraStic Nano follows the game's setting, calibrated against the DS Lite. Mic Level becomes a trim on top: 0 (the default, which Brain Age's colour test responds to best) is half, 1 is the hardware level and 2 is double.</li>
+<li><strong>The sample count.</strong> The game reads exactly 737.13 microphone samples per DS frame, and it now gets exactly that.</li>
+</ul>
+<h2 id="3d-and-video"><a class="toclink" href="#3d-and-video">3D and video</a></h2>
+<h3 id="gpu-3d-renderer"><a class="toclink" href="#gpu-3d-renderer">GPU 3D renderer</a></h3>
+<p>The DraStic app draws the DS 3D scene on the CPU only. DraStic Nano adds a GPU renderer (experimental, off by default) that reads DraStic's own polygon and texture data and draws it on the GPU, at native resolution or Hi-res 3D, with optional 4x supersampling. It was built to match DraStic's CPU renderer, and each rule below was checked pixel by pixel against it:</p>
+<ul>
+<li><strong>How the DS draws, rule by rule:</strong> the DS blending rules, toon and highlight shading, fog, stencil shadows drawn in the DS's own order, the depth rules for coplanar and decal polygons, and the DS rule that a translucent polygon never draws over itself.</li>
+<li><strong>Mario Kart DS:</strong> the kart shadow is solid and holds its shape as the kart turns.</li>
+<li><strong>Pokemon White 2:</strong> the pond, soil and grass show correctly in town, the floor shadows appear, and the round cushion no longer vanishes as you walk.</li>
+<li><strong>GTA Chinatown Wars:</strong> the clouds and haze match the CPU renderer.</li>
+<li><strong>Mario and Luigi Bowser's Inside Story:</strong> its rooms keep about 130 textures in use at once, so the texture store grows to hold them instead of drawing white floors.</li>
+<li><strong>Crash of the Titans:</strong> textures are sampled along each row the way DraStic does, so the ferns and flowers use the same texels as the CPU renderer on 97 to 99 percent of their pixels. The colours follow DraStic's own rounding, so lit surfaces are no longer one to four levels darker.</li>
+</ul>
+<p>If the GPU renderer cannot keep up with a scene, DraStic Nano drops back to the CPU renderer for the rest of the session rather than stutter.</p>
+<h3 id="faster-cpu-rendering"><a class="toclink" href="#faster-cpu-rendering">Faster CPU rendering</a></h3>
+<ul>
+<li><strong>Threaded 3D overlaps with the emulation.</strong> The DraStic app renders 3D in parallel too, but DraStic Nano splits each frame into bands and starts drawing as soon as each band's geometry is ready. It produces exactly the same frames as rendering with threading off. This also fixes a crash with 3D edge marking on.</li>
+<li><strong>A faster 2D blend.</strong> DraStic's two-layer colour blending loop, about 7 percent of the core's time, runs as a vector (NEON) routine instead. It is bit-exact against the original over every possible input and cuts the emulation thread's CPU use by 7.6 percent.</li>
+</ul>
+<h3 id="shaders"><a class="toclink" href="#shaders">Shaders</a></h3>
+<ul>
+<li><strong>38 more shaders.</strong> DraStic Nano ships faithful ports of 38 RetroArch LCD and CRT shaders, such as crt-lottes-fast, zfast-crt and lcd-grid. Their patterns are tied to the DS pixel grid, so Hi-res 3D never doubles the scanlines or the LCD grid.</li>
+<li><strong>SMAA removed.</strong> DraStic's SMAA shader needs desktop OpenGL features that phone GPUs do not have. Selecting it crashed the emulator, so it has been removed. The Scanline shader was removed too.</li>
+</ul>
+<h2 id="frame-pacing-and-fast-forward"><a class="toclink" href="#frame-pacing-and-fast-forward">Frame pacing and fast-forward</a></h2>
+<h3 id="steady-60-fps-on-the-real-panel-refresh"><a class="toclink" href="#steady-60-fps-on-the-real-panel-refresh">Steady 60 fps on the real panel refresh</a></h3>
+<p>DraStic paces itself at exactly 60.00 frames a second, but the RG DS panels refresh at about 59.83 Hz. The two drifted through a full cycle every 5.7 seconds, and each time several frames in a row landed a refresh late: the periodic micro stutter on Pokemon White 2's title screen. DraStic Nano locks the emulator to the panels' real refresh instead. A frame that runs long is caught up rather than dropped, which used to cost a frame and 16.7 ms of audio each time.</p>
+<p>Measured on Pokemon White 2's title screen: the frame rate low went from 53 to 54 fps up to 57 to 59 fps, with no pacing misses and no audio underruns in steady play.</p>
+<h3 id="fast-forward"><a class="toclink" href="#fast-forward">Fast-forward</a></h3>
+<ul>
+<li><strong>No garbage or flicker in games that show their own screen captures.</strong> Under fast-forward DraStic still captures the screen on frames it skips drawing, so it captures an unrendered picture. Pokemon White 2's screen transitions became a grey field with bands. Golden Sun Dark Dawn, which renders on one frame and shows the capture on the next, flickered black every other frame. DraStic Nano decides frame by frame which frames to render so captures always hold a real picture.</li>
+<li><strong>Any speed you choose.</strong> DraStic's limiter only offers six fixed speeds. DraStic Nano can cap fast-forward anywhere from 110 to 300 percent, or leave it uncapped. Every frame is still emulated in full at a capped speed.</li>
+<li><strong>No slow motion afterwards.</strong> After a capped fast-forward, the limiter's timing was left pointing the wrong way. On HeartGold and the Pokemon Diamond title screen, heavy scenes then ran at about 17 fps until the next fast-forward. Fixed.</li>
+<li><strong>No flicker after returning to normal speed.</strong> In Golden Sun's capture scenes, the top screen strobed between the two DS screens after a fast-forward ended. Fixed.</li>
+<li><strong>Buttons keep working.</strong> Fast-forward no longer takes all the processor time from the threads that read the controls, so you can always turn it off again.</li>
+</ul>
+<h3 id="run-ahead"><a class="toclink" href="#run-ahead">Run-Ahead</a></h3>
+<p>Run-Ahead is new and experimental, and off by default. It replays the last frame with your new input before the next one is shown, so on Sonic Rush a press reaches the screen one frame after it instead of three. It uses fast in-memory save states and only runs when the frame still fits before the screen refresh, so it never repeats a frame. Two DraStic bugs that it exposed are fixed:
+- The 3D command buffer could be left inconsistent after a state load and crash the emulator.
+- A state load reset the frame timer, so games ran fast while you mashed buttons.</p>
+<h2 id="stability-fixes"><a class="toclink" href="#stability-fixes">Stability fixes</a></h2>
+<ul>
+<li><strong>Crashes from the core's error handling.</strong> DraStic jumps back to a recovery point when certain errors happen. Outside its own app it could reach that jump before the recovery point existed, and crashed within seconds of starting. Those paths are made safe. The catch is that DraStic's built-in soft reset relies on the same jump, so <strong>Restart Game</strong> does a clean relaunch of the game instead.</li>
+<li><strong>Switching shaders.</strong> Freeing the old shader's GPU resources triggered a double free, inside DraStic or the GPU driver, and crashed on the second switch. DraStic Nano leaves those few kilobytes allocated instead.</li>
+<li><strong>The 1 GB handhelds.</strong> Large ROMs (up to 512 MB for DSi-enhanced games like Pokemon White 2) are read from storage on demand, as in the DraStic app, rather than pinned in memory. The emulator's own code is kept in memory so it never has to be re-read from the SD card mid-game, and the GPU renderer only allocates the texture memory a game actually uses.</li>
+</ul>
+<h2 id="what-drastic-nano-adds"><a class="toclink" href="#what-drastic-nano-adds">What DraStic Nano adds</a></h2>
+<p>These have no equivalent in the DraStic app, or work differently:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>In DraStic Nano</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Per-game settings</td>
+<td>Any setting can be kept for one game only, including its performance mode.</td>
+</tr>
+<tr>
+<td>Undo quick save and quick load</td>
+<td>A wrong hotkey press can be undone from the menu.</td>
+</tr>
+<tr>
+<td>RetroAchievements</td>
+<td>Built in (Softcore), reading the DS memory directly.</td>
+</tr>
+<tr>
+<td>Your own cheat files</td>
+<td>R4 style <code>usrcheat.dat</code> files are merged with the built-in cheats.</td>
+</tr>
+<tr>
+<td>Fast Forward Speed</td>
+<td>Any speed from 110 to 300 percent, or uncapped.</td>
+</tr>
+<tr>
+<td>Run-Ahead</td>
+<td>One frame, adaptive (experimental).</td>
+</tr>
+<tr>
+<td>GPU 3D renderer</td>
+<td>Optional, with 4x supersampling (experimental).</td>
+</tr>
+<tr>
+<td>Low latency audio and display</td>
+<td>An exclusive audio stream, and a direct dual-panel path on the RG DS family.</td>
+</tr>
+<tr>
+<td>Two FPS counters</td>
+<td>BLIT (what reaches the screen) and GAME (what the DS core produces).</td>
+</tr>
+<tr>
+<td>Quick Resume</td>
+<td>Boots straight back into your last game.</td>
+</tr>
+<tr>
+<td>Screen layouts</td>
+<td>Presets, picture-in-picture, rotation and fine tuning for single-screen devices.</td>
+</tr>
+<tr>
+<td>Close Lid</td>
+<td>A mappable button, and an option to close the DS lid with the device's own lid.</td>
+</tr>
+<tr>
+<td>Save folder anywhere</td>
+<td>Saves, save states and shaders can live on internal storage, the SD card or a network share.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-stays-the-same"><a class="toclink" href="#what-stays-the-same">What stays the same</a></h2>
+<ul>
+<li><strong>The core.</strong> It is the same DraStic r2.6.0.4a emulation as the app. Everything not listed here behaves exactly as it does in the app.</li>
+<li><strong>Save files and save states.</strong> These are the same DraStic <code>.dsv</code> and <code>.dss</code> formats. The first launch offers to import your DraStic app saves and settings.</li>
+<li><strong>Settings.</strong> The System settings (nickname, birthday, language, colour, Slot-2 and clock) match DraStic's own page and are imported from it once.</li>
+<li><strong>Cheats.</strong> The same cheat database is used.</li>
+</ul>
+<h2 id="turning-a-fix-off"><a class="toclink" href="#turning-a-fix-off">Turning a fix off</a></h2>
+<p>For comparisons and bug reports, the main fixes can be switched off from a computer over ADB, one at a time. These are for testing only; every fix is on by default. Properties starting with <code>sys.</code> are read when a game starts, so set them before you launch it.</p>
+<table>
+<thead>
+<tr>
+<th>Fix</th>
+<th>Property</th>
+<th>Off value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Write-only display registers read as zero (Pokemon Ranger)</td>
+<td><code>sys.gammaos.drastic_nano.io_wo_zero</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>3D settings captured at vblank (Hotel Dusk)</td>
+<td><code>sys.gammaos.drastic_nano.disp3d_latch</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>Capture ring repair (Golden Sun speech, reverb)</td>
+<td><code>persist.gammaos.drastic_nano.ring_repair</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>DS sound routing for capture games</td>
+<td><code>persist.gammaos.drastic_nano.hw_route</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>Microphone fixes</td>
+<td><code>persist.gammaos.drastic_nano.mic_fix</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>Audio clock match</td>
+<td><code>persist.gammaos.drastic_nano.clock_match</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>Low latency audio stream</td>
+<td><code>persist.gammaos.drastic_nano.audio_aaudio</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>Pacing at the panel refresh in heavy scenes</td>
+<td><code>persist.gammaos.drastic_nano.bypass_panel_rate</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>Fast-forward capture repair</td>
+<td><code>persist.gammaos.drastic_nano.ff_capfix</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>NEON 2D blend</td>
+<td><code>persist.gammaos.drastic_nano.lerp_neon</code></td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="related-pages"><a class="toclink" href="#related-pages">Related pages</a></h2>
+<ul>
+<li><a href="drastic-nano.html">DraStic Nano</a>: the complete guide to the player and its menu.</li>
+<li><a href="controls-drastic.html">DraStic controls</a>: the default buttons.</li>
+<li><a href="quick-resume.html">Quick Resume</a>: booting straight back into a game.</li>
+</ul>
+        <footer class="page-foot">
+          <p>GammaOS Nano is community software. This wiki is maintained alongside the OS.</p>
+        </footer>
+      </article>
+      <div class="toc-col"><div class="toc"><div class="toc-title">On this page</div><ul>
+<li><a href="#how-drastic-nano-runs-the-drastic-core">How DraStic Nano runs the DraStic core</a>
+</li>
+<li><a href="#emulation-accuracy-fixes">Emulation accuracy fixes</a>
+<ul>
+<li><a href="#pokemon-ranger-top-screen-panels-drift-off-position">Pokemon Ranger: top screen panels drift off position</a></li>
+<li><a href="#hotel-dusk-backdrops-bob-and-characters-flicker">Hotel Dusk: backdrops bob and characters flicker</a></li>
+<li><a href="#hotel-dusk-with-hi-res-3d-crash-after-loading-a-state">Hotel Dusk with Hi-res 3D: crash after loading a state</a></li>
+<li><a href="#the-ds-birthday-reaches-games-one-month-late">The DS birthday reaches games one month late</a></li>
+</ul>
+</li>
+<li><a href="#sound-fixes">Sound fixes</a>
+<ul>
+<li><a href="#golden-sun-dark-dawn-speech-and-ds-reverb-and-echo">Golden Sun Dark Dawn speech, and DS reverb and echo</a></li>
+<li><a href="#yoshis-island-ds-the-pipe-sound-loops-forever">Yoshi&#x27;s Island DS: the pipe sound loops forever</a></li>
+<li><a href="#crackles-in-heavy-scenes">Crackles in heavy scenes</a></li>
+<li><a href="#pops-after-an-underrun-and-a-click-every-few-seconds">Pops after an underrun, and a click every few seconds</a></li>
+<li><a href="#low-latency-audio">Low latency audio</a></li>
+<li><a href="#smaller-sound-fixes">Smaller sound fixes</a></li>
+</ul>
+</li>
+<li><a href="#microphone-fixes">Microphone fixes</a>
+</li>
+<li><a href="#3d-and-video">3D and video</a>
+<ul>
+<li><a href="#gpu-3d-renderer">GPU 3D renderer</a></li>
+<li><a href="#faster-cpu-rendering">Faster CPU rendering</a></li>
+<li><a href="#shaders">Shaders</a></li>
+</ul>
+</li>
+<li><a href="#frame-pacing-and-fast-forward">Frame pacing and fast-forward</a>
+<ul>
+<li><a href="#steady-60-fps-on-the-real-panel-refresh">Steady 60 fps on the real panel refresh</a></li>
+<li><a href="#fast-forward">Fast-forward</a></li>
+<li><a href="#run-ahead">Run-Ahead</a></li>
+</ul>
+</li>
+<li><a href="#stability-fixes">Stability fixes</a>
+</li>
+<li><a href="#what-drastic-nano-adds">What DraStic Nano adds</a>
+</li>
+<li><a href="#what-stays-the-same">What stays the same</a>
+</li>
+<li><a href="#turning-a-fix-off">Turning a fix off</a>
+</li>
+<li><a href="#related-pages">Related pages</a>
+</li>
+</ul></div></div>
+    </div>
+  </main>
+</div>
+
+<div class="nav-scrim" onclick="document.body.classList.remove('nav-open')"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
